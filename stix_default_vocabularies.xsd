@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.0.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX Default Vocabularies</schema>
+			<version>1.0.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - Schematic implementation for controlled vocabularies used in the Structured Threat Information eXchange format.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<!-- Package Intent Vocabulary -->
+	<xs:complexType name="PackageIntentVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The PackageIntentVocabType is the default STIX vocabulary for Package Intent.
+            
+                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:PackageIntentEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Package Intent Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#PackageIntentVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="PackageIntentEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for a package intent in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Collective Threat Intelligence">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey a broad characterization of a threat across multiple facets.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Threat Report">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey a broad characterization of a threat across multiple facets expressed as a cohesive report.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Phishing">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly phishing indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Watchlist">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly network watchlist indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Malware Artifacts">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly malware artifact indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Network Activity">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly network activity indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Endpoint Characteristics">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly endpoint characteristics (hashes, registry values, installed software, known vulnerabilities, etc.) indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Campaign Characterization">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of one or more campaigns.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Threat Actor Characterization">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of one or more threat actors.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Exploit Characterization">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of one or more exploits.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Attack Pattern Characterization">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of one or more attack patterns.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Characterization">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of one or more malware instances.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TTP - Infrastructure">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of attacker infrastructure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TTP - Tools">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a characterization of attacker tools.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Courses of Action">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly a set of courses of action.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Incident">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly information about one or more incidents.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Observations">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly information about instantial observations (cyber observables).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Observations - Email">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey mainly information about instantial email observations (email cyber observables).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Samples">
+				<xs:annotation>
+					<xs:documentation>Package is intended to convey a set of malware samples.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Confidence Vocabulary -->
+	<xs:complexType name="HighMediumLowVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The HighMediumLowVocabType is the default STIX vocabulary for expressing basic values that may be high, medium, low, none, or unknown.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:HighMediumLowEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default High/Medium/Low Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#HighMediumLowVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="HighMediumLowEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for expressing a high/medium/low statement in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="High"/>
+			<xs:enumeration value="Medium"/>
+			<xs:enumeration value="Low"/>
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Malware Type Vocabulary -->
+	<xs:complexType name="MalwareTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>
+				The MalwareTypeVocabType is the default STIX vocabulary for expressing types of malware instances.
+			
+                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:MalwareTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Malware Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#MalwareTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="MalwareTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The default set of malware types to use for characterizing a malware instance in STIX.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Automated Transfer Scripts"/>
+			<xs:enumeration value="Adware"/>
+			<xs:enumeration value="Dialer"/>
+			<xs:enumeration value="Bot"/>
+			<xs:enumeration value="Bot - Credential Theft"/>
+			<xs:enumeration value="Bot - DDoS"/>
+			<xs:enumeration value="Bot - Loader"/>
+			<xs:enumeration value="Bot - Spam"/>
+			<xs:enumeration value="DoS / DDoS"/>
+			<xs:enumeration value="DoS / DDoS - Participatory"/>
+			<xs:enumeration value="DoS / DDoS - Script"/>
+			<xs:enumeration value="DoS / DDoS - Stress Test Tools"/>
+			<xs:enumeration value="Exploit Kits"/>
+			<xs:enumeration value="POS / ATM Malware"/>
+			<xs:enumeration value="Ransomware"/>
+			<xs:enumeration value="Remote Access Trojan"/>
+			<xs:enumeration value="Rogue Antivirus"/>
+			<xs:enumeration value="Rootkit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Indicator Type Vocabulary -->
+	<xs:complexType name="IndicatorTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The IndicatorTypeVocabType is the default STIX vocabulary for expressing indicator types.
+            
+                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IndicatorTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Indicator Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IndicatorTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IndicatorTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of Indicator types to use for characterizing Indicators in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Malicious E-mail">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected malicious e-mail (phishing, spear phishing, infected, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IP Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious IP addresses or IP blocks.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="File Hash Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of hashes for suspected malicious files.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Domain Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious domains.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="URL Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious URLS.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Artifacts">
+				<xs:annotation>
+					<xs:documentation>Indicator describes the effects of suspected malware.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C2">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected command and control activity or static indications.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Anonymization">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected anonymization techniques (Proxy, TOR, VPN, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Exfiltration">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected exfiltration techniques or behavior.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Host Characteristics">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected malicious host characteristics.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- COA Stage Vocabulary -->
+	<xs:complexType name="COAStageVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The COAStageVocabType is the default STIX vocabulary for expressing the stages of the threat management lifecycle that a COA is applicable to.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:COAStageEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default COA Stages Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#COAStageVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="COAStageEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of stages of the threat management lifecycle that a COA may be applicable to.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Remedy">
+				<xs:annotation>
+					<xs:documentation>This COA is applicable to the "Remedy" stage of the threat management lifecycle, meaning it may be applied proactively to prevent future threats.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Response">
+				<xs:annotation>
+					<xs:documentation>This COA is applicable to the "Response" stage of the threat management lifecycle, meaning it may be applied as an immediate reaction to an ongoing threat.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Campaign Status Vocabulary -->
+	<xs:complexType name="CampaignStatusVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The CampaignStatusVocabType is the default STIX vocabulary for expressing the status of a campaign.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:CampaignStatusEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Campaign Status Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#CampaignStatusVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="CampaignStatusEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default list of possible statuses that a campaign might have.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ongoing">
+				<xs:annotation>
+					<xs:documentation>This campaign is currently taking place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Historic">
+				<xs:annotation>
+					<xs:documentation>This campaign occurred in the past and is currently not taking place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Future">
+				<xs:annotation>
+					<xs:documentation>This campaign is expected to take place in the future.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Incident Status Vocabulary -->
+	<xs:complexType name="IncidentStatusVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The IncidentStatusVocabType is the default STIX vocabulary for expressing the status of an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IncidentStatusEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Status Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentStatusVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IncidentStatusEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default list of possible statuses that an incident might have.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="New"/>
+			<xs:enumeration value="Open"/>
+			<xs:enumeration value="Stalled"/>
+			<xs:enumeration value="Containment Achieved"/>
+			<xs:enumeration value="Restoration Achieved"/>
+			<xs:enumeration value="Incident Reported"/>
+			<xs:enumeration value="Closed"/>
+			<xs:enumeration value="Rejected"/>
+			<xs:enumeration value="Deleted"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Enumerations from VERIS -->
+	<!-- Security Compromise Vocabulary -->
+	<xs:complexType name="SecurityCompromiseVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The SecurityCompromiseVocabType is the default STIX vocabulary for expressing whether or not an incident resulted in a security compromise.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:SecurityCompromiseEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Security Compromise Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#SecurityCompromiseVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="SecurityCompromiseEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing whether an incident resulted in a security compromise.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Yes">
+				<xs:annotation>
+					<xs:documentation>It has been confirmed that this incident resulted in a security compromise.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Suspected">
+				<xs:annotation>
+					<xs:documentation>It is suspected that this incident resulted in a security compromise.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="No">
+				<xs:annotation>
+					<xs:documentation>It has been confirmed that this incident did not result in a security compromise.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>It is not known whether this incident resulted in a security compromise.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Discovery Method Vocabulary -->
+	<xs:complexType name="DiscoveryMethodVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The DiscoveryMethodVocabType is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Discovery Method Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="DiscoveryMethodEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing how an incident was discovered.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Agent Disclosure">
+				<xs:annotation>
+					<xs:documentation>This incident was disclosed by the threat agent (e.g. public brag, private blackmail).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fraud Detection">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered through external fraud detection means (e.g. CPP).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Monitoring Service">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a managed security event monitoring service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Law Enforcement">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by law enforcement.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Customer">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a customer or partner affected by the incident.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unrelated Party">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by an unrelated third party.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered during an external security audit or scan.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Antivirus">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by an antivirus system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Incident Response">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered in the course of investigating a separate incident.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered in the course of a financial audit and/or reconciliation process.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fraud Detection">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered through internal fraud detection means.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HIPS">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered a host-based IDS or file integrity monitoring.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IT Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by an internal IT audit or scan.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Log Review">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered during a log review process or by a SIEM.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NIDS">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by a network-based intrustion detection/prevention system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Security Alarm">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by a physical security alarm.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="User">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a user.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>It is not known how this incident was discovered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Availability Loss Type Vocabulary -->
+	<xs:complexType name="AvailabilityLossTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The AvailabilityLossTypeVocabType is the default STIX vocabulary for expressing the type of availability that was lost due to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:AvailabilityLossTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Availability Loss Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="AvailabilityLossTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the type of availability that was lost due to an incident.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Destruction">
+				<xs:annotation>
+					<xs:documentation>The information was destroyed or wiped.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was lost.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Interruption">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was interrupted.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Degredation">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was degraded.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Acceleration">
+				<xs:annotation>
+					<xs:documentation>Availability loss type is acceleration.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Obscuration">
+				<xs:annotation>
+					<xs:documentation>Availability to the information is obscured.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The availability loss type is not known.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Loss Duration Vocabulary -->
+	<xs:complexType name="LossDurationVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The LossDurationVocabType is the default STIX vocabulary for expressing the approximate length of time of a loss due to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:LossDurationEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Loss Duration Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LossDurationVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="LossDurationEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the type of availability that was lost due to an incident.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Permanent">
+				<xs:annotation>
+					<xs:documentation>The loss is permanent.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Weeks">
+				<xs:annotation>
+					<xs:documentation>The loss lasted for weeks.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Days">
+				<xs:annotation>
+					<xs:documentation>The loss lasted for days.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Hours">
+				<xs:annotation>
+					<xs:documentation>The loss lasted for hours.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Minutes">
+				<xs:annotation>
+					<xs:documentation>The loss lasted for minutes.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Seconds">
+				<xs:annotation>
+					<xs:documentation>The loss lasted for seconds.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The loss duration is not known.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Ownership Class Vocabulary -->
+	<xs:complexType name="OwnershipClassVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The OwnershipClassVocabType is the default STIX vocabulary for expressing the type of ownership of an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:OwnershipClassEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Ownership Class Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#OwnershipClassVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="OwnershipClassEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the ownership class of an object.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Internally-Owned">
+				<xs:annotation>
+					<xs:documentation>The asset is owned internally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Employee-Owned">
+				<xs:annotation>
+					<xs:documentation>The asset is owned by an employee.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Partner-Owned">
+				<xs:annotation>
+					<xs:documentation>The asset is owned by a partner.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Customer-Owned">
+				<xs:annotation>
+					<xs:documentation>The asset is owned by a customer.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The asset ownership class is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Management Class Vocabulary -->
+	<xs:complexType name="ManagementClassVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The ManagementClassVocabType is the default STIX vocabulary for expressing the type of management of an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:ManagementClassEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Management Class Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ManagementClassVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ManagementClassEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the management class of an object.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Internally-Managed">
+				<xs:annotation>
+					<xs:documentation>The asset is managed internally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Externally-Management">
+				<xs:annotation>
+					<xs:documentation>The asset is managed externally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Co-Management">
+				<xs:annotation>
+					<xs:documentation>The asset is co-managed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The asset management class is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Location Class Vocabulary -->
+	<xs:complexType name="LocationClassVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The LocationClassVocabType is the default STIX vocabulary for expressing the location of an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:LocationClassEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Location Class Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LocationClassVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="LocationClassEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the location class of an object.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Internally-Located">
+				<xs:annotation>
+					<xs:documentation>The asset is located internally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Externally-Located">
+				<xs:annotation>
+					<xs:documentation>The asset is located externally.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Co-Located">
+				<xs:annotation>
+					<xs:documentation>The asset is co-located.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Mobile">
+				<xs:annotation>
+					<xs:documentation>The asset is mobile.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The asset location is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Impact Qualification Vocabulary -->
+	<xs:complexType name="ImpactQualificationVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The ImpactQualificationVocabType is the default STIX vocabulary for expressing the subjective level of impact of an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:ImpactQualificationEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Impact Qualification Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ImpactQualificationVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ImpactQualificationEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the impact level of an incident.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Insignificant">
+				<xs:annotation>
+					<xs:documentation>The impact is absorbed by normal activities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Distracting">
+				<xs:annotation>
+					<xs:documentation>There are limited “hard costs”, but the impact is felt through having to deal with the incident rather than conducting normal duties.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Painful">
+				<xs:annotation>
+					<xs:documentation>Real, somewhat serious effect on the "bottom line".</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Damaging">
+				<xs:annotation>
+					<xs:documentation>Real and serious effect on the “bottom line” and/or long-term ability to generate revenue.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Catastrophic">
+				<xs:annotation>
+					<xs:documentation>A business-ending event.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The impact qualification is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Impact Rating Vocabulary -->
+	<xs:complexType name="ImpactRatingVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The ImpactRatingVocabType is the default STIX vocabulary for expressing the level of impact due to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:ImpactRatingEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Impact Rating Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ImpactRatingVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ImpactRatingEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing the level of impact due to a loss.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None">
+				<xs:annotation>
+					<xs:documentation>There was no impact.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Minor">
+				<xs:annotation>
+					<xs:documentation>There was a minor impact.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Moderate">
+				<xs:annotation>
+					<xs:documentation>There was a moderate impact.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Major">
+				<xs:annotation>
+					<xs:documentation>There was a major impact.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The impact is not known.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Asset Type Vocabulary -->
+	<xs:complexType name="AssetTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The AssetTypeVocabType is the default STIX vocabulary for expressing the type of an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:AssetTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Asset Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AssetTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="AssetTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of assets.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Backup"/>
+			<xs:enumeration value="Database"/>
+			<xs:enumeration value="DHCP"/>
+			<xs:enumeration value="Directory"/>
+			<xs:enumeration value="DCS"/>
+			<xs:enumeration value="DNS"/>
+			<xs:enumeration value="File"/>
+			<xs:enumeration value="Log"/>
+			<xs:enumeration value="Mail"/>
+			<xs:enumeration value="Mainframe"/>
+			<xs:enumeration value="Payment switch"/>
+			<xs:enumeration value="POS controller"/>
+			<xs:enumeration value="Print"/>
+			<xs:enumeration value="Proxy"/>
+			<xs:enumeration value="Remote access"/>
+			<xs:enumeration value="SCADA"/>
+			<xs:enumeration value="Web application"/>
+			<xs:enumeration value="Server"/>
+			<xs:enumeration value="Access reader"/>
+			<xs:enumeration value="Camera"/>
+			<xs:enumeration value="Firewall"/>
+			<xs:enumeration value="HSM"/>
+			<xs:enumeration value="IDS"/>
+			<xs:enumeration value="Broadband"/>
+			<xs:enumeration value="PBX"/>
+			<xs:enumeration value="Private WAN"/>
+			<xs:enumeration value="PLC"/>
+			<xs:enumeration value="Public WAN"/>
+			<xs:enumeration value="RTU"/>
+			<xs:enumeration value="Router or switch"/>
+			<xs:enumeration value="SAN"/>
+			<xs:enumeration value="Telephone"/>
+			<xs:enumeration value="VoIP adapter"/>
+			<xs:enumeration value="LAN"/>
+			<xs:enumeration value="WLAN"/>
+			<xs:enumeration value="Network"/>
+			<xs:enumeration value="Auth token"/>
+			<xs:enumeration value="ATM"/>
+			<xs:enumeration value="Desktop"/>
+			<xs:enumeration value="PED pad"/>
+			<xs:enumeration value="Gas terminal"/>
+			<xs:enumeration value="Laptop"/>
+			<xs:enumeration value="Media"/>
+			<xs:enumeration value="Mobile phone"/>
+			<xs:enumeration value="Peripheral"/>
+			<xs:enumeration value="POS terminal"/>
+			<xs:enumeration value="Kiosk"/>
+			<xs:enumeration value="Tablet"/>
+			<xs:enumeration value="Telephone"/>
+			<xs:enumeration value="VoIP phone"/>
+			<xs:enumeration value="User Device"/>
+			<xs:enumeration value="Tapes"/>
+			<xs:enumeration value="Disk media"/>
+			<xs:enumeration value="Documents"/>
+			<xs:enumeration value="Flash drive"/>
+			<xs:enumeration value="Disk drive"/>
+			<xs:enumeration value="Smart card"/>
+			<xs:enumeration value="Payment card"/>
+			<xs:enumeration value="Media"/>
+			<xs:enumeration value="Administrator"/>
+			<xs:enumeration value="Auditor"/>
+			<xs:enumeration value="Call center"/>
+			<xs:enumeration value="Cashier"/>
+			<xs:enumeration value="Customer"/>
+			<xs:enumeration value="Developer"/>
+			<xs:enumeration value="End-user"/>
+			<xs:enumeration value="Executive"/>
+			<xs:enumeration value="Finance"/>
+			<xs:enumeration value="Former employee"/>
+			<xs:enumeration value="Guard"/>
+			<xs:enumeration value="Helpdesk"/>
+			<xs:enumeration value="Human resources"/>
+			<xs:enumeration value="Maintenance"/>
+			<xs:enumeration value="Manager"/>
+			<xs:enumeration value="Partner"/>
+			<xs:enumeration value="Person"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Attacker Infrastructure Vocabulary -->
+	<xs:complexType name="AttackerInfrastructureTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The AttackerInfrastructureTypeVocabType is the default STIX vocabulary for expressing the type of infrastructure an attacker uses.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:AttackerInfrastructureTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Attacker Infastructure Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AttackerInfrastructureTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="AttackerInfrastructureTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of attacker infrastructure.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Anonymization"/>
+			<xs:enumeration value="Anonymization - Proxy"/>
+			<xs:enumeration value="Anonymization - TOR Network"/>
+			<xs:enumeration value="Anonymization - VPN"/>
+			<xs:enumeration value="Communications"/>
+			<xs:enumeration value="Communications - Blogs"/>
+			<xs:enumeration value="Communications - Forums"/>
+			<xs:enumeration value="Communications - Internet Relay Chat"/>
+			<xs:enumeration value="Communications - Micro-Blogs"/>
+			<xs:enumeration value="Communications - Mobile Communications"/>
+			<xs:enumeration value="Communications - Social Networks"/>
+			<xs:enumeration value="Communications - User-Generated Content Websites"/>
+			<xs:enumeration value="Domain Registration"/>
+			<xs:enumeration value="Domain Registration - Dynamic DNS Services"/>
+			<xs:enumeration value="Domain Registration - Legitimate Domain Registration Services"/>
+			<xs:enumeration value="Domain Registration - Malicious Domain Registrars"/>
+			<xs:enumeration value="Domain Registration - Top-Level Domain Registrars"/>
+			<xs:enumeration value="Hosting"/>
+			<xs:enumeration value="Hosting - Bulletproof / Rogue Hosting"/>
+			<xs:enumeration value="Hosting - Cloud Hosting"/>
+			<xs:enumeration value="Hosting - Compromised Server"/>
+			<xs:enumeration value="Hosting - Fast Flux Botnet Hosting"/>
+			<xs:enumeration value="Hosting - Legitimate Hosting"/>
+			<xs:enumeration value="Electronic Payment Methods"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- System Type Vocabulary -->
+	<xs:complexType name="SystemTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The SystemTypeVocabType is the default STIX vocabulary for expressing the type of a system.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:SystemTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default System Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#SystemTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="SystemTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of systems.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Enterprise Systems"/>
+			<xs:enumeration value="Enterprise Systems - Application Layer"/>
+			<xs:enumeration value="Enterprise Systems - Database Layer"/>
+			<xs:enumeration value="Enterprise Systems - Enterprise Technologies and Support Infrastructure"/>
+			<xs:enumeration value="Enterprise Systems - Network Systems"/>
+			<xs:enumeration value="Enterprise Systems - Networking Devices"/>
+			<xs:enumeration value="Enterprise Systems - Web Layer"/>
+			<xs:enumeration value="Enterprise Systems - VoIP"/>
+			<xs:enumeration value="Industrial Control Systems"/>
+			<xs:enumeration value="Industrial Control Systems - Equipment Under Control"/>
+			<xs:enumeration value="Industrial Control Systems - Operations Management"/>
+			<xs:enumeration value="Industrial Control Systems - Safety, Protection and Local Control"/>
+			<xs:enumeration value="Industrial Control Systems - Supervisory Control"/>
+			<xs:enumeration value="Mobile Systems"/>
+			<xs:enumeration value="Mobile Systems - Mobile Operating Systems"/>
+			<xs:enumeration value="Mobile Systems - Near Field Communications"/>
+			<xs:enumeration value="Mobile Systems - Mobile Devices"/>
+			<xs:enumeration value="Third-Party Services"/>
+			<xs:enumeration value="Third-Party Services - Application Stores"/>
+			<xs:enumeration value="Third-Party Services - Cloud Services"/>
+			<xs:enumeration value="Third-Party Services - Security Vendors"/>
+			<xs:enumeration value="Third-Party Services - Social Media"/>
+			<xs:enumeration value="Third-Party Services - Software Update"/>
+			<xs:enumeration value="Users"/>
+			<xs:enumeration value="Users - Application And Software"/>
+			<xs:enumeration value="Users - Workstation"/>
+			<xs:enumeration value="Users - Removable Media"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Information Type Vocabulary -->
+	<xs:complexType name="InformationTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The InformationTypeVocabType is the default STIX vocabulary for expressing the type of information.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:InformationTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Information Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#InformationTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="InformationTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of information.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Information Assets"/>
+			<xs:enumeration value="Information Assets - Corporate Employee Information"/>
+			<xs:enumeration value="Information Assets - Customer PII"/>
+			<xs:enumeration value="Information Assets - Email Lists / Archives"/>
+			<xs:enumeration value="Information Assets - Financial Data"/>
+			<xs:enumeration value="Information Assets - Intellectual Property"/>
+			<xs:enumeration value="Information Assets - Mobile Phone Contacts"/>
+			<xs:enumeration value="Information Assets - User Credentials"/>
+			<xs:enumeration value="Authentication Cookies"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Threat Actor Type Vocabulary -->
+	<xs:complexType name="ThreatActorTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The ThreatActorTypeVocabType is the default STIX vocabulary for expressing the type of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:ThreatActorTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Threat Actor Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ThreatActorTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ThreatActorTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of threat actors.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Cyber Espionage Operations"/>
+			<xs:enumeration value="Hacker"/>
+			<xs:enumeration value="Hacker - White hat"/>
+			<xs:enumeration value="Hacker - Gray hat"/>
+			<xs:enumeration value="Hacker - Black hat"/>
+			<xs:enumeration value="Hacktivist"/>
+			<xs:enumeration value="State Actor / Agency"/>
+			<xs:enumeration value="eCrime Actor - Credential Theft Botnet Operator"/>
+			<xs:enumeration value="eCrime Actor - Credential Theft Botnet Service"/>
+			<xs:enumeration value="eCrime Actor - Malware Developer"/>
+			<xs:enumeration value="eCrime Actor - Money Laundering Network"/>
+			<xs:enumeration value="eCrime Actor - Organized Crime Actor"/>
+			<xs:enumeration value="eCrime Actor - Spam Service"/>
+			<xs:enumeration value="eCrime Actor - Traffic Service"/>
+			<xs:enumeration value="eCrime Actor - Underground Call Service"/>
+			<xs:enumeration value="Insider Threat"/>
+			<xs:enumeration value="Disgruntled Customer / User"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Motivation Vocabulary -->
+	<xs:complexType name="MotivationVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The MotivationVocabType is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:MotivationEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Motivation Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#MotivationVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="MotivationEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for motivations of a threat actor.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ideological"/>
+			<xs:enumeration value="Ideological - Anti-Corruption"/>
+			<xs:enumeration value="Ideological - Anti-Establisment"/>
+			<xs:enumeration value="Ideological - Environmental"/>
+			<xs:enumeration value="Ideological - Ethnic / Nationalist"/>
+			<xs:enumeration value="Ideological - Information Freedom"/>
+			<xs:enumeration value="Ideological - Religious"/>
+			<xs:enumeration value="Ideological - Security Awareness"/>
+			<xs:enumeration value="Ideological - Human Rights"/>
+			<xs:enumeration value="Ego"/>
+			<xs:enumeration value="Financial or Economic"/>
+			<xs:enumeration value="Military"/>
+			<xs:enumeration value="Opportunistic"/>
+			<xs:enumeration value="Policital"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Intended Effect Vocabulary -->
+	<xs:complexType name="IntendedEffectVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The IntendedEffectVocabType is the default STIX vocabulary for expressing the intended effect of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IntendedEffectEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Intended Effect Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IntendedEffectVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IntendedEffectEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for effects intended by a threat actor.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Advantage"/>
+			<xs:enumeration value="Advantage - Economic"/>
+			<xs:enumeration value="Advantage - Military"/>
+			<xs:enumeration value="Advantage - Political"/>
+			<xs:enumeration value="Theft"/>
+			<xs:enumeration value="Theft - Intellectual Property"/>
+			<xs:enumeration value="Theft - Credential Theft"/>
+			<xs:enumeration value="Theft - Identity Theft"/>
+			<xs:enumeration value="Theft - Theft of Proprietary Information"/>
+			<xs:enumeration value="Account Takeover"/>
+			<xs:enumeration value="Brand Damage"/>
+			<xs:enumeration value="Competitive Advantage"/>
+			<xs:enumeration value="Degradation of Service"/>
+			<xs:enumeration value="Denial and Deception"/>
+			<xs:enumeration value="Destruction"/>
+			<xs:enumeration value="Disruption"/>
+			<xs:enumeration value="Embarrassment"/>
+			<xs:enumeration value="Exposure"/>
+			<xs:enumeration value="Extortion"/>
+			<xs:enumeration value="Fraud"/>
+			<xs:enumeration value="Harassment"/>
+			<xs:enumeration value="ICS Control"/>
+			<xs:enumeration value="Traffic Diversion"/>
+			<xs:enumeration value="Unauthorized Access"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Intended Effect Vocabulary -->
+	<xs:complexType name="PlanningAndOperationalSupportVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The PlanningAndOperationalSupportVocabType is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:PlanningAndOperationalSupportEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Planning and Operational Support Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="PlanningAndOperationalSupportEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of planning and operational support functions of a threat actor.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Data Exploitation"/>
+			<xs:enumeration value="Data Exploitation - Analytic Support"/>
+			<xs:enumeration value="Data Exploitation - Translation Support"/>
+			<xs:enumeration value="Financial Resources"/>
+			<xs:enumeration value="Financial Resources - Academic"/>
+			<xs:enumeration value="Financial Resources - Commercial"/>
+			<xs:enumeration value="Financial Resources - Government"/>
+			<xs:enumeration value="Financial Resources - Hacktivist or Grassroot"/>
+			<xs:enumeration value="Financial Resources - Non-Attributable Finance"/>
+			<xs:enumeration value="Skill Development / Recruitment"/>
+			<xs:enumeration value="Skill Development / Recruitment - Contracting and Hiring"/>
+			<xs:enumeration value="Skill Development / Recruitment - Document Exploitation (DOCEX) Training"/>
+			<xs:enumeration value="Skill Development / Recruitment - Internal Training"/>
+			<xs:enumeration value="Skill Development / Recruitment - Military Programs"/>
+			<xs:enumeration value="Skill Development / Recruitment - Security / Hacker Conferences"/>
+			<xs:enumeration value="Skill Development / Recruitment - Underground Forums"/>
+			<xs:enumeration value="Skill Development / Recruitment - University Programs"/>
+			<xs:enumeration value="Planning "/>
+			<xs:enumeration value="Planning - Operational Cover Plan"/>
+			<xs:enumeration value="Planning - Open-Source Intelligence (OSINT) Gethering"/>
+			<xs:enumeration value="Planning - Pre-Operational Surveillance and Reconnaissance"/>
+			<xs:enumeration value="Planning - Target Selection"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Incident Effect Vocabulary -->
+	<xs:complexType name="IncidentEffectVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The IncidentEffectVocabType is the default STIX vocabulary for expressing the possible effects of an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IncidentEffectEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Effect Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentEffectVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IncidentEffectEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of possible effects of an incident.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Brand or Image Degradation"/>
+			<xs:enumeration value="Loss of Competitive Advantage"/>
+			<xs:enumeration value="Loss of Competitive Advantage - Economic"/>
+			<xs:enumeration value="Loss of Competitive Advantage - Military"/>
+			<xs:enumeration value="Loss of Competitive Advantage - Political"/>
+			<xs:enumeration value="Data Breach or Compromise"/>
+			<xs:enumeration value="Degradation of Service"/>
+			<xs:enumeration value="Destruction"/>
+			<xs:enumeration value="Disruption of Service / Operations"/>
+			<xs:enumeration value="Financial Loss"/>
+			<xs:enumeration value="Loss of Confidential / Proprietary Information or Intellectual Property"/>
+			<xs:enumeration value="Regulatory, Compliance or Legal Impact"/>
+			<xs:enumeration value="Unintended Access"/>
+			<xs:enumeration value="User Data Loss"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Attacker Tool Type Vocabulary -->
+	<xs:complexType name="AttackerToolTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>
+				The AttackerToolTypeVocab-1.0 is the default STIX vocabulary for expressing types of attacker tools.
+				
+                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:AttackerToolTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Attacker Tool Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AttackerToolTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="AttackerToolTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of attacker tools.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Malware"/>
+			<xs:enumeration value="Penetration Testing"/>
+			<xs:enumeration value="Port Scanner"/>
+			<xs:enumeration value="Traffic Scanner"/>
+			<xs:enumeration value="Vulnerability Scanner"/>
+			<xs:enumeration value="Application Scanner"/>
+			<xs:enumeration value="Password Cracking"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Incident Category Vocabulary -->
+	<xs:complexType name="IncidentCategoryVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The IncidentCategoryVocabType is the default STIX vocabulary for expressing the possible categories of an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IncidentCategoryEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Category Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentCategoryVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IncidentCategoryEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for types of possible categories of an incident.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is taken from the US-CERT Federal Incident Reporting Guidelines Incident Categories.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Exercise/Network Defense Testing">
+				<xs:annotation>
+					<xs:documentation>This category is used during state, federal, national, international exercises and approved activity testing of internal/external network defenses or responses.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unauthorized Access">
+				<xs:annotation>
+					<xs:documentation>In this category an individual gains logical or physical access without permission to a federal agency network, system, application, data, or other resource.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Denial of Service">
+				<xs:annotation>
+					<xs:documentation>An attack that successfully prevents or impairs the normal authorized functionality of networks, systems or applications by exhausting resources. This activity includes being the victim or participating in the DoS.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malicious Code">
+				<xs:annotation>
+					<xs:documentation>Installation of malicious software (e.g., virus, worm, Trojan horse, or other code-based malicious entity) that infects an operating system or application. Agencies are NOT required to report malicious logic that has been successfully quarantined by antivirus (AV) software.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Improper Usage">
+				<xs:annotation>
+					<xs:documentation>A person violates acceptable computing use policies.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Scans/Probes/Attempted Access">
+				<xs:annotation>
+					<xs:documentation>This category includes any activity that seeks to access or identify a federal agency computer, open ports, protocols, service, or any combination for later exploit. This activity does not directly result in a compromise or denial of service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Investigation">
+				<xs:annotation>
+					<xs:documentation>Unconfirmed incidents that are potentially malicious or anomalous activity deemed by the reporting entity to warrant further review.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Loss Property Vocabulary -->
+	<xs:complexType name="LossPropertyVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The LossPropertyVocabType is the default STIX vocabulary for expressing the possible properties of a loss.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:LossPropertyEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Loss Property Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LossPropertyVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="LossPropertyEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for properties of a loss.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Confidentiality"/>
+			<xs:enumeration value="Integrity"/>
+			<xs:enumeration value="Availability"/>
+			<xs:enumeration value="Accountability"/>
+			<xs:enumeration value="Non-Repudiation"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

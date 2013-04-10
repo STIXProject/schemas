@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" targetNamespace="http://stix.mitre.org/TTP-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX TTP</schema>
+			<version>1.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - TTP - Schematic implementation for the TTP construct within the STIX structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
+	<xs:import namespace="http://cybox.mitre.org/common-2" schemaLocation="cybox/cybox_common.xsd"/>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+	<xs:element name="TTP" type="ttp:TTPType">
+		<xs:annotation>
+			<xs:documentation>The TTP field characterizes specific details of observed or potential attacker Tactics, Techniques and Procedures.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!---->
+	<xs:complexType name="TTPType">
+		<xs:annotation>
+			<xs:documentation>TTPType characterizes an individual adversary TTP.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:TTPBaseType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Title field provides a simple title for this TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description field provides an unstructured description of the TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								The Intended_Effect field specifies the suspected intended effect for this TTP.
+								
+								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Behavior" type="ttp:BehaviorType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Behavior describes the attack patterns, malware, or exploits that the attacker leverages to execute this TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Resources" type="ttp:ResourceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation> Resources describe the infrastructure or tools that the adversary uses to execute this TTP. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Victim_Targeting" type="ttp:VictimTargetingType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Victim_Targeting field characterizes the people, organizations, information or access being targeted.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Exploit_Targets" type="stixCommon:ExploitTargetsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Exploit_Targets field characterizes potential vulnerability, weakness or configuration targets for exploitation by this TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_TTPs" type="ttp:RelatedTTPsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_TTPs field specifies other TTPs asserted to be related to this cyber threat TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Kill_Chain_Phases" type="stixCommon:KillChainPhasesReferenceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Kill_Chain_Phases field specifies one or more Kill Chain phases associated with this TTP item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Kill_Chains" type="stixCommon:KillChainsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Kill_Chains field characterizes specific Kill Chain definitions for reference within specific TTP entries, Indicators and elsewhere.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Specifies the relevant handling guidance for this TTP. The valid marking scope is the nearest TTPBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="version" type="ttp:TTPVersionType" default="1.0">
+					<xs:annotation>
+						<xs:documentation>Specifies the relevant STIX-TTP schema version for this content.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!---->
+	<xs:simpleType name="TTPVersionType">
+		<xs:annotation>
+			<xs:documentation>An enumeration of all versions of the TTP type valid in the current release of STIX.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AttackPatternType">
+		<xs:annotation>
+			<xs:documentation>
+				Captures prose information about an individual attack pattern as well as a CAPEC reference.
+
+				In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.5InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.5-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.5.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.0/capec_2.5.xsd.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides an unstructured description of an individual Attack Pattern.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="capec_id">
+			<xs:annotation>
+				<xs:documentation>This field specifies a reference to a particular entry within the Common Attack Pattern Enumeration and Classification (CAPEC)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="CAPEC-\d+"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="MalwareInstanceType">
+		<xs:annotation>
+			<xs:documentation>
+				Captures basic information about an individual malware instance.
+				
+				In addition to capturing basic information, this type is intended to be extended to enable the structured description of a malware instance using the XML Schema extension feature. The STIX default extension uses the Malware Attribute Enumeration and Classification (MAEC) schema to do so. The extension that defines this is captured in the MAECInstanceType in the http://stix.mitre.org/extensions/Malware#MAEC-1 namespace. This type is defined in the extensions/malware/maec-4.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/malware/maec-4.0/1.0/maec-4.0.xsd.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Type field provides a characterization of what type of malware this MalwareInstance is.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is MalwareTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Name field specifies a name associated with this MalwareInstance.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides an unstructured description of an individual Malware instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExploitType">
+		<xs:annotation>
+			<xs:documentation>
+				Characterizes a description of an individual exploit.
+
+				In addition to capturing basic information, this type is intended to be extended to enable the structured description of an exploit using the XML Schema extension feature. No extension is provided by STIX to support this, however those wishing to represent structured exploit information may develop such an extension.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides an unstructured description of an individual Exploit instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedTTPsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_TTP" type="stixCommon:RelatedTTPType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_TTP field specifies a single other TTP asserted to be related to this cyber threat TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="InfrastructureType">
+		<xs:sequence>
+			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Type field represents the type of infrastructure being described.
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerInfrastructureTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field generally describes specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Observable_Characterization" type="cybox:ObservablesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Observable_Characterization field provides structured characterization of the cyber observables detailing specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ToolsType">
+		<xs:sequence>
+			<xs:element name="Tool" type="cyboxCommon:ToolInformationType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Tool field specifies a single Tool leveraged by this TTP item.
+					
+						The Type field under this field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerToolTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExploitsType">
+		<xs:sequence>
+			<xs:element name="Exploit" type="ttp:ExploitType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Exploit field specifies a single Exploit for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MalwareType">
+		<xs:sequence>
+			<xs:element name="Malware_Instance" type="ttp:MalwareInstanceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Malware_Instance field specifies a single instance of Malware for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AttackPatternsType">
+		<xs:sequence>
+			<xs:element name="Attack_Pattern" type="ttp:AttackPatternType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Attack_Pattern field specifies a single Attack Pattern for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResourceType">
+		<xs:sequence>
+			<xs:element name="Tools" type="ttp:ToolsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Tools field specifies one or more Tools leveraged by this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Infrastructure" type="ttp:InfrastructureType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Infrastructure field characterizes specific classes or instances of infrastructure observed to have been utilized for cyber attack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BehaviorType">
+		<xs:sequence>
+			<xs:element name="Attack_Patterns" type="ttp:AttackPatternsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Attack_Patterns field specifies one or more Attack Patterns for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Malware" type="ttp:MalwareType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Malware field specifies one or more instances of Malware for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Exploits" type="ttp:ExploitsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Exploits field specifies one or more Exploits for this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VictimTargetingType">
+		<xs:sequence>
+			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Identity field characterizes information about the identity or characteristics of the targeted people or organizations.
+					
+						This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.					
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Targeted_Systems" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Targeted_Systems field characterizes a type of system that is targeted. It may be included multiple times to specify multiple types of targeted systems.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SystemTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.					
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Targeted_Information" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Targeted_Systems field characterizes a type of information that is targeted. It may be included multiple times to specify multiple types of targeted information.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.		
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

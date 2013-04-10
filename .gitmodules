@@ -1,0 +1,3 @@
+[submodule "cybox"]
+	path = cybox
+	url = https://github.com/CybOXProject/schemas.git

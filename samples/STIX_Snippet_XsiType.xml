@@ -1,0 +1,24 @@
+<!--
+	xsi:type Snippets - NOT INTENDED TO VALIDATE
+	
+	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+    The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
+    
+	This snippet demonstrates how users should use xsi:type in STIX.	
+-->
+
+<!-- These XML Snippets are NOT intended to validate -->
+
+<!-- Snippet example of xsi:type use to specify a STIX component implementation (default)  -->
+<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7">
+
+<!-- Snippet example of xsi:type use to specify a controlled vocabulary  -->
+<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">Malicious E-mail</indicator:Type>
+
+<!-- Snippet example of xsi:type use to specify a data marking model  -->
+<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="RED"/>
+
+<!-- Snippet example of xsi:type use to specify an externally defined schema. In this case the default CIQ-based extension of the Identity type.  -->
+<stixCommon:Identity xsi:type="ExtSch:CIQIdentity3.0InstanceType">
+    
+<!-- These XML Snippets are NOT intended to validate -->

@@ -1,0 +1,45 @@
+<!--
+	Controlled Vocabulary Specification Snippet - NOT INTENDED TO VALIDATE
+	
+	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+    The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
+
+	This snippet demonstrates how users can define their own controlled vocabularies for use within STIX. The snippet is taken from the STIX default_controlled_vocabularies.xsd file and describes a vocabulary for use within STIX. Those users who wish to define their own vocabularies should follow a similar pattern:
+
+	1. Create a new schema file that will define your vocabulary. Make sure to include a targetNamespace.
+	2. Include the complexType (first type listed below) that references your vocabulary with the name and reference. Name should be any relatively unique name and reference should be where consumers can go to see the definition of your vocabulary. This type will be a simpleContent restriction on the vocabulary itself (step 3).
+	3. Include the vocabulary itself as an enumeration. This will be referenced by the complexType in #2.
+	4. Use the vocabulary by including the schema in instance documents and using the same mechanism as you do to include STIX-defined vocabularies (xsi:type)
+-->
+
+<!-- This XML Snippet is NOT intended to validate -->
+	<xs:complexType name="HighMediumLowVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The HighMediumLowVocabType is the default STIX vocabulary for expressing basic values that may be high, medium, low, none, or unknown.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:HighMediumLowEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default High/Medium/Low Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0/stix_default_vocabularies.xsd#HighMediumLowVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="HighMediumLowEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for expressing a high/medium/low statement in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="High"/>
+			<xs:enumeration value="Medium"/>
+			<xs:enumeration value="Low"/>
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+<!-- This XML Snippet is NOT intended to validate -->

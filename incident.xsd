@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" targetNamespace="http://stix.mitre.org/Incident-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX Incident</schema>
+			<version>1.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - Incident - Schematic implementation for the Incident construct within the STIX structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
+	<xs:import namespace="http://cybox.mitre.org/common-2" schemaLocation="cybox/cybox_common.xsd"/>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+	<xs:element name="Incident" type="incident:IncidentType">
+		<xs:annotation>
+			<xs:documentation>This field characterizes a single cyber threat Incident.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="IncidentType">
+		<xs:annotation>
+			<xs:documentation>The IncidentType characterizes a single cyber threat Incident.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:IncidentBaseType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Title field provides a simple title for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Time" type="incident:TimeType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Time filed specifies relevant time values associated with this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description field provides a description of this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Categories" type="incident:CategoriesType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Categories field provides a set of categories for this incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Reporter" type="stixCommon:InformationSourceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Reporter field details information about the reporting source of this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Responder" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Responder field is optional and details information about the assigned responder for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Coordinator" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Coordinator field is optional and details information about the assigned coordinator for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Victim" type="stixCommon:IdentityType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								The Victim field is optional and details information about a victim of this Incident.
+
+								This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.0/ciq_identity.xsd.
+				
+								Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Affected_Assets" type="incident:AffectedAssetsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Affected_Assets field is optional and characterizes the particular assets affected during the Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Impact_Assessment" type="incident:ImpactAssessmentType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Impact_Assessment field specifies a summary assessment of impact for this cyber threat Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Status" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								Status describes the current status (sometimes called "state" or "disposition") of the incident.
+							
+								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentStatusVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_Indicators" type="incident:RelatedIndicatorsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Indicators field identifies or characterizes one or more cyber threat Indicators related to this cyber threat Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_Observables" type="incident:RelatedObservablesType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Observables field identifies or characterizes one or more cyber observables related to this cyber threat incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Leveraged_TTPs" type="incident:LeveragedTTPsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Leveraged_TTPs field specifies TTPs asserted to be related to this cyber threat Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Attributed_Threat_Actors" type="incident:AttributedThreatActorsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Attributed_Threat_Actors field identifies ThreatActors asserted to be attributed for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								The Intended_Effect field specifies the suspected intended effect of this incident.
+								
+								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Security_Compromise" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								Specifies knowledge of whether the Incident involved a compromise of security properties.
+							
+								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Discovery_Method" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								The Discovery_Method field identifies how the incident was discovered.
+							
+								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is DiscoveryMethodVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_Incidents" type="incident:RelatedIncidentsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Incidents field identifies or characterizes one or more other Incidents related to this cyber threat Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The COA_Requested field specifies and characterizes a requested CourseOfAction for this Incident as specified by the Producer for the Consumer of the Incident Report</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The COA_Taken field specifies and characterizes a CourseOfAction taken for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Confidence field characterizes the level of confidence held in the characterization of this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Contact" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Contact field identifies and characterizes organizations or personnel involved in this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="History" type="incident:HistoryType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The History field provides a log of events or actions taken during the handling of the Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Incident. The valid marking scope is the nearest IncidentBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="version" type="incident:IncidentVersionType" default="1.0">
+					<xs:annotation>
+						<xs:documentation>Specifies the relevant STIX-Incident schema version for this content.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="URL">
+					<xs:annotation>
+						<xs:documentation>Specifies a URL referencing the location for the Incident specification.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!---->
+	<xs:simpleType name="IncidentVersionType">
+		<xs:annotation>
+			<xs:documentation>An enumeration of all versions of the Incident type valid in the current release of STIX.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PropertyAffectedType">
+		<xs:sequence>
+			<xs:element name="Property" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The security property that was affected by the incident.
+
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossPropertyVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description_Of_Effect" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description_Of_Effect field is optional and provides a brief prose description of how the security property was affected.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Type_Of_Availability_Loss field is optional and characterizes in what manner the availability of this asset was affected (e.g. Destruction, Deletion, Interruption).
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AvailabilityLossTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.						
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Duration_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Duration_Of_Availability_Loss field is optional and specifies the approximate length of time availability was affected (e.g. Permanent, Seconds, Minutes, Hours, Days).
+					
+					This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossDurationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Non_Public_Data_Compromised" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						This field specifies whether non-public data was compromised or exposed.
+
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AffectedAssetType">
+		<xs:sequence>
+			<xs:element name="Type" type="incident:AssetTypeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Type field is optional and specifies the type of the asset impacted by the incident (a security attribute was negatively affected).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field is optional and provides a brief prose description of the asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Business_Function_Or_Role" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Business_Function_Or_Role field is optional and provides a brief description of the asset's role, mission, and importance within the organization.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ownership_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Ownership_Class field is optional and gives a high-level characterization of who owns (or controls) this asset (e.g. Internally-owned, Employee-owned, Partner-owned, Customer-owned).
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is OwnershipClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Management_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Management_Class field is optional and gives a high-level characterization of who is responsible for the day-to-day management and administration of this asset (e.g. Managed Internally, Managed by External Party, Co-managed).
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ManagementClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Location_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Location_Class field is optional and gives a high-level characterization of where this asset is physically located (e.g. Internal location, External location, Co-located, Mobile).
+					
+					This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LocationClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Location" type="stixCommon:AddressAbstractType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Location field specifies the physical location of the affected asset.
+
+						This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://stix.mitre.org/extensions/Identity#CIQAddress-1 namespace. This type is defined in the extensions/address/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address/1.0/ciq_address_3.0.xsd.
+				
+						Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Nature_Of_Security_Effect" type="incident:NatureOfSecurityEffectType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Nature_Of_Security_Effect field is optional and characterizes how the security properties of the Asset were affected.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Structured_Description" type="cybox:ObservablesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Structured_Description field is optional and provides a structured description of the asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="ImpactAssessmentType">
+		<xs:annotation>
+			<xs:documentation>The ImpactAssessmentType specifies a summary assessment of impact for this cyber threat Incident. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Direct_Impact_Summary" type="incident:DirectImpactSummaryType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Direct_Impact_Summary field is optional and characterizes (at a high level) losses directly resulting from the ThreatActor's actions against organizational assets within the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Indirect_Impact_Summary" type="incident:IndirectImpactSummaryType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Indirect_Impact_Summary field is optional and characterizes (at a high level) losses from other stakeholder reactions to the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Total_Loss_Estimation" type="incident:TotalLossEstimationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Total_Loss_Estimation field is optional and specifies the total estimated financial loss for the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Impact_Qualification" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Impact_Qualification field is optional and summarizes the subjective level of impact of the Incident.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactQualificationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Effects" type="incident:EffectsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Effects field captures a list of effects of this incident from a controlled vocabulary.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="External_Impact_Assessment_Model" type="incident:ExternalImpactAssessmentModelType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The External_Impact_Assessment_Model field is optional and characterizes impact assessment details utilizing impact assessment characterization models defined external to STIX. It is defined utilizing an abstract type enabling the definition through extension of incident impact assessment models external to STIX.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExternalImpactAssessmentModelType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The ExternalImpactAssessmentModelType is an abstract type enabling the definition through extension of incident impact assessment models external to STIX.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="model_name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Specifies the name of the externally defined impact assessment model.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="model_reference" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>Specifies a URL reference for the externally defined impact assessment model.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="COATakenType">
+		<xs:sequence>
+			<xs:element name="Time" type="incident:COATimeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Time field specifies the relative time criteria for this taken CourseOfAction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Contributors" type="incident:ContributorsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Contributors field specifies contributing actors for the CourseOfAction taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Course_Of_Action field specifies the actual CourseOfAction taken.
+
+						This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.0/course_of_action.xsd.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="JournalEntryType">
+		<xs:annotation>
+			<xs:documentation>The JournalEntryType is optional and provides journal notes for information discovered during the handling of the Incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="author" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Specifies the author of the JournalEntry note.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="time" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="COARequestedType">
+		<xs:complexContent>
+			<xs:extension base="incident:COATakenType">
+				<xs:attribute name="priority">
+					<xs:annotation>
+						<xs:documentation>Specifies a suggested level of priority to be applied to this requested COA.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ContributorsType">
+		<xs:sequence>
+			<xs:element name="Contributor" type="cyboxCommon:ContributorType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="COATimeType">
+		<xs:sequence>
+			<xs:element name="Start" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Start field specifies the time at which the CourseOfAction was begun.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="End" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The End field specifies the time at which the CourseOfAction was completed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LossEstimationType">
+		<xs:attribute name="amount">
+			<xs:annotation>
+				<xs:documentation>Specifies the estimated financial loss for the Incident.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="iso_currency_code">
+			<xs:annotation>
+				<xs:documentation>Specifies the ISO 4217 currency code if other than USD </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TotalLossEstimationType">
+		<xs:sequence>
+			<xs:element name="Initial_Reported_Total_Loss_Estimation" type="incident:LossEstimationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Initial_Reported_Total_Loss_Estimation field is optional and specifies the initially reported level of total estimated financial loss for the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Actual_Total_Loss_Estimation" type="incident:LossEstimationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Actual_Total_Loss_Estimation field is optional and specifies the actual level of total estimated financial loss for the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IndirectImpactSummaryType">
+		<xs:sequence>
+			<xs:element name="Loss_Of_Competitive_Advantage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Loss_Of_Competitive_Advantage field is optional and characterizes (at a high level) the level of impact based on loss of competitive advantage that occured in the Incident including loss/damage/exposure of IP, corporate wisdom, ability to compete, key personnel, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Brand_And_Market_Damage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Brand_And_Market_Damage field is optional and characterizes (at a high level) the level of impact based on brand or market damage that occured in the Incident including lost customers or partners, decrease in market value or share, advertising, rebranding, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Increased_Operating_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Increased_Operating_Costs field is optional and characterizes (at a high level) the level of impact based on increased operating costs that occured in the Incident including cost of additional audits, new hires or training, mandatory action, higher insurance, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Legal_And_Regulatory_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Legal_And_Regulatory_Costs field is optional and characterizes (at a high level) the level of impact based on legal and regulatory costs that occured in the Incident including legal fees, lawsuits, customer damages, contract violations, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DirectImpactSummaryType">
+		<xs:sequence>
+			<xs:element name="Asset_Losses" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Asset_Losses field is optional and characterizes (at a high level) the level of asset-related losses that occured in the Incident, including lost or damaged assets, stolen funds, cash outlays, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Business-Mission_Disruption" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Business-Mission_Disruption field is optional and characterizes (at a high level) the level of business or mission disruption impact that occured in the Incident including unproductive man-hours, lost revenue from system downtime, etc.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Response_And_Recovery_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Response_And_Recovery_Costs field is optional and characterizes (at a high level) the level of response and recovery related costs that occured in the Incident including cost of response, investigation, remediation, restoration, etc.	
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NatureOfSecurityEffectType">
+		<xs:sequence>
+			<xs:element name="Property_Affected" type="incident:PropertyAffectedType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Property_Affected field is optional and characterizes how a particular security property of the Asset was affected.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AssetTypeType">
+		<xs:simpleContent>
+			<xs:extension base="stixCommon:ControlledVocabularyStringType">
+				<xs:attribute name="count_affected">
+					<xs:annotation>
+						<xs:documentation>
+							This field specifies the number of assets of this type affected.
+						
+							This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AssetTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+							Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="HistoryItemType">
+		<xs:choice>
+			<xs:element name="Action_Entry" type="incident:COATakenType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Action_Entry field is optional and provides a record of actions taken during the handling of the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Journal_Entry" type="incident:JournalEntryType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Journal_Entry field is optional and provides journal notes for information discovered during the handling of the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="HistoryType">
+		<xs:sequence>
+			<xs:element name="History_Item" type="incident:HistoryItemType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The History_Item field provides a log entry of an event or action taken during the handling of the Incident. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedIncidentsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Incident" type="stixCommon:RelatedIncidentType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_Incident field identifies or characterizes another Incident related to this Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LeveragedTTPsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Leveraged_TTP" type="stixCommon:RelatedTTPType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Leveraged_TTP field specifies a single TTP asserted to be related to this cyber threat Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedObservablesType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_Observable field identifies or characterizes a cyber threat observable related to this Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIndicatorsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Indicator" type="stixCommon:RelatedIndicatorType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_Indicator field identifies or characterizes a cyber threat Indicator related to this Incident. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AttributedThreatActorsType">
+		<xs:annotation>
+			<xs:documentation>The AttributedThreatActorsType specifies a Threat Actor asserted to be attributed for this Incident.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Threat_Actor" type="stixCommon:RelatedThreatActorType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Threat_Actor field specifies details of a Threat Actor asserted to be attributed for this Incident.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AffectedAssetsType">
+		<xs:sequence>
+			<xs:element name="Affected_Asset" type="incident:AffectedAssetType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Affected_Asset field is optional and characterizes a particular asset affected during the Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TimeType">
+		<xs:sequence>
+			<xs:element name="First_Malicious_Action" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The First_Malicious_Action field specifies the time that the first malicious action related to this Incident occured.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Initial_Compromise" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Initial_Compromise field specifies the time that the initial compromise occured for this Incident.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="First_Data_Exfiltration" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The First_Data_Exfiltration field specifies the first time at which non-public data was taken from the victim environment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Incident_Discovery" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Incident_Discovery field specifies the first time at which the organization learned the incident had occurred.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Incident_Opened" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Incident_Opened field specifies the time at which the Incident was officially opened.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Containment_Achieved" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Containment_Achieved field specifies the first time at which the incident is contained (e.g., the “bleeding is stopped”).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Restoration_Achieved" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Restoration_Achieved field specifies the first time at which the incident's assets are restored (e.g., fully functional)”.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Incident_Reported" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Incident_Reported field specifies the time at which the Incident was reported.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Incident_Closed" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Incident_Closed field specifies the time at which the Incident was officially closed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CategoriesType">
+		<xs:annotation>
+			<xs:documentation>Represents a list of incident categories that an incident is tagged with.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Category" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Represents a single category that this incident is tagged with.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentCategoryVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EffectsType">
+		<xs:annotation>
+			<xs:documentation>Represents a list of incident effects that an incident is tagged with.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Effect" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Represents a single effect that this incident is tagged with.
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

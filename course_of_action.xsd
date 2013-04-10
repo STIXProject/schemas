@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" targetNamespace="http://stix.mitre.org/CourseOfAction-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX COA</schema>
+			<version>1.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - COA - Schematic implementation for the CourseOfAction construct within the STIX structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+	<xs:element name="Course_Of_Action" type="coa:CourseOfActionType">
+		<xs:annotation>
+			<xs:documentation>The CourseOfAction field characterizes a Course of Action to be taken in regards to one of more cyber threats. NOTE: This construct is still in its early stages of maturity and will require a good deal of review and refinement.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="CourseOfActionType">
+		<xs:annotation>
+			<xs:documentation>The CourseOfActionType characterizes a Course of Action to be taken in regards to one of more cyber threats. NOTE: This construct is still in its early stages of maturity and will require a good deal of review and refinement.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:CourseOfActionBaseType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Title field provides a simple title for this CourseOfAction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Stage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Reponse).
+							
+								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Type field specifies the type of this CourseOfAction.
+							
+								This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description element is optional and enables a generalized but structured description of this CourseOfAction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Objective" type="coa:ObjectiveType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Objective field characterizes the objective of this CourseOfAction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Structured_COA" type="coa:StructuredCOAType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Structured_COA field enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.
+
+								This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. This type is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Impact" type="stixCommon:StatementType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Impact field characterizes the estimated impact of applying this CourseOfAction.
+
+								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Cost" type="stixCommon:StatementType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Cost field characterizes the estimated cost for applying this CourseOfAction.
+
+								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Efficacy" type="stixCommon:StatementType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								The Efficacy field characterizes the effectiveness of this CourseOfAction in achieving its targeted Objective.
+
+								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this COA. The valid marking scope is the nearest CourseOfActionBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="version" type="coa:CourseOfActionVersionType" default="1.0">
+					<xs:annotation>
+						<xs:documentation>Specifies the relevant STIX-COA schema version for this content.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!---->
+	<xs:simpleType name="CourseOfActionVersionType">
+		<xs:annotation>
+			<xs:documentation>An enumeration of all versions of the Course of Action type valid in the current release of STIX.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="StructuredCOAType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>
+				The StructuredCOAType enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation. 
+
+				This type is defined as an abstract type and is intended to be extended using the XML Schema extension mechanism to allow for the expression of a variety of structured COA types. Instance documents representing structured COAs use the xsi:type attribute to specify which implementation of this type they wish to use.
+
+				STIX has provided one implementation to allow for the passing of proprietary or externally defined structured courses of action in a CDATA block. This implementation is captured in the Generic Structured COA extension, which provides the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. The extension is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic.xsd.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this StructuredCOA.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this StructuredCOA specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ObjectiveType">
+		<xs:annotation>
+			<xs:documentation>The ObjectiveType characterizes the objective of this CourseOfAction.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description element is optional and enables a generalized description of the objective of this CourseOfAction.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Applicability_Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Applicability_Confidence field characterizes the level of confidence held in the applicability of this suggested COA for its targeted Objective.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

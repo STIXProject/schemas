@@ -1,0 +1,21 @@
+<!--
+	Data Marking/Handling Usage Snippet - NOT INTENDED TO VALIDATE
+	
+	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+    The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
+    
+	This snippet demonstrates how users should use data markings to represent handling requirements. It includes two sets of markings.
+-->
+
+<!-- This XML Snippet is NOT intended to validate -->
+<indicator:Handling>
+	<marking:Marking id="example:Marking-88501eee-135a-429b-9848-9a992456bd91" version="0.5">
+		<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
+		<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="GREEN"/>
+	</marking:Marking>
+	<marking:Marking id="example:Marking-d50a3e6b-142e-4b8e-92ab-2bb61a273d61" version="0.5">
+		<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//indicator:SuggestedCOAs/indicator:SuggestedCOA/stixCommon:Course_Of_Action[@id="example:COA-e46d2565-754e-4ac3-9f44-2de1bfb1e71d"]</marking:Controlled_Structure>
+		<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="RED"/>
+	</marking:Marking>
+</indicator:Handling>
+<!-- This XML Snippet is NOT intended to validate -->

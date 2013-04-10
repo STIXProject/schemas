@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://data-marking.mitre.org/Marking-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The Data Marking XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>Data Marking</schema>
+			<version>1.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Data_Marking - Schematic implementation for an independent, flexible, structured data marking expression.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the Data Marking Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<xs:complexType name="MarkingType">
+		<xs:annotation>
+			<xs:documentation>MarkingType specifies a structure for marking information to be applied to portions of XML content.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Marking" type="marking:MarkingSpecificationType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This field contains specification of marking information to be applied to portions of XML content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MarkingStructureType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>
+				The MarkingStructureType contains the marking information to be applied to a portion of XML content.
+				
+				This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. STIX provides two options: Simple, and TLP.Additionally, those who wish to use another format may do so by defining a new extension to this type. The information for the STIX-provided extensions is:
+				
+				1. Simple: The Simple marking structures allows for the specification of unstructured statements through the use of a string field. The type is named SimpleMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 namespace. The extension is defined in the file extensions/marking/simple_marking.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/simple_marking/1.0/simple_marking.xsd.
+				
+				2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 namespace. The extension is defined in the file extensions/marking/tlp.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp.xsd.	
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="marking_model_name" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>This field specifies the name of the marking model to be applied within this Marking_Structure.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="marking_model_ref" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>This field contains a reference to an authoritative source on the marking model to be applied within this Marking_Structure.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="MarkingSpecificationType">
+		<xs:sequence>
+			<xs:element name="Controlled_Structure" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.
+						
+						The XPath expression is NOT recursive and the marking structure does NOT apply to child nodes of the selected node. Instead, the expression must explicitly select all nodes that the marking is to be applied to including elements, attributes, and text nodes.
+						
+						The context root of the XPath statement is this Controlled_Structure element. Any namespace prefix declarations that are available to this Controlled_Structure element are available to the XPath.
+						
+						Note that all Controlled_Structure elements have a scope within the document for which their XPath is valid to reference.
+						Usages of MarkingType may specify a "marking scope". The marking scope is always recursive and specifies the set of nodes that may be selected by the XPath expression (and therefore that may have the markings applied to them). If no marking scope is specified in the schema documentation or specification where the MarkingType is used, it should be assumed that the document itself and all nodes are within scope.
+						</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This field contains the marking information to be applied to the portions of XML content specified in the ControlledStructure field. This field is defined as MarkingStructureType which is an abstract type the enables the flexibility to utilize any variety of marking structures.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Marking.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID of a Marking defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="version" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Specifies the relevant Data_Marking schema version for this content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

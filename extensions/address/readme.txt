@@ -1,0 +1,1 @@
+The default type for representing addresses is CIQAddress3.0InstanceType in ciq_address_3.0.xsd.

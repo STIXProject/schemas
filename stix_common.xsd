@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/common-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="English">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX Common</schema>
+			<version>1.0</version>
+			<date>04/08/2013 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - Common - Schematic implementation for the common types of a structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://cybox.mitre.org/common-2" schemaLocation="cybox/cybox_common.xsd"/>
+	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
+	<xs:complexType name="InformationSourceType">
+		<xs:annotation>
+			<xs:documentation>The InformationSourceType details the source of a given data entry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Identity field is optional and specifies the identity of the information source.
+
+						This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.0/ciq_identity.xsd.
+				
+						Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Contributors" type="stixCommon:ContributorsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Contributors field is optional and enables description of the individual contributors involved in this instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Time" type="cyboxCommon:TimeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Time element is optional and enables description of various time-related attributes for this instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tools" type="cyboxCommon:ToolsInformationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Tools element is optional and enables description of the tools utilized for this instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="References" type="stixCommon:ReferencesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The References field is optional and enables specification of references to information source material for this instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="ConfidenceType">
+		<xs:annotation>
+			<xs:documentation>The ConfidenceType specifies a level of Confidence held in some assertion.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Specifies the level of confidence held in this direct assertion.
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides a description of the confidence value and how it was derived.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Source field specifies the source of this confidence assertion. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.
+						
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Confidence_Assertion_Chain" type="stixCommon:ConfidenceAssertionChainType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Confidence_Assertion_Chain field specifies a set of related confidence levels in this assertion along with who made them, when they were made and how they were made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies the time of this Confidence assertion.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="ActivityType" abstract="true">
+		<xs:sequence>
+			<xs:element name="Date_Time">
+				<xs:annotation>
+					<xs:documentation>The Date_Time field specifies the date and time at which the activity occured.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides a description of the activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="KillChainsType">
+		<xs:sequence>
+			<xs:element name="Kill_Chain" type="stixCommon:KillChainType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This field specifies a single kill chain definition for reference within specific TTP entries, Indicators and elsewhere.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KillChainType">
+		<xs:annotation>
+			<xs:documentation>The KillChainType characterizes a specific Kill Chain definition for reference within specific TTP entries, Indicators and elsewhere.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kill_Chain_Phase" type="stixCommon:KillChainPhaseType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This field specifies the name of an individual phase within this kill chain definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>A globally unique identifier for this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>A descriptive name for this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="definer">
+			<xs:annotation>
+				<xs:documentation>The organization or individual responsible for this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="reference" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>A resource reference for this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="number_of_phases">
+			<xs:annotation>
+				<xs:documentation>The number of phases in this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="KillChainPhaseType">
+		<xs:annotation>
+			<xs:documentation>The KillChainPhaseType characterizes an individual phase within a kill chain definition.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="phase_id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>This field specifies the ID for the relevant kill chain phase.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>This field specifies the descriptive name of the relevant kill chain phase.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ordinality" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>This field specifies the ordinality (e.g. 1, 2 or 3) of this phase within this kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="KillChainPhasesReferenceType">
+		<xs:sequence>
+			<xs:element name="Kill_Chain_Phase" type="stixCommon:KillChainPhaseReferenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Kill_Chain_Phase field specifies a single Kill Chain phase associated with this item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KillChainPhaseReferenceType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:KillChainPhaseType">
+				<xs:attribute name="kill_chain_id" type="xs:QName">
+					<xs:annotation>
+						<xs:documentation>This field specifies the ID for the relevant defined kill chain.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="kill_chain_name" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>This field specifies the descriptive name of the relevant kill chain.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="IdentityType">
+		<xs:annotation>
+			<xs:documentation>
+				The IdentityType is used to express identity information for both individuals and organizations.
+				
+				This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.
+				
+				Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field of this type.			
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Name field allows for expression of an identity through a simple name.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Related_Identities" type="stixCommon:RelatedIdentitiesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Related_Identities field identifies other entity Identities related to this entity Identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Identity.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to a unique ID defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- Relationships -->
+	<xs:complexType name="GenericRelationshipListType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Allows the expression of a list of relationships between STIX components. It's extended throughout STIX and should not be used directly. </xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="scope" type="stixCommon:RelationshipScopeEnum" default="exclusive">
+			<xs:annotation>
+				<xs:documentation>Indicates how multiple related items should be interpreted in this relationship. If "inclusive" is specified, then a single conceptual relationship is being defined between the subject and the collection of objects indicated by the related items (i.e. the relationship is not necessarily relevant for any one particular object being referenced, but for the aggregated collection of objects referenced). If "exclusive" is specified, then multiple relationships are being defined between the specific subject and each object individually. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="RelationshipScopeEnum">
+		<xs:annotation>
+			<xs:documentation>ScopeEnum is an enumeration of potential assertions on how a group of relationships should be treated.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="inclusive">
+				<xs:annotation>
+					<xs:documentation>A single relationship is being defined between the subject and the collection of objects indicated by the related items.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exclusive">
+				<xs:annotation>
+					<xs:documentation>Multiple relationships are being defined between the specific subject and each object individually.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="GenericRelationshipType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Allows the expression of relationships between STIX components. It is extended by each component relationship type to add the component itself.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The confidence field specifies the level of confidence in the assertion of the relationship between the two components.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Information_Source field specifies the source of the information about the relationship between the two components.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Relationship" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The relationship field characterizes the type of the relationship between the two components.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedCampaignType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a campaign.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Campaign" type="stixCommon:CampaignBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related campaign.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://stix.mitre.org/Campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://stix.mitre.org/XMLSchema/campaign/1.0/campaign.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedCourseOfActionType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a course of action.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference or representation of the related course of action.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.0/course_of_action.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedExploitTargetType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an exploit target.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Exploit_Target" type="stixCommon:ExploitTargetBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related exploit target.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ExploitTargetType in the http://stix.mitre.org/ExploitTarget-1 namespace. This type is defined in the exploit_target.xsd file or at the URL http://stix.mitre.org/XMLSchema/exploit_target/1.0/exploit_target.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIncidentType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Incident" type="stixCommon:IncidentBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related incident.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://stix.mitre.org/Incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://stix.mitre.org/XMLSchema/incident/1.0/incident.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIndicatorType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an indicator.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Indicator" type="stixCommon:IndicatorBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related indicator.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://stix.mitre.org/Indicator-2 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.0/indicator.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedObservableType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a cyber observable.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Observable" type="cybox:ObservableType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A reference to or representation of the related cyber observable.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedThreatActorType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Threat_Actor" type="stixCommon:ThreatActorBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference or representation of the related threat actor.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.0/threat_actor.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedTTPType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an TTP.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="TTP" type="stixCommon:TTPBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related TTP.
+
+								This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://stix.mitre.org/TTP-1 namespace. This type is defined in the ttp.xsd file or at the URL http://stix.mitre.org/XMLSchema/ttp/1.0/ttp.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIdentityType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an Identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								A reference to or representation of the related Identity.
+
+								This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- End of relationships -->
+	<!---->
+	<!--The following are a set of base, stub types defined for the decoupling of the different STIX component schemas. Each individual component schema type is defined as an extension of the relevant base type defined here. Inline usages of the main component structures will leverage these base types and instance content can simply include that structured content with the appropriate xsi:type reference. Alternatively, instances can use the base types themselves to reference using the @idref attribute -->
+	<xs:complexType name="IndicatorBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Indicator component. It is extended using the XML Schema Extension feature by the STIX Indicator type itself. Users of this type who wish to express a full indicator using STIX must do so using the xsi:type extension feature. The STIX-defined Indicator type is IndicatorType in the http://stix.mitre.org/Indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/1.2/indicator.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to an indicator defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName" use="optional">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Indicator.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID of an Indicator specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="IncidentBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Incident component. It is extended using the XML Schema Extension feature by the STIX Incident type itself. Users of this type who wish to express a full incident using STIX must do so using the xsi:type extension feature. The STIX-defined Incident type is IncidentType in the http://stix.mitre.org/Incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://stix.mitre.org/XMLSchema/incident/1.0/incident.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to an incident defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this cyber threat Incident.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat Incident specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TTPBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX TTP component. It is extended using the XML Schema Extension feature by the STIX TTP type itself. Users of this type who wish to express a full TTP using STIX must do so using the xsi:type extension feature. The STIX-defined TTP type is TTPType in the http://stix.mitre.org/TTP-1 namespace. This type is defined in the ttp.xsd file or at the URL http://stix.mitre.org/XMLSchema/ttp/1.0/ttp.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to a TTP defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this TTP item. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a TTP item specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ExploitTargetBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Exploit Target component. It is extended using the XML Schema Extension feature by the STIX Exploit Target type itself. Users of this type who wish to express a full exploit target using STIX must do so using the xsi:type extension feature. The STIX-defined Exploit Target type is ExploitTargetType in the http://stix.mitre.org/ExploitTarget-1 namespace. This type is defined in the exploit_target.xsd file or at the URL http://stix.mitre.org/XMLSchema/exploit_target/1.0/exploit_target.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to an exploit target defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this ExploitTarget. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of an ExploitTarget specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="CourseOfActionBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Course of Action component. It is extended using the XML Schema Extension feature by the STIX Course of Action type itself. Users of this type who wish to express a full course of action using STIX must do so using the xsi:type extension feature. The STIX-defined Course of Action type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.0/course_of_action.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to a course of action defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this COA. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a COA specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="CampaignBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Campaign component. It is extended using the XML Schema Extension feature by the STIX Campaign type itself. Users of this type who wish to express a full campaign using STIX must do so using the xsi:type extension feature. The STIX-defined Campaign type is CampaignType in the http://stix.mitre.org/Campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://stix.mitre.org/XMLSchema/campaign/1.0/campaign.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to a campaign defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this cyber threat Campaign.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat Campaign specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ThreatActorBaseType">
+		<xs:annotation>
+			<xs:documentation>
+				This type represents the STIX Threat Actor component. It is extended using the XML Schema Extension feature by the STIX Threat Actor type itself. Users of this type who wish to express a full threat actor using STIX must do so using the xsi:type extension feature. The STIX-defined Threat Actor type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.0/threat_actor.xsd.
+
+				Alternatively, uses that require simply specifying an idref as a reference to a threat actor defined elsewhere can do so without specifying an xsi:type.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this ThreatActor. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a ThreatActor specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- End of component base types -->
+	<xs:complexType name="ExploitTargetsType">
+		<xs:sequence>
+			<xs:element name="Exploit_Target" type="stixCommon:ExploitTargetBaseType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The Exploit_Target field characterizes a potential vulnerability, weakness or configuration target for exploitation.
+
+						This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ExploitTargetType in the http://stix.mitre.org/ExploitTarget-1 namespace. This type is defined in the exploit_target.xsd file or at the URL http://stix.mitre.org/XMLSchema/exploit_target/1.0/exploit_target.xsd.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressAbstractType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>
+				The AddressAbstractType is used to express geographic address information.
+				
+				This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address_3.0/1.0/ciq_address_3.0.xsd.	
+			</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="ContributorsType">
+		<xs:sequence>
+			<xs:element name="Contributor" type="stixCommon:IdentityType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						This field contains information describing the identity, resources and timing of involvement for a single contributor.
+
+						This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.0/ciq_identity.xsd.
+				
+						Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReferencesType">
+		<xs:sequence>
+			<xs:element name="Reference" type="xs:anyURI" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Reference field is optional and enables specification of a reference to an information source material.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedIdentitiesType">
+		<xs:sequence>
+			<xs:element name="Related_Identity" type="stixCommon:RelatedIdentityType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Related_Identity field identifies a single other entity Identity related to this entity Identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ConfidenceAssertionChainType">
+		<xs:sequence>
+			<xs:element name="Confidence_Assertion" type="stixCommon:ConfidenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Confidence_Assertion field specifies a related confidence level in this assertion along with who made it, when it was made and how it was made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StatementType">
+		<xs:annotation>
+			<xs:documentation>
+				StatementType allows the expression of a statement with an associated value, description, source, confidence, and timestamp.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						Specifies a value characterizing the statement within some vocabulary.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary may be provided by the field using this construct. If that's the case, the schema annotations on that element will describe which vocabulary to use. If not, the default vocabulary is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd .
+
+						Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specifies a prose description of the statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						The Source field captures the source of this statement. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.
+					
+						This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.					
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Confidence field characterizes the level of confidence held in the statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies the time this statement was asserted.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="StructuredTextType">
+		<xs:annotation>
+			<xs:documentation>The StructuredTextType is a type representing a generalized structure for capturing structured or unstructured textual information such as descriptions of things. It mirrors a similar type in CybOX 2.0</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="structuring_format" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the CybOX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EncodedCDATAType">
+		<xs:annotation>
+			<xs:documentation>
+				This type is used to represent data in an XML CDATA block. Data in a CDATA block may either be represented as-is or, in cases where it may contain characters that are not valid in CDATA, it may be encoded in Base64 per RFC4648. Data encoded in Base64 must be denoted as such using the encoded attribute.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="encoded" type="xs:boolean" default="false">
+					<xs:annotation>
+						<xs:documentation>If true, specifies that the content encoded in the element is encoded using Base64 per RFC4648.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ControlledVocabularyStringType">
+		<xs:annotation>
+			<xs:documentation>The ControlledVocabularyStringType is used as the basis for defining controlled vocabularies.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:attribute name="vocab_name" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>The vocab_name field specifies the name of the controlled vocabulary.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional">
+					<xs:annotation>
+						<xs:documentation>The vocab_reference field specifies the URI to the location of where the controlled vocabulary is defined, e.g., in an externally located XML schema file.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
