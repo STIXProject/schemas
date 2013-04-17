@@ -1,0 +1,43 @@
+<cybox:Observables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        
+xmlns:cybox="http://cybox.mitre.org/cybox-2" 
+xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
+xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" 
+xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" 
+xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"                 
+xsi:schemaLocation="     
+http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
+http://cybox.mitre.org/common-2 ../../cybox/cybox_common.xsd  
+http://cybox.mitre.org/objects#AddressObject-2 ../../cybox/objects/Address_Object.xsd
+http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
+http://cybox.mitre.org/objects#EmailMessageObject-2 ../../cybox/objects/Email_Message_Object.xsd 
+http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd" 
+  cybox_minor_version="0" cybox_major_version="1">
+  
+<cybox:Observable id="cybox:observable-pattern-5f1dedd3-ece3-4007-94cd-7d52784c1474">
+         <cybox:Object id="cybox:object-3a7aa9db-d082-447c-a422-293b78e24238">
+                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                    <EmailMessageObj:Header>
+                        <EmailMessageObj:From category="e-mail">
+                            <AddressObj:Address_Value condition="Contains">@state.gov</AddressObj:Address_Value>
+                        </EmailMessageObj:From>
+                    </EmailMessageObj:Header>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object>
+								 <cybox:Properties xsi:type="FileObj:FileObjectType">
+								   <FileObj:File_Extension>pdf</FileObj:File_Extension>
+								  <FileObj:Size_In_Bytes>87022</FileObj:Size_In_Bytes>
+								  <FileObj:Hashes>
+										<cyboxCommon:Hash>
+											 <cyboxCommon:Type>MD5</cyboxCommon:Type>
+											 <cyboxCommon:Simple_Hash_Value>cf2b3ad32a8a4cfb05e9dfc45875bd70</cyboxCommon:Simple_Hash_Value>
+										</cyboxCommon:Hash>
+								  </FileObj:Hashes>
+								 </cybox:Properties>
+								 <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+    </cybox:Observable>  
+</cybox:Observables>
