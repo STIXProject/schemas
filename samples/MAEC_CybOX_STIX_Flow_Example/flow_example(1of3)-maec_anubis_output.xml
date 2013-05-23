@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--MAEC 4.0 Anubis Sandbox Output for Zeus 1.x Sample
+    Represents Observed Behaviors for Sample
+    Part 1 of MAEC -> CybOX -> STIX Chain Example -->
+<maecPackage:MAEC_Package
+    xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
+    xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
+    xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+    xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
+    xmlns:WinExecutableFileObj="http://cybox.mitre.org/objects#WinExecutableFileObject-2"
+    xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
+    xmlns:WinPipeObj="http://cybox.mitre.org/objects#WinPipeObject-2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation=
+    "http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.0/maec_package_schema.xsd
+    http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.0/maec_default_vocabularies.xsd
+    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd 
+    http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
+    http://cybox.mitre.org/objects#WinPipeObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Pipe/2.0/Win_Pipe_Object.xsd
+    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0/Win_Registry_Key_Object.xsd
+    http://cybox.mitre.org/objects#WinExecutableFileObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Executable_File/2.0/Win_Executable_File_Object.xsd" 
+    id="maec-anubis_to_maec-pkg-1" schema_version="2.0">
+    <maecPackage:Malware_Subjects>
+        <maecPackage:Malware_Subject id="maec-anubis_to_maec-sub-1">
+            <maecPackage:Malware_Instance_Object_Attributes id="maec-anubis_to_maec-obj-1">
+                <cybox:Properties xsi:type="WinExecutableFileObj:WindowsExecutableFileObjectType">
+                    <FileObj:File_Name>1310603.a1.exe</FileObj:File_Name>
+                    <FileObj:File_Path>C:\1310603.a1.exe</FileObj:File_Path>
+                    <FileObj:Size_In_Bytes>52736</FileObj:Size_In_Bytes>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>a1a3eaf7dbef90d9ecf46fe375035429</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>817fa332b8280a2edda751ebe8dc8eeb24a7ec44</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                    <WinExecutableFileObj:Imports>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\ntdll.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>7C900000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\kernel32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>7C800000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\advapi32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77DD0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\RPCRT4.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77E70000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\Secur32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77FE0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\shlwapi.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77F60000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\GDI32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77F10000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\USER32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>7E410000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="false">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\msvcrt.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77C10000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\comctl32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>5D090000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\WS2HELP.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>71AA0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\ws2_32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>71AB0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\wsock32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>71AD0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\psapi.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>76BF0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\OLEAUT32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77120000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\wininet.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>771B0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\comctl32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>773D0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\ole32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>774E0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\CRYPT32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77A80000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\MSASN1.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>77B20000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                        <WinExecutableFileObj:Import delay_load="true">
+                            <WinExecutableFileObj:File_Name>C:\WINDOWS\system32\shell32.dll</WinExecutableFileObj:File_Name>
+                            <WinExecutableFileObj:Virtual_Address>7C9C0000</WinExecutableFileObj:Virtual_Address>
+                        </WinExecutableFileObj:Import>
+                    </WinExecutableFileObj:Imports>
+                </cybox:Properties>
+            </maecPackage:Malware_Instance_Object_Attributes>
+            <maecPackage:Analyses>
+                <maecPackage:Analysis id="maec-anubis_to_maec-ana-1" method="dynamic" type="triage">
+                    <maecPackage:Tools>
+                        <maecPackage:Tool id="maec-anubis_to_maec-tol-1">
+                            <cyboxCommon:Name>TTAnalyze</cyboxCommon:Name>
+                            <cyboxCommon:Vendor>ISECLab</cyboxCommon:Vendor>
+                            <cyboxCommon:Version>1.74.2857</cyboxCommon:Version>
+                        </maecPackage:Tool>
+                    </maecPackage:Tools>
+                    <maecPackage:Dynamic_Analysis_Metadata>
+                        <maecPackage:Command_Line>"C:\1310603.a1.exe"</maecPackage:Command_Line>
+                        <maecPackage:Exit_Code>0</maecPackage:Exit_Code>
+                    </maecPackage:Dynamic_Analysis_Metadata>
+                </maecPackage:Analysis>
+            </maecPackage:Analyses>
+            <maecPackage:Findings_Bundles>
+                <maecPackage:Bundle defined_subject="false" content_type="dynamic analysis tool output" timestamp="2012-07-31T13:28:57.082000" id="maec-anubis_to_maec-bnd-1" schema_version="4.0">
+                    <maecBundle:Collections>
+                        <maecBundle:Action_Collections>
+                            <maecBundle:Action_Collection name="File System Actions" id="maec-anubis_to_maec-actc-1">
+                                <maecBundle:Action_List>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-1">
+                                        <cybox:Name xsi:type="maecVocabs:FileActionNameVocab-1.0">create file</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-2">
+                                                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                                    <FileObj:File_Path fully_qualified="true">C:\WINDOWS\system32\twext.exe</FileObj:File_Path>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-2">
+                                        <cybox:Name xsi:type="maecVocabs:IPCActionNameVocab-1.0">read from named pipe</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-3">
+                                                <cybox:Properties xsi:type="WinPipeObj:WindowsPipeObjectType" named="true">
+                                                    <PipeObj:Name>lsarpc</PipeObj:Name>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-3">
+                                        <cybox:Name xsi:type="maecVocabs:FileActionNameVocab-1.0">modify file</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-4">
+                                                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                                    <FileObj:File_Path fully_qualified="true">C:\WINDOWS\system32\twext.exe</FileObj:File_Path>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                </maecBundle:Action_List>
+                            </maecBundle:Action_Collection>
+                            <maecBundle:Action_Collection name="Registry Actions" id="maec-anubis_to_maec-actc-5">
+                                <maecBundle:Action_List>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-7">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">modify registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-8">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>software\microsoft\windows nt\currentversion\winlogon</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>userinit</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>C:\WINDOWS\system32\userinit.exe,C:\WINDOWS\system32\twext.exe,</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-8">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-9">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>SYSTEM\CurrentControlSet\Control\Session Manager</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>CriticalSectionTimeout</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>2592000</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-9">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-10">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>SYSTEM\Setup</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>SystemSetupInProgress</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>0</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>                                                    
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-10">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object  id="maec-anubis_to_maec-obj-11">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>Software\Policies\Microsoft\Windows\Safer\CodeIdentifiers</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>TransparentEnabled</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>1</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-11">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-12">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>System\CurrentControlSet\Control\ComputerName\ActiveComputerName</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>ComputerName</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>PC</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-12">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-13">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>System\CurrentControlSet\Control\Terminal Server</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>TSUserEnabled</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>0</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                    <maecBundle:Action action_status="Success" context="Host" id="maec-anubis_to_maec-act-13">
+                                        <cybox:Name xsi:type="maecVocabs:RegistryActionNameVocab-1.0">read registry key value</cybox:Name>
+                                        <cybox:Associated_Objects>
+                                            <cybox:Associated_Object id="maec-anubis_to_maec-obj-14">
+                                                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                                                    <WinRegistryKeyObj:Key>software\microsoft\windows nt\currentversion\winlogon</WinRegistryKeyObj:Key>
+                                                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                                                    <WinRegistryKeyObj:Values>
+                                                        <WinRegistryKeyObj:Value>
+                                                            <WinRegistryKeyObj:Name>userinit</WinRegistryKeyObj:Name>
+                                                            <WinRegistryKeyObj:Data>C:\WINDOWS\system32\userinit.exe,</WinRegistryKeyObj:Data>
+                                                        </WinRegistryKeyObj:Value>
+                                                    </WinRegistryKeyObj:Values>
+                                                </cybox:Properties>
+                                                <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">input</cybox:Association_Type>
+                                            </cybox:Associated_Object>
+                                        </cybox:Associated_Objects>
+                                    </maecBundle:Action>
+                                </maecBundle:Action_List>
+                            </maecBundle:Action_Collection>
+                        </maecBundle:Action_Collections>
+                    </maecBundle:Collections>
+                </maecPackage:Bundle>
+            </maecPackage:Findings_Bundles>
+        </maecPackage:Malware_Subject>
+    </maecPackage:Malware_Subjects>
+</maecPackage:MAEC_Package>
+    

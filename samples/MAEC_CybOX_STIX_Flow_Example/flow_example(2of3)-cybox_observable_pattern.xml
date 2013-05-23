@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CybOX Observable Pattern Derived from MAEC Output
+    Specifies pattern representing artifacts associated with a known zeus instantiation/persistence behavior:
+    1) Existence of a file with a particular name in WINDOWS\system32\ directory
+    2) Existence of said file in Winlogon\Userinit Registry key value for persistence after reboot
+    Part 2 of MAEC -> CybOX -> STIX Chain Example -->
+<cybox:Observables xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+ xmlns:cybox="http://cybox.mitre.org/cybox-2"
+ xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+ xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:example="http://example.com/"
+ xsi:schemaLocation="http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
+ http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0/File_Object.xsd
+ http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0/Win_Registry_Key_Object.xsd"
+ cybox_major_version="2" 
+ cybox_minor_version="0">
+   <cybox:Observable id="example:f6bb0360-46ac-49b9-9ca1-9008e937ea24">
+       <cybox:Observable_Composition operator="AND">
+          <cybox:Observable>
+             <cybox:Object id="example:ca588488-5900-401e-b02f-0080d83e2472">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                   <FileObj:File_Path condition="Contains" fully_qualified="false">system32\twext.exe</FileObj:File_Path>
+                </cybox:Properties>
+             </cybox:Object>
+          </cybox:Observable>
+          <cybox:Observable>
+             <cybox:Object id="example:b1fc168c-c9be-4b4a-925e-206b9afed76a">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                   <WinRegistryKeyObj:Key condition="Equals">Software\Microsoft\Windows NT\CurrentVersion\Winlogon</WinRegistryKeyObj:Key>
+                   <WinRegistryKeyObj:Hive condition="Equals">HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                   <WinRegistryKeyObj:Values>
+                      <WinRegistryKeyObj:Value>
+                         <WinRegistryKeyObj:Name condition="Equals">Userinit</WinRegistryKeyObj:Name>
+                         <WinRegistryKeyObj:Data condition="Contains">system32\twext.exe</WinRegistryKeyObj:Data>
+                      </WinRegistryKeyObj:Value>
+                   </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+             </cybox:Object>
+          </cybox:Observable>
+       </cybox:Observable_Composition>
+    </cybox:Observable>
+</cybox:Observables>
