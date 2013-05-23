@@ -11,25 +11,22 @@ xmlns:DNSRecordObj="http://cybox.mitre.org/objects#DNSRecordObject-2"
 xmlns:DNSQueryObj="http://cybox.mitre.org/objects#DNSQueryObject-2"
 xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"        
 xsi:schemaLocation="
-http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
-http://cybox.mitre.org/common-2 ../../cybox/cybox_common.xsd  
-http://cybox.mitre.org/objects#AddressObject-2 ../../cybox/objects/Address_Object.xsd
-http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
-http://cybox.mitre.org/objects#URIObject-2 ../../cybox/objects/URI_Object.xsd
-http://cybox.mitre.org/objects#EmailMessageObject-2 ../../cybox/objects/Email_Message_Object.xsd 
-http://cybox.mitre.org/objects#ArtifactObject-2 ../../cybox/objects/Artifact_Object.xsd
-http://cybox.mitre.org/objects#WhoisObject-2 ../../cybox/objects/Whois_Object.xsd
-http://cybox.mitre.org/objects#DNSRecordObject-2 ../../cybox/objects/DNS_Record_Object.xsd
-http://cybox.mitre.org/objects#DNSQueryObject-2 ../../cybox/objects/DNS_Query_Object.xsd
-http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
-http://cybox.mitre.org/objects#ArtifactObject http://cybox.mitre.org/XMLSchema/objects/Artifact/Artifact_Object_1.0.xsd      
-http://cybox.mitre.org/objects#WhoisObject http://cybox.mitre.org/XMLSchema/objects/Whois/Whois_Object_1.0.xsd        
-http://cybox.mitre.org/objects#DNSQueryObject http://cybox.mitre.org/XMLSchema/objects/DNS_Query/DNS_Query_Object_1.0.xsd        
-http://cybox.mitre.org/objects#DNSRecordObject http://cybox.mitre.org/XMLSchema/objects/DNS_Record/DNS_Record_Object_1.1.xsd" 
+http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
+http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.0/cybox_common.xsd
+http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.0/Address_Object.xsd
+http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0/File_Object.xsd
+http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.0/URI_Object.xsd
+http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.0/Email_Message_Object.xsd 
+http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0/Artifact_Object.xsd
+http://cybox.mitre.org/objects#WhoisObject-2 http://cybox.mitre.org/XMLSchema/objects/Whois/2.0/Whois_Object.xsd
+http://cybox.mitre.org/objects#DNSRecordObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Record/2.0/DNS_Record_Object.xsd
+http://cybox.mitre.org/objects#DNSQueryObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Query/2.0/DNS_Query_Object.xsd
+http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd
+" 
   cybox_minor_version="0" cybox_major_version="1">
   
     <cybox:Observable id="cybox:observable-6f45ce72-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:object-6dc7fc5a-30c8-11e2-8011-000c291a73d5">
+            <cybox:Object id="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0">
                 <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
                     <EmailMessageObj:Header>
                         <EmailMessageObj:To>
@@ -91,29 +88,30 @@ MIME-Version: 1.0
                         <EmailMessageObj:File  object_reference="cybox:object-6dcae276-30c8-11e2-8011-000c291a73d5"/>
                 </EmailMessageObj:Attachments>
                 <EmailMessageObj:Links>
-								<EmailMessageObj:Link object_reference="cybox:guid-6dcb5fda-30c8-11e2-8011-000c291a73d5"/>
-								<EmailMessageObj:Link object_reference="cybox:guid-6ec9050e-30c8-11e2-8011-000c291a73d5"/>
+								<EmailMessageObj:Link object_reference="cybox:object-6dcb5fda-30c8-11e2-8011-000c291a73d5"/>
+								<EmailMessageObj:Link object_reference="cybox:object-6ec9050e-30c8-11e2-8011-000c291a73d5"/>
 				</EmailMessageObj:Links>
                 </cybox:Properties>
                 
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:object-6dcae276-30c8-11e2-8011-000c291a73d5">
+                    <cybox:Related_Object idref="cybox:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f">
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object><!-- File  -->
                     <cybox:Related_Object idref="cybox:object-afb6205d-4db6-44de-98d7-37a32ee4b012">
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object><!-- Artifact  -->
-                    <cybox:Related_Object idref="cybox:guid-6dcb5fda-30c8-11e2-8011-000c291a73d5">
+                    <cybox:Related_Object idref="cybox:object-1ba9f939-0c5a-421e-b59d-f8a6517f9018">
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object><!-- URL  -->
-                    <cybox:Related_Object idref="cybox:guid-6ec9050e-30c8-11e2-8011-000c291a73d5">
+                    <cybox:Related_Object idref="cybox:object-fa7efe7f-e1b4-45de-ba7e-c6a7d625c9d8">
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object><!-- URL  -->
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>  
   
-  <cybox:Observable id="cybox:observable-14ee6790-b83d-44f1-8604-92271efac9bf">
+	<!-- Artifact (raw attachment)-->
+	 <cybox:Observable id="cybox:observable-14ee6790-b83d-44f1-8604-92271efac9bf">
 				<cybox:Object id="cybox:object-afb6205d-4db6-44de-98d7-37a32ee4b012">
 					<cybox:Properties xsi:type="Artifact:ArtifactObjectType" type="File" content_type="application/pdf">
 						<Artifact:Hashes>
@@ -130,15 +128,19 @@ MIME-Version: 1.0
 						</Artifact:Raw_Artifact>
 					</cybox:Properties>
 					<cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:object-6dcae276-30c8-11e2-8011-000c291a73d5"><!-- File  -->
+                    <cybox:Related_Object idref="cybox:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f"><!-- File  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterized_By</cybox:Relationship>
                     </cybox:Related_Object>
+                    <cybox:Related_Object idref="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email  -->
+							<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
+					</cybox:Related_Object>
                 </cybox:Related_Objects>
 				</cybox:Object>
 	 </cybox:Observable>
   
-    <cybox:Observable id="cybox:observable-6f45edbc-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:object-6dcae276-30c8-11e2-8011-000c291a73d5">
+	<!-- FIle Attachment  -->
+    <cybox:Observable id="cybox:observable-0a41ab04-f6ca-4bc7-93e1-0efbad2119da">
+            <cybox:Object id="cybox:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f">
                 <cybox:Properties xsi:type="FileObj:FileObjectType">
                     <FileObj:File_Name>Joint_Statement.pdf</FileObj:File_Name>
                     <FileObj:File_Extension>pdf</FileObj:File_Extension>
@@ -151,7 +153,7 @@ MIME-Version: 1.0
                     </FileObj:Hashes>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:object-6dc7fc5a-30c8-11e2-8011-000c291a73d5"><!-- Email Message  -->
+                    <cybox:Related_Object idref="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email Message  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
                     <cybox:Related_Object idref="cybox:object-afb6205d-4db6-44de-98d7-37a32ee4b012"><!-- Artifact  -->
@@ -161,61 +163,64 @@ MIME-Version: 1.0
             </cybox:Object>
     </cybox:Observable>  
   
-    <cybox:Observable id="cybox:observable-6f45f0aa-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6dcb5fda-30c8-11e2-8011-000c291a73d5">
+    <!-- Link URL (http://www.state.gov/public/01aff0dc/Joint_Statement.pdf)  -->
+    <cybox:Observable id="cybox:observable-524048ee-9af0-4bb7-824e-52e1ce71ebd3">
+            <cybox:Object id="cybox:object-1ba9f939-0c5a-421e-b59d-f8a6517f9018">
                 <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
                     <URIObj:Value>http://www.state.gov/public/01aff0dc/Joint_Statement.pdf</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:object-6dc7fc5a-30c8-11e2-8011-000c291a73d5"><!-- Email Message  -->
+                    <cybox:Related_Object idref="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email Message  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>  
   
-    <cybox:Observable id="cybox:observable-6f45e4fc-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5">
+	<!-- Extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-6e98b56a-41b8-4c52-b5ae-6ac86e968b93">
+            <cybox:Object id="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3">
                 <cybox:Properties xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
                     <URIObj:Value>state.gov</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6eba12f6-30c8-11e2-8011-000c291a73d5"><!-- WHOIS  -->
+                    <cybox:Related_Object idref="cybox:object-03d041dd-21f7-4b70-a2be-d4abedf2503b"><!-- WHOIS  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6eba1dc8-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-bea8273c-3b4d-409f-880e-c53c64f8a05c"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cb36-30c8-11e2-8011-000c291a73d5"><!-- DNS Record  -->
+                    <cybox:Related_Object idref="cybox:object-4c9bad1b-e4ac-4b3e-9e28-fbf03b73613c"><!-- DNS Record  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterized_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1c8de-30c8-11e2-8011-000c291a73d5"><!-- IP Address  -->
+                    <cybox:Related_Object idref="cybox:object-f686e94e-d7ff-48b1-a1c3-0f5e8b8d59c1"><!-- IP Address  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cdf2-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-c1849f06-d433-4ef8-bcfa-a516a008c8d4"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec8ffaa-30c8-11e2-8011-000c291a73d5"><!-- DNS Record -->
+                    <cybox:Related_Object idref="cybox:object-1f68760e-fa04-4730-936d-d3abcc4b365b"><!-- DNS Record -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterized_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec8fd2a-30c8-11e2-8011-000c291a73d5"><!-- IP Address  -->
+                    <cybox:Related_Object idref="cybox:object-428679c7-89c4-4d3a-9693-dd2beb617fb7"><!-- IP Address  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6dcb5fda-30c8-11e2-8011-000c291a73d5"><!-- URL  -->
+                    <cybox:Related_Object idref="cybox:object-1ba9f939-0c5a-421e-b59d-f8a6517f9018"><!-- URL  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Extracted_From</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6dcb5fda-30c8-11e2-8011-000c291a73d5"><!-- URL  -->
+                    <cybox:Related_Object idref="cybox:object-1ba9f939-0c5a-421e-b59d-f8a6517f9018"><!-- URL  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Sub-domain_Of</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>  
   
-    <cybox:Observable id="cybox:observable-6f45d6ce-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6eba12f6-30c8-11e2-8011-000c291a73d5">
+    <!-- WHOIS for extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-e43863e6-8c28-479d-a8cb-714521750365">
+            <cybox:Object id="cybox:object-03d041dd-21f7-4b70-a2be-d4abedf2503b">
                 <cybox:Properties xsi:type="WhoisObj:WhoisObjectType">
                     <WhoisObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
                         <URIObj:Value>state.gov</URIObj:Value>
@@ -223,15 +228,16 @@ MIME-Version: 1.0
                     <WhoisObj:Status><WhoisObj:Status>OK</WhoisObj:Status></WhoisObj:Status>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45d944-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6eba1dc8-30c8-11e2-8011-000c291a73d5">
+    <!-- Type A DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-58c11cce-aef1-467c-b2bf-051407a0c2ba">
+            <cybox:Object id="cybox:object-bea8273c-3b4d-409f-880e-c53c64f8a05c">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="true">
                     <DNSQueryObj:Question>
                         <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
@@ -241,22 +247,23 @@ MIME-Version: 1.0
                         <DNSQueryObj:QClass>IN</DNSQueryObj:QClass>
                     </DNSQueryObj:Question>
                     <DNSQueryObj:Answer_Resource_Records>
-                        <DNSQueryObj:Resource_Record xsi:type="DNSRecordObj:DNSRecordObjectType" object_reference="cybox:guid-6ec1cb36-30c8-11e2-8011-000c291a73d5"/>
+                        <DNSQueryObj:Resource_Record xsi:type="DNSRecordObj:DNSRecordObjectType" object_reference="cybox:object-6ec1cb36-30c8-11e2-8011-000c291a73d5"/>
                     </DNSQueryObj:Answer_Resource_Records>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cb36-30c8-11e2-8011-000c291a73d5"><!-- DNS Record  -->
+                    <cybox:Related_Object idref="cybox:object-4c9bad1b-e4ac-4b3e-9e28-fbf03b73613c"><!-- DNS Record  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Searched_For</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45f67c-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec1cb36-30c8-11e2-8011-000c291a73d5">
+    <!-- Returned DNS Record for Type A DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-8239d3ba-5f4e-4d3d-99cf-cc17ae99f9b5">
+            <cybox:Object id="cybox:object-4c9bad1b-e4ac-4b3e-9e28-fbf03b73613c">
                 <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
                     <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
                         <URIObj:Value>state.gov</URIObj:Value>
@@ -278,37 +285,39 @@ state.gov. 5 IN A 72.166.186.151
 ;ADDITIONAL</DNSRecordObj:Record_Data>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterizes</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6eba1dc8-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-bea8273c-3b4d-409f-880e-c53c64f8a05c"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Searched_For_By</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>    
     
-    <cybox:Observable id="cybox:observable-6f45dea8-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec1c8de-30c8-11e2-8011-000c291a73d5">
+    <!-- Resolved IP Address from Returned DNS Record for Type A DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-2b2b84e1-2d10-46d7-ab4a-6f71d33f2b0b">
+            <cybox:Object id="cybox:object-f686e94e-d7ff-48b1-a1c3-0f5e8b8d59c1">
                 <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
                     <AddressObj:Address_Value>72.166.186.151</AddressObj:Address_Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6eba1dc8-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-bea8273c-3b4d-409f-880e-c53c64f8a05c"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cb36-30c8-11e2-8011-000c291a73d5"><!-- DNS Record  -->
+                    <cybox:Related_Object idref="cybox:object-4c9bad1b-e4ac-4b3e-9e28-fbf03b73613c"><!-- DNS Record  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>    
     
-    <cybox:Observable id="cybox:observable-6f45fca8-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec1cdf2-30c8-11e2-8011-000c291a73d5">
+    <!-- Type AAAA DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-fbd84ce1-fb99-4c6c-8617-5f2b4179da64">
+            <cybox:Object id="cybox:object-c1849f06-d433-4ef8-bcfa-a516a008c8d4">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="true">
                     <DNSQueryObj:Question>
                         <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
@@ -318,22 +327,23 @@ state.gov. 5 IN A 72.166.186.151
                         <DNSQueryObj:QClass>IN</DNSQueryObj:QClass>
                     </DNSQueryObj:Question>
                     <DNSQueryObj:Answer_Resource_Records>
-                        <DNSQueryObj:Resource_Record xsi:type="DNSRecordObj:DNSRecordObjectType" object_reference="cybox:guid-6ec8ffaa-30c8-11e2-8011-000c291a73d5"/>
+                        <DNSQueryObj:Resource_Record xsi:type="DNSRecordObj:DNSRecordObjectType" object_reference="cybox:object-6ec8ffaa-30c8-11e2-8011-000c291a73d5"/>
                     </DNSQueryObj:Answer_Resource_Records>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec8ffaa-30c8-11e2-8011-000c291a73d5"><!-- DNS Record  -->
+                    <cybox:Related_Object idref="cybox:object-1f68760e-fa04-4730-936d-d3abcc4b365b"><!-- DNS Record  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Searched_For</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45dbec-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec8ffaa-30c8-11e2-8011-000c291a73d5">
+    <!-- Returned DNS Record for Type AAAA DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-66d0ee64-2412-4af4-82b5-9e5b20e7deda">
+            <cybox:Object id="cybox:object-1f68760e-fa04-4730-936d-d3abcc4b365b">
                 <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
                     <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
                         <URIObj:Value>state.gov</URIObj:Value>
@@ -355,39 +365,41 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
 ;ADDITIONAL</DNSRecordObj:Record_Data>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cdf2-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-c1849f06-d433-4ef8-bcfa-a516a008c8d4"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Searched_For_By</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45f992-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec8fd2a-30c8-11e2-8011-000c291a73d5">
+    <!-- Resolved IP Address from Returned DNS Record for Type AAAA DNS Query of extracted Domain from link URL (state.gov)  -->
+    <cybox:Observable id="cybox:observable-d701dba9-9325-4d6b-a2d5-3927a9ffd4f5">
+            <cybox:Object id="cybox:object-428679c7-89c4-4d3a-9693-dd2beb617fb7">
                 <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv6-addr">
                     <AddressObj:Address_Value>2001:428:d400:4:72:166:186:151</AddressObj:Address_Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6dcb9414-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Resolved_To</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec1cdf2-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-c1849f06-d433-4ef8-bcfa-a516a008c8d4"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec8ffaa-30c8-11e2-8011-000c291a73d5"><!-- DNS Record  -->
+                    <cybox:Related_Object idref="cybox:object-1f68760e-fa04-4730-936d-d3abcc4b365b"><!-- DNS Record  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45ffdc-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec9050e-30c8-11e2-8011-000c291a73d5">
+    <!-- Link URL (http://bhsxeozfiwqj.net/links/p2iodajfpoajsfafh.php)  -->
+    <cybox:Observable id="cybox:observable-bcb595f7-2d67-4ef2-883e-5cca47e336ce">
+            <cybox:Object id="cybox:object-fa7efe7f-e1b4-45de-ba7e-c6a7d625c9d8">
                 <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
                     <URIObj:Value>http://bhsxeozfiwqj.net/links/p2iodajfpoajsfafh.php</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6ec90798-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-486b9846-ced7-49d3-ae92-7845f06b6557"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
                     </cybox:Related_Object>
                     <cybox:Related_Object idref="cybox:object-6dc7fc5a-30c8-11e2-8011-000c291a73d5"><!-- Email Message  -->
@@ -397,30 +409,32 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
             </cybox:Object>
     </cybox:Observable>
     
-    <cybox:Observable id="cybox:observable-6f45d386-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6ec90798-30c8-11e2-8011-000c291a73d5">
+    <!-- Extracted Domain from link URL (bhsxeozfiwqj.net)  -->
+    <cybox:Observable id="cybox:observable-542405ea-3a77-4490-b37d-c1a555f2d7be">
+            <cybox:Object id="cybox:object-486b9846-ced7-49d3-ae92-7845f06b6557">
                 <cybox:Properties xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
                     <URIObj:Value>bhsxeozfiwqj.net</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6f2f88e2-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-79a3f502-478d-4c0c-a97f-d10d69658b4c"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6f37a860-30c8-11e2-8011-000c291a73d5"><!-- DNS Query  -->
+                    <cybox:Related_Object idref="cybox:object-b7edd88e-5b47-42a6-a5be-ab87d8d8d1ba"><!-- DNS Query  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried_By</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec9050e-30c8-11e2-8011-000c291a73d5"><!-- URL  -->
+                    <cybox:Related_Object idref="cybox:object-fa7efe7f-e1b4-45de-ba7e-c6a7d625c9d8"><!-- URL  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Extracted_From</cybox:Relationship>
                     </cybox:Related_Object>
-                    <cybox:Related_Object idref="cybox:guid-6ec9050e-30c8-11e2-8011-000c291a73d5"><!-- URL  -->
+                    <cybox:Related_Object idref="cybox:object-fa7efe7f-e1b4-45de-ba7e-c6a7d625c9d8"><!-- URL  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">FQDN_Of</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>    
     
-    <cybox:Observable id="cybox:observable-6f45f3ca-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6f2f88e2-30c8-11e2-8011-000c291a73d5">
+    <!-- Type A DNS Query of extracted Domain from link URL (bhsxeozfiwqj.net)  -->
+    <cybox:Observable id="cybox:observable-86edf6eb-e67f-47c4-96ed-1f5b3eb5fa44">
+            <cybox:Object id="cybox:object-79a3f502-478d-4c0c-a97f-d10d69658b4c">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="false">
                     <DNSQueryObj:Question>
                         <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
@@ -431,15 +445,16 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
                     </DNSQueryObj:Question>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6ec90798-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-486b9846-ced7-49d3-ae92-7845f06b6557"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>
             </cybox:Object>
     </cybox:Observable>    
     
-    <cybox:Observable id="cybox:observable-6f45ead8-30c8-11e2-8011-000c291a73d5">
-            <cybox:Object id="cybox:guid-6f37a860-30c8-11e2-8011-000c291a73d5">
+    <!-- Type AAAA DNS Query of extracted Domain from link URL (bhsxeozfiwqj.net)  -->
+    <cybox:Observable id="cybox:observable-a044709c-8d83-406c-8cc9-73cd16c62718">
+            <cybox:Object id="cybox:object-b7edd88e-5b47-42a6-a5be-ab87d8d8d1ba">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="false">
                     <DNSQueryObj:Question>
                         <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
@@ -450,7 +465,7 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
                     </DNSQueryObj:Question>
                 </cybox:Properties>
                 <cybox:Related_Objects>
-                    <cybox:Related_Object idref="cybox:guid-6ec90798-30c8-11e2-8011-000c291a73d5"><!-- URI  -->
+                    <cybox:Related_Object idref="cybox:object-486b9846-ced7-49d3-ae92-7845f06b6557"><!-- URI  -->
 						<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Properties_Queried</cybox:Relationship>
                     </cybox:Related_Object>
                 </cybox:Related_Objects>

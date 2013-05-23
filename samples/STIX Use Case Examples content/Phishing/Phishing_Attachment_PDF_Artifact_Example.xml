@@ -4,10 +4,11 @@ xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
 xmlns:Artifact="http://cybox.mitre.org/objects#ArtifactObject-2" 
 xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"      
 xsi:schemaLocation="
-http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
-http://cybox.mitre.org/common-2 ../../cybox/cybox_common.xsd  
-http://cybox.mitre.org/objects#ArtifactObject-2 ../../cybox/objects/Artifact_Object.xsd
-http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd" 
+http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
+http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.0/cybox_common.xsd
+http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0/Artifact_Object.xsd
+http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd
+" 
   cybox_minor_version="0" cybox_major_version="1">
   
 <!-- Artifact object -->  
@@ -28,10 +29,10 @@ http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabula
 						</Artifact:Raw_Artifact>
 					</cybox:Properties>
 					<cybox:Related_Objects>
-						<cybox:Related_Object idref="cybox:object-6dcae276-30c8-11e2-8011-000c291a73d5">
+						<cybox:Related_Object idref="cybox:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f"><!-- File  -->
 							<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterized_By</cybox:Relationship>
 						</cybox:Related_Object>
-						<cybox:Related_Object idref="cybox:object-6dc7fc5a-30c8-11e2-8011-000c291a73d5">
+						<cybox:Related_Object idref="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email  -->
 							<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
 						</cybox:Related_Object>
 					</cybox:Related_Objects>
