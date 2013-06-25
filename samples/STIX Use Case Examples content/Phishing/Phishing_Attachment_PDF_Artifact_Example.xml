@@ -12,8 +12,8 @@ http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/d
   cybox_minor_version="0" cybox_major_version="1">
   
 <!-- Artifact object -->  
-	 <cybox:Observable id="cybox:observable-14ee6790-b83d-44f1-8604-92271efac9bf">
-				<cybox:Object id="cybox:object-afb6205d-4db6-44de-98d7-37a32ee4b012">
+	 <cybox:Observable id="example:observable-14ee6790-b83d-44f1-8604-92271efac9bf">
+				<cybox:Object id="example:object-afb6205d-4db6-44de-98d7-37a32ee4b012">
 					<cybox:Properties xsi:type="Artifact:ArtifactObjectType" type="File" content_type="application/pdf">
 						<Artifact:Hashes>
                         <cyboxCommon:Hash>
@@ -29,10 +29,10 @@ http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/d
 						</Artifact:Raw_Artifact>
 					</cybox:Properties>
 					<cybox:Related_Objects>
-						<cybox:Related_Object idref="cybox:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f"><!-- File  -->
+						<cybox:Related_Object idref="example:object-cb0ec4ad-4a39-4d4b-934b-72ff0563476f"><!-- File  -->
 							<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterized_By</cybox:Relationship>
 						</cybox:Related_Object>
-						<cybox:Related_Object idref="cybox:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email  -->
+						<cybox:Related_Object idref="example:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0"><!-- Email  -->
 							<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contained_Within</cybox:Relationship>
 						</cybox:Related_Object>
 					</cybox:Related_Objects>

@@ -5,6 +5,7 @@ xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
 xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" 
 xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" 
 xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"                 
+xmlns:example="http://example.com"
 xsi:schemaLocation="     
 http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
 http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.0/cybox_common.xsd
@@ -12,10 +13,10 @@ http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/
 http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0/File_Object.xsd
 http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.0/Email_Message_Object.xsd
 http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd" 
-  cybox_minor_version="0" cybox_major_version="1">
+  cybox_minor_version="0" cybox_major_version="2">
   
-<cybox:Observable id="cybox:observable-pattern-5f1dedd3-ece3-4007-94cd-7d52784c1474">
-         <cybox:Object id="cybox:object-3a7aa9db-d082-447c-a422-293b78e24238">
+<cybox:Observable id="example:observable-pattern-5f1dedd3-ece3-4007-94cd-7d52784c1474">
+         <cybox:Object id="example:object-3a7aa9db-d082-447c-a422-293b78e24238">
                 <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
                     <EmailMessageObj:Header>
                         <EmailMessageObj:From category="e-mail">
