@@ -43,7 +43,7 @@
             <indicator:Observable id="example:Observable-Pattern-cc5c00ce-98a6-4cbe-8474-59eaecdb018f">
                 <cybox:Object>
                     <cybox:Properties xsi:type="URIObject:URIObjectType">
-                        <URIObject:Value condition="Equals" apply_condition="ANY">http://example.com/foo/malicious1.html,http://example.com/foo/malicious2.html,http://example.com/foo/malicious3.html</URIObject:Value>
+                        <URIObject:Value condition="Equals" apply_condition="ANY">http://example.com/foo/malicious1.html##comma##http://example.com/foo/malicious2.html##comma##http://example.com/foo/malicious3.html</URIObject:Value>
                     </cybox:Properties>
                 </cybox:Object>
             </indicator:Observable>
