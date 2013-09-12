@@ -15,7 +15,7 @@
 	<xs:complexType name="PackageIntentVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>
-                The PackageIntentVocabType is the default STIX vocabulary for Package Intent.
+                The PackageIntentVocab is the default STIX vocabulary for Package Intent.
             
                 Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
             </xs:documentation>
@@ -143,7 +143,7 @@
 	<!-- Confidence Vocabulary -->
 	<xs:complexType name="HighMediumLowVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The HighMediumLowVocabType is the default STIX vocabulary for expressing basic values that may be high, medium, low, none, or unknown.</xs:documentation>
+			<xs:documentation>The HighMediumLowVocab is the default STIX vocabulary for expressing basic values that may be high, medium, low, none, or unknown.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -174,7 +174,7 @@
 	<xs:complexType name="MalwareTypeVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>
-				The MalwareTypeVocabType is the default STIX vocabulary for expressing types of malware instances.
+				The MalwareTypeVocab is the default STIX vocabulary for expressing types of malware instances.
 			
                 Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.</xs:documentation>
 		</xs:annotation>
@@ -223,7 +223,7 @@
 	<xs:complexType name="IndicatorTypeVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>
-                The IndicatorTypeVocabType is the default STIX vocabulary for expressing indicator types.
+                The IndicatorTypeVocab is the default STIX vocabulary for expressing indicator types.
             
                 Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
             </xs:documentation>
@@ -301,7 +301,7 @@
 	<!-- COA Stage Vocabulary -->
 	<xs:complexType name="COAStageVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The COAStageVocabType is the default STIX vocabulary for expressing the stages of the threat management lifecycle that a COA is applicable to.</xs:documentation>
+			<xs:documentation>The COAStageVocab is the default STIX vocabulary for expressing the stages of the threat management lifecycle that a COA is applicable to.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -336,7 +336,7 @@
 	<!-- Campaign Status Vocabulary -->
 	<xs:complexType name="CampaignStatusVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The CampaignStatusVocabType is the default STIX vocabulary for expressing the status of a campaign.</xs:documentation>
+			<xs:documentation>The CampaignStatusVocab is the default STIX vocabulary for expressing the status of a campaign.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -376,7 +376,7 @@
 	<!-- Incident Status Vocabulary -->
 	<xs:complexType name="IncidentStatusVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The IncidentStatusVocabType is the default STIX vocabulary for expressing the status of an incident.</xs:documentation>
+			<xs:documentation>The IncidentStatusVocab is the default STIX vocabulary for expressing the status of an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -411,7 +411,7 @@
 	<!-- Security Compromise Vocabulary -->
 	<xs:complexType name="SecurityCompromiseVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The SecurityCompromiseVocabType is the default STIX vocabulary for expressing whether or not an incident resulted in a security compromise.</xs:documentation>
+			<xs:documentation>The SecurityCompromiseVocab is the default STIX vocabulary for expressing whether or not an incident resulted in a security compromise.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -459,7 +459,7 @@
 	<!-- Discovery Method Vocabulary -->
 	<xs:complexType name="DiscoveryMethodVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The DiscoveryMethodVocabType is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
+			<xs:documentation>The DiscoveryMethodVocab is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -577,7 +577,7 @@
 	<!-- Availability Loss Type Vocabulary -->
 	<xs:complexType name="AvailabilityLossTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The AvailabilityLossTypeVocabType is the default STIX vocabulary for expressing the type of availability that was lost due to an incident.</xs:documentation>
+			<xs:documentation>The AvailabilityLossTypeVocab is the default STIX vocabulary for expressing the type of availability that was lost due to an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -640,7 +640,7 @@
 	<!-- Loss Duration Vocabulary -->
 	<xs:complexType name="LossDurationVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The LossDurationVocabType is the default STIX vocabulary for expressing the approximate length of time of a loss due to an incident.</xs:documentation>
+			<xs:documentation>The LossDurationVocab is the default STIX vocabulary for expressing the approximate length of time of a loss due to an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -702,7 +702,7 @@
 	<!-- Ownership Class Vocabulary -->
 	<xs:complexType name="OwnershipClassVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The OwnershipClassVocabType is the default STIX vocabulary for expressing the type of ownership of an asset.</xs:documentation>
+			<xs:documentation>The OwnershipClassVocab is the default STIX vocabulary for expressing the type of ownership of an asset.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -754,7 +754,7 @@
 	<!-- Management Class Vocabulary -->
 	<xs:complexType name="ManagementClassVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The ManagementClassVocabType is the default STIX vocabulary for expressing the type of management of an asset.</xs:documentation>
+			<xs:documentation>The ManagementClassVocab is the default STIX vocabulary for expressing the type of management of an asset.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -801,7 +801,7 @@
 	<!-- Location Class Vocabulary -->
 	<xs:complexType name="LocationClassVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The LocationClassVocabType is the default STIX vocabulary for expressing the location of an asset.</xs:documentation>
+			<xs:documentation>The LocationClassVocab is the default STIX vocabulary for expressing the location of an asset.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -853,7 +853,7 @@
 	<!-- Impact Qualification Vocabulary -->
 	<xs:complexType name="ImpactQualificationVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The ImpactQualificationVocabType is the default STIX vocabulary for expressing the subjective level of impact of an incident.</xs:documentation>
+			<xs:documentation>The ImpactQualificationVocab is the default STIX vocabulary for expressing the subjective level of impact of an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -911,7 +911,7 @@
 	<!-- Impact Rating Vocabulary -->
 	<xs:complexType name="ImpactRatingVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The ImpactRatingVocabType is the default STIX vocabulary for expressing the level of impact due to an incident.</xs:documentation>
+			<xs:documentation>The ImpactRatingVocab is the default STIX vocabulary for expressing the level of impact due to an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -964,7 +964,7 @@
 	<!-- Asset Type Vocabulary -->
 	<xs:complexType name="AssetTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The AssetTypeVocabType is the default STIX vocabulary for expressing the type of an asset.</xs:documentation>
+			<xs:documentation>The AssetTypeVocab is the default STIX vocabulary for expressing the type of an asset.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1069,7 +1069,7 @@
 	<!-- Attacker Infrastructure Vocabulary -->
 	<xs:complexType name="AttackerInfrastructureTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The AttackerInfrastructureTypeVocabType is the default STIX vocabulary for expressing the type of infrastructure an attacker uses.</xs:documentation>
+			<xs:documentation>The AttackerInfrastructureTypeVocab is the default STIX vocabulary for expressing the type of infrastructure an attacker uses.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1121,7 +1121,7 @@
 	<!-- System Type Vocabulary -->
 	<xs:complexType name="SystemTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The SystemTypeVocabType is the default STIX vocabulary for expressing the type of a system.</xs:documentation>
+			<xs:documentation>The SystemTypeVocab is the default STIX vocabulary for expressing the type of a system.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1176,7 +1176,7 @@
 	<!-- Information Type Vocabulary -->
 	<xs:complexType name="InformationTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The InformationTypeVocabType is the default STIX vocabulary for expressing the type of information.</xs:documentation>
+			<xs:documentation>The InformationTypeVocab is the default STIX vocabulary for expressing the type of information.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1213,7 +1213,7 @@
 	<!-- Threat Actor Type Vocabulary -->
 	<xs:complexType name="ThreatActorTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The ThreatActorTypeVocabType is the default STIX vocabulary for expressing the type of a threat actor.</xs:documentation>
+			<xs:documentation>The ThreatActorTypeVocab is the default STIX vocabulary for expressing the type of a threat actor.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1347,7 +1347,7 @@
 	<!-- Intended Effect Vocabulary -->
 	<xs:complexType name="IntendedEffectVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The IntendedEffectVocabType is the default STIX vocabulary for expressing the intended effect of a threat actor.</xs:documentation>
+			<xs:documentation>The IntendedEffectVocab is the default STIX vocabulary for expressing the intended effect of a threat actor.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1508,7 +1508,7 @@
 	<!-- Incident Effect Vocabulary -->
 	<xs:complexType name="IncidentEffectVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The IncidentEffectVocabType is the default STIX vocabulary for expressing the possible effects of an incident.</xs:documentation>
+			<xs:documentation>The IncidentEffectVocab is the default STIX vocabulary for expressing the possible effects of an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1589,7 +1589,7 @@
 	<!-- Incident Category Vocabulary -->
 	<xs:complexType name="IncidentCategoryVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The IncidentCategoryVocabType is the default STIX vocabulary for expressing the possible categories of an incident.</xs:documentation>
+			<xs:documentation>The IncidentCategoryVocab is the default STIX vocabulary for expressing the possible categories of an incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1652,7 +1652,7 @@
 	<!-- Loss Property Vocabulary -->
 	<xs:complexType name="LossPropertyVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The LossPropertyVocabType is the default STIX vocabulary for expressing the possible properties of a loss.</xs:documentation>
+			<xs:documentation>The LossPropertyVocab is the default STIX vocabulary for expressing the possible properties of a loss.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
