@@ -1256,9 +1256,54 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Motivation Vocabulary -->
+	<xs:complexType name="MotivationVocab-1.0.1">
+		<xs:annotation>
+			<xs:documentation>The MotivationVocab is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:MotivationEnum-1.0.1"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Motivation Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#MotivationVocab-1.0.1"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="MotivationEnum-1.0.1">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for motivations of a threat actor.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0.1</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ideological"/>
+			<xs:enumeration value="Ideological - Anti-Corruption"/>
+			<xs:enumeration value="Ideological - Anti-Establishment"/>
+			<xs:enumeration value="Ideological - Environmental"/>
+			<xs:enumeration value="Ideological - Ethnic / Nationalist"/>
+			<xs:enumeration value="Ideological - Information Freedom"/>
+			<xs:enumeration value="Ideological - Religious"/>
+			<xs:enumeration value="Ideological - Security Awareness"/>
+			<xs:enumeration value="Ideological - Human Rights"/>
+			<xs:enumeration value="Ego"/>
+			<xs:enumeration value="Financial or Economic"/>
+			<xs:enumeration value="Military"/>
+			<xs:enumeration value="Opportunistic"/>
+			<xs:enumeration value="Policital"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:complexType name="MotivationVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The MotivationVocabType is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+			<xs:documentation>The MotivationVocab is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1273,11 +1318,12 @@
 	<xs:simpleType name="MotivationEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>
-                The possible values for motivations of a threat actor.
-            </xs:documentation>
+				The possible values for motivations of a threat actor.
+			</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+				<deprecated>true</deprecated>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
@@ -1297,6 +1343,7 @@
 			<xs:enumeration value="Policital"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
 	<!-- Intended Effect Vocabulary -->
 	<xs:complexType name="IntendedEffectVocab-1.0">
 		<xs:annotation>
