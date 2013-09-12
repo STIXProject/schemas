@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2013 sp1 (http://www.altova.com) by SEAN BARNUM (THE MITRE CORPORATION) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/stix-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.1" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
@@ -13,12 +12,6 @@
 	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
 	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
 	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
-	<xs:element name="STIX_Packages" type="stix:STIX_PackagesType"/>
-	<xs:complexType name="STIX_PackagesType">
-		<xs:sequence>
-			<xs:element ref="stix:STIX_Package" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:element name="STIX_Package" type="stix:STIXType">
 		<xs:annotation>
 			<xs:documentation>The STIX_Package field contains a bundle of information characterized in the Structured Threat Information eXpression (STIX) language.</xs:documentation>
