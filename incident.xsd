@@ -33,7 +33,7 @@
 					</xs:element>
 					<xs:element name="Time" type="incident:TimeType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Time filed specifies relevant time values associated with this Incident.</xs:documentation>
+							<xs:documentation>The Time field specifies relevant time values associated with this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
