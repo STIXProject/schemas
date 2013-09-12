@@ -1349,10 +1349,66 @@
 			<xs:enumeration value="Unauthorized Access"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- Intended Effect Vocabulary -->
+	<!-- Planning and Operational Support Vocabulary -->
+	<xs:complexType name="PlanningAndOperationalSupportVocab-1.0.1">
+		<xs:annotation>
+			<xs:documentation>The PlanningAndOperationalSupportVocab is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:PlanningAndOperationalSupportEnum-1.0.1"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Planning and Operational Support Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0.1"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="PlanningAndOperationalSupportEnum-1.0.1">
+		<xs:annotation>
+			<xs:documentation>
+				The possible values for types of planning and operational support functions of a threat actor.
+			</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Data Exploitation"/>
+			<xs:enumeration value="Data Exploitation - Analytic Support"/>
+			<xs:enumeration value="Data Exploitation - Translation Support"/>
+			<xs:enumeration value="Financial Resources"/>
+			<xs:enumeration value="Financial Resources - Academic"/>
+			<xs:enumeration value="Financial Resources - Commercial"/>
+			<xs:enumeration value="Financial Resources - Government"/>
+			<xs:enumeration value="Financial Resources - Hacktivist or Grassroot"/>
+			<xs:enumeration value="Financial Resources - Non-Attributable Finance"/>
+			<xs:enumeration value="Skill Development / Recruitment"/>
+			<xs:enumeration value="Skill Development / Recruitment - Contracting and Hiring"/>
+			<xs:enumeration value="Skill Development / Recruitment - Document Exploitation (DOCEX) Training"/>
+			<xs:enumeration value="Skill Development / Recruitment - Internal Training"/>
+			<xs:enumeration value="Skill Development / Recruitment - Military Programs"/>
+			<xs:enumeration value="Skill Development / Recruitment - Security / Hacker Conferences"/>
+			<xs:enumeration value="Skill Development / Recruitment - Underground Forums"/>
+			<xs:enumeration value="Skill Development / Recruitment - University Programs"/>
+			<xs:enumeration value="Planning"/>
+			<xs:enumeration value="Planning - Operational Cover Plan"/>
+			<xs:enumeration value="Planning - Open-Source Intelligence (OSINT) Gathering"/>
+			<xs:enumeration value="Planning - Pre-Operational Surveillance and Reconnaissance"/>
+			<xs:enumeration value="Planning - Target Selection"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="PlanningAndOperationalSupportVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The PlanningAndOperationalSupportVocabType is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.</xs:documentation>
+			<xs:documentation>
+				The PlanningAndOperationalSupportVocab is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.
+			
+				NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportVocab is deprecated. Please use PlanningAndOperationalSupportVocab-1.0.1 instead.
+			</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1368,10 +1424,13 @@
 		<xs:annotation>
 			<xs:documentation>
                 The possible values for types of planning and operational support functions of a threat actor.
+                
+                NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportEnumType is deprecated. Please use PlanningAndOperationalSupportEnum-1.0.1 instead.
             </xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
+				<deprecated>true</deprecated>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
