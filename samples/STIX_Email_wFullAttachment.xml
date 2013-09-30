@@ -29,7 +29,7 @@
         <stix:Title>Email with attachments.</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Observations - Email</stix:Package_Intent>
     </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="0">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="0" cybox_update_version="1">
         <cybox:Observable id="example:Observable-9d299eb7-c089-465a-bf5f-d6283c251645">
             <cybox:Description>
                 This observable is an email with aattachments. This observable also 
