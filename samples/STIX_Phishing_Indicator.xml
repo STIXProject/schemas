@@ -22,13 +22,12 @@
 	
 	Created by Sean Barnum
 -->
-<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:TTP="http://stix.mitre.org/TTP-1" xmlns:COA="http://stix.mitre.org/CourseOfAction-1" xmlns:ciq="urn:oasis:names:tc:ciq:xpil:3" xmlns:n="urn:oasis:names:tc:ciq:xnl:3" xmlns:capec="http://stix.mitre.org/extensions/AP#CAPEC2.5-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:example="http://example.com/" xsi:schemaLocation="
+<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:TTP="http://stix.mitre.org/TTP-1" xmlns:COA="http://stix.mitre.org/CourseOfAction-1" xmlns:ciq="urn:oasis:names:tc:ciq:xpil:3" xmlns:n="urn:oasis:names:tc:ciq:xnl:3" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:example="http://example.com/" xsi:schemaLocation="
 http://stix.mitre.org/stix-1 ../stix_core.xsd
 http://stix.mitre.org/common-1 ../stix_common.xsd
 http://stix.mitre.org/Indicator-2 ../indicator.xsd
 http://stix.mitre.org/TTP-1 ../ttp.xsd
 http://stix.mitre.org/CourseOfAction-1 ../course_of_action.xsd
-http://stix.mitre.org/extensions/AP#CAPEC2.5-1 ../extensions/attack_pattern/capec_2.5.xsd
 http://data-marking.mitre.org/Marking-1  ../data_marking.xsd
 http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 ../extensions/marking/tlp.xsd
 http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
