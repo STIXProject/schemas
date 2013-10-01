@@ -14,7 +14,7 @@
 	<xs:import namespace="http://capec.mitre.org/capec-2" schemaLocation="../../external/capec_2.6.1/ap_schema_v2.6.1.xsd"/>
 	<xs:complexType name="CAPEC2.6InstanceType">
 		<xs:annotation>
-			<xs:documentation>The CAPECInstanceType provides an extension to the APStructureAbstractType which imports and leverages the CAPEC schema for structured characterization of Attack Patterns.</xs:documentation>
+			<xs:documentation>The CAPECInstanceType provides an extension to the APStructureAbstractType which imports and leverages the CAPEC 2.6.1 schema for structured characterization of Attack Patterns.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="ttp:AttackPatternType">
