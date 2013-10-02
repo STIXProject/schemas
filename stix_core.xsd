@@ -78,7 +78,7 @@
 				<xs:documentation>Specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="version" type="stix:STIXPackageVersionEnum" default="1.0">
+		<xs:attribute name="version" type="stix:STIXPackageVersionEnum">
 			<xs:annotation>
 				<xs:documentation>Specifies the relevant STIX schema version for this content.</xs:documentation>
 			</xs:annotation>
@@ -90,6 +90,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="1.0.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="STIXHeaderType">

@@ -114,7 +114,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="version" type="ta:ThreatActorVersionType" default="1.0">
+				<xs:attribute name="version" type="ta:ThreatActorVersionType">
 					<xs:annotation>
 						<xs:documentation>Specifies the relevant STIX-ThreatActor schema version for this content.</xs:documentation>
 					</xs:annotation>
@@ -129,6 +129,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="1.0.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AssociatedActorsType">

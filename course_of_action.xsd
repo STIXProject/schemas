@@ -107,7 +107,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="version" type="coa:CourseOfActionVersionType" default="1.0">
+				<xs:attribute name="version" type="coa:CourseOfActionVersionType">
 					<xs:annotation>
 						<xs:documentation>Specifies the relevant STIX-COA schema version for this content.</xs:documentation>
 					</xs:annotation>
@@ -122,6 +122,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="1.0.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="StructuredCOAType" abstract="true">

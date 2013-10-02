@@ -103,7 +103,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="version" type="campaign:CampaignVersionType" default="1.0">
+				<xs:attribute name="version" type="campaign:CampaignVersionType">
 					<xs:annotation>
 						<xs:documentation>Specifies the relevant STIX-Campaign schema version for this content.</xs:documentation>
 					</xs:annotation>
@@ -118,6 +118,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="1.0.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AttributionType">

@@ -94,7 +94,7 @@
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="version" type="ttp:TTPVersionType" default="1.0">
+				<xs:attribute name="version" type="ttp:TTPVersionType">
 					<xs:annotation>
 						<xs:documentation>Specifies the relevant STIX-TTP schema version for this content.</xs:documentation>
 					</xs:annotation>
@@ -109,6 +109,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="1.0.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AttackPatternType">
