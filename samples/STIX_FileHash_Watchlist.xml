@@ -33,7 +33,8 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd"
-    id="example:STIXPackage-ac823873-4c51-4dd1-936e-a39d40151cc3">
+    id="example:STIXPackage-ac823873-4c51-4dd1-936e-a39d40151cc3"
+    version="1.0.1">
     <stix:STIX_Header>
         <stix:Title>Example file watchlist</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Watchlist</stix:Package_Intent>

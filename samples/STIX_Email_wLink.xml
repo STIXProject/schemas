@@ -37,6 +37,7 @@
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-95141684-9092-4080-93fe-956a452a4acd"
+    version="1.0.1"
     >
     <stix:STIX_Header>
         <stix:Title>Email with a link.</stix:Title>
