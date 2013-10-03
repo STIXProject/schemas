@@ -1,1 +1,1 @@
-The default type for representing attack patterns is the CAPEC2.6InstanceType defined in capec_2.6.xsd.
+The default type for representing attack patterns is the CAPEC2.6InstanceType defined in capec_2.6.1.xsd.
