@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created on   : September 15 2011
+Author       : Ivan Kirillov
+Last Revised : October 19 2011
+Description  : malware MetaData sharing version 1.2
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://xml/metadataSharing.xsd" xmlns="http://xml/metadataSharing.xsd"
+ elementFormDefault="qualified" version="1.8">
+
+ <xs:annotation>
+  <xs:documentation xml:lang="en">
+   A schema for sharing data associated with malicious software.
+  </xs:documentation>
+ </xs:annotation>
+
+ <!-- some definitions of types -->
+ <xs:simpleType name="intBetween0and100">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Utility type for integers between 0 and 100. Used in field data for commonality and importance.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:integer">
+   <xs:minInclusive value="0"/>
+   <xs:maxInclusive value="100"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <xs:simpleType name="NoQuestionMark">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Utility type for a string not including a question mark (?) for uri objects.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[^?]+"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <xs:simpleType name="IPRange">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Utility type for ip ranges, for example 111.112.113.0-111.112.113.100.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[0-9\.]+-[0-9\.]+"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Enumerations -->
+
+ <!-- These are the types of relationships between objects (and classifications  -->
+ <xs:simpleType name="RelationshipTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    All the different types of relationship that are possible.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+
+   <xs:enumeration value="relatedTo">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     relatedTo - generic relationship.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="isClassifiedAs">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      isClassifiedAs -  Used to match an object to a classification to provide a "name" for the object. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="hosts">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      hosts - Used when a web site hosts a file.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="installed">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      installed - Used to relate files that install one another. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="isParentOf">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      isParentOf - Used to relate files that creates another one. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="causesToInstall">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     causesToInstall - As in web site causes file to be installed.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="downloads">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      downloads - As in file retrieves data from a url, or file downloads file.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+
+   <xs:enumeration value="runs">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      runs - File that a url with an exploit runs. Or a file (parent) that runs another file (child).
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="usesCNC">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      usesCNC - As in classification/object uses command and control url/domain/ip.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="isNameServerOf">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      isNameServerOf - Maps name server ip to domain.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="resolvesTo">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      resolvesTo - Maps domain/url to ip address, could also use for ip address and asn.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="verifiedBy">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      verifiedBy - Mapping from object information (e.g. url) to entity, with date indicating verified time.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="isServerOfService">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     isServerOfService - Map from domain/ip to service object.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="hasAssociatedConfiguration">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      hasAssociatedConfiguration - Map from file to associated registry information.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="operatedByEntity">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      operatedByEntity  - Map from object to operating entity.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="downloadedFrom">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      downloadedFrom  - Map from file to url.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="contactedBy">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      contactedBy  - Map from file to url.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="partOfPackage"/>
+   <xs:enumeration value="sourcedFrom"/>
+   <xs:enumeration value="createdBy"/>
+   <xs:enumeration value="hasSignature"/>
+   <xs:enumeration value="hasTaggant"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+
+
+
+ <!-- the types of classification -->
+ <!-- clean is normal program, dirty is malware/malicious. a file infected with a file infector would be dirty -->
+ <xs:simpleType name="ClassificationTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Top level types of classification. This is a high level type, not to be confused with the detailed category. 
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="clean">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      clean - the object can be regarded as not malicious.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="dirty">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      dirty - the object can be regarded as malicious.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="unknown">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      unknown - the object classification type is unknown.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="unwanted">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      unwanted - the object can be regarded as potentially unwanted. This is intended to cover the well known case of "potentially unwanted programs".
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="neutral">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      neutral - the object can be regarded as neutral, neither malicious nor legitimate.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+
+
+ <xs:simpleType name="LocationTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    A list of the various ways that geographical location can be represented. 
+    The elements correspond to various levels of granularity of geographical data.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="countryCodeISO3166-2"/>
+   <xs:enumeration value="countryCodeISO3166-3"/>
+   <xs:enumeration value="countryCodeFIPS"/>
+   <xs:enumeration value="city"/>
+   <xs:enumeration value="region"/>
+   <xs:enumeration value="isp"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+
+ <xs:simpleType name="VolumeUnitsEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    A list of the various units allowed to be used in volume tag in fieldDataEntry.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="numberUsersAffected">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberUsersAffected - The count of users (humans) affected by the items referenced by the field data entry.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="numberMachinesAffected">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberMachinesAffected - The count of computers affected by the items referenced by the field data entry.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="numberSeenInSpam">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberSeenInSpam - The count of spam messages containing the items referenced by the field data entry. Most commonly used for uris.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="numberSeenInMalwareSamples">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberSeenInMalwareSamples - The count of malware samples containing the items referenced by the field data entry. Most commonly used for uris.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="numberOfWebsitesHosting">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberOfWebsitesHosting - The count of web sites hosting the items referenced by the field data entry. Most commonly used for uris.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="numberOfWebsitesRedirecting">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      numberOfWebsitesRedirecting - The count of web sites redirecting the items referenced by the field data entry. Most commonly used for uris.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- types of ip addresses -->
+ <xs:simpleType name="IPTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+   Types of IP addresses
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="ipv4"/>
+   <xs:enumeration value="ipv6"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- regions -->
+ <xs:simpleType name="RegionTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    A list of regions, currently not used, but encouraged as values for 'region' when describing location.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="NorthAmerica"/>
+   <xs:enumeration value="SouthAmerica"/>
+   <xs:enumeration value="CentralAmerica"/>
+   <xs:enumeration value="Europe"/>
+   <xs:enumeration value="Africa"/>
+   <xs:enumeration value="APAC"/>
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- user/desktop/network/gateway/isp/honeypot/collection/spam/web/internal -->
+ <xs:simpleType name="OriginTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    A list of origins, used in fieldData, to show where objects originated.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+
+   <xs:enumeration value="user">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      user - Data originated from a user, normally meaning manual submissions from a user.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="desktop">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      desktop - Data originated from a computer, normally meaning automated submissions from a product running on a users computer.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="lan">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      network - Data originated from a local network.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="gateway">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      gateway - Data originated from measurements at a gateway.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="isp">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      isp - Data originated from measurements at an ISP.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="honeypot">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      honeypot - Data originated from internally gathered data using a honeypot or other collection device.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="collection">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      collection - Data from a malware collection. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="spam">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      spam - Data originated from spam (e.g. spam Email had a link to malware or the malware itself).
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="wan">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      web - Data originated from the Internet.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="internal">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      internal - Internally generated object (e.g. replicants of a polymorphic malware) .
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="partner">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      partner - Data originated from a partner.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <xs:enumeration value="unknown">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     unknown - unknown.
+    </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- property type enum -->
+ <xs:simpleType name="PropertyTypeEnum">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Property types allowed in an objectProperty.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:string">
+   <!-- file related -->
+
+   <xs:enumeration value="filename">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      filename - names of files, normally associated with file objects.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="filepath">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      filepath - directory path of files, normally associated with file objects.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="locationUrl">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      locationUrl - a url at which the file sample can be retrieved, associated with file objects.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- file related properties that used to be in category -->
+   <xs:enumeration value="isKernel">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       isKernel - true/false if the malware has a kernel component. This can be applied either to a classification
+           or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isParasitic">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       isParasitic - true/false if the malware infects other files by attaching to them (if it also replicates then it is a parasitic virus). This can be applied 
+           either to a classification or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isStealth">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       isStealth - true/false if the malware uses rootkit style techniques to hide from users or security software. This can be applied 
+         either to a classification or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isPolymorphic">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       isPolymorphic - true/false if the malware is polymorphic, changing its appearance either through replication or server-side techniques.
+           This can be applied either to a classification or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isVirus">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       isVirus - true/false if the malware is a virus (replicates and propagates recursively). This can be applied either to a classification or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isNonReplicating">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+         isNonReplicating - true/false if the malware is non replicating. This can be applied either to a classification or to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isDamaged">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+         isDamaged - true/false if the malware sample is damaged. This can be applied to a file object.
+        </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+
+
+   <!-- registry related -->
+   <xs:enumeration value="registryValueData">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      registryValueData - data from the registry from Microsoft operating systems. This is normally applied to a registry object. 
+        It could also be applied to a relationship between a malware sample (file object) and a registry object, to indicate the data
+        that was written by the malware.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- url related -->
+   <xs:enumeration value="urlParameterString">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      urlParameterString - parameter string information associated with a GET http request. This is normally applied to a uri object.
+        It could also be applied to a relationship between a malware sample (file object) and a uri object, indicating the parameters 
+        associated with the communication.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="postData">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     postData - parameter information associated with a POST http request. This is normally applied to a relationship between a 
+       malware sample (file object) and a uri object, indicating the data sent with the communication.
+    </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- domain related -->
+   <xs:enumeration value="registrant">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      registrant - the registrant of a domain name, used for domain objects.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="registrationDate">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      registrationDate - the registration date of a domain name, used for domain objects.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="ownerAddress">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      ownerAddress - the address associated with the owner of a domain name, used for domain objects. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="adminContact">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      adminContact - the administrative contact address associated with a domain name, used for domain objects. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="technicalContact">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      technicalContact - the technical contact address associated with a domain name, used for domain objects. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="nameServer">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      nameServer - the name server associated with a domain name, used for domain objects. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- ip related -->
+   <xs:enumeration value="countryCodeISO3166-2">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      countryCodeISO3166-2 - the ISO3166-2 code for country, usually associated with an ip address object, 
+         e.g. the country where that IP address is hosted.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="countryCodeISO3166-3">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      countryCodeISO3166-3 - the ISO3166-3 code for country, usually associated with an ip address object.
+        e.g. the country where that IP address is hosted.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="countryCodeFIPS">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      countryCodeFIPS - theFIPS code for country, usually associated with an ip address object.
+        e.g. the country where that IP address is hosted.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="city">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      city - the name of a city, usually associated with an ip address object, e.g. the city in which that IP address is hosted.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="region">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      region - the name of a region, usually associated with an ip address object, e.g. the region in which that IP address is hosted.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="isp">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      isp - the name of a Internet Service Provider, usually associated with an ip address object, 
+        e.g. the isp that hosts the IP address.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- other -->
+   <xs:enumeration value="httpMethod">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      httpMethod - the http method (e.g. GET/POST/etc.) associated with an http request. This is usually associated with a
+        relationship between malware (file object), and a uri (uri object), to indicate the type of http request made.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!--  -->
+   <xs:enumeration value="referrer">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     referrer - the referrer uri, used when accessing a uri, associated with a uri object, or applied to a relationship between an 
+     entity and a uri, for the user agent used when that entity visited that uri.
+    </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="operatingSystem">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      operatingSystem - environmental information of the operating system used. Normally used as a property of a relationship 
+         between malware (file object) and some other object.    
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="userAgent">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      userAgent - User agent used when accessing a uri, associated with a uri object, or applied to a relationship between an 
+       entity and a uri, for the user agent used when that entity visited that uri.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="browser">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      browser - browser used when accessing a uri, associated with a uri object, or applied to a relationship between an 
+      entity and a uri, for the browser used when that entity visited that uri
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+
+   <!-- a comment field -->
+   <xs:enumeration value="comment">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      comment - a human readable comment that can be applied to any object or relationship.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+  </xs:restriction>
+ </xs:simpleType>
+
+
+
+ <!-- The root element and basic structure -->
+ <xs:element name="malwareMetaData">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    
+    This is the top level element for the xml document. Required attribute is version.
+    
+    Open issues:
+    
+    
+    2. Right way to express commonality in field data so that it can be combined properly
+    
+    3. How to handle unicode in urls
+    
+    
+    Change list
+    
+    08/26/2011
+    Clean-file attribute based changes
+    
+    1. added digitalSignature to objects
+    2. added softwarePackage to objects
+    3. added taggant to objects
+    4. added numerous elements to fileObject
+    
+    11/12/2009
+    
+    1. adding documentation across the schema
+    2. added partner to OriginTypeEnum
+    3. made sha1 in fileObject optional
+    4. added isDamaged as a propertyType
+    5. changed property name isNon-replicating to isNonReplicating
+    
+    6/11/2009
+    
+    1. incremented version
+    2.Rename parents/children in relationship to source/target
+    3. Add generic relationship, ‘relatedTo’
+    4. Make commonality element in fieldDataEntry optional
+    5. Add unknown element to origintypeenum
+    6. Remove ipv4 and ipv6 from locationenum
+    7. Make id on ip object startaddress-endaddress even if startaddress == endaddress. Added IPRange type
+    8. Add optional firstSeenDate to fieldDataEntry, for first time entity providing data saw the object
+     
+    
+    6/4/2009
+    
+    1. File - id should be a xs:hexBinary
+    2. File - extraHash should be a xs:string
+    3. Uri – add optional ipProtocol field, with enumeration of values tcp/udp/icmp etc.
+    4. Uri – add documentation that protocol in uri needs to be either from well known list (from iana.org) or ‘unknown’
+    5. Domain - need to fix documentation for domain – example is wrong
+    6. registry – remove valuedata – it is in a property
+    7. ip object – rename to ip, and give it a start address and end address. Share a single address by making start and end the same. Id will be address or startaddress-endaddress  
+    8. service – delete – subsumed by uri with extra data elements in it
+    9. classification – remove modifiers (attributes) on category and put in properties
+    10. classification – add documentation that category is companyname:category
+    11. objectProperty – move timestamp to be top level instead of on each property and make it required
+    12. relationship – make timestamp required
+    13. relationship – add doc on runs. removed 'exploits'  - it refers to environment object that no longer exists
+    14. added comment field to propertyenum
+    15. made timeStamp -&gt; timestamp for consistency
+    16.incremented version
+    
+    5/31/2009
+    
+    1. incremented version
+    2. changed url to uri
+    3. removed environment object and related enumerations
+    4. added restriction on uri to not allow a question mark (?)
+    
+    
+    5/15/2009
+    
+    1. incremented version
+    2. Added neutral classification type
+    3. Added numberOfWebsitesHosting and numberOfWebsitesRedirecting to volume units enumeration
+    4. added referrer, operatingSystem, userAgent and browser to properties
+    5. made classification type attribute required
+    
+    5/8/2009
+    
+    1. added new object type for asn
+    2. moved domain information to properties, so that domains info can be timestamped
+    3. added properties for geolocation of an ip address
+    4. added property for location url for a file
+    5. added VolumeUnitsEnum and volume tag in fieldData. This is to allow sharing of actual prevalence numbers, 
+        with various units.
+    6. Added ipProtocol (tcp/udp) to service object. Also changed names of expectedProtocol and actualProtocol to be 
+       expectedApplicationProtocol and actualApplicationProtocol
+    7. added 'references' surrounding tag to ref tag in fieldDataEntry and objectProperty, so that can assign multiple references if required
+    8. made id on file back to hexBinary. Use length to figure out what hash it is.
+    9. incremented version
+    10. added properties for httpMethod and postData
+    11. added relationship types 'contactedBy' and 'downloadedFrom'
+    
+    
+    4/17/2009
+    
+    1.	Incremented version
+    2.	Added unwanted to ClassificationTypeEnum
+    3.	Added text about ids for files to documentation
+    4.	Removed filename from file object definition
+    5.	Relaxed requirement on id of file to be an xs:hexString to be an xs:string to allow e.g. md5:aaaaabbbbccc as an id. Not enormously happy about that…
+    6.	Made sha256 optional and sha1 required in files
+    7.	Added “open issues” section in documentation for top level element
+    8.	Category is now an xs:string; deleted CategoryTypeEnum
+    9.	Added comment to doc on fieldDataEntry about using standard time periods, but kept start date and end date
+    10.	Added objectProperties element, and example illustratingProperties.xml. Currently allowed properties are filename, filepath, registryValueData and urlParameterString. There is an optional timestamp on each property. I allowed objectProperty to have an id, so that it can be referenced elsewhere, although we might want to re-think that.
+    11.	Added some better documentation to relationships
+    12.	Added more documentation throughout
+    
+    
+   </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="company" type="xs:string">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+        The company name for the entity generating the xml document, for example "AVG Technologies".
+      </xs:documentation>
+     </xs:annotation>
+    </xs:element>
+    <xs:element name="author" type="xs:string">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      The author of the document, for example "Matt Williamson" or "Igor Muttik".
+     </xs:documentation>
+     </xs:annotation>
+    </xs:element>
+    <xs:element name="comment" type="xs:string">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      A human readable comment.
+     </xs:documentation>
+     </xs:annotation>
+    </xs:element>
+    <xs:element name="timestamp" type="xs:dateTime">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      The time that the document was created.
+     </xs:documentation>
+     </xs:annotation>
+    </xs:element>
+
+    <!-- objects is optional and contains and unbounded number of 'object' elements -->
+    <xs:element name="objects" minOccurs="0">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      Objects are globally unique files, urls, domain, registry, ipAddress etc. The data within the object is supporting data for the globally unique object. 
+      For example, files have an id (by convention the hash, sha256 if available, else weaker ones), and the data for the file is the hashes, sizes etc. 
+      Urls have an id (the  url itself), and data which is simply the url parts broken out.
+      There are no dates, etc in the objects. These are first class, global objects. 
+     </xs:documentation>
+     </xs:annotation>
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="file" type="fileObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Files or samples
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="uri" type="uriObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        URI (Uniform Resource Identifier) objects.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="domain" type="domainObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Domain names as administered by ICANN.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="registry" type="registryObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Configuration information from the registry on Microsoft Windows operating systems.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="ip" type="IPObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Internet Protocol (IP) addresses, both ipv4 and ipv6.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="asn" type="ASNObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Autonomous System (AS).
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="entity" type="entityObject" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        A corporation or other entity.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element name="classification" type="classificationObject" minOccurs="0"
+        maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation xml:lang="en">
+        Labels or names, for example detection names associated with malware samples.
+       </xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element maxOccurs="unbounded" minOccurs="0" name="softwarePackage"
+        type="softwarePackageObject">
+        <xs:annotation>
+         <xs:documentation>Software packages, typically used for associating with the files that they install or create.</xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element maxOccurs="unbounded" minOccurs="0" name="digitalSignature"
+        type="digitalSignatureObject">
+        <xs:annotation>
+         <xs:documentation>Digital signatures, for use in assocating with &gt;1 binaries that may have the same signature. If only one binary with a signature is wished to be profiled, then the digitalSignature element inside the fileObject should be utilized.</xs:documentation>
+        </xs:annotation>
+       </xs:element>
+       <xs:element maxOccurs="unbounded" minOccurs="0" name="taggant" type="taggantObject">
+        <xs:annotation>
+         <xs:documentation>Digital signatures, for use in assocating with &gt;1 binaries that may have the same signature. If only one binary with a taggant is wished to be profiled, then the taggant element inside the fileObject should be utilized.</xs:documentation>
+        </xs:annotation>
+       </xs:element>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+
+    <!-- properties are properties of objects that do not make sense as relationships, e.g. file names -->
+    <xs:element name="objectProperties" minOccurs="0">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      Properties of objects that do not make sense as relationships. e.g. file names, url parameter strings, registry value data.
+     </xs:documentation>
+     </xs:annotation>
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="objectProperty" type="objectProperty" maxOccurs="unbounded"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+
+    <!-- relationships contain an unbounded number of relationship elements -->
+    <xs:element name="relationships" minOccurs="0">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      Relationships between objects.
+     </xs:documentation>
+     </xs:annotation>
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="relationship" type="relationship" maxOccurs="unbounded"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+
+
+
+    <!-- fieldData is an unbounded number of fieldDataEntry elements -->
+    <xs:element name="fieldData" minOccurs="0">
+     <xs:annotation>
+      <xs:documentation xml:lang="en">
+      Prevalence data.
+     </xs:documentation>
+     </xs:annotation>
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="fieldDataEntry" type="fieldDataEntry" maxOccurs="unbounded"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+   <!-- attributes on the top level element -->
+   <xs:attribute use="required" name="version" type="xs:decimal" fixed="1.2">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+     The version of the schema. This is currently fixed to be 1.1.
+    </xs:documentation>
+    </xs:annotation>
+   </xs:attribute>
+   <!-- globally unique identifier for the file -->
+   <xs:attribute use="required" name="id" type="xs:string">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      A required identifier for the document. 
+     </xs:documentation>
+    </xs:annotation>
+   </xs:attribute>
+  </xs:complexType>
+ </xs:element>
+
+
+
+ <!-- definition of file -->
+ <xs:complexType name="fileObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Object definition for files. The required attribute is the id, which needs to be globally unique. 
+    By convention, the value used is a hash, the stronger the better. 
+    
+    The choice should be: use sha256 if you have it, if not use sha1, if not use md5.
+  
+    Other hashes and file sizes are recorded in the elements. 
+
+    File names are put in as properties.
+    
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="md5" type="xs:hexBinary" minOccurs="1"/>
+   <xs:element name="sha1" type="xs:hexBinary" minOccurs="0"/>
+   <xs:element name="sha256" type="xs:hexBinary" minOccurs="0"/>
+   <xs:element name="sha512" type="xs:hexBinary" minOccurs="0"/>
+   <xs:element name="size" type="xs:int" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      The file size in bytes.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="crc32" type="xs:string" minOccurs="0"/>
+   <xs:element name="fileType" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      String describing the type of file, for example executable, script etc.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="extraHash" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      Element for inserting fuzzy hashes for example pehash, ssdeep. These are put in with this element, with a required attribute 'type' used
+      to hold the type of hash.
+     </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="type" use="required" type="xs:string"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="filename" type="xs:string"/>
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="normalizedNativePath" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The normalized native path of the file, using standardized system path variables (for Windows see http://en.wikipedia.org/wiki/Environment_variable#System_path_variables) with prepended and appended percentage characters. E.g. %ProgramFiles%/Microsoft Visual Studio.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="filenameWithinInstaller" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The name of the file within an installer or archive.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="folderWithinInstaller" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The folder the file resides in within an installer or archive.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="vendor" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The name of the vendor, if extractable from the file.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="internalName" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The internal name(s) of hte file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="unbounded" minOccurs="0" name="language" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The language(s) the file is in.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="1" minOccurs="0" name="productName" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The name of the product the file belongs to, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="fileVersion" type="xs:string"/>
+   <xs:element minOccurs="0" name="productVersion" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The version of the product the file belongs to, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="developmentEnvironment" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The development environment used to build the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="checksum" type="xs:hexBinary">
+    <xs:annotation>
+     <xs:documentation>The checksum of the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="architecture" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The processor architecture of the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="buildTimeDateStamp" type="xs:dateTime">
+    <xs:annotation>
+     <xs:documentation>The build timestamp of the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="compilerVersion" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The version of the compiler used to compile the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="linkerVersion" type="xs:float">
+    <xs:annotation>
+     <xs:documentation>The version of the linker used to link the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="minOSVersionCPE" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The minimum operating system version needed to run the file, specifeid as a CPE name. The Common Platform Enumeration, or CPE, name of the package if one exists. CPE is a structured naming scheme for IT systems, software, and packages. For more information on CPE see http://cpe.mitre.org. For the official CPE dictionary see http://nvd.nist.gov/cpe.cfm.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="1" minOccurs="0" name="numberOfSections" type="xs:int">
+    <xs:annotation>
+     <xs:documentation>The number of sections in the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="MIMEType" type="xs:string"/>
+   <xs:element minOccurs="0" name="requiredPrivilege" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The minimum required to run the file, e.g. Administrator, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="0" name="digitalSignature" type="digitalSignatureObject">
+    <xs:annotation>
+     <xs:documentation>Information on the digital signature of the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element maxOccurs="1" minOccurs="0" name="taggant" type="taggantObject">
+    <xs:annotation>
+     <xs:documentation>Information on the taggant used to tag the file, if applicable.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:hexBinary"/>
+ </xs:complexType>
+
+ <!-- definition of registry -->
+ <xs:complexType name="registryObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Registry object. The required attribute is 'id', which is taken to be key\\valueName. 
+    Keys end in a \, value names start  with a \, so you have e.g.
+    key = hklm\software\microsoft\currentversion\windows\run\
+    value =\foo
+    making the id hklm\software\microsoft\currentversion\windows\run\\foo
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="key" type="xs:string"/>
+   <xs:element name="valueName" type="xs:string" minOccurs="0"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+ </xs:complexType>
+
+ <!-- definition of entity -->
+ <xs:complexType name="entityObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Entity Object. This is used to record groups, companies etc., and departments within organizations. 
+    The globally unique id (attribute) should be constructed from the company and department name, 
+    e.g. "Company name:Department name",  "Mcafee:AVERT labs", or "Russian Business Network".  
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="name" type="xs:string"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+ </xs:complexType>
+
+ <!-- definition of url -->
+ <xs:complexType name="uriObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Uri object. Only required element is uri string itself. There are elements for each of the broken out elements.
+    The protocol should be take from the list at http://www.iana.org/assignments/port-numbers, or if not in that list have the value 'unknown'.
+    The ipProtocol should be taken from the list http://www.iana.org/assignments/protocol-numbers/.
+    
+    The elements correspond to the usual breakdown of a uri into its component domain, hostname, path, port etc, as
+    described at http://en.wikipedia.org/wiki/Uniform_Resource_Locator.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="uriString" type="NoQuestionMark"/>
+   <xs:element name="protocol" type="xs:string" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      Protocol, for example http, ftp. value must match an element in the list hosted at http://www.iana.org/assignments/port-numbers.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="hostname" type="xs:string" minOccurs="0"/>
+   <xs:element name="domain" type="xs:string" minOccurs="0"/>
+   <xs:element name="port" type="xs:int" minOccurs="0"/>
+   <xs:element name="path" type="xs:string" minOccurs="0"/>
+   <xs:element name="ipProtocol" type="xs:string" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      IP protocol, for example. tcp, udp. value must match an element in the list hosted at http://www.iana.org/assignments/protocol-numbers/.
+     </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="NoQuestionMark"/>
+ </xs:complexType>
+
+
+ <!-- definition of ip address -->
+ <xs:complexType name="IPObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    IP object. Used to hold ipv4, ipv6 ip addresses and address ranges. The globally unique id is 'startAddress-endAddress'.
+    
+    There are two required elements, startAddress and endAddress, make these the same if you are 
+    specifying a single address.
+    
+    Thus for ip range id, would be e.g. 213.23.45.7-213.23.45.19
+    For a single ip, id would be e.g. 12.34.56.1-12.34.56.1
+    
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="startAddress" type="IPAddress"/>
+   <xs:element name="endAddress" type="IPAddress"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="IPRange"/>
+ </xs:complexType>
+
+ <!-- definition of IPAddress -->
+ <xs:complexType name="IPAddress">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    ip address - string for the actual address and attribute either ipv4, ipv6.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:simpleContent>
+   <xs:extension base="xs:string">
+    <xs:attribute name="type" type="IPTypeEnum" use="required"/>
+   </xs:extension>
+  </xs:simpleContent>
+ </xs:complexType>
+
+ <!-- definition of domain -->
+ <xs:complexType name="domainObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+   Domain object, used to hold internet domains, e.g.yahoo.com. The globally unique identifier (id attribute) is the domain itself.
+   whois information on domain is recorded using object properties.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="domain" type="xs:string"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+ </xs:complexType>
+
+ <!-- defintion of asn -->
+ <xs:complexType name="ASNObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Object used to hold information on Autonomous System Numbers. An autonomous system (AS) is a collection of connected
+    Internet Protocol (IP) routing prefixes under the control of one or more network operators that presents a common, 
+    clearly defined routing policy to the Internet.
+    
+    The id is the number, written as an integer for both 16 and 32 bit numbers.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="as-number" type="xs:int"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:int"/>
+ </xs:complexType>
+
+ <!-- definition of classification  -->
+ <xs:complexType name="classificationObject">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+       Classification object, used to hold names or classifications of objects. The most common use case for this is detection
+       names for files from av scanners. However, this object could be used for general classification. The globally unique id (attribute)
+       should be created from "Company name:internal classification name", e.g. "Mcafee:Generic.DX". The other required attribute is the
+       type of classification, e.g. clean, dirty, unknown. 
+       
+       There are elements to capture the category of the classification. The category should be entered in the same way to the
+       classification name, e.g. company name:category name, e..g Mcafee:Trojan.
+       
+      </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="classificationName" type="xs:string"> </xs:element>
+   <xs:element name="companyName" type="xs:string"/>
+   <xs:element name="category" minOccurs="0" type="xs:string">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+         Category is "companyname:category".
+        </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="classificationDetails" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+           Details of the classification, giving product details, particularly useful for anti-virus scanner detections.
+          </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="definitionVersion" type="xs:string" minOccurs="0"/>
+      <xs:element name="detectionAddedTimeStamp" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="detectionShippedTimeStamp" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="product" type="xs:string" minOccurs="0"/>
+      <xs:element name="productVersion" type="xs:string" minOccurs="0"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+  </xs:sequence>
+  <!-- the id of the classification = companyName:classificationName -->
+  <xs:attribute name="id" type="xs:string" use="required"/>
+  <!-- classification type - can only have certain values  -->
+  <xs:attribute name="type" type="ClassificationTypeEnum" use="required"/>
+ </xs:complexType>
+
+
+
+
+ <!-- definition of fieldDataEntry. 
+Required fields are subject (xpath to id) dates and origin
+everything else is optional 
+add multiple lines if necessary
+-->
+ <xs:complexType name="fieldDataEntry">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+     Data structure to hold prevalence information. The data includes a reference to another object (which is an xpath 
+     expression pointing to an object inside the 'ref' element), together with a time period (startDate -&gt; endDate), 
+     an origin - where the object came from, and various location tags. This allows rich information on prevalence to be recorded.
+     
+     By convention, time periods should be wherever possible standard time periods, e.g. minute, hour, 24 hours, week, month, quarter, year. This
+     will facilitate combination of data from multiple sources.
+     
+     To represent a single entry, make startDate == endDate.
+     
+     Commonality is calculated from the sightings of malware objects (and so such calculation is easier to automate).
+     Importance is reserved for cases when “commonality” is not available or if there is a need to communicate the 
+     importance when commonality is low. 
+     
+     We define the commonality on a scale 0 to 100 (0 means “never found in the field” and 100 means “found very frequently”). Scaling commonality to 0..100 range instead of using actual sample counts is to avoid the effect of the user base size on the commonality. We derive commonality from the number of affected computers – not from the number of samples (for example, a hundred parasitic infections of the same virus on a single computer are to be counted as one).  
+     
+     To calculate the commonality we use two-stage approach and logarithmic scale:
+     -	If the number of affected users exceeds 0.1% of your user base (more frequent than 1 in a 1000) set commonality to “100”
+     -	Otherwise, calculate the ratio of infected computers amongst your user base by dividing the real number of affected computers ‘n’ by the total number ‘N’ 
+     -	Apply the following formula to get the commonality –( log2(1+n*1000/N) ) * 100
+     -	Round to the closest integer
+    
+     
+     Obviously, the calculation above can only be applied to counting of malware sightings on desktops.
+     If telemetry is collected from a fraction of such desktops then an appropriate correction should be used. 
+     For all other cases (e.g. sighting on gateways, in some network security appliance, on an ISP level, etc.) 
+     please exercise your best judgment and apply provided desktop guideline as an example to make sure
+     the commonality factor is as comparable as possible.
+     
+     For a URL object the commonality could reflect, for example, how widely it was spammed.
+     
+     “Importance” should not be used together with “commonality” (unless commonality=“0”) to avoid possible confusion. High “importance”, for example, can be assigned to samples that are over-hyped by media when their commonality is still “0”. 
+     
+     Use the following guidelines for “importance” which is also defined on a scale 0..100:
+     100 – you’d  expect your CEO and/or media to call you any second about this object
+     80 – you might get a call from your CEO and/or media
+     60 –  you’d  expect your boss to call you any second
+     40 – you might get a call from your boss
+     20 – someone is very likely to contact you about this object
+     10 – you might get contacted about this object
+     0 – you’d be surprised if anyone would ever contact you about this object
+    
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:sequence>
+   <xs:element name="references">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       The objects the prevalence information pertains to.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="ref" type="reference" minOccurs="1" maxOccurs="unbounded"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+   <xs:element name="startDate" type="xs:dateTime">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       The start date for this field data entry - the start date of the period over which the prevalence (commonality) and importance is measured.
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="endDate" type="xs:dateTime">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       The end date for this field data entry - the end date of the period over which the prevalence (commonality) and importance is measured.
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="firstSeenDate" type="xs:dateTime" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       The date that the object was first seen by the reporting entity. 
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="origin" type="OriginTypeEnum">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       An enumeration of common sources or origins of data associated with the field data.
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="commonality" type="intBetween0and100" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       Qualitative measurements of prevalence.
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="volume" minOccurs="0" maxOccurs="unbounded">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       Quantitive measurements of prevalence.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:int">
+       <xs:attribute name="units" type="VolumeUnitsEnum" use="required"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+   <xs:element name="importance" type="intBetween0and100" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       Qualitative measurement of risk associated with the object.
+      </xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element name="location" minOccurs="0">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+       Geolocation information for prevalence.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="type" type="LocationTypeEnum"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
+
+ <!-- definition of reference which is xpath to object id -->
+ <xs:complexType name="reference">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    Reference element used to hold xpath expressions to objects, for example file[@id="12345"]. 
+   </xs:documentation>
+  </xs:annotation>
+  <xs:simpleContent>
+   <xs:extension base="xs:string"> </xs:extension>
+  </xs:simpleContent>
+ </xs:complexType>
+
+
+ <!-- type definition for attributes -->
+ <xs:complexType name="property">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+    A property.
+   </xs:documentation>
+  </xs:annotation>
+  <xs:simpleContent>
+   <xs:extension base="xs:string">
+    <xs:attribute name="type" type="PropertyTypeEnum" use="required"/>
+   </xs:extension>
+  </xs:simpleContent>
+ </xs:complexType>
+
+
+ <!-- definition of property -->
+ <xs:complexType name="objectProperty">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+     Property; a reference to the object, a timestamp and an unbounded set of properties.
+   
+    This is used to describe extra information about an object. For example, to show the url parameter strings
+    associated with a particular URI object. Or to show file names associated with a particular file.
+    
+    Properties can also be applied to relationships, by referencing the relationship by id. This allows use such as 
+    e.g. recording the post data sent in an http request between a malware (file object) and a uri (uri object).
+   </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element name="references">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      The objects the properties pertain to.
+     </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="ref" type="reference" minOccurs="1" maxOccurs="unbounded"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+   <xs:element name="timestamp" type="xs:dateTime"/>
+   <xs:element name="property" type="property" maxOccurs="unbounded"/>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:anySimpleType" use="optional"/>
+ </xs:complexType>
+
+ <!-- definition of relationship -->
+ <xs:complexType name="relationship">
+  <xs:annotation>
+   <xs:documentation xml:lang="en">
+       Relationships are used to express relationships between objects, and dates. Relationships have 
+       a type (an attribute with a defined list of allowed relationships), source (a set of xpath references to the parent end of 
+       the relationship), target (xpath references to the other end of the relationship) and an optional date.
+       
+       The linking of objects with types is a powerful way of describing data. The dates can be used to provide context. 
+       
+       For example, to assign a classification to an object, that can done with an "isClassifiedAs" relationship, with the date meaning 
+       that that was the data that that classification was assigned.
+       
+       To show urls and the last visited data, this can be expressed as a "verifiedBy" relationship between the urls and the entity doing the 
+       verification, with the date interpreted as the verification date.
+       
+      </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <!-- relationship is source section with multiple parent elements each of which contains xpath to it-->
+   <xs:element name="source">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      References to objects at the parent end of the relationship.
+     </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="ref" minOccurs="1" maxOccurs="unbounded" type="reference"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+   <!-- and target element with multiple child elements, each of which is xpath to id -->
+   <xs:element name="target">
+    <xs:annotation>
+     <xs:documentation xml:lang="en">
+      References to objects at the child end of the relationship.
+     </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="ref" minOccurs="1" maxOccurs="unbounded" type="reference"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+   <xs:element name="timestamp" type="xs:dateTime"/>
+  </xs:sequence>
+
+  <!-- attributes on relationship element relationships can have an optional id-->
+  <xs:attribute name="type" type="RelationshipTypeEnum" use="required"/>
+  <xs:attribute name="id" type="xs:anySimpleType" use="optional"/>
+ </xs:complexType>
+
+ <xs:complexType name="softwarePackageObject">
+  <xs:annotation>
+   <xs:documentation>Software package object, used to store information about a software package, such as the vendor and version. Intended primarily for the clean-file metadata sharing use case.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element minOccurs="1" name="vendor" type="xs:string"/>
+   <xs:element minOccurs="0" name="productgroup" type="xs:string">
+    <xs:annotation>
+     <xs:documentation>The product group that the product belongs to, e.g. Microsoft Office.</xs:documentation>
+    </xs:annotation>
+   </xs:element>
+   <xs:element minOccurs="1" name="product" type="xs:string"/>
+   <xs:element minOccurs="0" name="version" type="xs:string"/>
+   <xs:element minOccurs="0" name="update" type="xs:string"/>
+   <xs:element minOccurs="0" name="edition" type="xs:string"/>
+   <xs:element minOccurs="0" name="language" type="xs:string"/>
+   <xs:element minOccurs="0" name="CPEname">
+    <xs:annotation>
+     <xs:documentation>The Common Platform Enumeration, or CPE, name of the package if one exists. CPE is a structured naming scheme for IT systems, software, and packages. For more information on CPE see http://cpe.mitre.org. For the official CPE dictionary see http://nvd.nist.gov/cpe.cfm.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:string">
+       <xs:attribute name="cpeVersion" type="xs:string">
+        <xs:annotation>
+         <xs:documentation>The version of CPE that is used for the name in the CPEname element. As of 10/04/2011 this is 2.2.</xs:documentation>
+        </xs:annotation>
+       </xs:attribute>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:string" use="required"/>
+ </xs:complexType>
+ <xs:complexType name="digitalSignatureObject">
+  <xs:annotation>
+   <xs:documentation>Digital signature object, used to hold information about digitally signed binaries with regards to the certificate used and its validity.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element minOccurs="1" name="certificateIssuer" type="xs:string"/>
+   <xs:element minOccurs="0" name="certificateSubject" type="xs:string"/>
+   <xs:element minOccurs="1" name="certificateValidity" type="xs:boolean"/>
+   <xs:element minOccurs="0" name="certificateRevocationTimestamp" type="xs:dateTime"/>
+   <xs:element minOccurs="0" name="signingTimestamp">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:dateTime">
+       <xs:attribute name="valid" type="xs:boolean"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:string" use="required"/>
+  <xs:attribute name="type">
+   <xs:simpleType>
+    <xs:restriction base="xs:string">
+     <xs:enumeration value="CatalogSigned"/>
+     <xs:enumeration value="CodeSigned"/>
+    </xs:restriction>
+   </xs:simpleType>
+  </xs:attribute>
+ </xs:complexType>
+ <xs:complexType name="taggantObject">
+  <xs:annotation>
+   <xs:documentation>Taggant object, for use in characterizing the software taggant that may be associated with a file or multiple files. For more information on the taggant system or the IEEE Malware Working Group that created it, please see http://standards.ieee.org/develop/indconn/icsg/malware.html.</xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+   <xs:element minOccurs="1" name="vendorID" type="xs:string"/>
+   <xs:element minOccurs="0" name="taggantValidity" type="xs:boolean"/>
+   <xs:element minOccurs="0" name="signingTimestamp">
+    <xs:complexType>
+     <xs:simpleContent>
+      <xs:extension base="xs:dateTime">
+       <xs:attribute name="valid" type="xs:boolean"/>
+      </xs:extension>
+     </xs:simpleContent>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+  <xs:attribute name="id" type="xs:string" use="required"/>
+ </xs:complexType>
+</xs:schema>

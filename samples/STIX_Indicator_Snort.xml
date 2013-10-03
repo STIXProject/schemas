@@ -28,6 +28,7 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://stix.mitre.org/extensions/TestMechanism#Snort-1 ../extensions/test_mechanism/snort.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    version="1.0.1"
     >
     <stix:STIX_Header>
         <stix:Title>Example SNORT Indicator</stix:Title>

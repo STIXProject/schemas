@@ -37,12 +37,13 @@
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-075427ae-4021-410c-8d0b-2cde003a1e7b"
+    version="1.0.1"
     >
     <stix:STIX_Header>
         <stix:Title>Email with attachments.</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Observations - Email</stix:Package_Intent>
     </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="0">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="0" cybox_update_version="1">
         <cybox:Observable id="example:Observable-9d299eb7-c089-465a-bf5f-d6283c251645">
             <cybox:Description>
                 This observable is a raw email with attachments. This observable also 

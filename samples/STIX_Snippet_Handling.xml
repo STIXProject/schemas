@@ -9,11 +9,11 @@
 
 <!-- This XML Snippet is NOT intended to validate -->
 <indicator:Handling>
-	<marking:Marking id="example:Marking-88501eee-135a-429b-9848-9a992456bd91" version="0.5">
+	<marking:Marking id="example:Marking-88501eee-135a-429b-9848-9a992456bd91">
 		<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
 		<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="GREEN"/>
 	</marking:Marking>
-	<marking:Marking id="example:Marking-d50a3e6b-142e-4b8e-92ab-2bb61a273d61" version="0.5">
+	<marking:Marking id="example:Marking-d50a3e6b-142e-4b8e-92ab-2bb61a273d61">
 		<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//indicator:SuggestedCOAs/indicator:SuggestedCOA/stixCommon:Course_Of_Action[@id="example:COA-e46d2565-754e-4ac3-9f44-2de1bfb1e71d"]</marking:Controlled_Structure>
 		<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="RED"/>
 	</marking:Marking>
