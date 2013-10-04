@@ -2,18 +2,17 @@
 
 <stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:TTP="http://stix.mitre.org/TTP-1" xmlns:COA="http://stix.mitre.org/CourseOfAction-1" xmlns:ciq="urn:oasis:names:tc:ciq:xpil:3" xmlns:n="urn:oasis:names:tc:ciq:xnl:3" xmlns:capec="http://stix.mitre.org/extensions/AP#CAPEC2.5-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:tlpMarking="http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2"  xmlns:example="http://example.com/" 
 xsi:schemaLocation="
-http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.0/stix_core.xsd
-http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.0/stix_common.xsd
-http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.0/indicator.xsd
-http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.0/ttp.xsd
-http://stix.mitre.org/CourseOfAction-1 http://stix.mitre.org/XMLSchema/course_of_action/1.0/course_of_action.xsd
-http://stix.mitre.org/extensions/AP#CAPEC2.5-1 http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.0/capec_2.5.xsd
-http://data-marking.mitre.org/Marking-1  http://stix.mitre.org/XMLSchema/data_marking/1.0/data_marking.xsd
-http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp.xsd
-http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd
+http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.0.1/stix_core.xsd
+http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.0.1/stix_common.xsd
+http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.0.1/indicator.xsd
+http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.0.1/ttp.xsd
+http://stix.mitre.org/CourseOfAction-1 http://stix.mitre.org/XMLSchema/course_of_action/1.0.1/course_of_action.xsd
+http://data-marking.mitre.org/Marking-1  http://stix.mitre.org/XMLSchema/data_marking/1.0.1/data_marking.xsd
+http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0.1/tlp.xsd
+http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd
 " 
 id="example:package-ba1d406e-937c-414f-9231-6e1dbe64fe8b" 
-version="1.0">
+version="1.0.1">
 	<stix:Indicators>
 		<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7">
 			<indicator:Title>"US-China" Phishing Indicator</indicator:Title>
@@ -107,11 +106,11 @@ version="1.0">
 				</indicator:Suggested_COA>
 			</indicator:Suggested_COAs>
 			<indicator:Handling>
-				<marking:Marking id="example:Marking-88501eee-135a-429b-9848-9a992456bd91" version="0.5">
+				<marking:Marking id="example:Marking-88501eee-135a-429b-9848-9a992456bd91">
 					<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//node()</marking:Controlled_Structure>
 					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="GREEN"/>
 				</marking:Marking>
-				<marking:Marking id="example:Marking-d50a3e6b-142e-4b8e-92ab-2bb61a273d61" version="0.5">
+				<marking:Marking id="example:Marking-d50a3e6b-142e-4b8e-92ab-2bb61a273d61">
 					<marking:Controlled_Structure>ancestor-or-self::stix:Indicator//indicator:Suggested_COAs/indicator:Suggested_COA/stixCommon:Course_Of_Action[@id="example:COA-e46d2565-754e-4ac3-9f44-2de1bfb1e71d"]//node()</marking:Controlled_Structure>
 					<marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="RED"/>
 				</marking:Marking>

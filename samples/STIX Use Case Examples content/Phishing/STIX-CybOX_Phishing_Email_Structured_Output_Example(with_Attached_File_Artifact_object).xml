@@ -12,19 +12,19 @@ xmlns:DNSQueryObj="http://cybox.mitre.org/objects#DNSQueryObject-2"
 xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"        
 xmlns:example="http://example.com"
 xsi:schemaLocation="
-http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
-http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.0/cybox_common.xsd
-http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.0/Address_Object.xsd
-http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0/File_Object.xsd
-http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.0/URI_Object.xsd
-http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.0/Email_Message_Object.xsd 
-http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0/Artifact_Object.xsd
-http://cybox.mitre.org/objects#WhoisObject-2 http://cybox.mitre.org/XMLSchema/objects/Whois/2.0/Whois_Object.xsd
-http://cybox.mitre.org/objects#DNSRecordObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Record/2.0/DNS_Record_Object.xsd
-http://cybox.mitre.org/objects#DNSQueryObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Query/2.0/DNS_Query_Object.xsd
-http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd
+http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0.1/cybox_core.xsd
+http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.0.1/cybox_common.xsd
+http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.0.1/Address_Object.xsd
+http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0.1/File_Object.xsd
+http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.0.1/URI_Object.xsd
+http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.0.1/Email_Message_Object.xsd 
+http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0.1/Artifact_Object.xsd
+http://cybox.mitre.org/objects#WhoisObject-2 http://cybox.mitre.org/XMLSchema/objects/Whois/2.0.1/Whois_Object.xsd
+http://cybox.mitre.org/objects#DNSRecordObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Record/2.0.1/DNS_Record_Object.xsd
+http://cybox.mitre.org/objects#DNSQueryObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Query/2.0.1/DNS_Query_Object.xsd
+http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.1/cybox_default_vocabularies.xsd
 " 
-  cybox_minor_version="0" cybox_major_version="2">
+  cybox_update_version="1" cybox_minor_version="0" cybox_major_version="2">
   
     <cybox:Observable id="example:observable-6f45ce72-30c8-11e2-8011-000c291a73d5">
             <cybox:Object id="example:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0">
@@ -184,7 +184,7 @@ MIME-Version: 1.0
 	<!-- Extracted Domain from link URL (state.gov)  -->
     <cybox:Observable id="example:observable-6e98b56a-41b8-4c52-b5ae-6ac86e968b93">
             <cybox:Object id="example:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3">
-                <cybox:Properties xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
                     <URIObj:Value>state.gov</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
@@ -223,7 +223,7 @@ MIME-Version: 1.0
     <cybox:Observable id="example:observable-e43863e6-8c28-479d-a8cb-714521750365">
             <cybox:Object id="example:object-03d041dd-21f7-4b70-a2be-d4abedf2503b">
                 <cybox:Properties xsi:type="WhoisObj:WhoisObjectType">
-                    <WhoisObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                    <WhoisObj:Domain_Name xsi:type="URIObj:URIObjectType" type="Domain Name">
                         <URIObj:Value>state.gov</URIObj:Value>
                     </WhoisObj:Domain_Name>
                     <WhoisObj:Status><WhoisObj:Status>OK</WhoisObj:Status></WhoisObj:Status>
@@ -241,7 +241,7 @@ MIME-Version: 1.0
             <cybox:Object id="example:object-bea8273c-3b4d-409f-880e-c53c64f8a05c">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="true">
                     <DNSQueryObj:Question>
-                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType" type="Domain Name">
                             <URIObj:Value>state.gov</URIObj:Value>
                         </DNSQueryObj:QName>
                         <DNSQueryObj:QType>A</DNSQueryObj:QType>
@@ -266,7 +266,7 @@ MIME-Version: 1.0
     <cybox:Observable id="example:observable-8239d3ba-5f4e-4d3d-99cf-cc17ae99f9b5">
             <cybox:Object id="example:object-4c9bad1b-e4ac-4b3e-9e28-fbf03b73613c">
                 <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
-                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType" type="Domain Name">
                         <URIObj:Value>state.gov</URIObj:Value>
                     </DNSRecordObj:Domain_Name>
                     <DNSRecordObj:IP_Address xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
@@ -321,7 +321,7 @@ state.gov. 5 IN A 72.166.186.151
             <cybox:Object id="example:object-c1849f06-d433-4ef8-bcfa-a516a008c8d4">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="true">
                     <DNSQueryObj:Question>
-                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType" type="Domain Name">
                             <URIObj:Value>state.gov</URIObj:Value>
                         </DNSQueryObj:QName>
                         <DNSQueryObj:QType>AAAA</DNSQueryObj:QType>
@@ -346,7 +346,7 @@ state.gov. 5 IN A 72.166.186.151
     <cybox:Observable id="example:observable-66d0ee64-2412-4af4-82b5-9e5b20e7deda">
             <cybox:Object id="example:object-1f68760e-fa04-4730-936d-d3abcc4b365b">
                 <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
-                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType" type="Domain Name">
                         <URIObj:Value>state.gov</URIObj:Value>
                     </DNSRecordObj:Domain_Name>
                     <DNSRecordObj:IP_Address xsi:type="AddressObj:AddressObjectType" category="ipv6-addr">
@@ -413,7 +413,7 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
     <!-- Extracted Domain from link URL (bhsxeozfiwqj.net)  -->
     <cybox:Observable id="example:observable-542405ea-3a77-4490-b37d-c1a555f2d7be">
             <cybox:Object id="example:object-486b9846-ced7-49d3-ae92-7845f06b6557">
-                <cybox:Properties xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
                     <URIObj:Value>bhsxeozfiwqj.net</URIObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
@@ -438,7 +438,7 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
             <cybox:Object id="example:object-79a3f502-478d-4c0c-a97f-d10d69658b4c">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="false">
                     <DNSQueryObj:Question>
-                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType" type="Domain Name">
                             <URIObj:Value>bhsxeozfiwqj.net</URIObj:Value>
                         </DNSQueryObj:QName>
                         <DNSQueryObj:QType>A</DNSQueryObj:QType>
@@ -458,7 +458,7 @@ state.gov. 5 IN AAAA 2001:428:d400:4:72:166:186:151
             <cybox:Object id="example:object-b7edd88e-5b47-42a6-a5be-ab87d8d8d1ba">
                 <cybox:Properties xsi:type="DNSQueryObj:DNSQueryObjectType" successful="false">
                     <DNSQueryObj:Question>
-                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType"><!-- This should have an attribute of @type="Domain Name" but there is a bug in CybOX 2.0 that will be fixed in 2.1 preventing it from holding any value other than URL  -->
+                        <DNSQueryObj:QName xsi:type="URIObj:URIObjectType" type="Domain Name">
                             <URIObj:Value>bhsxeozfiwqj.net</URIObj:Value>
                         </DNSQueryObj:QName>
                         <DNSQueryObj:QType>AAAA</DNSQueryObj:QType>
