@@ -3,7 +3,7 @@
 	xmlns:cybox="http://cybox.mitre.org/cybox-2" targetNamespace="http://capec.mitre.org/capec-2"
 	elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.6.1">
 	<xs:import namespace="http://cybox.mitre.org/cybox-2"
-		schemaLocation="http://cybox.mitre.org/XMLSchema/core/2.0.1/cybox_core.xsd"/>
+		schemaLocation="../../cybox/cybox_core.xsd"/>
 	<xs:element name="Attack_Pattern_Catalog">
 		<xs:annotation>
 			<xs:documentation>This is the enumerated catalog of common attack
