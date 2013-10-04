@@ -24,27 +24,28 @@
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
     xmlns:example="http://example.com/"
     xsi:schemaLocation=
-    "http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
-    http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.0/stix_core.xsd
-    http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.0/indicator.xsd
-    http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.0/ttp.xsd
-    http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd
-    http://stix.mitre.org/extensions/Malware#MAEC4.0-1 http://stix.mitre.org/XMLSchema/extensions/malware/maec_4.0/1.0/maec_4.0.xsd
-    http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.0/maec_package_schema.xsd
-    http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.0/maec_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0/Artifact_Object.xsd
-    http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0/File_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd 
-    http://cybox.mitre.org/objects#WinPipeObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Pipe/2.0/Win_Pipe_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/objects#WinExecutableFileObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Executable_File/2.0/Win_Executable_File_Object.xsd"
-    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc">
+    "http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0.1/cybox_core.xsd
+    http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.0.1/stix_core.xsd
+    http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.0.1/indicator.xsd
+    http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.0.1/ttp.xsd
+    http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd
+    http://stix.mitre.org/extensions/Malware#MAEC4.0-1 http://stix.mitre.org/XMLSchema/extensions/malware/maec_4.0.1/1.0.1/maec_4.0.1.xsd
+    http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.0.1/maec_package_schema.xsd
+    http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.0.1/maec_default_vocabularies.xsd
+    http://cybox.mitre.org/objects#ArtifactObject-2 http://cybox.mitre.org/XMLSchema/objects/Artifact/2.0.1/Artifact_Object.xsd
+    http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.0.1/File_Object.xsd
+    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0.1/Win_Registry_Key_Object.xsd
+    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.1/cybox_default_vocabularies.xsd 
+    http://cybox.mitre.org/objects#WinPipeObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Pipe/2.0.1/Win_Pipe_Object.xsd
+    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0.1/Win_Registry_Key_Object.xsd
+    http://cybox.mitre.org/objects#WinExecutableFileObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Executable_File/2.0.1/Win_Executable_File_Object.xsd"
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    version="1.0.1">
     <stix:STIX_Header>
         <stix:Title>Zeus 1.x Artifacts and Characterization</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</stix:Package_Intent>
     </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="0">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="0" cybox_update_version="1">
         <cybox:Observable>
             <cybox:Description>
                 The Zeus 1.x binary encoded as an Artifact Object
@@ -98,7 +99,7 @@
                     <ttp:Behavior>
                         <ttp:Malware>
                             <ttp:Malware_Instance xsi:type="maecExtension:MAEC4.0InstanceType">
-                                <maecExtension:MAEC id="maec-anubis_to_maec-pkg-1" schema_version="2.0">
+                                <maecExtension:MAEC id="maec-anubis_to_maec-pkg-1" schema_version="2.0.1">
                                     <maecPackage:Malware_Subjects>
                                         <maecPackage:Malware_Subject id="maec-anubis_to_maec-sub-1">
                                             <maecPackage:Malware_Instance_Object_Attributes id="maec-anubis_to_maec-obj-1">
@@ -220,7 +221,7 @@
                                                 </maecPackage:Analysis>
                                             </maecPackage:Analyses>
                                             <maecPackage:Findings_Bundles>
-                                                <maecPackage:Bundle defined_subject="false" content_type="dynamic analysis tool output" timestamp="2012-07-31T13:28:57.082000" id="maec-anubis_to_maec-bnd-1" schema_version="4.0">
+                                                <maecPackage:Bundle defined_subject="false" content_type="dynamic analysis tool output" timestamp="2012-07-31T13:28:57.082000" id="maec-anubis_to_maec-bnd-1" schema_version="4.0.1">
                                                     <maecBundle:Collections>
                                                         <maecBundle:Action_Collections>
                                                             <maecBundle:Action_Collection name="File System Actions" id="maec-anubis_to_maec-actc-1">

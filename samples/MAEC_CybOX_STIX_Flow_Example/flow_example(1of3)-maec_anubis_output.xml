@@ -16,14 +16,14 @@
     xmlns:WinPipeObj="http://cybox.mitre.org/objects#WinPipeObject-2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation=
-    "http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.0/maec_package_schema.xsd
-    http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.0/maec_default_vocabularies.xsd
-    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.0/cybox_default_vocabularies.xsd 
-    http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0/cybox_core.xsd
-    http://cybox.mitre.org/objects#WinPipeObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Pipe/2.0/Win_Pipe_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/objects#WinExecutableFileObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Executable_File/2.0/Win_Executable_File_Object.xsd" 
-    id="maec-anubis_to_maec-pkg-1" schema_version="2.0">
+    "http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.0.1/maec_package_schema.xsd
+    http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.0.1/maec_default_vocabularies.xsd
+    http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.0.1/cybox_default_vocabularies.xsd 
+    http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.0.1/cybox_core.xsd
+    http://cybox.mitre.org/objects#WinPipeObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Pipe/2.0.1/Win_Pipe_Object.xsd
+    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.0.1/Win_Registry_Key_Object.xsd
+    http://cybox.mitre.org/objects#WinExecutableFileObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Executable_File/2.0.1/Win_Executable_File_Object.xsd" 
+    id="maec-anubis_to_maec-pkg-1" schema_version="2.0.1">
     <maecPackage:Malware_Subjects>
         <maecPackage:Malware_Subject id="maec-anubis_to_maec-sub-1">
             <maecPackage:Malware_Instance_Object_Attributes id="maec-anubis_to_maec-obj-1">
@@ -145,7 +145,7 @@
                 </maecPackage:Analysis>
             </maecPackage:Analyses>
             <maecPackage:Findings_Bundles>
-                <maecPackage:Bundle defined_subject="false" content_type="dynamic analysis tool output" timestamp="2012-07-31T13:28:57.082000" id="maec-anubis_to_maec-bnd-1" schema_version="4.0">
+                <maecPackage:Bundle defined_subject="false" content_type="dynamic analysis tool output" timestamp="2012-07-31T13:28:57.082000" id="maec-anubis_to_maec-bnd-1" schema_version="4.0.1">
                     <maecBundle:Collections>
                         <maecBundle:Action_Collections>
                             <maecBundle:Action_Collection name="File System Actions" id="maec-anubis_to_maec-actc-1">
