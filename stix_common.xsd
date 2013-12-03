@@ -712,13 +712,13 @@
 	</xs:complexType>
 	<xs:complexType name="StructuredTextType">
 		<xs:annotation>
-			<xs:documentation>The StructuredTextType is a type representing a generalized structure for capturing structured or unstructured textual information such as descriptions of things. It mirrors a similar type in CybOX 2.0</xs:documentation>
+			<xs:documentation>The StructuredTextType is a type representing a generalized structure for capturing structured or unstructured textual information such as descriptions of things.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute name="structuring_format" type="xs:string" use="optional">
 					<xs:annotation>
-						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the CybOX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
+						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the STIX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
