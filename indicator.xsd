@@ -233,7 +233,7 @@
 	<!---->
 	<xs:complexType name="SightingsType">
 		<xs:sequence>
-			<xs:element name="Sighting" type="indicator:SightingType" maxOccurs="unbounded">
+			<xs:element name="Sighting" type="indicator:SightingType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>This field characterizes a single sighting report for this Indicator.</xs:documentation>
 				</xs:annotation>
