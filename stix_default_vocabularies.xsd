@@ -1294,7 +1294,7 @@
 			<xs:enumeration value="Financial or Economic"/>
 			<xs:enumeration value="Military"/>
 			<xs:enumeration value="Opportunistic"/>
-			<xs:enumeration value="Policital"/>
+			<xs:enumeration value="Political"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
