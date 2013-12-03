@@ -96,7 +96,7 @@
 	<!---->
 	<xs:complexType name="ActivityType" abstract="true">
 		<xs:sequence>
-			<xs:element name="Date_Time">
+			<xs:element name="Date_Time" type="xs:dateTime">
 				<xs:annotation>
 					<xs:documentation>The Date_Time field specifies the date and time at which the activity occured.</xs:documentation>
 				</xs:annotation>
