@@ -29,7 +29,7 @@
 					<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>
-								Specifies the type for this Indicator.
+								Specifies the type or types for this Indicator.
 							
 								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IndicatorTypeVocabularyType in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd .
 
