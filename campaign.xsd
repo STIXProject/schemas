@@ -37,24 +37,16 @@
 					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>
-								The Intended_Effect field characterizes the intended effect of this cyber threat Campaign.
-							
-								It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd .
-
-								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
-							</xs:documentation>
+							<xs:documentation>The Intended_Effect field characterizes the intended effect of this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Status" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>
-								The status of this Campaign. For example, is the Campaign ongoing, historical, future, etc.
-							
-								This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CampaignStatusType in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd .
-
-								Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.
-							</xs:documentation>
+							<xs:documentation>The status of this Campaign. For example, is the Campaign ongoing, historical, future, etc.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CampaignStatusType in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>	Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_TTPs" type="campaign:RelatedTTPsType" minOccurs="0">
@@ -157,11 +149,8 @@
 		<xs:sequence>
 			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>
-						The Name field specifies a Name used to identify this Campaign. This field can be used to capture various aliases used to identify this Campaign.
-					
-						This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.					
-					</xs:documentation>
+					<xs:documentation>The Name field specifies a Name used to identify this Campaign. This field can be used to capture various aliases used to identify this Campaign.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

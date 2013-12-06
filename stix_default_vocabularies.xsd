@@ -1358,9 +1358,7 @@
 	</xs:complexType>
 	<xs:simpleType name="MotivationEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-				The possible values for motivations of a threat actor.
-			</xs:documentation>
+			<xs:documentation>The possible values for motivations of a threat actor.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
@@ -1402,9 +1400,7 @@
 	</xs:complexType>
 	<xs:simpleType name="IntendedEffectEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-                The possible values for effects intended by a threat actor.
-            </xs:documentation>
+			<xs:documentation>The possible values for effects intended by a threat actor.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
@@ -1454,9 +1450,7 @@
 	</xs:complexType>
 	<xs:simpleType name="PlanningAndOperationalSupportEnum-1.0.1">
 		<xs:annotation>
-			<xs:documentation>
-				The possible values for types of planning and operational support functions of a threat actor.
-			</xs:documentation>
+			<xs:documentation>The possible values for types of planning and operational support functions of a threat actor.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
@@ -1489,11 +1483,8 @@
 	</xs:simpleType>
 	<xs:complexType name="PlanningAndOperationalSupportVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>
-				The PlanningAndOperationalSupportVocab is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.
-			
-				NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportVocab is deprecated. Please use PlanningAndOperationalSupportVocab-1.0.1 instead.
-			</xs:documentation>
+			<xs:documentation>The PlanningAndOperationalSupportVocab is the default STIX vocabulary for expressing the planning and operational support functions of a threat actor.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportVocab is deprecated. Please use PlanningAndOperationalSupportVocab-1.0.1 instead.</xs:documentation>
 			<xs:appinfo>
 				<deprecated>true</deprecated>
 			</xs:appinfo>
@@ -1510,12 +1501,9 @@
 	</xs:complexType>
 	<xs:simpleType name="PlanningAndOperationalSupportEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-                The possible values for types of planning and operational support functions of a threat actor.
-                
-                NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportEnumType is deprecated. Please use PlanningAndOperationalSupportEnum-1.0.1 instead.
-            </xs:documentation>
-			<xs:appinfo>
+			<xs:documentation>The possible values for types of planning and operational support functions of a threat actor.</xs:documentation>
+            <xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportEnumType is deprecated. Please use PlanningAndOperationalSupportEnum-1.0.1 instead.</xs:documentation>    
+  			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
 				<deprecated>true</deprecated>
@@ -1563,9 +1551,7 @@
 	</xs:complexType>
 	<xs:simpleType name="IncidentEffectEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-                The possible values for types of possible effects of an incident.
-            </xs:documentation>
+			<xs:documentation>The possible values for types of possible effects of an incident.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
@@ -1591,12 +1577,9 @@
 	<!-- Attacker Tool Type Vocabulary -->
 	<xs:complexType name="AttackerToolTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>
-				The AttackerToolTypeVocab-1.0 is the default STIX vocabulary for expressing types of attacker tools.
-				
-                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
-			</xs:documentation>
-		</xs:annotation>
+			<xs:documentation>The AttackerToolTypeVocab-1.0 is the default STIX vocabulary for expressing types of attacker tools.</xs:documentation>
+			<xs:documentation>Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.</xs:documentation>	
+   		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
 				<xs:simpleType>
@@ -1644,9 +1627,7 @@
 	</xs:complexType>
 	<xs:simpleType name="IncidentCategoryEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-                The possible values for types of possible categories of an incident.
-            </xs:documentation>
+			<xs:documentation>The possible values for types of possible categories of an incident.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>This vocabulary is taken from the US-CERT Federal Incident Reporting Guidelines Incident Categories.</source>
@@ -1707,9 +1688,7 @@
 	</xs:complexType>
 	<xs:simpleType name="LossPropertyEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>
-                The possible values for properties of a loss.
-            </xs:documentation>
+			<xs:documentation>The possible values for properties of a loss.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 			</xs:appinfo>
