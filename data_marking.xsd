@@ -25,15 +25,10 @@
 	</xs:complexType>
 	<xs:complexType name="MarkingStructureType" abstract="true">
 		<xs:annotation>
-			<xs:documentation>
-				The MarkingStructureType contains the marking information to be applied to a portion of XML content.
-				
-				This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. STIX provides two options: Simple, and TLP.Additionally, those who wish to use another format may do so by defining a new extension to this type. The information for the STIX-provided extensions is:
-				
-				1. Simple: The Simple marking structures allows for the specification of unstructured statements through the use of a string field. The type is named SimpleMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 namespace. The extension is defined in the file extensions/marking/simple_marking.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/simple_marking/1.0/simple_marking.xsd.
-				
-				2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 namespace. The extension is defined in the file extensions/marking/tlp.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp.xsd.	
-			</xs:documentation>
+			<xs:documentation>The MarkingStructureType contains the marking information to be applied to a portion of XML content.</xs:documentation>
+			<xs:documentation>This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. STIX provides two options: Simple, and TLP.Additionally, those who wish to use another format may do so by defining a new extension to this type. The information for the STIX-provided extensions is:</xs:documentation>
+			<xs:documentation>1. Simple: The Simple marking structures allows for the specification of unstructured statements through the use of a string field. The type is named SimpleMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 namespace. The extension is defined in the file extensions/marking/simple_marking.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/simple_marking/1.0/simple_marking.xsd.</xs:documentation>
+			<xs:documentation>2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 namespace. The extension is defined in the file extensions/marking/tlp.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="marking_model_name" type="xs:QName">
 			<xs:annotation>
@@ -50,16 +45,11 @@
 		<xs:sequence>
 			<xs:element name="Controlled_Structure" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>
-						This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.
-						
-						The XPath expression is NOT recursive and the marking structure does NOT apply to child nodes of the selected node. Instead, the expression must explicitly select all nodes that the marking is to be applied to including elements, attributes, and text nodes.
-						
-						The context root of the XPath statement is this Controlled_Structure element. Any namespace prefix declarations that are available to this Controlled_Structure element are available to the XPath.
-						
-						Note that all Controlled_Structure elements have a scope within the document for which their XPath is valid to reference.
-						Usages of MarkingType may specify a "marking scope". The marking scope is always recursive and specifies the set of nodes that may be selected by the XPath expression (and therefore that may have the markings applied to them). If no marking scope is specified in the schema documentation or specification where the MarkingType is used, it should be assumed that the document itself and all nodes are within scope.
-						</xs:documentation>
+					<xs:documentation>This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.</xs:documentation>
+					<xs:documentation>The XPath expression is NOT recursive and the marking structure does NOT apply to child nodes of the selected node. Instead, the expression must explicitly select all nodes that the marking is to be applied to including elements, attributes, and text nodes.</xs:documentation>
+					<xs:documentation>The context root of the XPath statement is this Controlled_Structure element. Any namespace prefix declarations that are available to this Controlled_Structure element are available to the XPath.</xs:documentation>						
+					<xs:documentation>Note that all Controlled_Structure elements have a scope within the document for which their XPath is valid to reference.</xs:documentation>						
+					<xs:documentation>Usages of MarkingType may specify a "marking scope". The marking scope is always recursive and specifies the set of nodes that may be selected by the XPath expression (and therefore that may have the markings applied to them). If no marking scope is specified in the schema documentation or specification where the MarkingType is used, it should be assumed that the document itself and all nodes are within scope.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" maxOccurs="unbounded">
