@@ -47,6 +47,11 @@
 							<xs:documentation>Specifies a description for this Indicator.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Specifies a short description for this Indicator.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Valid_Time_Position" type="indicator:ValidTimeType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>Specifies the time window for which this Indicator is valid.</xs:documentation>

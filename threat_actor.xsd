@@ -28,6 +28,16 @@
 							<xs:documentation>The Title field provides a simple title for this ThreatActor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description element is optional and enables a generalized but structured description of this ThreatActor.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Short_Description element is optional and enables a short, generalized but structured description of this ThreatActor.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>
