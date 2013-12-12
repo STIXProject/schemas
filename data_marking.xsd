@@ -48,7 +48,7 @@
 	</xs:complexType>
 	<xs:complexType name="MarkingSpecificationType">
 		<xs:sequence>
-			<xs:element name="Controlled_Structure" type="xs:string">
+			<xs:element name="Controlled_Structure" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.
@@ -62,7 +62,7 @@
 						</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" maxOccurs="unbounded">
+			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>This field contains the marking information to be applied to the portions of XML content specified in the ControlledStructure field. This field is defined as MarkingStructureType which is an abstract type the enables the flexibility to utilize any variety of marking structures.</xs:documentation>
 				</xs:annotation>
