@@ -35,6 +35,11 @@
 							<xs:documentation>The Names field specifies Names used to identify this Campaign. These may be either internal or external names.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description element is optional and enables a generalized but structured description of this Campaign.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Intended_Effect field characterizes the intended effect of this cyber threat Campaign.</xs:documentation>
