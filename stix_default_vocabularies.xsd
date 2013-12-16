@@ -1701,4 +1701,109 @@
 			<xs:enumeration value="Non-Repudiation"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<!-- Course Of Action Type Vocabulary -->
+	<xs:complexType name="CourseOfActionTypeVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The CourseOfActionTypeVocab is the default STIX vocabulary for expressing types of courses of action.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:CourseOfActionTypeEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Course Of Action Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#CourseOfActionTypeVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="CourseOfActionTypeEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for expressing a type of course of action in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Perimeter Blocking">
+				<xs:annotation>
+					<xs:documentation>Perimeter-based blocking of traffic from a compromised source.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Internal Blocking">
+				<xs:annotation>
+					<xs:documentation>Host-based blocking of traffic from an internal compromised source.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Redirection">
+				<xs:annotation>
+					<xs:documentation>Re-routing of suspicious or known malicious traffic away from the intended target to an area where the threat can be more safely observed and analyzed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Redirection (Honey Pot)">
+				<xs:annotation>
+					<xs:documentation>Setting up a decoy parallel network that is intended to attract adversaries to the honey pot and away from the real network assets.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Hardening">
+				<xs:annotation>
+					<xs:documentation>Securing a system by reducing its surface of unnecessary software, usernames or logins, and running services.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Patching">
+				<xs:annotation>
+					<xs:documentation>A specific form of hardening, patching involves applying a code fix directly to the software with the vulnerability.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Eradication">
+				<xs:annotation>
+					<xs:documentation>Identifying, locating, and eliminating malware from the network.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Rebuilding">
+				<xs:annotation>
+					<xs:documentation>Re-installing a computing resource from a known safe source in order to ensure that the malware is no longer present on the previously compromised resource.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Training">
+				<xs:annotation>
+					<xs:documentation>Training users and administrators on how to identify and mitigate this type of threat.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Monitoring">
+				<xs:annotation>
+					<xs:documentation>Setting up network or host-based sensors to detected the presence of this threat.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Physical Access Restrictions">
+				<xs:annotation>
+					<xs:documentation>Activities associated with restricting physical access to computing resources.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Logical Access Restrictions">
+				<xs:annotation>
+					<xs:documentation>Activities associated with restricting logical access to computing resources.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Public Disclosure">
+				<xs:annotation>
+					<xs:documentation>Informing the public of the existence and characteristics of the threat or threat actor to influence positive change in adversary behavior.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Diplomatic Actions">
+				<xs:annotation>
+					<xs:documentation>Engaging in communications and relationship building with threat actors to influence positive changes in behavior.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Policy Actions">
+				<xs:annotation>
+					<xs:documentation>Modifications to policy that reduce the attack surface or infection vectors of malware.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Other">
+				<xs:annotation>
+					<xs:documentation>Other actions not covered in this list.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
