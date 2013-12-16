@@ -30,6 +30,16 @@
 							<xs:documentation>The Title field provides a simple title for this Campaign.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description field is optional and provides an unstructured, text description of this Campaign.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this Campaign.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Names" type="campaign:NamesType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Names field specifies Names used to identify this Campaign. These may be either internal or external names.</xs:documentation>
