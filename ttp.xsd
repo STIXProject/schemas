@@ -322,28 +322,76 @@
 	</xs:complexType>
 	<xs:complexType name="ExploitsType">
 		<xs:sequence>
-			<xs:element name="Exploit" type="ttp:ExploitType" maxOccurs="unbounded">
+			<xs:element name="Exploit" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Exploit field specifies a single Exploit for this TTP item.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ttp:ExploitType">
+							<xs:attribute name="id" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier for this Exploit.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="idref" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier of an Exploit specified elsewhere.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="MalwareType">
 		<xs:sequence>
-			<xs:element name="Malware_Instance" type="ttp:MalwareInstanceType" maxOccurs="unbounded">
+			<xs:element name="Malware_Instance" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Malware_Instance field specifies a single instance of Malware for this TTP item.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ttp:MalwareInstanceType">
+							<xs:attribute name="id" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier for this Malware_Instance.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="idref" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier of a Malware_Instance specified elsewhere.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AttackPatternsType">
 		<xs:sequence>
-			<xs:element name="Attack_Pattern" type="ttp:AttackPatternType" maxOccurs="unbounded">
+			<xs:element name="Attack_Pattern" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Attack_Pattern field specifies a single Attack Pattern for this TTP item.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ttp:AttackPatternType">
+							<xs:attribute name="id" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier for this Attack_Pattern.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="idref" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier of an Attack_Pattern specified elsewhere.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -354,10 +402,26 @@
 					<xs:documentation>The Tools field specifies one or more Tools leveraged by this TTP item.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Infrastructure" type="ttp:InfrastructureType" minOccurs="0">
+			<xs:element name="Infrastructure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Infrastructure field characterizes specific classes or instances of infrastructure observed to have been utilized for cyber attack.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ttp:InfrastructureType">
+							<xs:attribute name="id" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier for this Infrastructure.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="idref" type="xs:QName">
+								<xs:annotation>
+									<xs:documentation>Specifies a globally unique identifier of an Infrastructure specified elsewhere.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
