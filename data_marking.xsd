@@ -43,7 +43,7 @@
 	</xs:complexType>
 	<xs:complexType name="MarkingSpecificationType">
 		<xs:sequence>
-			<xs:element name="Controlled_Structure" type="xs:string">
+			<xs:element name="Controlled_Structure" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.</xs:documentation>
 					<xs:documentation>The XPath expression is NOT recursive and the marking structure does NOT apply to child nodes of the selected node. Instead, the expression must explicitly select all nodes that the marking is to be applied to including elements, attributes, and text nodes.</xs:documentation>
@@ -52,7 +52,7 @@
 					<xs:documentation>Usages of MarkingType may specify a "marking scope". The marking scope is always recursive and specifies the set of nodes that may be selected by the XPath expression (and therefore that may have the markings applied to them). If no marking scope is specified in the schema documentation or specification where the MarkingType is used, it should be assumed that the document itself and all nodes are within scope.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" maxOccurs="unbounded">
+			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>This field contains the marking information to be applied to the portions of XML content specified in the ControlledStructure field. This field is defined as MarkingStructureType which is an abstract type the enables the flexibility to utilize any variety of marking structures.</xs:documentation>
 				</xs:annotation>

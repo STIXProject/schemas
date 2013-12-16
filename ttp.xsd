@@ -34,7 +34,12 @@
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Description field provides an unstructured description of the TTP.</xs:documentation>
+							<xs:documentation>The Description field is optional and provides an unstructured, text description of this TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this TTP.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
@@ -114,12 +119,32 @@
 			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.5InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.5-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.5.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.0/capec_2.5.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Title field provides a simple title for an individual Attack Pattern.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Description field provides an unstructured description of an individual Attack Pattern.</xs:documentation>
+					<xs:documentation>The Description field is optional and provides an unstructured, text description of an individual Attack Pattern.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of an individual Attack Pattern.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Attack Pattern.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this Attack Pattern specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 		<xs:attribute name="capec_id">
 			<xs:annotation>
 				<xs:documentation>This field specifies a reference to a particular entry within the Common Attack Pattern Enumeration and Classification (CAPEC)</xs:documentation>
@@ -152,10 +177,25 @@
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Description field provides an unstructured description of an individual Malware instance.</xs:documentation>
+					<xs:documentation>The Description field is optional and provides an unstructured, text description of an individual Malware Instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of an individual Malware Instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Malware Instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this Malware Instance specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ExploitType">
 		<xs:annotation>
@@ -163,12 +203,32 @@
 			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an exploit using the XML Schema extension feature. No extension is provided by STIX to support this, however those wishing to represent structured exploit information may develop such an extension.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Title field provides a simple title for an individual Exploit instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Description field provides an unstructured description of an individual Exploit instance.</xs:documentation>
+					<xs:documentation>The Description field is optional and provides an unstructured, text description of an individual Exploit Instance.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of an individual Exploit Instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Exploit Instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this Exploit Instance specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RelatedTTPsType">
 		<xs:complexContent>
@@ -185,6 +245,11 @@
 	</xs:complexType>
 	<xs:complexType name="InfrastructureType">
 		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Title field provides a simple title for a class or instance of Infrastructure utilized for cyber attack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Type field represents the type of infrastructure being described.</xs:documentation>
@@ -194,7 +259,12 @@
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Description field generally describes specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
+					<xs:documentation>The Description field is optional and provides an unstructured, text description of specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Observable_Characterization" type="cybox:ObservablesType" minOccurs="0">
@@ -203,9 +273,34 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this class or instance of Infrastructure.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this class or instance of Infrastructure specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ToolsType">
 		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Title field provides a simple title for a single tool leveraged by this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field is optional and provides an unstructured, text description of a single tool leveraged by this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of a single tool leveraged by this TTP item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Tool" type="cyboxCommon:ToolInformationType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Tool field specifies a single Tool leveraged by this TTP item.</xs:documentation>
@@ -214,6 +309,16 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Tool.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID for this Tool specified elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ExploitsType">
 		<xs:sequence>
