@@ -1681,22 +1681,22 @@
 			<xs:enumeration value="Non-Repudiation"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!-- Course of Action Type Vocabulary -->
-	<xs:complexType name="CourseofActionTypeVocab-1.0">
+	<!-- Course Of Action Type Vocabulary -->
+	<xs:complexType name="CourseOfActionTypeVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The CourseofActionTypeVocab is the default STIX vocabulary for expressing types of courses of action.</xs:documentation>
+			<xs:documentation>The CourseOfActionTypeVocab is the default STIX vocabulary for expressing types of courses of action.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
 				<xs:simpleType>
-					<xs:union memberTypes="stixVocabs:CourseofActionTypeEnum-1.0"/>
+					<xs:union memberTypes="stixVocabs:CourseOfActionTypeEnum-1.0"/>
 				</xs:simpleType>
-				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Course of Action Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#CourseofActionTypeVocab-1.0"/>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Course Of Action Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#CourseOfActionTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:simpleType name="CourseofActionTypeEnum-1.0">
+	<xs:simpleType name="CourseOfActionTypeEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The default set of values to use for expressing a type of course of action in STIX.</xs:documentation>
 			<xs:appinfo>
