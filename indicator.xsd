@@ -258,6 +258,11 @@
 					<xs:documentation>This field provides a confidence assertion in the accuracy of this sighting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field is optional and enables an unstructured, text description of this Sighting.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
