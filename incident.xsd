@@ -374,6 +374,7 @@
 				<xs:attribute name="time" type="xs:dateTime">
 					<xs:annotation>
 						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+						<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 				<xs:attribute name="time_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
@@ -405,11 +406,13 @@
 			<xs:element name="Start" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Start field specifies the time at which the CourseOfAction was begun.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The End field specifies the time at which the CourseOfAction was completed.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -624,46 +627,55 @@
 			<xs:element name="First_Malicious_Action" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The First_Malicious_Action field specifies the time that the first malicious action related to this Incident occured.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Initial_Compromise" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Initial_Compromise field specifies the time that the initial compromise occured for this Incident.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="First_Data_Exfiltration" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The First_Data_Exfiltration field specifies the first time at which non-public data was taken from the victim environment</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Discovery" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Discovery field specifies the first time at which the organization learned the incident had occurred.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Opened" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Opened field specifies the time at which the Incident was officially opened.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Containment_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Containment_Achieved field specifies the first time at which the incident is contained (e.g., the “bleeding is stopped”).</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Restoration_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Restoration_Achieved field specifies the first time at which the incident's assets are restored (e.g., fully functional)”.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Reported" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Reported field specifies the time at which the Incident was reported.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Closed" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Closed field specifies the time at which the Incident was officially closed.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

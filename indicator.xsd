@@ -154,11 +154,13 @@
 			<xs:element name="Start_Time" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If not present, the valid time position of the indicator does not have a lower bound (i.e., temporal window is only bounded by the end-time). </xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End_Time" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>If not present, the valid time position of the indicator does not have an upper bound (i.e., temporal window is only bounded by the start-time). </xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -271,6 +273,7 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>This field provides the date and time of the Indicator sighting.</xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">

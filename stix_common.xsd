@@ -79,6 +79,7 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies the time of this Confidence assertion.</xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
@@ -93,6 +94,7 @@
 			<xs:element name="Date_Time" type="stixCommon:DateTimeWithPrecisionType">
 				<xs:annotation>
 					<xs:documentation>The Date_Time field specifies the date and time at which the activity occured.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -632,6 +634,7 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies the time this statement was asserted.</xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
