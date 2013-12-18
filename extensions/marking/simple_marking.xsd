@@ -14,6 +14,7 @@
 	<xs:complexType name="SimpleMarkingStructureType">
 		<xs:annotation>
 			<xs:documentation>The SimpleMarkingStructureType is a basic implementation of the data marking schema that allows for a string statement to be associated with the data being marked. One example might be the application of a copyright statement to some data set.</xs:documentation>
+			<xs:documentation>Nodes may be marked by multiple SimpleMarking statements. When this occurs, all SimpleMarking statements applied to that node are considered valid. There is no resolution for SimpleMarking Statements that appear to conflict: the behavior is undefined at the STIX level.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="marking:MarkingStructureType">
