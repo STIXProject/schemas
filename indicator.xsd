@@ -13,10 +13,14 @@
 	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
 	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
 	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
-	<xs:element name="Indicator" type="indicator:IndicatorType"/>
+	<xs:element name="Indicator" type="indicator:IndicatorType">
+		<xs:annotation>
+			<xs:documentation>The Indicator field characterizes a cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="IndicatorType">
 		<xs:annotation>
-			<xs:documentation>The IndicatorType characterizes a cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc. </xs:documentation>
+			<xs:documentation>The IndicatorType characterizes a cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IndicatorBaseType">
