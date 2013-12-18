@@ -149,12 +149,12 @@
 		<xs:sequence>
 			<xs:element name="Start_Time" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If not present, then client should assume infinity (i.e., temporal window is only bounded by the end-time). </xs:documentation>
+					<xs:documentation>If not present, the valid time position of the indicator does not have a lower bound (i.e., temporal window is only bounded by the end-time). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End_Time" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If not present, then client should assume infinity (i.e., temporal window is only bounded by the start-time). </xs:documentation>
+					<xs:documentation>If not present, the valid time position of the indicator does not have an upper bound (i.e., temporal window is only bounded by the start-time). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
