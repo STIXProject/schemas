@@ -126,7 +126,7 @@
 				</xs:attribute>
 				<xs:attribute name="negate" type="xs:boolean" default="false">
 					<xs:annotation>
-						<xs:documentation>The negate field applies when using an Indicator as a pattern and specifies the absence of the pattern.</xs:documentation>
+						<xs:documentation>The negate field specifies the absence of the pattern.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
