@@ -402,6 +402,11 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Targeted_Technical_Details" type="cybox:ObservablesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Targeted_Technical_Details field characterizes the technical information about what is targeted. It is implemented using the CybOX observables type, which allows for the representation of products, platforms, and code that are targeted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
