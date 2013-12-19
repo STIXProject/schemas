@@ -1297,7 +1297,6 @@
 			<xs:enumeration value="Policital"/>
 		</xs:restriction>
 	</xs:simpleType>
-
 	<xs:complexType name="MotivationVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>The MotivationVocab is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
@@ -1343,7 +1342,6 @@
 			<xs:enumeration value="Policital"/>
 		</xs:restriction>
 	</xs:simpleType>
-
 	<!-- Intended Effect Vocabulary -->
 	<xs:complexType name="IntendedEffectVocab-1.0">
 		<xs:annotation>
