@@ -31,7 +31,7 @@
 					</xs:element>
 					<xs:element name="Stage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Reponse).</xs:documentation>
+							<xs:documentation>The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Response).</xs:documentation>
 							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
