@@ -221,13 +221,113 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Indicator Type Vocabulary -->
+	<xs:complexType name="IndicatorTypeVocab-1.1">
+		<xs:annotation>
+			<xs:documentation>
+				The IndicatorTypeVocab is the default STIX vocabulary for expressing indicator types.
+				
+				Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:IndicatorTypeEnum-1.1"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Indicator Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IndicatorTypeVocab-1.1"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="IndicatorTypeEnum-1.1">
+		<xs:annotation>
+			<xs:documentation>The default set of Indicator types to use for characterizing Indicators in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.1</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Malicious E-mail">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected malicious e-mail (phishing, spear phishing, infected, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IP Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious IP addresses or IP blocks.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="File Hash Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of hashes for suspected malicious files.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Domain Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious domains.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="URL Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a set of suspected malicious URLS.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Artifacts">
+				<xs:annotation>
+					<xs:documentation>Indicator describes the effects of suspected malware.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C2">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected command and control activity or static indications.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Anonymization">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected anonymization techniques (Proxy, TOR, VPN, etc.).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Exfiltration">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected exfiltration techniques or behavior.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Host Characteristics">
+				<xs:annotation>
+					<xs:documentation>Indicator describes suspected malicious host characteristics.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Compromised PKI Certificate">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a compromised PKI Certificate.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Login Name">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a compromised Login Name.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IMEI Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a watchlist for IMEI (handset) identifiers.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IMSI Watchlist">
+				<xs:annotation>
+					<xs:documentation>Indicator describes a watchlist for IMSI (SIM card) identifiers.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="IndicatorTypeVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>
                 The IndicatorTypeVocab is the default STIX vocabulary for expressing indicator types.
-            
-                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
             </xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.1, this version of the IndicatorTypeVocab is deprecated. Please use IndicatorTypeVocab-1.1 instead.</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -242,8 +342,10 @@
 	<xs:simpleType name="IndicatorTypeEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The default set of Indicator types to use for characterizing Indicators in STIX.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.1, this version of the IndicatorTypeEnum is deprecated. Please use IndicatorTypeEnum-1.1 instead.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
+				<deprecated>true</deprecated>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
@@ -1267,7 +1369,7 @@
 					<xs:union memberTypes="stixVocabs:MotivationEnum-1.1"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Motivation Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1/stix_default_vocabularies.xsd#MotivationVocab-1.1"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#MotivationVocab-1.1"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1301,6 +1403,10 @@
 	<xs:complexType name="MotivationVocab-1.0.1">
 		<xs:annotation>
 			<xs:documentation>The MotivationVocab is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.1, this version of the MotivationVocab is deprecated. Please use MotivationVocab-1.1 instead.</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -1317,8 +1423,10 @@
 			<xs:documentation>
                 The possible values for motivations of a threat actor.
             </xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.1, this version of the MotivationEnum is deprecated. Please use MotivationEnum-1.1 instead.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0.1</version>
+				<deprecated>true</deprecated>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
 			</xs:appinfo>
 		</xs:annotation>
@@ -1342,6 +1450,7 @@
 	<xs:complexType name="MotivationVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>The MotivationVocab is the default STIX vocabulary for expressing the motivation of a threat actor.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the MotivationVocab is deprecated. Please use MotivationVocab-1.0.1 instead.</xs:documentation>
 			<xs:appinfo>
 				<deprecated>true</deprecated>
 			</xs:appinfo>
@@ -1359,6 +1468,7 @@
 	<xs:simpleType name="MotivationEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The possible values for motivations of a threat actor.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the MotivationEnum is deprecated. Please use MotivationEnum-1.0.1 instead.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
@@ -1827,6 +1937,7 @@
 			</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
+				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
