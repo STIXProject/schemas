@@ -174,7 +174,7 @@
 		<xs:sequence>
 			<xs:element ref="indicator:Indicator" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The indicator field specifies one cyber threat indicator asserting a relationship between a cyber observable and a TTP.</xs:documentation>
+					<xs:documentation>The indicator field specifies one cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
