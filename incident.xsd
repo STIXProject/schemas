@@ -31,6 +31,11 @@
 							<xs:documentation>The Title field provides a simple title for this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="External_ID" type="incident:ExternalIDType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The External_ID field provides a reference to an ID of an incident in a remote system.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Time" type="incident:TimeType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Time field specifies relevant time values associated with this Incident.</xs:documentation>
@@ -427,6 +432,20 @@
 				<xs:attribute name="time" type="xs:dateTime">
 					<xs:annotation>
 						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ExternalIDType">
+		<xs:annotation>
+			<xs:documentation>The ExternalIDType is optional and provides a reference to an ID of an incident in a remote system.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Specifies the source of the External ID.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
