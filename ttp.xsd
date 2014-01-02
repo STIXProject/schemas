@@ -64,7 +64,7 @@
 							<xs:documentation>The Victim_Targeting field characterizes the people, organizations, information or access being targeted.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Exploit_Targets" type="stixCommon:ExploitTargetsType" minOccurs="0">
+					<xs:element name="Exploit_Targets" type="ttp:ExploitTargetsType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Exploit_Targets field characterizes potential vulnerability, weakness or configuration targets for exploitation by this TTP.</xs:documentation>
 						</xs:annotation>
@@ -328,6 +328,19 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExploitTargetsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Exploit_Target" type="stixCommon:RelatedExploitTargetType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Exploit_Target field characterizes potential vulnerability, weakness or configuration targets for exploitation by this TTP.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="MalwareType">
 		<xs:sequence>
