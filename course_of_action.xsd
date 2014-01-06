@@ -58,7 +58,7 @@
 							<xs:documentation>The Objective field characterizes the objective of this CourseOfAction.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Parameter_Observables" type="cybox:ObservablesType">
+					<xs:element name="Parameter_Observables" type="cybox:ObservablesType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Parameter_Observables field enables the specification of technical parameters to this Course of Action expressed using the CybOX Language. It is intended that the combination of the Course of Action Type and the Parameter_Observables could be used to define automated courses of action.</xs:documentation>
 						</xs:annotation>
