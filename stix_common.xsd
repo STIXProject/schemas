@@ -175,6 +175,10 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="KillChainPhaseReferenceType">
+		<xs:annotation>
+			<xs:documentation>The KillChainPhaseReferenceType is used to reference kill chains that are defined elsewhere.</xs:documentation>
+			<xs:documentation>This type extends from stixCommon:KillChainPhaseType and contains several attributes that are redundant to the original kill chain definition: @kill_chain_name, @ordinality, and @name. These attributes should not be used to redefine the kill chain when creating references. Instead, it is strongly suggested that they either be omitted or, if present, contain the same values as the kill chain definition. This ensures data consistency across the kill chain itself and all references to it.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:KillChainPhaseType">
 				<xs:attribute name="kill_chain_id" type="xs:QName">
