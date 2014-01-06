@@ -136,12 +136,12 @@
 							<xs:documentation>The Related_Incidents field identifies or characterizes one or more other Incidents related to this cyber threat Incident. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0">
+					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The COA_Requested field specifies and characterizes a requested CourseOfAction for this Incident as specified by the Producer for the Consumer of the Incident Report</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0">
+					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The COA_Taken field specifies and characterizes a CourseOfAction taken for this Incident.</xs:documentation>
 						</xs:annotation>
