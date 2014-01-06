@@ -102,6 +102,11 @@
                         <xs:documentation>Type of Party. e.g. Person or an organisation. An organisation could be university, college, club, association, company, etc</xs:documentation>
                     </xs:annotation>
                 </xs:attribute>
+                <xs:attribute form="qualified" name="LanguageCode" type="xs:language">
+                    <xs:annotation>
+                        <xs:documentation>Human Language used. e.g. "en", "en-US", "en-AUS", etc</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
             </xs:restriction>
         </xs:complexContent>
     </xs:complexType>
