@@ -312,7 +312,7 @@
 					<xs:documentation>
 						The Location field specifies the physical location of the affected asset.
 
-						This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://stix.mitre.org/extensions/Identity#CIQAddress-1 namespace. This type is defined in the extensions/address/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address/1.0/ciq_address_3.0.xsd.
+This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://stix.mitre.org/extensions/Identity#CIQAddress-1 namespace. This type is defined in the extensions/address/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address/1.0/ciq_3.0_address.xsd.
 				
 						Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.
 					</xs:documentation>

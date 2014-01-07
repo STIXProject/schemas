@@ -32,7 +32,7 @@
 				
 				1. Simple: The Simple marking structures allows for the specification of unstructured statements through the use of a string field. The type is named SimpleMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 namespace. The extension is defined in the file extensions/marking/simple_marking.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/simple_marking/1.0/simple_marking.xsd.
 				
-				2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 namespace. The extension is defined in the file extensions/marking/tlp.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp.xsd.	
+				2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 namespace. The extension is defined in the file extensions/marking/tlp_marking.xsd or at the URL http://stix.mitre.org/XMLSchema/extensions/marking/tlp/1.0/tlp_marking.xsd.	
 			</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="marking_model_name" type="xs:QName">

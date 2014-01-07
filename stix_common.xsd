@@ -620,7 +620,7 @@
 			<xs:documentation>
 				The AddressAbstractType is used to express geographic address information.
 				
-				This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address_3.0/1.0/ciq_address_3.0.xsd.	
+				This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/address/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_3.0_address/1.0/ciq_3.0_address.xsd.	
 			</xs:documentation>
 		</xs:annotation>
 	</xs:complexType>

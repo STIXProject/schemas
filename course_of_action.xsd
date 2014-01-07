@@ -64,7 +64,7 @@
 							<xs:documentation>
 								The Structured_COA field enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.
 
-								This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. This type is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic.xsd.
+This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. This type is defined in the extensions/structured_coa/generic_structured_coa.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic_structured_coa.xsd.
 							</xs:documentation>
 						</xs:annotation>
 					</xs:element>
