@@ -143,7 +143,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a reference to the ID for this StructuredCOA specified elsewhere.</xs:documentation>
-				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this StructuredCOA should not hold content unless an extension of the StructuredCOA allows it.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this StructuredCOA should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
