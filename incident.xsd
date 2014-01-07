@@ -31,7 +31,7 @@
 							<xs:documentation>The Title field provides a simple title for this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="External_ID" type="incident:ExternalIDType" minOccurs="0">
+					<xs:element name="External_ID" type="incident:ExternalIDType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The External_ID field provides a reference to an ID of an incident in a remote system.</xs:documentation>
 						</xs:annotation>
@@ -439,7 +439,7 @@
 	</xs:complexType>
 	<xs:complexType name="ExternalIDType">
 		<xs:annotation>
-			<xs:documentation>The ExternalIDType is optional and provides a reference to an ID of an incident in a remote system.</xs:documentation>
+			<xs:documentation>The ExternalIDType provides a reference to an ID of an incident in a remote system.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
