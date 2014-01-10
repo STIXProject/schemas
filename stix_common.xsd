@@ -17,16 +17,26 @@
 			<xs:documentation>The InformationSourceType details the source of a given data entry.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Description field provides a description of this information source.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Identity field is optional and specifies the identity of the information source.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.0/ciq_identity.xsd.</xs:documentation>
-					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>	
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Contributors" type="stixCommon:ContributorsType" minOccurs="0">
+			<xs:element name="Role" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Contributors field is optional and enables description of the individual contributors involved in this instance.</xs:documentation>
+					<xs:documentation>The Role field is optional and enables characterization of the sourcing Role played by this Information Source.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Contributing_Sources" type="stixCommon:ContributingSourcesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Contributing_Sources field is optional and enables description of the individual contributing sources involved in this instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Time" type="cyboxCommon:TimeType" minOccurs="0">
@@ -56,7 +66,7 @@
 				<xs:annotation>
 					<xs:documentation>Specifies the level of confidence held in this direct assertion.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>						
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -66,7 +76,7 @@
 			</xs:element>
 			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Source field specifies the source of this confidence assertion. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.</xs:documentation>						
+					<xs:documentation>The Source field specifies the source of this confidence assertion. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -194,8 +204,8 @@
 	<xs:complexType name="IdentityType">
 		<xs:annotation>
 			<xs:documentation>The IdentityType is used to express identity information for both individuals and organizations.</xs:documentation>
-			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.0/ciq_3.0_identity.xsd.</xs:documentation>	
-			<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field of this type.</xs:documentation>	
+			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.0/ciq_3.0_identity.xsd.</xs:documentation>
+			<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field of this type.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="xs:string" minOccurs="0">
@@ -563,13 +573,13 @@
 			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_3.0/1.0/ciq_3.0_address.xsd.</xs:documentation>
 		</xs:annotation>
 	</xs:complexType>
-	<xs:complexType name="ContributorsType">
+	<xs:complexType name="ContributingSourcesType">
 		<xs:sequence>
-			<xs:element name="Contributor" type="stixCommon:IdentityType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>This field contains information describing the identity, resources and timing of involvement for a single contributor.</xs:documentation>
+					<xs:documentation>The Source field contains information describing the identity, resources and timing of involvement for a single contributing Source.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.0/ciq_identity.xsd.</xs:documentation>
-					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>	
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -612,7 +622,7 @@
 				<xs:annotation>
 					<xs:documentation>Specifies a value characterizing the statement within some vocabulary.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary may be provided by the field using this construct. If that's the case, the schema annotations on that element will describe which vocabulary to use. If not, the default vocabulary is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -623,7 +633,7 @@
 			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Source field captures the source of this statement. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>					
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
