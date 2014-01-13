@@ -31,6 +31,11 @@
 							<xs:documentation>The Title field provides a simple title for this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="External_ID" type="incident:ExternalIDType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The External_ID field provides a reference to an ID of an incident in a remote system.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Time" type="incident:TimeType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Time field specifies relevant time values associated with this Incident.</xs:documentation>
@@ -136,12 +141,12 @@
 							<xs:documentation>The Related_Incidents field identifies or characterizes one or more other Incidents related to this cyber threat Incident. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0">
+					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The COA_Requested field specifies and characterizes a requested CourseOfAction for this Incident as specified by the Producer for the Consumer of the Incident Report</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0">
+					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The COA_Taken field specifies and characterizes a CourseOfAction taken for this Incident.</xs:documentation>
 						</xs:annotation>
@@ -268,8 +273,8 @@
 			<xs:element name="Location" type="stixCommon:AddressAbstractType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Location field specifies the physical location of the affected asset.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://stix.mitre.org/extensions/Identity#CIQAddress-1 namespace. This type is defined in the extensions/address/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address/1.0/ciq_address_3.0.xsd.</xs:documentation>
-					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>						
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://stix.mitre.org/extensions/Identity#CIQAddress-1 namespace. This type is defined in the extensions/address/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq/1.0/ciq_3.0_address.xsd.</xs:documentation>
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Nature_Of_Security_Effect" type="incident:NatureOfSecurityEffectType" minOccurs="0">
@@ -374,6 +379,20 @@
 				<xs:attribute name="time" type="xs:dateTime">
 					<xs:annotation>
 						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ExternalIDType">
+		<xs:annotation>
+			<xs:documentation>The ExternalIDType provides a reference to an ID of an incident in a remote system.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Specifies the source of the External ID.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
