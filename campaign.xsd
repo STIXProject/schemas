@@ -72,6 +72,10 @@
 					<xs:element name="Related_Indicators" type="campaign:RelatedIndicatorsType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Related_Indicators field identifies or characterizes one or more cyber threat Indicators related to this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>NOTE: As of STIX Version 1.1, this field is deprecated and is scheduled to be removed in STIX Version 2.0. Relationships between indicators and campaigns should be represented using the Related_Campaigns field on IndicatorType unless legacy code or content requires the use of this field.</xs:documentation>
+							<xs:appinfo>
+								<deprecated>true</deprecated>
+							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Attribution" type="campaign:AttributionType" minOccurs="0" maxOccurs="unbounded">
