@@ -23,7 +23,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="MarkingStructureType" abstract="true">
+	<xs:complexType name="MarkingStructureType">
 		<xs:annotation>
 			<xs:documentation>The MarkingStructureType contains the marking information to be applied to a portion of XML content.</xs:documentation>
 			<xs:documentation>This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. The data marking structure is simply a mechanism for applying existing marking systems to nodes. The data marking systems themselves define the semantics of what the markings mean, how multiple markings to the same node should be applied, and what to do if a node is unmarked.</xs:documentation>
