@@ -1611,8 +1611,8 @@
 	<xs:simpleType name="PlanningAndOperationalSupportEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The possible values for types of planning and operational support functions of a threat actor.</xs:documentation>
-            <xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportEnumType is deprecated. Please use PlanningAndOperationalSupportEnum-1.0.1 instead.</xs:documentation>    
-  			<xs:appinfo>
+			<xs:documentation>NOTE: As of STIX Version 1.0.1, this version of the PlanningAndOperationalSupportEnumType is deprecated. Please use PlanningAndOperationalSupportEnum-1.0.1 instead.</xs:documentation>
+			<xs:appinfo>
 				<version>1.0</version>
 				<source>The initial version of this enumeration was contributed by iSight Partners, Inc. and is used with their permission.</source>
 				<deprecated>true</deprecated>
@@ -1687,8 +1687,8 @@
 	<xs:complexType name="AttackerToolTypeVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>The AttackerToolTypeVocab-1.0 is the default STIX vocabulary for expressing types of attacker tools.</xs:documentation>
-			<xs:documentation>Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.</xs:documentation>	
-   		</xs:annotation>
+			<xs:documentation>Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="cyboxCommon:ControlledVocabularyStringType">
 				<xs:simpleType>
@@ -1964,6 +1964,50 @@
 			<xs:enumeration value="Aspirant">
 				<xs:annotation>
 					<xs:documentation>Demonstrates no capability.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="InformationSourceRoleVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The InformationSourceRoleVocab is the default STIX vocabulary for characterizing roles played by given entities as information sources.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:InformationSourceRoleEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default InformationSourceRole Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#InformationSourceRoleVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="InformationSourceRoleEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for characterizing roles played by given entities as information sources in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Initial Author">
+				<xs:annotation>
+					<xs:documentation>A party acting as the initial author/creator of a set of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Content Enhancer/Refiner">
+				<xs:annotation>
+					<xs:documentation>A party that enhances or refines a preexisting set of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Aggregator">
+				<xs:annotation>
+					<xs:documentation>A party that aggregates multiple different sets of information into one new set of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Transformer/Translator">
+				<xs:annotation>
+					<xs:documentation>A party that transforms or translates a preexisting set of information into a different representation (e.g., translating an unstructured prose threat analysis report into STIX).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
