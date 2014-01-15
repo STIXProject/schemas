@@ -121,6 +121,11 @@
 							<xs:documentation>The Related_Indicators field is optional and enables content producers to express a relationship between the enclosing indicator (i.e., the subject of the relationship) and a disparate indicator (i.e., the object side of the relationship).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Related_Campaigns" type="indicator:RelatedCampaignReferencesType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Campaigns field captures references to related campaigns. Note that unlike most other relationship types, Related_Campaigns does not allow campaigns to be embedded, only referenced via name or ID.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Producer" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Producer field details the source of this entry.</xs:documentation>
@@ -323,6 +328,15 @@
 			<xs:element name="Test_Mechanism" type="indicator:TestMechanismType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The TestMechanism field specifies a non-standard Test Mechanism effective at identifying the cyber Observables specified in this cyber threat Indicator. This field is defined as of type TestMechanismType which is an abstract type enabling the extension and inclusion of various formats of Test Mechanism specifications.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedCampaignReferencesType">
+		<xs:sequence>
+			<xs:element name="Related_Campaign" type="stixCommon:CampaignReferenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Related_Campaign field captures a single relationship to a related campaign.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
