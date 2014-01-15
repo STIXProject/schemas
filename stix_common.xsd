@@ -827,7 +827,6 @@
 				<xs:attribute name="idref" type="xs:QName">
 					<xs:annotation>
 						<xs:documentation>Specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
-						<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this STIX Package should not hold content.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
