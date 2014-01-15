@@ -50,7 +50,7 @@
 						<xs:annotation>
 							<xs:documentation>The Intended_Effect field specifies the suspected intended effect for this TTP.</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Behavior" type="ttp:BehaviorType" minOccurs="0">
@@ -96,6 +96,11 @@
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Specifies the relevant handling guidance for this TTP. The valid marking scope is the nearest TTPBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -170,7 +175,7 @@
 				<xs:annotation>
 					<xs:documentation>The Type field provides a characterization of what type of malware this MalwareInstance is.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is MalwareTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
@@ -257,8 +262,8 @@
 			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Type field represents the type of infrastructure being described.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerInfrastructureTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>	
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerInfrastructureTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -309,7 +314,7 @@
 				<xs:annotation>
 					<xs:documentation>The Tool field specifies a single Tool leveraged by this TTP item.</xs:documentation>
 					<xs:documentation>The Type field under this field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerToolTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -409,14 +414,14 @@
 				<xs:annotation>
 					<xs:documentation>The Targeted_Systems field characterizes a type of system that is targeted. It may be included multiple times to specify multiple types of targeted systems.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SystemTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>						
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Targeted_Information" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Targeted_Systems field characterizes a type of information that is targeted. It may be included multiple times to specify multiple types of targeted information.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Targeted_Technical_Details" type="cybox:ObservablesType" minOccurs="0">

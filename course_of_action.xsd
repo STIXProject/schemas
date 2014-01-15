@@ -84,19 +84,24 @@
 						<xs:annotation>
 							<xs:documentation>The Cost field characterizes the estimated cost for applying this CourseOfAction.</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Efficacy" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Efficacy field characterizes the effectiveness of this CourseOfAction in achieving its targeted Objective.</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>	
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this COA. The valid marking scope is the nearest CourseOfActionBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -120,7 +125,7 @@
 	</xs:simpleType>
 	<xs:complexType name="StructuredCOAType" abstract="true">
 		<xs:annotation>
-			<xs:documentation>The StructuredCOAType enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation> 
+			<xs:documentation>The StructuredCOAType enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
 			<xs:documentation>This type is defined as an abstract type and is intended to be extended using the XML Schema extension mechanism to allow for the expression of a variety of structured COA types. Instance documents representing structured COAs use the xsi:type attribute to specify which implementation of this type they wish to use.</xs:documentation>
 			<xs:documentation>STIX has provided one implementation to allow for the passing of proprietary or externally defined structured courses of action in a CDATA block. This implementation is captured in the Generic Structured COA extension, which provides the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. The extension is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic.xsd.</xs:documentation>
 		</xs:annotation>

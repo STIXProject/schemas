@@ -112,6 +112,11 @@
 							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Campaign. The valid marking scope is the nearest CampaignBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 				<xs:attribute name="version" type="campaign:CampaignVersionType">
 					<xs:annotation>
