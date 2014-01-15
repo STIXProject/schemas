@@ -12,6 +12,7 @@
 	</xs:annotation>
 	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
 	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
 	<xs:element name="Course_Of_Action" type="coa:CourseOfActionType">
 		<xs:annotation>
 			<xs:documentation>The CourseOfAction field characterizes a Course of Action to be taken in regards to one of more cyber threats. NOTE: This construct is still in its early stages of maturity and will require a good deal of review and refinement.</xs:documentation>
@@ -59,6 +60,11 @@
 					<xs:element name="Objective" type="coa:ObjectiveType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Objective field characterizes the objective of this CourseOfAction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Parameter_Observables" type="cybox:ObservablesType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Parameter_Observables field enables the specification of technical parameters to this Course of Action expressed using the CybOX Language. It is intended that the combination of the Course of Action Type and the Parameter_Observables could be used to define automated courses of action.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Structured_COA" type="coa:StructuredCOAType" minOccurs="0">
