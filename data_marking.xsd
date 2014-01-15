@@ -42,6 +42,17 @@
 				<xs:documentation>This field contains a reference to an authoritative source on the marking model to be applied within this Marking_Structure.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a unique ID for this Marking_Structure.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a reference to the ID of a Marking_Structure defined elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Marking_Structure should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="MarkingSpecificationType">
 		<xs:sequence>
