@@ -274,6 +274,11 @@
 					<xs:documentation>The Description field is optional and enables an unstructured, text description of this Sighting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Related_Observable field identifies or characterizes a cyber threat observable related to this sighting.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
