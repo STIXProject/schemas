@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" targetNamespace="http://stix.mitre.org/Incident-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.1" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:ttp="http://stix.mitre.org/TTP-1" targetNamespace="http://stix.mitre.org/Incident-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.1" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
@@ -18,6 +18,10 @@
 		<xs:annotation>
 			<xs:documentation>This field characterizes a single cyber threat Incident.</xs:documentation>
 		</xs:annotation>
+		<xs:unique name="unique-incident-id">
+			<xs:selector xpath=".//stixCommon:*|.//stix:*|.//cybox:*|.//cyboxCommon:*|.//campaign:*|.//coa:*|.//et:*|.//incident:*|.//indicator:*|.//ta:*|.//ttp:*|.//marking:*"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
 	</xs:element>
 	<xs:complexType name="IncidentType">
 		<xs:annotation>
@@ -379,6 +383,12 @@
 				<xs:attribute name="time" type="xs:dateTime">
 					<xs:annotation>
 						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+						<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="time_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+					<xs:annotation>
+						<xs:documentation>Represents the precision of the associated time value. If omitted, the default is "second", meaning the timestamp is precise to the full field value. Digits in the timestamp that are required by the xs:dateTime datatype but are beyond the specified precision should be zeroed out.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -416,14 +426,16 @@
 	</xs:complexType>
 	<xs:complexType name="COATimeType">
 		<xs:sequence>
-			<xs:element name="Start" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Start" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Start field specifies the time at which the CourseOfAction was begun.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="End" type="xs:dateTime" minOccurs="0">
+			<xs:element name="End" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The End field specifies the time at which the CourseOfAction was completed.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -635,49 +647,58 @@
 	</xs:complexType>
 	<xs:complexType name="TimeType">
 		<xs:sequence>
-			<xs:element name="First_Malicious_Action" type="xs:dateTime" minOccurs="0">
+			<xs:element name="First_Malicious_Action" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The First_Malicious_Action field specifies the time that the first malicious action related to this Incident occured.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Initial_Compromise" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Initial_Compromise" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Initial_Compromise field specifies the time that the initial compromise occured for this Incident.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="First_Data_Exfiltration" type="xs:dateTime" minOccurs="0">
+			<xs:element name="First_Data_Exfiltration" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The First_Data_Exfiltration field specifies the first time at which non-public data was taken from the victim environment</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Incident_Discovery" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Incident_Discovery" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Discovery field specifies the first time at which the organization learned the incident had occurred.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Incident_Opened" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Incident_Opened" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Opened field specifies the time at which the Incident was officially opened.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Containment_Achieved" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Containment_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Containment_Achieved field specifies the first time at which the incident is contained (e.g., the “bleeding is stopped”).</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Restoration_Achieved" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Restoration_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Restoration_Achieved field specifies the first time at which the incident's assets are restored (e.g., fully functional)”.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Incident_Reported" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Incident_Reported" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Reported field specifies the time at which the Incident was reported.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Incident_Closed" type="xs:dateTime" minOccurs="0">
+			<xs:element name="Incident_Closed" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Incident_Closed field specifies the time at which the Incident was officially closed.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
