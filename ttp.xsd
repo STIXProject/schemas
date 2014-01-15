@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" targetNamespace="http://stix.mitre.org/TTP-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.1" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" targetNamespace="http://stix.mitre.org/TTP-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.1" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
@@ -18,6 +18,10 @@
 		<xs:annotation>
 			<xs:documentation>The TTP field characterizes specific details of observed or potential attacker Tactics, Techniques and Procedures.</xs:documentation>
 		</xs:annotation>
+		<xs:unique name="unique-ttp-id">
+			<xs:selector xpath=".//stixCommon:*|.//stix:*|.//cybox:*|.//cyboxCommon:*|.//campaign:*|.//coa:*|.//et:*|.//incident:*|.//indicator:*|.//ta:*|.//ttp:*|.//marking:*"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
 	</xs:element>
 	<!---->
 	<xs:complexType name="TTPType">
