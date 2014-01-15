@@ -194,7 +194,7 @@
 	<xs:complexType name="IdentityType">
 		<xs:annotation>
 			<xs:documentation>The IdentityType is used to express identity information for both individuals and organizations.</xs:documentation>
-			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.</xs:documentation>	
+			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.0/ciq_3.0_identity.xsd.</xs:documentation>	
 			<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field of this type.</xs:documentation>	
 		</xs:annotation>
 		<xs:sequence>
@@ -217,6 +217,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a reference to a unique ID defined elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Identity should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -439,6 +440,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a reference to the ID of an Indicator specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Indicator should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -455,6 +457,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat Incident specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Incident should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -471,6 +474,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a TTP item specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this TTP item should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -487,6 +491,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of an ExploitTarget specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ExploitTarget should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -503,6 +508,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a COA specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this COA should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -519,6 +525,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat Campaign specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Campaign should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -535,6 +542,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a ThreatActor specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ThreatActor should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -552,7 +560,7 @@
 	<xs:complexType name="AddressAbstractType" abstract="true">
 		<xs:annotation>
 			<xs:documentation>The AddressAbstractType is used to express geographic address information.</xs:documentation>
-			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address_3.0/1.0/ciq_address_3.0.xsd.</xs:documentation>
+			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_3.0/1.0/ciq_3.0_address.xsd.</xs:documentation>
 		</xs:annotation>
 	</xs:complexType>
 	<xs:complexType name="ContributorsType">
