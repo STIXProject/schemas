@@ -79,15 +79,22 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies the time of this Confidence assertion.</xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+			<xs:annotation>
+				<xs:documentation>Represents the precision of the associated timestamp value. If omitted, the default is "second", meaning the timestamp is precise to the full field value. Digits in the timestamp that are required by the xs:dateTime datatype but are beyond the specified precision should be zeroed out.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<!---->
 	<xs:complexType name="ActivityType" abstract="true">
 		<xs:sequence>
-			<xs:element name="Date_Time" type="xs:dateTime">
+			<xs:element name="Date_Time" type="stixCommon:DateTimeWithPrecisionType">
 				<xs:annotation>
 					<xs:documentation>The Date_Time field specifies the date and time at which the activity occured.</xs:documentation>
+					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -150,17 +157,20 @@
 		</xs:annotation>
 		<xs:attribute name="phase_id" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>This field specifies the ID for the relevant kill chain phase.</xs:documentation>
+				<xs:documentation>A globally unique identifier for this kill chain phase.</xs:documentation>
+				<xs:documentation>When used directly within a kill chain definition, this attribute must be globally unique and serves to identify the kill chain phase being defined. When used within a kill chain reference, this attribute must reference an existing kill chain phase phase_id and serves as a reference (similar to @idref elsewhere in STIX).</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="name" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>This field specifies the descriptive name of the relevant kill chain phase.</xs:documentation>
+				<xs:documentation>When used within a kill chain reference, this attribute should be omitted or, if it is present, must match the name used in the kill chain phase definition that this field references.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="ordinality" type="xs:int">
 			<xs:annotation>
 				<xs:documentation>This field specifies the ordinality (e.g. 1, 2 or 3) of this phase within this kill chain definition.</xs:documentation>
+				<xs:documentation>When used within a kill chain reference, this attribute should be omitted or, if it is present, must match the ordinality used in the kill chain phase definition that this field references.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -175,6 +185,10 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="KillChainPhaseReferenceType">
+		<xs:annotation>
+			<xs:documentation>The KillChainPhaseReferenceType is used to reference kill chains that are defined elsewhere.</xs:documentation>
+			<xs:documentation>This type extends from stixCommon:KillChainPhaseType and contains several attributes that are redundant to the original kill chain definition: @kill_chain_name, @ordinality, and @name. These attributes should not be used to redefine attributes in the referenced kill chain. Instead, it is strongly suggested that they either be omitted or, if they are present, they must contain the same values as the kill chain definition. This ensures data consistency across the kill chain itself and all references to it.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:KillChainPhaseType">
 				<xs:attribute name="kill_chain_id" type="xs:QName">
@@ -184,7 +198,7 @@
 				</xs:attribute>
 				<xs:attribute name="kill_chain_name" type="xs:string">
 					<xs:annotation>
-						<xs:documentation>This field specifies the descriptive name of the relevant kill chain.</xs:documentation>
+						<xs:documentation>This field specifies the descriptive name of the relevant kill chain. If a kill chain is being referenced (via the kill_chain_id field), this field should be omitted or, if present, must match the kill chain name of the kill chain referenced by the @kill_chain_id attribute.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -194,7 +208,7 @@
 	<xs:complexType name="IdentityType">
 		<xs:annotation>
 			<xs:documentation>The IdentityType is used to express identity information for both individuals and organizations.</xs:documentation>
-			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.</xs:documentation>	
+			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.0/ciq_3.0_identity.xsd.</xs:documentation>	
 			<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field of this type.</xs:documentation>	
 		</xs:annotation>
 		<xs:sequence>
@@ -217,6 +231,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a reference to a unique ID defined elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Identity should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -439,6 +454,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a reference to the ID of an Indicator specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Indicator should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -455,6 +471,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat Incident specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Incident should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -471,6 +488,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a TTP item specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this TTP item should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -487,6 +505,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of an ExploitTarget specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ExploitTarget should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -503,6 +522,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a COA specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this COA should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -519,6 +539,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat Campaign specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Campaign should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -535,6 +556,7 @@
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a ThreatActor specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ThreatActor should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -552,7 +574,7 @@
 	<xs:complexType name="AddressAbstractType" abstract="true">
 		<xs:annotation>
 			<xs:documentation>The AddressAbstractType is used to express geographic address information.</xs:documentation>
-			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_address_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_address_3.0/1.0/ciq_address_3.0.xsd.</xs:documentation>
+			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://stix.mitre.org/extensions/Address#CIQAddress3.0-1 namespace. This type is defined in the extensions/identity/ciq_3.0_address.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/address/ciq_3.0/1.0/ciq_3.0_address.xsd.</xs:documentation>
 		</xs:annotation>
 	</xs:complexType>
 	<xs:complexType name="ContributorsType">
@@ -627,6 +649,12 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies the time this statement was asserted.</xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+			<xs:annotation>
+				<xs:documentation>Represents the precision of the associated timestamp value. If omitted, the default is "second", meaning the timestamp is precise to the full field value. Digits in the timestamp that are required by the xs:dateTime datatype but are beyond the specified precision should be zeroed out.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -679,4 +707,59 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<!---->
+	<xs:complexType name="DateTimeWithPrecisionType">
+		<xs:annotation>
+			<xs:documentation>This type is used as a replacement for the standard xs:dateTime type but allows for the representation of the precision of the dateTime.  If the precision is given, consumers must ignore the portions of this field that is more precise than the given precision. Producers should zero-out (fill with zeros) digits in the dateTime that are required by the xs:dateTime datatype but are beyond the specified precision.</xs:documentation>
+			<xs:documentation>In order to avoid ambiguity, it is strongly suggested that all dateTimes include a specification of the timezone if it is known.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+					<xs:annotation>
+						<xs:documentation>The precision of the associated dateTime. If omitted, the default is "second", meaning the full field value (including fractional seconds).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!---->
+	<xs:simpleType name="DateTimePrecisionEnum">
+		<xs:annotation>
+			<xs:documentation>Possible values for representing time precision.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="year">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given year.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="month">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given month.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="day">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given day.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hour">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="minute">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given minute.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="second">
+				<xs:annotation>
+					<xs:documentation>DateTime is precise to the given second (including fractional seconds).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!---->
 </xs:schema>
