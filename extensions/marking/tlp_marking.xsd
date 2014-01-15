@@ -14,6 +14,7 @@
 	<xs:complexType name="TLPMarkingStructureType">
 		<xs:annotation>
 			<xs:documentation>The TLPMarkingStructureType is an implementation of the data marking schema that allows for a TLP Designation to be attached to an identified XML structure. Information about TLP is available here: http://www.us-cert.gov/tlp.</xs:documentation>
+			<xs:documentation>Nodes may be marked by multiple TLP Marking statements. When this occurs, the node should be considered marked at the most restrictive TLP Marking of all TLP Markings that were applied to it. For example, if a node is marked both GREEN and AMBER, the node should be considered AMBER.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="marking:MarkingStructureType">
