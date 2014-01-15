@@ -150,17 +150,20 @@
 		</xs:annotation>
 		<xs:attribute name="phase_id" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>This field specifies the ID for the relevant kill chain phase.</xs:documentation>
+				<xs:documentation>A globally unique identifier for this kill chain phase.</xs:documentation>
+				<xs:documentation>When used directly within a kill chain definition, this attribute must be globally unique and serves to identify the kill chain phase being defined. When used within a kill chain reference, this attribute must reference an existing kill chain phase phase_id and serves as a reference (similar to @idref elsewhere in STIX).</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="name" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>This field specifies the descriptive name of the relevant kill chain phase.</xs:documentation>
+				<xs:documentation>When used within a kill chain reference, this attribute should be omitted or, if it is present, must match the name used in the kill chain phase definition that this field references.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="ordinality" type="xs:int">
 			<xs:annotation>
 				<xs:documentation>This field specifies the ordinality (e.g. 1, 2 or 3) of this phase within this kill chain definition.</xs:documentation>
+				<xs:documentation>When used within a kill chain reference, this attribute should be omitted or, if it is present, must match the ordinality used in the kill chain phase definition that this field references.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -175,6 +178,10 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="KillChainPhaseReferenceType">
+		<xs:annotation>
+			<xs:documentation>The KillChainPhaseReferenceType is used to reference kill chains that are defined elsewhere.</xs:documentation>
+			<xs:documentation>This type extends from stixCommon:KillChainPhaseType and contains several attributes that are redundant to the original kill chain definition: @kill_chain_name, @ordinality, and @name. These attributes should not be used to redefine attributes in the referenced kill chain. Instead, it is strongly suggested that they either be omitted or, if they are present, they must contain the same values as the kill chain definition. This ensures data consistency across the kill chain itself and all references to it.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:KillChainPhaseType">
 				<xs:attribute name="kill_chain_id" type="xs:QName">
@@ -184,7 +191,7 @@
 				</xs:attribute>
 				<xs:attribute name="kill_chain_name" type="xs:string">
 					<xs:annotation>
-						<xs:documentation>This field specifies the descriptive name of the relevant kill chain.</xs:documentation>
+						<xs:documentation>This field specifies the descriptive name of the relevant kill chain. If a kill chain is being referenced (via the kill_chain_id field), this field should be omitted or, if present, must match the kill chain name of the kill chain referenced by the @kill_chain_id attribute.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
