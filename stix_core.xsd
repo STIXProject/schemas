@@ -120,6 +120,11 @@
 					<xs:documentation>The Description field provides a description of this package of STIX content.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Profiles" type="stixCommon:ProfilesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Profiles field provides a list of profiles that the STIX_Package conforms to.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Specifies the relevant handling guidance for this STIX_Package. The valid marking scope is the nearest STIXPackageType ancestor of this Handling element and all its descendants.</xs:documentation>

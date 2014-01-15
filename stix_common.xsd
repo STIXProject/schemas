@@ -762,4 +762,16 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!---->
+	<xs:complexType name="ProfilesType">
+		<xs:annotation>
+			<xs:documentation>The ProfilesType represents a list of STIX Profiles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Profile" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Profile field represents a reference to one STIX Profile. The profile is referenced as a URI and should include components for: the creator of the profile, the name of the profile, and the version of the profile. When publishing a profile, this URI should be published alongside the profile such that it can be referred to from this field.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
