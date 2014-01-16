@@ -339,21 +339,29 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RelatedCampaignReferencesType">
-		<xs:sequence>
-			<xs:element name="Related_Campaign" type="stixCommon:CampaignReferenceType" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The Related_Campaign field captures a single relationship to a related campaign.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Campaign" type="stixCommon:CampaignReferenceType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_Campaign field captures a single relationship to a related campaign.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>		
 	</xs:complexType>
 	<xs:complexType name="RelatedObservablesType">
-		<xs:sequence>
-			<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The Related_Observable field captures a relationship to a cyber observable related to this campaign.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_Observable field captures a relationship to a cyber observable related to this sighting.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>

@@ -232,12 +232,16 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RelatedPackagesType">
-		<xs:sequence>
-			<xs:element name="Related_Package" type="stix:RelatedPackageType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Characterizes a single relationship to another Packages.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_Package" type="stix:RelatedPackageType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Characterizes a single relationship to another Packages.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>		
 	</xs:complexType>
 </xs:schema>
