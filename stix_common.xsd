@@ -854,4 +854,30 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="ToolInformationType">
+		<xs:annotation>
+			<xs:documentation>The ToolInformationType is intended to characterize the properties of a hardware or software tool, including those related to instances of its use. It is extended from an identically-named type in CybOX and adds standard STIX descriptive fields.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cyboxCommon:ToolInformationType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Title field provides a simple title for a single tool leveraged by this TTP item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Description field is optional and provides an unstructured, text description of a single tool leveraged by this TTP item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of a single tool leveraged by this TTP item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 </xs:schema>
