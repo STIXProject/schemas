@@ -232,9 +232,9 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Non_Public_Data_Compromised" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+			<xs:element name="Non_Public_Data_Compromised" type="incident:NonPublicDataCompromisedType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field specifies whether non-public data was compromised or exposed.</xs:documentation>
+					<xs:documentation>This field specifies whether non-public data was compromised or exposed and whether that data was encrypted or not.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
@@ -735,5 +735,19 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NonPublicDataCompromisedType">
+		<xs:annotation>
+			<xs:documentation>This type represents whether non-public data was compromised or exposed and whether that data was encrypted or not.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:ControlledVocabularyStringType">
+				<xs:attribute name="data_encrypted" type="xs:boolean">
+					<xs:annotation>
+						<xs:documentation>Indicates whether the data that was compromised was encrypted or not.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>
