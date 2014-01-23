@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1.0" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
 			<schema>STIX Default Vocabularies</schema>
-			<version>1.1</version>
+			<version>1.1.0</version>
 			<date>1/16/2013 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Schematic implementation for controlled vocabularies used in the Structured Threat Information eXchange format.</short_description>
 			<terms_of_use>Copyright (c) 2012-2013, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
@@ -27,7 +27,7 @@
 					<xs:union memberTypes="stixVocabs:PackageIntentEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Package Intent Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#PackageIntentVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#PackageIntentVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -152,7 +152,7 @@
 					<xs:union memberTypes="stixVocabs:HighMediumLowEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default High/Medium/Low Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#HighMediumLowVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#HighMediumLowVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -185,7 +185,7 @@
 					<xs:union memberTypes="stixVocabs:MalwareTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Malware Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#MalwareTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#MalwareTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -335,7 +335,7 @@
 					<xs:union memberTypes="stixVocabs:IndicatorTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Indicator Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IndicatorTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IndicatorTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -412,7 +412,7 @@
 					<xs:union memberTypes="stixVocabs:COAStageEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default COA Stages Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#COAStageVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#COAStageVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -447,7 +447,7 @@
 					<xs:union memberTypes="stixVocabs:CampaignStatusEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Campaign Status Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#CampaignStatusVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#CampaignStatusVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -487,7 +487,7 @@
 					<xs:union memberTypes="stixVocabs:IncidentStatusEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Status Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentStatusVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IncidentStatusVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -522,7 +522,7 @@
 					<xs:union memberTypes="stixVocabs:SecurityCompromiseEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Security Compromise Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#SecurityCompromiseVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#SecurityCompromiseVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -570,7 +570,7 @@
 					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Discovery Method Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -688,7 +688,7 @@
 					<xs:union memberTypes="stixVocabs:AvailabilityLossTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Availability Loss Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -751,7 +751,7 @@
 					<xs:union memberTypes="stixVocabs:LossDurationEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Loss Duration Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LossDurationVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#LossDurationVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -813,7 +813,7 @@
 					<xs:union memberTypes="stixVocabs:OwnershipClassEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Ownership Class Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#OwnershipClassVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#OwnershipClassVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -865,7 +865,7 @@
 					<xs:union memberTypes="stixVocabs:ManagementClassEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Management Class Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ManagementClassVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#ManagementClassVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -912,7 +912,7 @@
 					<xs:union memberTypes="stixVocabs:LocationClassEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Location Class Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LocationClassVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#LocationClassVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -964,7 +964,7 @@
 					<xs:union memberTypes="stixVocabs:ImpactQualificationEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Impact Qualification Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ImpactQualificationVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#ImpactQualificationVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1022,7 +1022,7 @@
 					<xs:union memberTypes="stixVocabs:ImpactRatingEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Impact Rating Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ImpactRatingVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#ImpactRatingVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1075,7 +1075,7 @@
 					<xs:union memberTypes="stixVocabs:AssetTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Asset Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AssetTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AssetTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1180,7 +1180,7 @@
 					<xs:union memberTypes="stixVocabs:AttackerInfrastructureTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Attacker Infastructure Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AttackerInfrastructureTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AttackerInfrastructureTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1232,7 +1232,7 @@
 					<xs:union memberTypes="stixVocabs:SystemTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default System Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#SystemTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#SystemTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1287,7 +1287,7 @@
 					<xs:union memberTypes="stixVocabs:InformationTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Information Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#InformationTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#InformationTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1324,7 +1324,7 @@
 					<xs:union memberTypes="stixVocabs:ThreatActorTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Threat Actor Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#ThreatActorTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#ThreatActorTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1414,7 +1414,7 @@
 					<xs:union memberTypes="stixVocabs:MotivationEnum-1.0.1"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Motivation Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#MotivationVocab-1.0.1"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#MotivationVocab-1.0.1"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1461,7 +1461,7 @@
 					<xs:union memberTypes="stixVocabs:MotivationEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Motivation Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#MotivationVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#MotivationVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1503,7 +1503,7 @@
 					<xs:union memberTypes="stixVocabs:IntendedEffectEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Intended Effect Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IntendedEffectVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IntendedEffectVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1553,7 +1553,7 @@
 					<xs:union memberTypes="stixVocabs:PlanningAndOperationalSupportEnum-1.0.1"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Planning and Operational Support Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0.1"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0.1"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1604,7 +1604,7 @@
 					<xs:union memberTypes="stixVocabs:PlanningAndOperationalSupportEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Planning and Operational Support Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#PlanningAndOperationalSupportVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1654,7 +1654,7 @@
 					<xs:union memberTypes="stixVocabs:IncidentEffectEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Effect Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentEffectVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IncidentEffectVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1695,7 +1695,7 @@
 					<xs:union memberTypes="stixVocabs:AttackerToolTypeEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Attacker Tool Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#AttackerToolTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AttackerToolTypeVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1730,7 +1730,7 @@
 					<xs:union memberTypes="stixVocabs:IncidentCategoryEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Incident Category Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#IncidentCategoryVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#IncidentCategoryVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1791,7 +1791,7 @@
 					<xs:union memberTypes="stixVocabs:LossPropertyEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Loss Property Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#LossPropertyVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#LossPropertyVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1978,7 +1978,7 @@
 					<xs:union memberTypes="stixVocabs:InformationSourceRoleEnum-1.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default InformationSourceRole Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.0/stix_default_vocabularies.xsd#InformationSourceRoleVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#InformationSourceRoleVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
