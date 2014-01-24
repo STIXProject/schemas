@@ -364,7 +364,7 @@
 			</xs:element>
 			<xs:element name="Personas" type="ttp:PersonasType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Infrastructure field characterizes specific classes or instances of personas (identities) leveraged by a threat.</xs:documentation>
+					<xs:documentation>The Personas field characterizes specific classes or instances of personas (identities) leveraged by a threat to masquerade as other parties.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -421,7 +421,7 @@
 		<xs:sequence>
 			<xs:element name="Persona" type="stixCommon:IdentityType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The persona field represents a single persona (identity) leveraged by a threat.</xs:documentation>
+					<xs:documentation>The persona field characterizes a single persona (identity) leveraged by a threat to masquerade as another party.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
