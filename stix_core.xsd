@@ -88,6 +88,12 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this STIX Package should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a STIX Package defined elsewhere. The referenced version timestamp is contained in the STIX_Header/Information_Source/Time/Produced_Time field of the related package and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 		<xs:attribute name="version" type="stix:STIXPackageVersionEnum">
 			<xs:annotation>
 				<xs:documentation>Specifies the relevant STIX schema version for this content.</xs:documentation>

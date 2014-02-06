@@ -345,6 +345,12 @@
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat campaign defined elsewhere.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a campaign defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related campaign and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="NamesType">
 		<xs:sequence>
@@ -510,6 +516,12 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Indicator should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an indicator defined elsewhere. The referenced version timestamp is contained in the Producer/Time/Produced_Time field of the related indicator and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="IncidentBaseType">
 		<xs:annotation>
@@ -525,6 +537,12 @@
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat Incident specified elsewhere.</xs:documentation>
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Incident should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an incident defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related incident and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -544,6 +562,12 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this TTP item should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a TTP defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related TTP and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ExploitTargetBaseType">
 		<xs:annotation>
@@ -559,6 +583,12 @@
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of an ExploitTarget specified elsewhere.</xs:documentation>
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ExploitTarget should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an exploit target defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related exploit target and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -578,6 +608,12 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this COA should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a course of action defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related course of action and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="CampaignBaseType">
 		<xs:annotation>
@@ -595,6 +631,12 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Campaign should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a campaign defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related campaign and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ThreatActorBaseType">
 		<xs:annotation>
@@ -610,6 +652,12 @@
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a ThreatActor specified elsewhere.</xs:documentation>
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ThreatActor should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a threat actor defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related threat actor and must be an exact match.</xs:documentation>
+				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -837,6 +885,12 @@
 				<xs:attribute name="idref" type="xs:QName">
 					<xs:annotation>
 						<xs:documentation>Specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="timestamp_ref" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a STIX Package defined elsewhere. The referenced version timestamp is contained in the STIX_Header/Information_Source/Time/Produced_Time field of the related package and must be an exact match.</xs:documentation>
+						<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
