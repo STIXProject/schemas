@@ -170,6 +170,11 @@
 							<xs:documentation>The History field provides a log of events or actions taken during the handling of the Incident. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Incident. The valid marking scope is the nearest IncidentBaseType ancestor of this Handling element and all its descendants.</xs:documentation>

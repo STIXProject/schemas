@@ -94,6 +94,11 @@
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this COA. The valid marking scope is the nearest CourseOfActionBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
