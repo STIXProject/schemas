@@ -362,6 +362,11 @@
 					<xs:documentation>The Infrastructure field characterizes specific classes or instances of infrastructure observed to have been utilized for cyber attack.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Personas" type="ttp:PersonasType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Personas field characterizes specific classes or instances of personas (identities) leveraged by a threat to masquerade as other parties.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BehaviorType">
@@ -408,6 +413,15 @@
 			<xs:element name="Targeted_Technical_Details" type="cybox:ObservablesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Targeted_Technical_Details field characterizes the technical information about what is targeted. It is implemented using the CybOX observables type, which allows for the representation of products, platforms, and code that are targeted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonasType">
+		<xs:sequence>
+			<xs:element name="Persona" type="stixCommon:IdentityType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The persona field characterizes a single persona (identity) leveraged by a threat to masquerade as another party.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
