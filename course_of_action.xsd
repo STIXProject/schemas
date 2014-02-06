@@ -99,6 +99,11 @@
 							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this COA. The valid marking scope is the nearest CourseOfActionBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="Related_COAs" type="coa:RelatedCOAsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Related_COAs field identifies or characterizes relationships to one or more related courses of action.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
@@ -163,5 +168,18 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedCOAsType">
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipListType">
+				<xs:sequence>
+					<xs:element name="Related_COA" type="stixCommon:RelatedCourseOfActionType" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Related_COA field specifies a single other course of action related to this course of action.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>
