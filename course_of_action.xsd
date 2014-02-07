@@ -5,8 +5,8 @@
 		<xs:appinfo>
 			<schema>STIX COA</schema>
 			<version>1.1</version>
-			<date>02/07/2014 9:00:00 AM</date>
-			<notice>DRAFT: This schema does not represent the final version and is intended for testing purposes only. It is STRONGLY recommended that this schema is not used in any production code or environments.</notice>
+			<date>02/13/2014 9:00:00 AM</date>
+			<notice>RELEASE CANDIDATE: This schema does not represent the final version and is intended for testing purposes only. It is STRONGLY recommended that this schema is not used in any production code or environments.</notice>
 			<short_description>Structured Threat Information eXpression (STIX) - COA - Schematic implementation for the CourseOfAction construct within the STIX structured cyber threat expression language architecture.</short_description>
 			<terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
@@ -38,14 +38,14 @@
 					<xs:element name="Stage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Response).</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Type field specifies the type of this CourseOfAction.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CourseOfActionTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CourseOfActionTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
@@ -71,27 +71,27 @@
 					<xs:element name="Structured_COA" type="coa:StructuredCOAType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Structured_COA field enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
-							<xs:documentation>	This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. This type is defined in the extensions/structured_coa/generic_structured_coa.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic_structured_coa.xsd.</xs:documentation>
+							<xs:documentation>	This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. This type is defined in the extensions/structured_coa/generic_structured_coa.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.1/generic_structured_coa.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Impact" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Impact field characterizes the estimated impact of applying this CourseOfAction.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Cost" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Cost field characterizes the estimated cost for applying this CourseOfAction.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Efficacy" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Efficacy field characterizes the effectiveness of this CourseOfAction in achieving its targeted Objective.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -139,7 +139,7 @@
 		<xs:annotation>
 			<xs:documentation>The StructuredCOAType enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
 			<xs:documentation>This type is defined as an abstract type and is intended to be extended using the XML Schema extension mechanism to allow for the expression of a variety of structured COA types. Instance documents representing structured COAs use the xsi:type attribute to specify which implementation of this type they wish to use.</xs:documentation>
-			<xs:documentation>STIX has provided one implementation to allow for the passing of proprietary or externally defined structured courses of action in a CDATA block. This implementation is captured in the Generic Structured COA extension, which provides the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. The extension is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.0/generic.xsd.</xs:documentation>
+			<xs:documentation>STIX has provided one implementation to allow for the passing of proprietary or externally defined structured courses of action in a CDATA block. This implementation is captured in the Generic Structured COA extension, which provides the GenericStructuredCOAType in the http://stix.mitre.org/extensions/StructuredCOA#Generic-1 namespace. The extension is defined in the extensions/structured_coa/generic.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/structured_coa/generic/1.1/generic.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>

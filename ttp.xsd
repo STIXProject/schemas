@@ -5,8 +5,8 @@
 		<xs:appinfo>
 			<schema>STIX TTP</schema>
 			<version>1.1</version>
-			<date>02/07/2014 9:00:00 AM</date>
-			<notice>DRAFT: This schema does not represent the final version and is intended for testing purposes only. It is STRONGLY recommended that this schema is not used in any production code or environments.</notice>
+			<date>02/13/2014 9:00:00 AM</date>
+			<notice>RELEASE CANDIDATE: This schema does not represent the final version and is intended for testing purposes only. It is STRONGLY recommended that this schema is not used in any production code or environments.</notice>
 			<short_description>Structured Threat Information eXpression (STIX) - TTP - Schematic implementation for the TTP construct within the STIX structured cyber threat expression language architecture.</short_description>
 			<terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
@@ -50,7 +50,7 @@
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Intended_Effect field specifies the suspected intended effect for this TTP.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -127,7 +127,7 @@
 	<xs:complexType name="AttackPatternType">
 		<xs:annotation>
 			<xs:documentation>Captures prose information about an individual attack pattern as well as a CAPEC reference.</xs:documentation>
-			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.5InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.5-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.5.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.0/capec_2.5.xsd.</xs:documentation>
+			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.5InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.5-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.5.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.1/capec_2.5.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Title" type="xs:string" minOccurs="0">
@@ -170,13 +170,13 @@
 	<xs:complexType name="MalwareInstanceType">
 		<xs:annotation>
 			<xs:documentation>Captures basic information about an individual malware instance.</xs:documentation>
-			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of a malware instance using the XML Schema extension feature. The STIX default extension uses the Malware Attribute Enumeration and Classification (MAEC) schema to do so. The extension that defines this is captured in the MAECInstanceType in the http://stix.mitre.org/extensions/Malware#MAEC-1 namespace. This type is defined in the extensions/malware/maec-4.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/malware/maec-4.0/1.0/maec-4.0.xsd.</xs:documentation>
+			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of a malware instance using the XML Schema extension feature. The STIX default extension uses the Malware Attribute Enumeration and Classification (MAEC) schema to do so. The extension that defines this is captured in the MAECInstanceType in the http://stix.mitre.org/extensions/Malware#MAEC-1 namespace. This type is defined in the extensions/malware/maec-4.1.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/malware/maec-4.1/1.1/maec-4.1.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Type field provides a characterization of what type of malware this MalwareInstance is.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is MalwareTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is MalwareTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -269,7 +269,7 @@
 			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Type field represents the type of infrastructure being described.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerInfrastructureTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerInfrastructureTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -305,7 +305,7 @@
 			<xs:element name="Tool" type="stixCommon:ToolInformationType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Tool field specifies a single Tool leveraged by this TTP item.</xs:documentation>
-					<xs:documentation>The Type field under this field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerToolTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>The Type field under this field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AttackerToolTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -394,20 +394,20 @@
 			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Identity field characterizes information about the identity or characteristics of the targeted people or organizations.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.0/ciq_identity_3.0.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.1/ciq_identity_3.0.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Targeted_Systems" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Targeted_Systems field characterizes a type of system that is targeted. It may be included multiple times to specify multiple types of targeted systems.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SystemTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SystemTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Targeted_Information" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Targeted_Systems field characterizes a type of information that is targeted. It may be included multiple times to specify multiple types of targeted information.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.0.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
