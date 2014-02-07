@@ -19,14 +19,34 @@
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
-                    <xs:element name="Version" type="xs:string" minOccurs="0">
+                    <xs:element name="Product_Name" type="xs:string" minOccurs="0">
                         <xs:annotation>
-                            <xs:documentation>The Version of Snort that the rule was written against.</xs:documentation>
+                            <xs:documentation>Name of the Snort-compatible tool that the rules were written again. If the tool has a CPE name, use of that name is suggested, otherwise a simple name like "Snort", "Suricata", or "Sourcefire" could be used.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="Rule" type="stixCommon:EncodedCDATAType" minOccurs="0">
+                    <xs:element name="Version" type="xs:string" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>The Version of Snort or Snort-compatible tool that the rules were written against.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Rule" type="stixCommon:EncodedCDATAType" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
                             <xs:documentation>The Rule field encapsulates a Snort rule in its native format within a String field. The specification should be within a CDATA construct within the String field.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Event_Filter" type="stixCommon:EncodedCDATAType" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The Event_Filter field encapsulates a Snort event filter line in its native format within a String field. The specification should be within a CDATA construct within the String field.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Rate_Filter" type="stixCommon:EncodedCDATAType" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The Rate_Filter field encapsulates a Snort rate filter line in its native format within a String field. The specification should be within a CDATA construct within the String field.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Event_Suppression" type="stixCommon:EncodedCDATAType" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The Event_Suppression field encapsulates a Snort event suppression line in its native format within a String field. The specification should be within a CDATA construct within the String field.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
