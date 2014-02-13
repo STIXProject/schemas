@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:TOUMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1" targetNamespace="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" xml:lang="English">
 	<xs:annotation>
-		<xs:documentation>This schema was originally developed by The MITRE Corporation. The Data Marking Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation in coordination with Terry MacDonald. The Data Marking Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
 			<schema>Data Marking Extension - Terms Of Use Marking Instance</schema>
 			<version>1.1</version>
