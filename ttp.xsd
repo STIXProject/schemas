@@ -127,7 +127,7 @@
 	<xs:complexType name="AttackPatternType">
 		<xs:annotation>
 			<xs:documentation>Captures prose information about an individual attack pattern as well as a CAPEC reference.</xs:documentation>
-			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.5InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.5-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.5.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.5/1.1/capec_2.5.xsd.</xs:documentation>
+			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of an attack pattern instance using the XML Schema extension feature. The STIX default extension uses the Common Attack Pattern Enumeration and Classification (CAPEC) schema to do so. The extension that defines this is captured in the CAPEC2.7InstanceType in the http://stix.mitre.org/extensions/AP#CAPEC2.7-1 namespace. This type is defined in the extensions/attack_pattern/capec_2.7_attack_pattern.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/attack_pattern/capec_2.7/1.0/capec_2.7_attack_pattern.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Title" type="xs:string" minOccurs="0">
@@ -170,7 +170,7 @@
 	<xs:complexType name="MalwareInstanceType">
 		<xs:annotation>
 			<xs:documentation>Captures basic information about an individual malware instance.</xs:documentation>
-			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of a malware instance using the XML Schema extension feature. The STIX default extension uses the Malware Attribute Enumeration and Classification (MAEC) schema to do so. The extension that defines this is captured in the MAECInstanceType in the http://stix.mitre.org/extensions/Malware#MAEC-1 namespace. This type is defined in the extensions/malware/maec-4.1.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/malware/maec-4.1/1.1/maec-4.1.xsd.</xs:documentation>
+			<xs:documentation>In addition to capturing basic information, this type is intended to be extended to enable the structured description of a malware instance using the XML Schema extension feature. The STIX default extension uses the Malware Attribute Enumeration and Classification (MAEC) schema to do so. The extension that defines this is captured in the MAEC4.1InstanceType in the http://stix.mitre.org/extensions/Malware#MAEC4.1-1 namespace. This type is defined in the extensions/malware/maec_4.1_malware.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/malware/maec_4.1/1.0/maec_4.1_malware.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
