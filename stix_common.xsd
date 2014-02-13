@@ -346,9 +346,9 @@
 				<xs:documentation>Specifies a globally unique identifier for a cyber threat campaign defined elsewhere.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a campaign defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related campaign and must be an exact match.</xs:documentation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a campaign defined elsewhere.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -517,9 +517,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Indicator should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an indicator defined elsewhere. The referenced version timestamp is contained in the Producer/Time/Produced_Time field of the related indicator and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of an Indicator. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Indicator. When used in conjunction with the idref, this field is specifying a reference to a specific version of an Indicator defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -540,9 +540,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Incident should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an incident defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related incident and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of an Incident. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Incident. When used in conjunction with the idref, this field is specifying a reference to a specific version of an Incident defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -563,9 +563,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this TTP item should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a TTP defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related TTP and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a TTP item. When used in conjunction with the id, this field is specifying the definition time for the specific version of the TTP item. When used in conjunction with the idref, this field is specifying a reference to a specific version of a TTP item defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -586,9 +586,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ExploitTarget should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an exploit target defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related exploit target and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of an ExploitTarget When used in conjunction with the id, this field is specifying the definition time for the specific version of the  ExploitTarget. When used in conjunction with the idref, this field is specifying a reference to a specific version of an ExploitTarget defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -609,9 +609,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this COA should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a course of action defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related course of action and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a COA. When used in conjunction with the id, this field is specifying the definition time for the specific version of the COA. When used in conjunction with the idref, this field is specifying a reference to a specific version of a COA defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -632,9 +632,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Campaign should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a campaign defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related campaign and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Campaign. When used in conjunction with the id, this field is specifying the definition time for the specific version of the  Campaign. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Campaign defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -655,9 +655,9 @@
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this ThreatActor should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="timestamp_ref" type="xs:dateTime">
+		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a threat actor defined elsewhere. The referenced version timestamp is contained in the Information_Source/Time/Produced_Time field of the related threat actor and must be an exact match.</xs:documentation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a ThreatActor. When used in conjunction with the id, this field is specifying the definition time for the specific version of the ThreatActor. When used in conjunction with the idref, this field is specifying a reference to a specific version of a ThreatActor defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
@@ -888,9 +888,9 @@
 						<xs:documentation>Specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="timestamp_ref" type="xs:dateTime">
+				<xs:attribute name="timestamp" type="xs:dateTime">
 					<xs:annotation>
-						<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a STIX Package defined elsewhere. The referenced version timestamp is contained in the STIX_Header/Information_Source/Time/Produced_Time field of the related package and must be an exact match.</xs:documentation>
+						<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a STIX Package defined elsewhere.</xs:documentation>
 						<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
