@@ -28,7 +28,10 @@
 	is intended for illustrative purposes only.
 -->
 
-<stix:STIX_Package id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf" version="1.1"
+<stix:STIX_Package
+	id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf"
+	timestamp="2014-02-20T09:00:00.000000Z"
+	version="1.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://data-marking.mitre.org/Marking-1"
 	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
@@ -145,7 +148,7 @@
 
 	<!-- Top-level APT1 TTP -->
 	<stix:TTPs>
-		<stix:TTP id="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" xsi:type="ttp:TTPType">
 			<ttp:Title>APT1 Tactics, Techniques and Procedures</ttp:Title>
 			<ttp:Intended_Effect>
 				<stixCommon:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -254,7 +257,7 @@
 <!-- Only two of the APT1 malware families (WEBC2 & HTRAN) were expressed minimally here in STIX to show how they can fit into the overall picture. 
 			All of the other malware families could be similarly expressed and in greater detail.  -->
 
-		<stix:TTP id="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" xsi:type="ttp:TTPType">
 			<ttp:Title>WEBC2 Backdoor</ttp:Title>
 			<ttp:Behavior>
 				<ttp:Malware>
@@ -289,7 +292,7 @@
 			</ttp:Kill_Chain_Phases>
 		</stix:TTP>
 
-		<stix:TTP id="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" xsi:type="ttp:TTPType">
 			<ttp:Title>HTRAN Malware C2</ttp:Title>
 			<ttp:Behavior>
 				<ttp:Malware>
@@ -362,7 +365,7 @@
 
 
 		<!-- Net blocks corresponding to IP addresses that APT1 used to access their hop points -->
-		<stix:TTP id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Type>Hop Point Accessors</ttp:Type>
 				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1">
@@ -413,7 +416,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Servers infrastructure -->
-		<stix:TTP id="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" xsi:type="ttp:TTPType">
 			<ttp:Title>APT1 C2 Servers Infrstructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -434,7 +437,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Domain names infrastructure -->
-		<stix:TTP id="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" xsi:type="ttp:TTPType">
 			<ttp:Title>Domain Names Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -477,7 +480,7 @@
 		</stix:TTP>
 
 		<!-- Registered DNS Zones infrastructure -->
-		<stix:TTP id="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" xsi:type="ttp:TTPType">
 			<ttp:Title>Registered DNS Zones infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -667,7 +670,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Third party services infrastructure -->
-		<stix:TTP id="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" xsi:type="ttp:TTPType">
 			<ttp:Title>Third-party Services Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -690,7 +693,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Hijacked FQDNs infrastructure -->
-		<stix:TTP id="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" xsi:type="ttp:TTPType">
 			<ttp:Title>Hijacked FQDN Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -711,7 +714,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - The Initial Compromise -->
-		<stix:TTP id="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" xsi:type="ttp:TTPType">
 			<ttp:Title>The Initial Compromise</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>The Initial Compromise represents the methods intruders
 				use to first penetrate a target organization’s network.</stixCommon:Description></ttp:Intended_Effect>
@@ -768,7 +771,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Establishing a Foothold -->
-		<stix:TTP id="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" xsi:type="ttp:TTPType">
 			<ttp:Title>Establishing a Foothold</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Establishing a foothold involves actions that ensure
 				control of the target network’s systems from outside the network.</stixCommon:Description></ttp:Intended_Effect>
@@ -889,7 +892,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Privilege Escalation -->
-		<stix:TTP id="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" xsi:type="ttp:TTPType">
 			<ttp:Title>Privilege Escalation</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Escalating privileges involves acquiring items (most
 				often usernames and passwords) that will allow access to more resources within
@@ -992,7 +995,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Internal Reconnaisance -->
-		<stix:TTP id="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" xsi:type="ttp:TTPType">
 			<ttp:Title>Internal Reconnaisance</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>In the Internal Reconnaissance stage, the intruder
 				collects information about the victim environment.</stixCommon:Description></ttp:Intended_Effect>
@@ -1053,7 +1056,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Lateral Movement -->
-		<stix:TTP id="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" xsi:type="ttp:TTPType">
 			<ttp:Title>Lateral Movement</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Expand foothold and access through lateral movement
 				within the target environment.</stixCommon:Description></ttp:Intended_Effect>
@@ -1089,7 +1092,7 @@
 		</stix:TTP>
 		
 		<!-- Killchain phase - Maintain Presence -->
-		<stix:TTP id="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" xsi:type="ttp:TTPType">
 			<ttp:Title>Maintain Presence</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>In this stage, the intruder takes actions to ensure
 				continued, long-term control over key systems in the network environment from
@@ -1137,7 +1140,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Completing the Mission -->
-		<stix:TTP id="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" xsi:type="ttp:TTPType">
 			<ttp:Title>Completing the Mission</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Exfiltration information relevant to the mission.</stixCommon:Description></ttp:Intended_Effect>
 			<ttp:Intended_Effect><stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Theft - Theft of Proprietary Information</stixCommon:Value></ttp:Intended_Effect>
@@ -1242,7 +1245,7 @@
 
 	<stix:Threat_Actors>
 		<!-- ThreatActor characterization for APT1 -->
-		<stix:Threat_Actor id="mandiant:threat-actor-8dff0344-0c82-4079-8d04-6f3e4d9bd1df" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-8dff0344-0c82-4079-8d04-6f3e4d9bd1df" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stixCommon:Related_Identities>
 					<stixCommon:Related_Identity>
@@ -1482,7 +1485,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for UglyGorilla -->
-		<stix:Threat_Actor id="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z"  id="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1541,7 +1544,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for DOTA -->
-		<stix:Threat_Actor id="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1574,7 +1577,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for SuperHard -->
-		<stix:Threat_Actor id="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1614,28 +1617,28 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Comment Crew -->
-		<stix:Threat_Actor id="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Comment Crew</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Comment Group -->
-		<stix:Threat_Actor id="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Comment Group</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Shady Rat -->
-		<stix:Threat_Actor id="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Shady Rat</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for GSD 3rd Department / 2nd Bureau -->
-		<stix:Threat_Actor id="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>GSD 3rd Department / 2nd Bureau</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1648,7 +1651,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for GSD 3rd Department -->
-		<stix:Threat_Actor id="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>GSD 3rd Department</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1661,7 +1664,7 @@
 		</stix:Threat_Actor>
 		
 		<!-- ThreatActor characterization for PLA General Staff -->
-		<stix:Threat_Actor id="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>PLA General Staff</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1674,7 +1677,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Communist Party of China -->
-		<stix:Threat_Actor id="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1698,7 +1701,7 @@
 		</stix:Threat_Actor>
 		
 		<!-- ThreatActor characterization for China Telecom-->
-		<stix:Threat_Actor id="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2014-02-20T09:00:00.000000Z" id="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>

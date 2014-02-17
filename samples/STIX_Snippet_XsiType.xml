@@ -13,7 +13,7 @@
 <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7">
 
 <!-- Snippet example of xsi:type use to specify a controlled vocabulary  -->
-<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.0">Malicious E-mail</indicator:Type>
+<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
 
 <!-- Snippet example of xsi:type use to specify a data marking model  -->
 <marking:Marking_Structure xsi:type="tlpMarking:TLPMarkingStructureType" marking_model_name="TLP" marking_model_ref="http://www.us-cert.gov/tlp/" color="RED"/>
