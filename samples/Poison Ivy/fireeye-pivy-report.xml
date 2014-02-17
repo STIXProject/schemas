@@ -14,7 +14,7 @@
     xmlns:fireeye="http://www.fireeye.com"
     xmlns:marking="http://data-marking.mitre.org/Marking-1"
     xmlns:indicator="http://stix.mitre.org/Indicator-2" 
-    xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" 
+    xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
     xmlns:stixCiqIdentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1" 
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" 
@@ -30,7 +30,7 @@
         http://stix.mitre.org/TTP-1 ../../ttp.xsd
         http://stix.mitre.org/COA-1 ../../course_of_action.xsd
         http://data-marking.mitre.org/Marking-1 ../../data_marking.xsd
-        http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 ../../extensions/marking/simple_marking.xsd
+        http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd
         http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 ../../extensions/identity/ciq_3.0_identity.xsd
     "
     id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d"
@@ -56,8 +56,8 @@ RATs require live, direct, real-time human interaction by the APT attacker. This
         <stix:Handling>
             <marking:Marking id="fireeye:markingspecification-6d04e7fe-2561-4b2d-a7bb-04f8cfd01271">
                 <marking:Controlled_Structure>//node()</marking:Controlled_Structure>
-                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
-                    <simpleMarking:Statement>Copyright 2013 FireEye, Inc.</simpleMarking:Statement>
+                <marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
+                    <terms:Terms_Of_Use>Copyright 2013 FireEye, Inc.</terms:Terms_Of_Use>
                 </marking:Marking_Structure>
             </marking:Marking>
         </stix:Handling>

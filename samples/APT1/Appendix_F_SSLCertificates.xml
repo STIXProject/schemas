@@ -21,7 +21,7 @@
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:marking="http://data-marking.mitre.org/Marking-1"
-    xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+    xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
     xmlns:cybox="http://cybox.mitre.org/cybox-2" 
     xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" 
@@ -33,7 +33,7 @@
     http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd
     http://stix.mitre.org/common-1 ../../stix_common.xsd
     http://data-marking.mitre.org/Marking-1 ../../data_marking.xsd
-    http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 ../../extensions/marking/simple_marking.xsd
+    http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd
     http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
     http://cybox.mitre.org/objects#X509CertificateObject-2 ../../cybox/objects/X509_Certificate_Object.xsd
@@ -47,8 +47,8 @@
         <stix:Handling>
             <marking:Marking xmlns="http://data-marking.mitre.org">
                 <marking:Controlled_Structure>//node()</marking:Controlled_Structure>
-                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
-                    <simpleMarking:Statement>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</simpleMarking:Statement>
+                <marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
+                    <terms:Terms_Of_Use>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</terms:Terms_Of_Use>
                 </marking:Marking_Structure>
             </marking:Marking>
         </stix:Handling>

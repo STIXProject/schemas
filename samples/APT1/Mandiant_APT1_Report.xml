@@ -34,7 +34,7 @@
 	version="1.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://data-marking.mitre.org/Marking-1"
-	xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1"
+	xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
 	xmlns:cybox="http://cybox.mitre.org/cybox-2" 
 	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
 	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
@@ -68,7 +68,7 @@
 		http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
 		http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 ../../extensions/identity/ciq_3.0_identity.xsd
 		http://stix.mitre.org/stix-1 ../../stix_core.xsd
-		http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 ../../extensions/marking/simple_marking.xsd">
+		http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd">
 	<stix:STIX_Header>
 		<stix:Title>APT1: Exposing One of China's Cyber Espionage Units</stix:Title>
 		<stix:Package_Intent>Threat Actor Report</stix:Package_Intent>
@@ -116,8 +116,8 @@
 			<marking:Marking>
 				<marking:Controlled_Structure>//node()</marking:Controlled_Structure>
 				<!-- Apply following marking to entire document -->
-				<marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
-          			<simpleMarking:Statement>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</simpleMarking:Statement>
+				<marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
+					<terms:Terms_Of_Use>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</terms:Terms_Of_Use>
 				</marking:Marking_Structure>
 			</marking:Marking>
 		</stix:Handling>

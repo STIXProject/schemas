@@ -12,7 +12,7 @@
     xmlns:fireeye="http://www.fireeye.com"
     xmlns:indicator="http://stix.mitre.org/Indicator-2"
     xmlns:marking="http://data-marking.mitre.org/Marking-1"
-    xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" 
+    xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1" 
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -23,7 +23,7 @@
         http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
         http://stix.mitre.org/Indicator-2 ../../indicator.xsd
         http://data-marking.mitre.org/Marking-1 ../../data_marking.xsd
-        http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1 ../../extensions/marking/simple_marking.xsd
+        http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd
         http://cybox.mitre.org/objects#AddressObject-2 ../../cybox/objects/Address_Object.xsd
         http://cybox.mitre.org/objects#CodeObject-2 ../../cybox/objects/Code_Object.xsd
         http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
@@ -37,8 +37,8 @@
         <stix:Handling>
             <marking:Marking id="fireeye:markingspecification-087236e7-b47c-4a75-b1da-5b3e17dcd1aa">
                 <marking:Controlled_Structure>//node()</marking:Controlled_Structure>
-                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
-                    <simpleMarking:Statement>Copyright 2013 FireEye, Inc.</simpleMarking:Statement>
+                <marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
+                    <terms:Terms_Of_Use>Copyright 2013 FireEye, Inc.</terms:Terms_Of_Use>
                 </marking:Marking_Structure>
             </marking:Marking>
         </stix:Handling>
