@@ -20,7 +20,7 @@
 		<xs:complexContent>
 			<xs:extension base="marking:MarkingStructureType">
 				<xs:sequence>
-					<xs:element name="terms_of_use" type="xs:string">
+					<xs:element name="Terms_Of_Use" type="xs:string">
 						<xs:annotation>
 							<xs:documentation>The Terms Of Use statement to apply to the structure for which the Marking is to be applied.</xs:documentation>
 						</xs:annotation>
