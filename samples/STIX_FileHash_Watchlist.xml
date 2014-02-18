@@ -1,7 +1,7 @@
 <!--
 	STIX File Hash Watchlist Example
 	
-	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+	Copyright (c) 2014, The MITRE Corporation. All rights reserved. 
     The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
     
 	This example demonstrates a simple representation of indicators that consist of file hashes. Cyber operations and malware analysis centers often share a list of indicators with hashes of malicious files and some information about what those indicators represent. This STIX package represents a list of three hashes with a short dummy description of what they represent.

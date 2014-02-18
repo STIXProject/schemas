@@ -1,7 +1,7 @@
 <!--
 	STIX Indicator w/ Snort Example
 	
-	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+	Copyright (c) 2014, The MITRE Corporation. All rights reserved. 
     The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
     
 	This example demonstrates a simple usage of STIX to represent indicators with a Snort test mechanism. This demonstrates the ability of STIX indicators to represent external test mechanisms within an indicator.

@@ -1,7 +1,7 @@
 <!--
 	STIX Domain Watchlist Example
 	
-	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+	Copyright (c) 2014, The MITRE Corporation. All rights reserved. 
     The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
     
 	This example demonstrates one method of representing a domain watchlist (list of malicious domains) in STIX and CybOX. It demonstrates several STIX/CybOX concepts and best practices including:

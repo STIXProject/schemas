@@ -1,7 +1,7 @@
 <!--
 	Controlled Vocabulary Specification Snippet - NOT INTENDED TO VALIDATE
 	
-	Copyright (c) 2013, The MITRE Corporation. All rights reserved. 
+	Copyright (c) 2014, The MITRE Corporation. All rights reserved. 
     The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
 
 	This snippet demonstrates how users can define their own controlled vocabularies for use within STIX. The snippet is taken from the STIX default_controlled_vocabularies.xsd file and describes a vocabulary for use within STIX. Those users who wish to define their own vocabularies should follow a similar pattern:
