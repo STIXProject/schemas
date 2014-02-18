@@ -208,6 +208,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1.0"/>
 			<xs:enumeration value="1.0.1"/>
+			<xs:enumeration value="1.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PropertyAffectedType">
