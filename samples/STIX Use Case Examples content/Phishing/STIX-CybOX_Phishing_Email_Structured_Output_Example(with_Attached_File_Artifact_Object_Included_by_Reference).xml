@@ -3,7 +3,8 @@ xmlns:cybox="http://cybox.mitre.org/cybox-2"
 xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
 xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
 xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" 
-xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" 
+xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
 xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
 xmlns:Artifact="http://cybox.mitre.org/objects#ArtifactObject-2"               
 xmlns:WhoisObj="http://cybox.mitre.org/objects#WhoisObject-2"     
@@ -17,6 +18,7 @@ http://cybox.mitre.org/common-2 ../../../cybox/cybox_common.xsd
 http://cybox.mitre.org/objects#AddressObject-2 ../../../cybox/objects/Address_Object.xsd
 http://cybox.mitre.org/objects#FileObject-2 ../../../cybox/objects/File_Object.xsd
 http://cybox.mitre.org/objects#URIObject-2 ../../../cybox/objects/URI_Object.xsd
+http://cybox.mitre.org/objects#DomainNameObject-1 ../../../cybox/objects/Domain_Name_Object.xsd
 http://cybox.mitre.org/objects#EmailMessageObject-2 ../../../cybox/objects/Email_Message_Object.xsd 
 http://cybox.mitre.org/objects#ArtifactObject-2 ../../../cybox/objects/Artifact_Object.xsd
 http://cybox.mitre.org/objects#WhoisObject-2 ../../../cybox/objects/Whois_Object.xsd
@@ -158,8 +160,8 @@ MIME-Version: 1.0
 	<!-- Extracted Domain from link URL (state.gov)  -->
     <cybox:Observable id="example:observable-6e98b56a-41b8-4c52-b5ae-6ac86e968b93">
             <cybox:Object id="example:object-45ed3e11-5be1-4a7e-8f02-25b8f74196d3">
-                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
-                    <URIObj:Value>state.gov</URIObj:Value>
+                <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                    <DomainNameObj:Value>state.gov</DomainNameObj:Value>
                 </cybox:Properties>
                 <cybox:Related_Objects>
                     <cybox:Related_Object idref="example:object-03d041dd-21f7-4b70-a2be-d4abedf2503b"><!-- WHOIS  -->
