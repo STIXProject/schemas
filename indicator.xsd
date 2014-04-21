@@ -265,7 +265,7 @@
 			<xs:documentation>Describes a single sighting of an indicator.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Source" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This field provides a name or description of the sighting source.</xs:documentation>
 				</xs:annotation>
