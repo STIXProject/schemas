@@ -19,17 +19,17 @@
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
-                    <xs:element name="Description" type="stixCommon:StructuredTextType">
+                    <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
                         <xs:annotation>
                             <xs:documentation>A structured Description of this Generic Test Mechanism.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="Type" type="stixCommon:ControlledVocabularyStringType">
+                    <xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
                         <xs:annotation>
                             <xs:documentation>Specifies the type of Generic Test Mechanism.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="Specification" type="stixCommon:EncodedCDATAType">
+                    <xs:element name="Specification" type="stixCommon:EncodedCDATAType" minOccurs="0">
                         <xs:annotation>
                             <xs:documentation>The Specification field encapsulates any test mechnism specification in its native format within a string field. The specification should be within a CDATA construct within the string field.</xs:documentation>
                         </xs:annotation>
