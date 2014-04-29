@@ -74,7 +74,7 @@
 					<xs:documentation>The Description field provides a description of the confidence value and how it was derived.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Source field specifies the source of this confidence assertion. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
@@ -735,7 +735,7 @@
 					<xs:documentation>Specifies a prose description of the statement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Source" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Source field captures the source of this statement. An optional vocabulary name and reference allows the expression of the source name in some given vocabulary context.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.0. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
