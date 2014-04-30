@@ -33,7 +33,7 @@
     http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd"
     id="example:package-4cc56b6b-748f-440b-9f01-03bcf3ce7c68"
     timestamp="2014-02-20T09:00:00.000000Z"
-    version="1.1"
+    version="1.1.1"
     >
     <stix:STIX_Header>
         <stix:Title>Example watchlist that contains URL information.</stix:Title>
