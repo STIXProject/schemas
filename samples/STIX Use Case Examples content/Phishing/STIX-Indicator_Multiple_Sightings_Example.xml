@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <indicator:Indicator xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://stix.mitre.org/Indicator-2 ../../../indicator.xsd" version="2.1.1">
 	<indicator:Sightings sightings_count="3">
-		<indicator:Sighting><indicator:Source>MITRE</indicator:Source></indicator:Sighting>
-		<indicator:Sighting><indicator:Source>ACME</indicator:Source></indicator:Sighting>
-		<indicator:Sighting><indicator:Source>FooBar</indicator:Source></indicator:Sighting>
+		<indicator:Sighting>
+			<indicator:Source>
+				<stixCommon:Identity><stixCommon:Name>MITRE</stixCommon:Name></stixCommon:Identity>
+			</indicator:Source>
+		</indicator:Sighting>
+		<indicator:Sighting>
+			<indicator:Source>
+				<stixCommon:Identity><stixCommon:Name>ACME</stixCommon:Name></stixCommon:Identity>
+			</indicator:Source>
+		</indicator:Sighting>
+		<indicator:Sighting>
+			<indicator:Source>
+				<stixCommon:Identity><stixCommon:Name>FooBar</stixCommon:Name></stixCommon:Identity>
+			</indicator:Source>
+		</indicator:Sighting>
 	</indicator:Sightings>
 </indicator:Indicator>

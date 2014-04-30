@@ -169,11 +169,15 @@ http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularie
 			</indicator:Handling>
 			<indicator:Confidence timestamp="2012-12-01T09:30:47Z">
 				<stixCommon:Value vocab_reference="someURLtoConfidenceModelDescription.foo.com">High</stixCommon:Value>
-				<stixCommon:Source>MITRE</stixCommon:Source>
+				<stixCommon:Source>
+					<stixCommon:Identity><stixCommon:Name>MITRE</stixCommon:Name></stixCommon:Identity>
+				</stixCommon:Source>
 			</indicator:Confidence>
 			<indicator:Sightings sightings_count="1">
 				<indicator:Sighting timestamp="2012-12-01T09:30:47Z">
-					<indicator:Source>MITRE</indicator:Source>
+					<indicator:Source>
+						<stixCommon:Identity><stixCommon:Name>MITRE</stixCommon:Name></stixCommon:Identity>
+					</indicator:Source>
 				</indicator:Sighting>
 			</indicator:Sightings>
 			<indicator:Producer>
