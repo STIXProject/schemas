@@ -343,7 +343,7 @@
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
-					<xs:element name="Related_Campaign" type="stixCommon:CampaignReferenceType" maxOccurs="unbounded">
+					<xs:element name="Related_Campaign" type="stixCommon:RelatedCampaignReferenceType" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Related_Campaign field captures a single relationship to a related campaign.</xs:documentation>
 						</xs:annotation>
