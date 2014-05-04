@@ -91,7 +91,6 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies a timestamp for the definition of a specific version of a STIX Package. When used in conjunction with the id, this field is specifying the definition time for the specific version of the STIX Package. When used in conjunction with the idref, this field is specifying a reference to a specific version of a STIX Package defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
-				<xs:documentation>This field must only be used in conjunction with the idref field.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="version" type="stix:STIXPackageVersionEnum">
