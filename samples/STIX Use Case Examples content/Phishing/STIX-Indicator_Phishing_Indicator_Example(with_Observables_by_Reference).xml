@@ -12,7 +12,7 @@ http://data-marking.mitre.org/extensions/MarkingStructure#TLP-1 ../../../extensi
 http://stix.mitre.org/default_vocabularies-1 ../../../stix_default_vocabularies.xsd
 " 
 id="example:package-ba1d406e-937c-414f-9231-6e1dbe64fe8b" 
-version="1.1">
+version="1.1.1">
 	<stix:Indicators>
 		<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7" timestamp="2014-02-20T09:00:00.000000Z">
 			<indicator:Title>"US-China" Phishing Indicator</indicator:Title>
@@ -117,11 +117,15 @@ version="1.1">
 			</indicator:Handling>
 			<indicator:Confidence timestamp="2012-12-01T09:30:47Z">
 				<stixCommon:Value vocab_reference="someURLtoConfidenceModelDescription.foo.com">High</stixCommon:Value>
-				<stixCommon:Source>MITRE</stixCommon:Source>
+				<stixCommon:Source>
+					<stixCommon:Identity><stixCommon:Name>MITRE</stixCommon:Name></stixCommon:Identity>
+				</stixCommon:Source>
 			</indicator:Confidence>
 			<indicator:Sightings sightings_count="1">
 				<indicator:Sighting timestamp="2012-12-01T09:30:47Z">
-					<indicator:Source>MITRE</indicator:Source>
+					<indicator:Source>
+						<stixCommon:Identity><stixCommon:Name>MITRE</stixCommon:Name></stixCommon:Identity>
+					</indicator:Source>
 				</indicator:Sighting>
 			</indicator:Sightings>
 			<indicator:Producer>

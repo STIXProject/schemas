@@ -30,7 +30,7 @@
         http://cybox.mitre.org/objects#MutexObject-2 ../../cybox/objects/Mutex_Object.xsd
         http://cybox.mitre.org/objects#DomainNameObject-1 ../../cybox/objects/Domain_Name_Object.xsd
     "
-    id="fireeye:stix-0232a453-acb4-4548-bc0f-e9367b45dac7" version="1.1">
+    id="fireeye:stix-0232a453-acb4-4548-bc0f-e9367b45dac7" version="1.1.1">
     <stix:STIX_Header>
         <stix:Title>PIVY Indicators - Collected By FireEye</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>

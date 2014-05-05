@@ -10,13 +10,19 @@
 <!-- This XML Snippet is NOT intended to validate -->
 <indicator:Sightings sightings_count="3">
 	<indicator:Sighting timestamp="2012-12-01T09:30:47Z">
-		<indicator:Source>Alpha</indicator:Source>
+		<indicator:Source>
+			<stixCommon:Identity><stixCommon:Name>Alpha</stixCommon:Name></stixCommon:Identity>
+		</indicator:Source>
 	</indicator:Sighting>
 	<indicator:Sighting timestamp="2012-11-28T11:35:15Z">
-		<indicator:Source>Bravo</indicator:Source>
+		<indicator:Source>
+			<stixCommon:Identity><stixCommon:Name>Bravo</stixCommon:Name></stixCommon:Identity>
+		</indicator:Source>
 	</indicator:Sighting>
 	<indicator:Sighting timestamp="2012-11-27T19:50:33Z">
-		<indicator:Source>Charlie</indicator:Source>
+		<indicator:Source>
+			<stixCommon:Identity><stixCommon:Name>Charlie</stixCommon:Name></stixCommon:Identity>
+		</indicator:Source>
 	</indicator:Sighting>
 </indicator:Sightings>
 <!-- This XML Snippet is NOT intended to validate -->

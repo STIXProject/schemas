@@ -31,7 +31,7 @@
 <stix:STIX_Package
 	id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf"
 	timestamp="2014-02-20T09:00:00.000000Z"
-	version="1.1"
+	version="1.1.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://data-marking.mitre.org/Marking-1"
 	xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
