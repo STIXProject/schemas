@@ -433,7 +433,7 @@
 	</xs:complexType>
 	<xs:complexType name="ContributorsType">
 		<xs:sequence>
-			<xs:element name="Contributor" type="cyboxCommon:ContributorType"/>
+			<xs:element name="Contributor" type="cyboxCommon:ContributorType" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="COATimeType">
