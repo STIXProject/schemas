@@ -688,7 +688,7 @@
 					<xs:union memberTypes="stixVocabs:AvailabilityLossTypeEnum-1.1.1"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Availability Loss Type Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.1.1"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
