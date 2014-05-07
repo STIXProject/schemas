@@ -31,8 +31,8 @@ Mandiant's website at: http://intelreport.mandiant.com.
 Mandiant_APT1_Report.xml
 ------------------------
 This document is the result of a manual conversion of the APT1 report itself (Mandiant_APT1_Report.pdf)
-into a representative portion of that report in STIX 1.1. The process was to read through the report
-and manually create STIX 1.1 XML content to match the contents of the report, with the primary focus
+into a representative portion of that report in STIX 1.1.1. The process was to read through the report
+and manually create STIX 1.1.1 XML content to match the contents of the report, with the primary focus
 on TTPs, Threat Actors, and Campaigns. The intent was not to convert the whole report but to provide
 illustrative examples of the higher-level content that the APT1 report describes. As such, not all material
 in the original report is in the conversion and some of the material that was converted over may have small

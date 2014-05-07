@@ -5,7 +5,7 @@
         <xs:appinfo>
             <schema>STIX Extension - CIQ Identity 3.0 Instance</schema>
             <version>1.1.1</version>
-            <date>05/01/2014 9:00:00 AM</date>
+            <date>05/08/2014 9:00:00 AM</date>
             <short_description>Structured Threat Information eXpression (STIX) Extension - CIQ Identity 3.0 Instance - Schematic implementation for the using version 3.0 of CIQ to describe an Identity within the STIX structured cyber threat expression language architecture.</short_description>
             <terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
         </xs:appinfo>

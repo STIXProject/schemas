@@ -20,7 +20,7 @@
 id="example:package-772be925-6290-4867-9f17-da8e7e2624ff" 
 version="1.1.1">
 	<stix:Indicators>
-		<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7" timestamp="2014-02-20T09:00:00.000000Z">
+		<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7" timestamp="2014-05-08T09:00:00.000000Z">
 			<indicator:Title>"US-China" Phishing Indicator</indicator:Title>
 			<indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malicious E-mail</indicator:Type>
 			<indicator:Description>This is a cyber threat indicator for instances of "US-China" phishing attempts.</indicator:Description>

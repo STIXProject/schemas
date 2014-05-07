@@ -29,7 +29,7 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://cybox.mitre.org/objects#DomainNameObject-1 ../cybox/objects/Domain_Name_Object.xsd"
     id="example:STIXPackage-f61cd874-494d-4194-a3e6-6b487dbb6d6e"
-    timestamp="2014-02-20T09:00:00.000000Z"
+    timestamp="2014-05-08T09:00:00.000000Z"
     version="1.1.1"
     >
     <stix:STIX_Header>
@@ -37,7 +37,7 @@
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Watchlist</stix:Package_Intent>
     </stix:STIX_Header>
     <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-2e20c5b2-56fa-46cd-9662-8f199c69d2c9" timestamp="2014-02-20T09:00:00.000000Z">
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-2e20c5b2-56fa-46cd-9662-8f199c69d2c9" timestamp="2014-05-08T09:00:00.000000Z">
             <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
             <indicator:Description>Sample domain Indicator for this watchlist</indicator:Description>
             <indicator:Observable id="example:Observable-87c9a5bb-d005-4b3e-8081-99f720fad62b">
