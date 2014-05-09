@@ -20,11 +20,15 @@
 	<stixCommon:Confidence_Assertion_Chain>
 		<stixCommon:Confidence_Assertion timestamp="2012-11-25T00:30:00Z">
 			<stixCommon:Value vocab_reference="someURLtoConfidenceModelDescription.foo.com">High</stixCommon:Value>
-			<stixCommon:Source>Alpha</stixCommon:Source>
+			<stixCommon:Source>
+				<stixCommon:Identity><stixCommon:Name>Alpha</stixCommon:Name></stixCommon:Identity>
+			</stixCommon:Source>
 		</stixCommon:Confidence_Assertion>
 		<stixCommon:Confidence_Assertion timestamp="2012-11-24T11:04:12Z">
 			<stixCommon:Value vocab_reference="someURLtoConfidenceModelDescription.bar.com">Confirmed</stixCommon:Value>
-			<stixCommon:Source>Beta</stixCommon:Source>
+			<stixCommon:Source>
+				<stixCommon:Identity><stixCommon:Name>Beta</stixCommon:Name></stixCommon:Identity>
+			</stixCommon:Source>
 			<stixCommon:Confidence_Assertion_Chain>
 				<stixCommon:Confidence_Assertion timestamp="2012-11-22T10:45:00Z">
 					<stixCommon:Value>Medium</stixCommon:Value>

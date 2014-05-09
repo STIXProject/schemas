@@ -24,8 +24,8 @@
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-075427ae-4021-410c-8d0b-2cde003a1e7b"
-    timestamp="2014-02-20T09:00:00.000000Z"
-    version="1.1"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
     >
     <stix:STIX_Header>
         <stix:Title>Email with attachments.</stix:Title>

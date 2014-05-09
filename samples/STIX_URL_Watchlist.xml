@@ -32,15 +32,15 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd"
     id="example:package-4cc56b6b-748f-440b-9f01-03bcf3ce7c68"
-    timestamp="2014-02-20T09:00:00.000000Z"
-    version="1.1"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
     >
     <stix:STIX_Header>
         <stix:Title>Example watchlist that contains URL information.</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Watchlist</stix:Package_Intent>
     </stix:STIX_Header>
     <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2014-02-20T09:00:00.000000Z">
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2014-05-08T09:00:00.000000Z">
             <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1" >URL Watchlist</indicator:Type>
             <indicator:Description>Sample URL Indicator for this watchlist</indicator:Description>
             <indicator:Observable id="example:Observable-Pattern-cc5c00ce-98a6-4cbe-8474-59eaecdb018f">

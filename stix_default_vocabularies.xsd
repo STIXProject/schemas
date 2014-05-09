@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1.0" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1.1" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
 			<schema>STIX Default Vocabularies</schema>
-			<version>1.1.0</version>
-			<date>02/20/2014 9:00:00 AM</date>
+			<version>1.1.1</version>
+			<date>05/08/2014 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Schematic implementation for controlled vocabularies used in the Structured Threat Information eXchange format.</short_description>
 			<terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
@@ -678,9 +678,75 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Availability Loss Type Vocabulary -->
+	<xs:complexType name="AvailabilityLossTypeVocab-1.1.1">
+		<xs:annotation>
+			<xs:documentation>The AvailabilityLossTypeVocab is the default STIX vocabulary for expressing the type of availability that was lost due to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:AvailabilityLossTypeEnum-1.1.1"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Availability Loss Type Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd#AvailabilityLossTypeVocab-1.1.1"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="AvailabilityLossTypeEnum-1.1.1">
+		<xs:annotation>
+			<xs:documentation>
+				The possible values for expressing the type of availability that was lost due to an incident.
+			</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Destruction">
+				<xs:annotation>
+					<xs:documentation>The information was destroyed or wiped.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was lost.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Interruption">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was interrupted.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Degradation">
+				<xs:annotation>
+					<xs:documentation>Availability to the information was degraded.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Acceleration">
+				<xs:annotation>
+					<xs:documentation>Availability loss type is acceleration.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Obscuration">
+				<xs:annotation>
+					<xs:documentation>Availability to the information is obscured.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>The availability loss type is not known.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="AvailabilityLossTypeVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>The AvailabilityLossTypeVocab is the default STIX vocabulary for expressing the type of availability that was lost due to an incident.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.1.1, this version of the AvailabilityLossTypeVocab is deprecated. Please use AvailabilityLossTypeVocab-1.1.1 instead.</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>		
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">

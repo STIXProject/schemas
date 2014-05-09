@@ -6,7 +6,7 @@
     by The MITRE Corporation using the content of the APT1 Report with Mandiant's
     permission.  Mandiant is not responsible for the content of this file.  
 
-    This document was developed against STIX 1.0.1 and CybOX 2.0.1 using automated transforms
+    This document was developed against STIX 1.1.1 and CybOX 2.1 using automated transforms
     (https://github.com/CybOXProject/Tools/tree/master/scripts/x509_to_cybox) of text-based
     representations of X509 certificates from Appendix F of the Mandiant APT1 report. It is
     intended for demonstration purposes only and no guarantee is made to the accuracy or
@@ -14,8 +14,8 @@
 -->
 <stix:STIX_Package
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e249"
-    timestamp="2014-02-20T09:00:00.000000Z"
-    version="1.1"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:stix="http://stix.mitre.org/stix-1"
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"

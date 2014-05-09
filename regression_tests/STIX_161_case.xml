@@ -1,0 +1,29 @@
+<!--
+    test case for https://github.com/STIXProject/schemas/issues/161
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:incident="http://stix.mitre.org/Incident-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:example="http://example.com/"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xsi:schemaLocation=
+    "http://stix.mitre.org/stix-1 ../stix_core.xsd
+    http://stix.mitre.org/Incident-1 ../incident.xsd
+    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd"
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    
+    <!-- show that StatementType is of type InformationSource, and contains Identity -->
+    <stix:Incidents>
+        <stix:Incident xsi:type="incident:IncidentType" >
+            <incident:Intended_Effect><stixCommon:Description>"shut it all down"</stixCommon:Description>
+            <stixCommon:Source><stixCommon:Identity><stixCommon:Name>Sensitive Collections</stixCommon:Name></stixCommon:Identity></stixCommon:Source>
+            </incident:Intended_Effect>
+        </stix:Incident>
+    </stix:Incidents>
+    
+</stix:STIX_Package>

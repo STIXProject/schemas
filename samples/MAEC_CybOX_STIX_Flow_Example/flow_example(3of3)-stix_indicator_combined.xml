@@ -40,8 +40,8 @@
     http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
     http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
-    timestamp="2014-02-20T09:00:00.000000Z" 
-    version="1.1">
+    timestamp="2014-05-08T09:00:00.000000Z" 
+    version="1.1.1">
     <stix:STIX_Header>
         <stix:Title>Zeus 1.x Artifacts and Characterization</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</stix:Package_Intent>
@@ -63,7 +63,7 @@
         </cybox:Observable>
     </stix:Observables>
     <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2014-02-20T09:00:00.000000Z">
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2014-05-08T09:00:00.000000Z">
             <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
             <indicator:Description>
                Zeus 1.x Instantiation/Persistence Related Artifacts

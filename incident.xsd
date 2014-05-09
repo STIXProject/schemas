@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:ttp="http://stix.mitre.org/TTP-1" targetNamespace="http://stix.mitre.org/Incident-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:ttp="http://stix.mitre.org/TTP-1" targetNamespace="http://stix.mitre.org/Incident-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.1" xml:lang="English">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
 			<schema>STIX Incident</schema>
-			<version>1.1</version>
-			<date>02/20/2014 9:00:00 AM</date>
+			<version>1.1.1</version>
+			<date>05/08/2014 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Incident - Schematic implementation for the Incident construct within the STIX structured cyber threat expression language architecture.</short_description>
 			<terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
@@ -95,7 +95,7 @@
 					<xs:element name="Status" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Status describes the current status (sometimes called "state" or "disposition") of the incident.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentStatusVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentStatusVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -122,21 +122,21 @@
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Intended_Effect field specifies the suspected intended effect of this incident.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Security_Compromise" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Specifies knowledge of whether the Incident involved a compromise of security properties.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Discovery_Method" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Discovery_Method field identifies how the incident was discovered.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is DiscoveryMethodVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is DiscoveryMethodVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -208,6 +208,7 @@
 			<xs:enumeration value="1.0"/>
 			<xs:enumeration value="1.0.1"/>
 			<xs:enumeration value="1.1"/>
+			<xs:enumeration value="1.1.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PropertyAffectedType">
@@ -215,7 +216,7 @@
 			<xs:element name="Property" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The security property that was affected by the incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossPropertyVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossPropertyVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -227,21 +228,21 @@
 			<xs:element name="Type_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Type_Of_Availability_Loss field is optional and characterizes in what manner the availability of this asset was affected (e.g. Destruction, Deletion, Interruption).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AvailabilityLossTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AvailabilityLossTypeVocab-1.1.1 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Duration_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Duration_Of_Availability_Loss field is optional and specifies the approximate length of time availability was affected (e.g. Permanent, Seconds, Minutes, Hours, Days).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossDurationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossDurationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Non_Public_Data_Compromised" type="incident:NonPublicDataCompromisedType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>This field specifies whether non-public data was compromised or exposed and whether that data was encrypted or not.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -267,21 +268,21 @@
 			<xs:element name="Ownership_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Ownership_Class field is optional and gives a high-level characterization of who owns (or controls) this asset (e.g. Internally-owned, Employee-owned, Partner-owned, Customer-owned).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is OwnershipClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is OwnershipClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Management_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Management_Class field is optional and gives a high-level characterization of who is responsible for the day-to-day management and administration of this asset (e.g. Managed Internally, Managed by External Party, Co-managed).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ManagementClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ManagementClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Location_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Location_Class field is optional and gives a high-level characterization of where this asset is physically located (e.g. Internal location, External location, Co-located, Mobile).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LocationClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LocationClassVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -328,7 +329,7 @@
 			<xs:element name="Impact_Qualification" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Impact_Qualification field is optional and summarizes the subjective level of impact of the Incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactQualificationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactQualificationVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -432,7 +433,7 @@
 	</xs:complexType>
 	<xs:complexType name="ContributorsType">
 		<xs:sequence>
-			<xs:element name="Contributor" type="cyboxCommon:ContributorType"/>
+			<xs:element name="Contributor" type="cyboxCommon:ContributorType" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="COATimeType">
@@ -482,28 +483,28 @@
 			<xs:element name="Loss_Of_Competitive_Advantage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Loss_Of_Competitive_Advantage field is optional and characterizes (at a high level) the level of impact based on loss of competitive advantage that occured in the Incident including loss/damage/exposure of IP, corporate wisdom, ability to compete, key personnel, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Brand_And_Market_Damage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Brand_And_Market_Damage field is optional and characterizes (at a high level) the level of impact based on brand or market damage that occured in the Incident including lost customers or partners, decrease in market value or share, advertising, rebranding, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Increased_Operating_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Increased_Operating_Costs field is optional and characterizes (at a high level) the level of impact based on increased operating costs that occured in the Incident including cost of additional audits, new hires or training, mandatory action, higher insurance, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Legal_And_Regulatory_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Legal_And_Regulatory_Costs field is optional and characterizes (at a high level) the level of impact based on legal and regulatory costs that occured in the Incident including legal fees, lawsuits, customer damages, contract violations, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -514,21 +515,21 @@
 			<xs:element name="Asset_Losses" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Asset_Losses field is optional and characterizes (at a high level) the level of asset-related losses that occured in the Incident, including lost or damaged assets, stolen funds, cash outlays, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Business-Mission_Disruption" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Business-Mission_Disruption field is optional and characterizes (at a high level) the level of business or mission disruption impact that occured in the Incident including unproductive man-hours, lost revenue from system downtime, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Response_And_Recovery_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Response_And_Recovery_Costs field is optional and characterizes (at a high level) the level of response and recovery related costs that occured in the Incident including cost of response, investigation, remediation, restoration, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -544,13 +545,15 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AssetTypeType">
+		<xs:annotation>	
+			<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AssetTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+			<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+		</xs:annotation>	
 		<xs:simpleContent>
 			<xs:extension base="stixCommon:ControlledVocabularyStringType">
 				<xs:attribute name="count_affected">
 					<xs:annotation>
 						<xs:documentation>This field specifies the number of assets of this type affected.</xs:documentation>
-						<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AssetTypeVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
-						<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -722,7 +725,7 @@
 			<xs:element name="Category" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Represents a single category that this incident is tagged with.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentCategoryVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentCategoryVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -736,7 +739,7 @@
 			<xs:element name="Effect" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Represents a single effect that this incident is tagged with.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
