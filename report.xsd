@@ -69,6 +69,11 @@
                                 <xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
                             </xs:annotation>
                         </xs:element>
+                        <xs:element name="Related_Reports" type="report:AssociatedReportsType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:sequence>
             </xs:extension>
@@ -198,5 +203,19 @@
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="AssociatedReportsType">
+        <xs:complexContent>
+            <xs:extension base="stixCommon:GenericRelationshipListType">
+                <xs:sequence>
+                    <xs:element name="Associated_Report" type="stixCommon:RelatedReportType" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>The Associated_Campaign field specifies a single other cyber threat Report asserted to be associated with this cyber threat Report.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 </xs:schema>

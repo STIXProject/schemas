@@ -601,6 +601,38 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="ReportReferenceType">
+		<xs:annotation>
+			<xs:documentation>This type represents a reference to the STIX Report component.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a Report specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Report should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Report. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Report. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Report defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RelatedReportType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a report.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Report" type="stixCommon:ReportReferenceType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A reference to the related report.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<!-- End of relationships -->
 	<!---->
 	<!--The following are a set of base, stub types defined for the decoupling of the different STIX component schemas. Each individual component schema type is defined as an extension of the relevant base type defined here. Inline usages of the main component structures will leverage these base types and instance content can simply include that structured content with the appropriate xsi:type reference. Alternatively, instances can use the base types themselves to reference using the @idref attribute -->
@@ -765,22 +797,6 @@
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for this Report.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="timestamp" type="xs:dateTime">
-			<xs:annotation>
-				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Report. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Report. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Report defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-	</xs:complexType>
-	<xs:complexType name="ReportReferenceType">
-		<xs:annotation>
-			<xs:documentation>This type represents a reference to the STIX Report component.</xs:documentation>
-		</xs:annotation>
-		<xs:attribute name="idref" type="xs:QName">
-			<xs:annotation>
-				<xs:documentation>Specifies a globally unique identifier of a Report specified elsewhere.</xs:documentation>
-				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Report should not hold content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp" type="xs:dateTime">
