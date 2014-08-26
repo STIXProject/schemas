@@ -378,6 +378,21 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="CourseOfActionReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to a course of action.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat course of action defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a course of action defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="RelatedExploitTargetType">
 		<xs:annotation>
 			<xs:documentation>Identifies or characterizes a relationship to an exploit target.</xs:documentation>
@@ -394,6 +409,21 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExploitTargetReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to an exploit target.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat exploit target defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a exploit target defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RelatedIncidentType">
 		<xs:annotation>
@@ -412,6 +442,21 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="IncidentReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to an incident.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat incident defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an incident defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="RelatedIndicatorType">
 		<xs:annotation>
 			<xs:documentation>Identifies or characterizes a relationship to an indicator.</xs:documentation>
@@ -429,6 +474,21 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="IndicatorReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to an indicator.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat indicator defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an indicator defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="RelatedObservableType">
 		<xs:annotation>
 			<xs:documentation>Identifies or characterizes a relationship to a cyber observable.</xs:documentation>
@@ -444,6 +504,21 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ObservableReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to an observable.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat observable defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of an observable defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RelatedThreatActorType">
 		<xs:annotation>
@@ -462,6 +537,21 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="ThreatActorReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to a threat actor.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat actor defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a threat actor defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="RelatedTTPType">
 		<xs:annotation>
 			<xs:documentation>Identifies or characterizes a relationship to an TTP.</xs:documentation>
@@ -478,6 +568,21 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TTPReferenceType">
+		<xs:annotation>
+			<xs:documentation>Characterizes a reference to a TTP.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for a cyber threat TTP defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>In conjunction with the idref, this field may be used to reference a specific version of a TTP defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RelatedIdentityType">
 		<xs:annotation>
@@ -650,6 +755,37 @@
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies a timestamp for the definition of a specific version of a ThreatActor. When used in conjunction with the id, this field is specifying the definition time for the specific version of the ThreatActor. When used in conjunction with the idref, this field is specifying a reference to a specific version of a ThreatActor defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ReportBaseType">
+		<xs:annotation>
+			<xs:documentation>This type represents the STIX Report component. It is extended using the XML Schema Extension feature by the STIX Report type itself. Users of this type who wish to express a full report using STIX must do so using the xsi:type extension feature. The STIX-defined Report type is ReportType in the http://stix.mitre.org/Report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.0/report.xsd.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this Report.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Report. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Report. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Report defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ReportReferenceType">
+		<xs:annotation>
+			<xs:documentation>This type represents a reference to the STIX Report component.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a Report specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Report should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Report. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Report. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Report defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>

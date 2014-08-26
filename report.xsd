@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:report="http://stix.mitre.org/Report-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/Report-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.1" xml:lang="en">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX Report</schema>
+			<version>1.1.1</version>
+			<date>05/08/2014 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - Report - Schematic implementation for the Report construct within the STIX structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2014, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
+	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+    
+	<xs:element name="Report" type="report:ReportType">
+	    <xs:annotation>
+	        <xs:documentation>This field characterizes a single cyber threat Report.</xs:documentation>
+	    </xs:annotation>
+	</xs:element>
+    
+    <xs:complexType name="ReportType">
+        <xs:complexContent>
+            <xs:extension base="stixCommon:ReportBaseType">
+                <xs:sequence>
+                    <xs:sequence>
+                        <xs:element name="Header" type="report:HeaderType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>The STIX_Header field provides information characterizing this package of STIX content.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Observables" type="report:ObservableReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber observables.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Indicators" type="report:IndicatorReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber threat Indicators.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="TTPs" type="report:TTPReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber threat adversary Tactics, Techniques or Procedures.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Exploit_Targets" type="report:ExploitTargetReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more potential targets for exploitation.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Incidents" type="report:IncidentReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber threat Incidents.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Courses_Of_Action" type="report:CourseOfActionReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes Courses of Action to be taken in regards to one of more cyber threats.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Campaigns" type="report:CampaignReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber threat Campaigns.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Threat_Actors" type="report:ThreatActorReferencesType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="HeaderType">
+        <xs:annotation>
+            <xs:documentation>The STIXHeaderType provides a structure for characterizing a package of STIX content.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Title field provides a simple title for this STIX Package.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Intent" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>The Intent field characterizes the intended purpose(s) or use(s) for this package of STIX content.</xs:documentation>
+                    <xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is PackageIntentVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+                    <xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Description field provides a description of this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Short_Description field provides a short description of this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Profiles" type="stixCommon:ProfilesType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Profiles field provides a list of profiles that the report conforms to.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Specifies the relevant handling guidance for this report. The valid marking scope is the nearest ReportType ancestor of this Handling element and all its descendants.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The Information_Source field details the source of this report, including time information as well as information about the producer, contributors, tools, and references. Note that unlike the Information_Source on a STIX Package, it is not assumed that this information source applies to content within this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ExploitTargetReferencesType">
+        <xs:sequence>
+            <xs:element name="Exploit_Target" type="stixCommon:ExploitTargetReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes an exploit target in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ObservableReferencesType">
+        <xs:sequence>
+            <xs:element name="Observable" type="stixCommon:ObservableReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes an observable in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="IndicatorReferencesType">
+        <xs:sequence>
+            <xs:element name="Indicator" type="stixCommon:IndicatorReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes an indicator in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="TTPReferencesType">
+        <xs:sequence>
+            <xs:element name="TTP" type="stixCommon:TTPReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes a TTP in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="IncidentReferencesType">
+        <xs:sequence>
+            <xs:element name="Incident" type="stixCommon:IncidentReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes an incident in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="CourseOfActionReferencesType">
+        <xs:sequence>
+            <xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes a course of action in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="CampaignReferencesType">
+        <xs:sequence>
+            <xs:element name="Campaign" type="stixCommon:CampaignReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes a course of action in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ThreatActorReferencesType">
+        <xs:sequence>
+            <xs:element name="Threat_Actor" type="stixCommon:ThreatActorReferenceType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Includes a threat actor in this report.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -34,63 +34,81 @@
 			<xs:element name="Observables" type="cybox:ObservablesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber observables.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included observables is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Observables in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Indicators" type="stix:IndicatorsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Indicators.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included indicators is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Indicators in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TTPs" type="stix:TTPsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat adversary Tactics, Techniques or Procedures.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included TTPs and kill chains is deprecated and will be removed in the next major version of STIX. Their use is strongly discouraged except for legacy applications. TTPs and kill chains in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Exploit_Targets" type="stixCommon:ExploitTargetsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more potential targets for exploitation.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included exploit targets is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Exploit targets in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incidents" type="stix:IncidentsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Incidents.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included incidents is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Incidents in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Courses_Of_Action" type="stix:CoursesOfActionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes Courses of Action to be taken in regards to one of more cyber threats.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included courses of action is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Courses of Action in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Campaigns" type="stix:CampaignsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Campaigns.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included campaigns is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Campaigns in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Threat_Actors" type="stix:ThreatActorsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included threat actors is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Threat actors in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Related_Packages" type="stix:RelatedPackagesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more relationships to other Packages.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. The Reports element should be used instead.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Reports" type="stix:ReportsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Characterizes one or more relationships to other Packages.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. The Reports element should be used instead.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for this STIX Package. </xs:documentation>
+				<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
 				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this STIX Package should not hold content.</xs:documentation>
+				<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
 				<xs:documentation>Specifies a timestamp for the definition of a specific version of a STIX Package. When used in conjunction with the id, this field is specifying the definition time for the specific version of the STIX Package. When used in conjunction with the idref, this field is specifying a reference to a specific version of a STIX Package defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
+				<xs:documentation>DEPRECATED: This attribute is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="version" type="stix:STIXPackageVersionEnum">
@@ -118,6 +136,7 @@
 			<xs:element name="Title" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Title field provides a simple title for this STIX Package.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Package_Intent" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
@@ -125,21 +144,25 @@
 					<xs:documentation>The Package_Intent field characterizes the intended purpose(s) or use(s) for this package of STIX content.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is PackageIntentVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of this package of STIX content.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field provides a short description of this package of STIX content.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Profiles" type="stixCommon:ProfilesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Profiles field provides a list of profiles that the STIX_Package conforms to.</xs:documentation>
+					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
@@ -149,7 +172,7 @@
 			</xs:element>
 			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Information_Source field details the source of this entry, including time information as well as information about the producer, contributors, tools, and references.</xs:documentation>
+					<xs:documentation>The Information_Source field details the source of the data in this package. This information applies to all content included within unless overriden by the contained component.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -249,5 +272,15 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReportsType">
+		<xs:sequence>
+			<xs:element name="Report" type="stixCommon:ReportBaseType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Characterizes a single cyber threat report.</xs:documentation>
+					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://stix.mitre.org/Report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.0/report.xsd.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
