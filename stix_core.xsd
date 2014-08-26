@@ -88,7 +88,6 @@
 			<xs:element name="Reports" type="stix:ReportsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more relationships to other Packages.</xs:documentation>
-					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. The Reports element should be used instead.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
