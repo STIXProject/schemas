@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!--
 	STIX Indicator w/ Snort Example
 	
@@ -15,41 +17,21 @@
 	
 	Created by Mark Davidson
 -->
-<stix:STIX_Package
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
-    xmlns:testMechSnort="http://stix.mitre.org/extensions/TestMechanism#Snort-1"
-    xmlns:example="http://example.com/"
-    xsi:schemaLocation=
-    "http://stix.mitre.org/stix-1 ../stix_core.xsd
-    http://stix.mitre.org/Indicator-2 ../indicator.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
-    http://stix.mitre.org/extensions/TestMechanism#Snort-1 ../extensions/test_mechanism/snort_test_mechanism.xsd"
-    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
-    timestamp="2014-05-08T09:00:00.000000Z"
-    version="1.1.1"
-    >
-    <stix:STIX_Header>
-        <stix:Title>Example SNORT Indicator</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Network Activity</stix:Package_Intent>
-    </stix:STIX_Header>
-    <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2014-05-08T09:00:00.000000Z">
-            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Exfiltration</indicator:Type>
-            <indicator:Description>
+
+<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:testMechSnort="http://stix.mitre.org/extensions/TestMechanism#Snort-1" xmlns:example="http://example.com/" xmlns:report="http://stix.mitre.org/Report-1" xsi:schemaLocation="http://stix.mitre.org/stix-1 ../stix_core.xsd     http://stix.mitre.org/Indicator-2 ../indicator.xsd     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd     http://stix.mitre.org/extensions/TestMechanism#Snort-1 ../extensions/test_mechanism/snort_test_mechanism.xsd http://stix.mitre.org/Report-1 ../report.xsd" version="1.1.1">
+   <stix:Indicators>
+      <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2014-05-08T09:00:00.000000Z">
+         <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Exfiltration</indicator:Type>
+         <indicator:Description>
                 Indicator that contains a SNORT signature. 
-                This snort signature detects &apos;exfiltration attempts&apos; 
+                This snort signature detects 'exfiltration attempts' 
                 to the 192.168.1.0/24 subnet.
             </indicator:Description>
-            <indicator:Test_Mechanisms>
-                <indicator:Test_Mechanism id="example:TestMechanism-5f5fde43-ee30-4582-afaa-238a672f70b1" 
-                                          xsi:type="testMechSnort:SnortTestMechanismType">
-                    <!-- From http://manual.snort.org/node29.html -->
-                    <testMechSnort:Rule><![CDATA[log udp any any -> 192.168.1.0/24 1:1024]]></testMechSnort:Rule>
-                </indicator:Test_Mechanism>
-            </indicator:Test_Mechanisms>
-        </stix:Indicator>
-    </stix:Indicators>
+         <indicator:Test_Mechanisms>
+            <indicator:Test_Mechanism id="example:TestMechanism-5f5fde43-ee30-4582-afaa-238a672f70b1" xsi:type="testMechSnort:SnortTestMechanismType">
+               <testMechSnort:Rule>log udp any any -&gt; 192.168.1.0/24 1:1024</testMechSnort:Rule>
+            </indicator:Test_Mechanism>
+         </indicator:Test_Mechanisms>
+      </stix:Indicator>
+   </stix:Indicators>
 </stix:STIX_Package>

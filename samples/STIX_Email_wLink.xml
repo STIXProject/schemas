@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!--
 	STIX Email w/ Link Example
 	
@@ -17,49 +19,24 @@
 	
 	Created by Mark Davidson
 -->
-<stix:STIX_Package
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
-    xmlns:FileObject="http://cybox.mitre.org/objects#FileObject-2"
-    xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
-    xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
-    xmlns:example="http://example.com/"
-    xsi:schemaLocation=
-    "http://stix.mitre.org/stix-1 ../stix_core.xsd
-    http://stix.mitre.org/Indicator-2 ../indicator.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#EmailMessageObject-2 ../cybox/objects/Email_Message_Object.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
-    http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
-    id="example:STIXPackage-95141684-9092-4080-93fe-956a452a4acd"
-    timestamp="2014-05-08T09:00:00.000000Z"
-    version="1.1.1"
-    >
-    <stix:STIX_Header>
-        <stix:Title>Email with a link.</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Observations - Email</stix:Package_Intent>
-    </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
-        <cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
-            <cybox:Description>
+
+<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:FileObject="http://cybox.mitre.org/objects#FileObject-2" xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:example="http://example.com/" xmlns:report="http://stix.mitre.org/Report-1" xsi:schemaLocation="http://stix.mitre.org/stix-1 ../stix_core.xsd     http://stix.mitre.org/Indicator-2 ../indicator.xsd     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd     http://cybox.mitre.org/objects#EmailMessageObject-2 ../cybox/objects/Email_Message_Object.xsd     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd http://stix.mitre.org/Report-1 ../report.xsd" version="1.1.1">
+   <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+      <cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
+         <cybox:Description>
                 This observable is an email with a link in it. This observable also 
                 contains a zip file of the resource identified by the link (stix.mitre.org). The zip file 
                 is password protected. The zip file does not contain malicious content.
             </cybox:Description>
-            <cybox:Object id="example:Object-e0e87eef-6315-410f-8025-086968129f41">
-                <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
-                    <EmailMessageObj:Raw_Body datatype="string"><![CDATA[Check out a cool new opportunity! http://stix.mitre.org/]]></EmailMessageObj:Raw_Body>
-                    <EmailMessageObj:Raw_Header datatype="string"><![CDATA[Delivered-To: [redacted]@gmail.com
+         <cybox:Object id="example:Object-e0e87eef-6315-410f-8025-086968129f41">
+            <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+               <EmailMessageObj:Raw_Body datatype="string">Check out a cool new opportunity! http://stix.mitre.org/</EmailMessageObj:Raw_Body>
+               <EmailMessageObj:Raw_Header datatype="string">Delivered-To: [redacted]@gmail.com
 Received: by 10.49.5.231 with SMTP id v7csp262162qev;
         Fri, 5 Apr 2013 06:39:52 -0700 (PDT)
 X-Received: by 10.224.114.73 with SMTP id d9mr8146222qaq.86.1365169191898;
         Fri, 05 Apr 2013 06:39:51 -0700 (PDT)
-Return-Path: <mdavidson@mitre.org>
+Return-Path: &lt;mdavidson@mitre.org&gt;
 Received: from smtpksrv1.mitre.org (smtpksrv1.mitre.org. [198.49.146.77])
         by mx.google.com with ESMTP id 3si9954424qar.52.2013.04.05.06.39.51;
         Fri, 05 Apr 2013 06:39:51 -0700 (PDT)
@@ -68,19 +45,19 @@ Authentication-Results: mx.google.com;
        spf=pass (google.com: best guess record for domain of mdavidson@mitre.org designates 198.49.146.77 as permitted sender) smtp.mail=mdavidson@mitre.org
 Received: from smtpksrv1.mitre.org (localhost.localdomain [127.0.0.1])
 	by localhost (Postfix) with SMTP id 7D2B12260124
-	for <[redacted]@gmail.com>; Fri,  5 Apr 2013 09:39:51 -0400 (EDT)
+	for &lt;[redacted]@gmail.com&gt;; Fri,  5 Apr 2013 09:39:51 -0400 (EDT)
 Received: from IMCCAS01.MITRE.ORG (imccas01.mitre.org [129.83.29.78])
 	by smtpksrv1.mitre.org (Postfix) with ESMTP id 1E64A226006B
-	for <[redacted]@gmail.com>; Fri,  5 Apr 2013 09:39:51 -0400 (EDT)
+	for &lt;[redacted]@gmail.com&gt;; Fri,  5 Apr 2013 09:39:51 -0400 (EDT)
 Received: from IMCMBX02.MITRE.ORG ([169.254.2.133]) by IMCCAS01.MITRE.ORG
  ([129.83.29.68]) with mapi id 14.02.0342.003; Fri, 5 Apr 2013 09:39:50 -0400
-From: "Davidson II, Mark S" <mdavidson@mitre.org>
-To: "[redacted]@gmail.com" <[redacted]@gmail.com>
+From: "Davidson II, Mark S" &lt;mdavidson@mitre.org&gt;
+To: "[redacted]@gmail.com" &lt;[redacted]@gmail.com&gt;
 Subject: Cool new opportunity
 Thread-Topic: Cool new opportunity
 Thread-Index: Ac4yAwu7tcvBPI28R8+MSGIwrJ9Auw==
 Date: Fri, 5 Apr 2013 13:39:50 +0000
-Message-ID: <69F1FC52EB080B4983863BD1602520D80C625DC1@IMCMBX02.MITRE.ORG>
+Message-ID: &lt;69F1FC52EB080B4983863BD1602520D80C625DC1@IMCMBX02.MITRE.ORG&gt;
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach:
@@ -92,29 +69,29 @@ MIME-Version: 1.0
 
 --_000_69F1FC52EB080B4983863BD1602520D80C625DC1IMCMBX02MITREOR_
 Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable]]></EmailMessageObj:Raw_Header>
-                </cybox:Properties>
-                <cybox:Related_Objects>
-                    <cybox:Related_Object id="example:Object-107a9290-30aa-4059-aa01-b441f6aa0cc6">
-                        <cybox:Properties xsi:type="FileObject:FileObjectType">
-                            <FileObject:File_Name>resource.zip</FileObject:File_Name>
+Content-Transfer-Encoding: quoted-printable</EmailMessageObj:Raw_Header>
+            </cybox:Properties>
+            <cybox:Related_Objects>
+               <cybox:Related_Object id="example:Object-107a9290-30aa-4059-aa01-b441f6aa0cc6">
+                  <cybox:Properties xsi:type="FileObject:FileObjectType">
+                     <FileObject:File_Name>resource.zip</FileObject:File_Name>
+                  </cybox:Properties>
+                  <cybox:Related_Objects>
+                     <cybox:Related_Object id="example:Object-b6f60527-699f-4f51-bd31-c0925a0c2cfc">
+                        <cybox:Properties xsi:type="ArtifactObj:ArtifactObjectType">
+                           <ArtifactObj:Packaging is_encrypted="true">
+                              <ArtifactObj:Encoding algorithm="Base64"/>
+                              <ArtifactObj:Encryption encryption_mechanism="PasswordProtected" encryption_key="test"/>
+                           </ArtifactObj:Packaging>
+                           <ArtifactObj:Raw_Artifact datatype="string">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</ArtifactObj:Raw_Artifact>
                         </cybox:Properties>
-                        <cybox:Related_Objects>
-                            <cybox:Related_Object id="example:Object-b6f60527-699f-4f51-bd31-c0925a0c2cfc">
-                                <cybox:Properties xsi:type="ArtifactObj:ArtifactObjectType">
-                                    <ArtifactObj:Packaging is_encrypted="true">
-                                        <ArtifactObj:Encoding algorithm="Base64"/>
-                                        <ArtifactObj:Encryption encryption_mechanism="PasswordProtected" encryption_key="test"/>
-                                    </ArtifactObj:Packaging>
-                                    <ArtifactObj:Raw_Artifact datatype="string"><![CDATA[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]]></ArtifactObj:Raw_Artifact>
-                                </cybox:Properties>
-                                <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterizes</cybox:Relationship>
-                            </cybox:Related_Object>
-                        </cybox:Related_Objects>
-                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
-                    </cybox:Related_Object>
-                </cybox:Related_Objects>
-            </cybox:Object>
-        </cybox:Observable>
-    </stix:Observables>
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Characterizes</cybox:Relationship>
+                     </cybox:Related_Object>
+                  </cybox:Related_Objects>
+                  <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.0">Contains</cybox:Relationship>
+               </cybox:Related_Object>
+            </cybox:Related_Objects>
+         </cybox:Object>
+      </cybox:Observable>
+   </stix:Observables>
 </stix:STIX_Package>
