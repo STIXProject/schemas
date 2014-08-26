@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!--
 	STIX IP Watchlist Example
 	
@@ -16,40 +18,19 @@
 	
 	Created by Mark Davidson
 -->
-<stix:STIX_Package
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
-    xmlns:URIObject="http://cybox.mitre.org/objects#URIObject-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
-    xmlns:example="http://example.com/"
-    xsi:schemaLocation="
-    http://stix.mitre.org/stix-1 ../stix_core.xsd
-    http://stix.mitre.org/Indicator-2 ../indicator.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd"
-    id="example:package-4cc56b6b-748f-440b-9f01-03bcf3ce7c68"
-    timestamp="2014-05-08T09:00:00.000000Z"
-    version="1.1.1"
-    >
-    <stix:STIX_Header>
-        <stix:Title>Example watchlist that contains URL information.</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Watchlist</stix:Package_Intent>
-    </stix:STIX_Header>
-    <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2014-05-08T09:00:00.000000Z">
-            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1" >URL Watchlist</indicator:Type>
-            <indicator:Description>Sample URL Indicator for this watchlist</indicator:Description>
-            <indicator:Observable id="example:Observable-Pattern-cc5c00ce-98a6-4cbe-8474-59eaecdb018f">
-                <cybox:Object>
-                    <cybox:Properties xsi:type="URIObject:URIObjectType">
-                        <URIObject:Value condition="Equals" apply_condition="ANY">http://example.com/foo/malicious1.html##comma##http://example.com/foo/malicious2.html##comma##http://example.com/foo/malicious3.html</URIObject:Value>
-                    </cybox:Properties>
-                </cybox:Object>
-            </indicator:Observable>
-        </stix:Indicator>
-    </stix:Indicators>
+
+<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:URIObject="http://cybox.mitre.org/objects#URIObject-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:example="http://example.com/" xsi:schemaLocation="     http://stix.mitre.org/stix-1 ../stix_core.xsd     http://stix.mitre.org/Indicator-2 ../indicator.xsd     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd     http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd" version="1.1.1">
+   <stix:Indicators>
+      <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2014-05-08T09:00:00.000000Z">
+         <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">URL Watchlist</indicator:Type>
+         <indicator:Description>Sample URL Indicator for this watchlist</indicator:Description>
+         <indicator:Observable id="example:Observable-Pattern-cc5c00ce-98a6-4cbe-8474-59eaecdb018f">
+            <cybox:Object>
+               <cybox:Properties xsi:type="URIObject:URIObjectType">
+                  <URIObject:Value condition="Equals" apply_condition="ANY">http://example.com/foo/malicious1.html##comma##http://example.com/foo/malicious2.html##comma##http://example.com/foo/malicious3.html</URIObject:Value>
+               </cybox:Properties>
+            </cybox:Object>
+         </indicator:Observable>
+      </stix:Indicator>
+   </stix:Indicators>
 </stix:STIX_Package>
