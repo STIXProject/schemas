@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- 
+    Demonstrates the usage of the report object to talk about previously defined STIX components.
+    
+    In this case, a set of hash indicators for malware are conveyed in this package as raw content
+    without an associated report. A set of reports is then conveyed (potentially by a different producer)
+    which creates a contextual relationship between the Indicators/TTPs and describes some metadata about them.
+    
+    This file contains a single report pointing to some of the content. As with the content itself, this could be
+    sent individually, as part of a daily pack of reports, etc.
+-->
+
+<stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:example="http://www.example.com" xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1" xmlns:report="http://stix.mitre.org/Report-1" version="1.1.1" xsi:schemaLocation="     http://stix.mitre.org/stix-1 ../../stix_core.xsd     http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd     http://stix.mitre.org/common-1 ../../stix_common.xsd http://stix.mitre.org/Report-1 ../../report.xsd">
+   <stix:Reports>
+      <stix:Report id="example:package-dcd5388b-3150-4177-9f82-27af6f2941de" timestamp="2014-08-29T18:21:33.755000+00:00" xsi:type="report:ReportType">
+         <report:Header>
+            <report:Title>High Priority Indicators - Operation Jaguar Mountain</report:Title>
+            <report:Description>The referenced indicators have been identified as high priority to those involved in OJM defense.</report:Description>
+            <report:Information_Source>
+               <stixCommon:Identity>
+                  <stixCommon:Name>ACME Corporation SOC</stixCommon:Name>
+               </stixCommon:Identity>
+               <stixCommon:Time>
+                  <cyboxCommon:Produced_Time>2014-08-29T18:21:33.755000+00:00</cyboxCommon:Produced_Time>
+               </stixCommon:Time>
+            </report:Information_Source>
+         </report:Header>
+         <report:Indicators>
+            <report:Indicator idref="example:indicator-409fdd41-8a16-492b-a2e8-7482f5516253" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-bb62f0ea-7869-405b-bf15-6784bfa61a37" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-a7000bc9-5815-4f98-9a88-56692296fcf5" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-53f733d0-1256-4e73-b227-3ebbc2e80e67" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-0a9ece47-9fb8-4452-b556-1b2a77616f66" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-fe730cc9-89fe-4d57-b939-830cd3406986" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-d5b263da-9315-4d45-892c-ce83b73404e0" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-ef030609-1c50-4da6-9f48-f63843a2509c" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-c009426c-64a6-40d6-97a7-7e4d140ed9c3" timestamp="2014-08-27T18:21:33.755000+00:00" />
+            <report:Indicator idref="example:indicator-c23bb132-46b4-44e8-8fa0-b040409eb932" timestamp="2014-08-27T18:21:33.755000+00:00" />
+         </report:Indicators>
+      </stix:Report>
+   </stix:Reports>
+</stix:STIX_Package>
