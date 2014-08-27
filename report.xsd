@@ -107,11 +107,6 @@
                     <xs:documentation>The Short_Description field provides a short description of this report.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Profiles" type="stixCommon:ProfilesType" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>The Profiles field provides a list of profiles that the report conforms to.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
             <xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Specifies the relevant handling guidance for this report. The valid marking scope is the nearest ReportType ancestor of this Handling element and all its descendants.</xs:documentation>

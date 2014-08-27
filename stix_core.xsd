@@ -161,7 +161,6 @@
 			<xs:element name="Profiles" type="stixCommon:ProfilesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Profiles field provides a list of profiles that the STIX_Package conforms to.</xs:documentation>
-					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
