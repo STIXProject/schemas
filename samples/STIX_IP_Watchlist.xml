@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 	STIX IP Watchlist Example
@@ -20,6 +20,10 @@
 -->
 
 <stix:STIX_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:AddressObject="http://cybox.mitre.org/objects#AddressObject-2" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:example="http://example.com/" xmlns:report="http://stix.mitre.org/Report-1" xsi:schemaLocation="     http://stix.mitre.org/stix-1 ../stix_core.xsd     http://stix.mitre.org/Indicator-2 ../indicator.xsd     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd     http://cybox.mitre.org/objects#AddressObject-2 ../cybox/objects/Address_Object.xsd http://stix.mitre.org/Report-1 ../report.xsd" version="1.1.1">
+   <stix:STIX_Header>
+        
+        
+    </stix:STIX_Header>
    <stix:Indicators>
       <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-33fe3b22-0201-47cf-85d0-97c02164528d" timestamp="2014-05-08T09:00:00.000000Z">
          <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
@@ -33,4 +37,15 @@
          </indicator:Observable>
       </stix:Indicator>
    </stix:Indicators>
+   <stix:Reports>
+      <stix:Report timestamp="2014-05-08T09:00:00.000000Z" id="example:STIXPackage-33fe3b22-0201-47cf-85d0-97c02164528d" xsi:type="report:ReportType">
+         <report:Header>
+            <report:Title>Example watchlist that contains IP information.</report:Title>
+            <report:Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Watchlist</report:Intent>
+         </report:Header>
+         <report:Indicators>
+            <report:Indicator idref="example:Indicator-33fe3b22-0201-47cf-85d0-97c02164528d" timestamp="2014-05-08T09:00:00.000000Z"/>
+         </report:Indicators>
+      </stix:Report>
+   </stix:Reports>
 </stix:STIX_Package>

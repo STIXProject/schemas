@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--STIX Package of MAEC/CybOX Zeus Data
     Represents Zeus sample MAEC analysis data and CybOX-based Indicator
@@ -375,6 +375,7 @@
             <report:Title>Zeus 1.x Artifacts and Characterization</report:Title>
             <report:Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</report:Intent>
          </report:Header>
+         <!-- Invalid because we didn't have a top-level ID yet -->
          <report:Observables>
             <report:Observable idref=""/>
          </report:Observables>
