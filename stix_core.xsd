@@ -94,7 +94,6 @@
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
 				<xs:documentation>Specifies a globally unique identifier for this STIX Package. </xs:documentation>
-				<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="idref" type="xs:QName">
@@ -171,6 +170,7 @@
 			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Information_Source field details the source of the data in this package. This information applies to all content included within unless overriden by the contained component.</xs:documentation>
+					<xs:documentation>DEPRECATION: With the exception of "Tools", all fields used in STIX_Package/Information_Source are deprecated. Their use is strongly discouraged except for legacy applications.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
