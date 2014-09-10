@@ -34,6 +34,29 @@
             </marking:Marking_Structure>
          </marking:Marking>
       </stix:Handling>
+      <stix:Information_Source>
+         <stixCommon:Identity>
+            <stixCommon:Name>MITRE</stixCommon:Name>
+         </stixCommon:Identity>
+         <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
+         <stixCommon:Contributing_Sources>
+            <stixCommon:Source>
+               <stixCommon:Identity>
+                  <stixCommon:Name>Mandiant</stixCommon:Name>
+               </stixCommon:Identity>
+               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
+               <stixCommon:Time>
+                  <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
+               </stixCommon:Time>
+            </stixCommon:Source>
+         </stixCommon:Contributing_Sources>
+         <stixCommon:Time>
+            <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
+         </stixCommon:Time>
+         <stixCommon:References>
+            <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
+         </stixCommon:References>
+      </stix:Information_Source>
    </stix:STIX_Header>
    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
       <cybox:Observable id="mandiant:observable-b7013416-7e77-4078-a0bd-a33b49c7cb2f">
@@ -34804,29 +34827,6 @@
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d577b671-abca-4318-ad94-27c793544168">
          <indicator:Title>GREENCAT (FAMILY)</indicator:Title>
@@ -36045,29 +36045,6 @@
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-554448f5-8e09-4c72-9dd9-5e2e1047eb33">
          <indicator:Title>HELAUTO (FAMILY)</indicator:Title>
@@ -36473,29 +36450,6 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-36437a22-f0d7-4a48-bec4-153e19045f8d">
          <indicator:Title>BOUNCER (FAMILY)</indicator:Title>
@@ -36722,29 +36676,6 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-dc2eb534-d2c4-421c-89d0-9bc6762009c5">
          <indicator:Title>LONGRUN (FAMILY)</indicator:Title>
@@ -36862,29 +36793,6 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2322085d-c557-4278-affc-633be5f36fe5">
          <indicator:Title>WEBC2-BOLID (FAMILY)</indicator:Title>
@@ -37074,29 +36982,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-be16e289-114e-4f01-bc85-aa72f03a50dc">
          <indicator:Title>KURTON (FAMILY)</indicator:Title>
@@ -37273,29 +37158,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-34a5f05a-f830-4d55-bb09-c1e8745a998d">
          <indicator:Title>MINIASP (FAMILY)</indicator:Title>
@@ -37482,29 +37344,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-706a8e36-77d0-41bb-81b4-05ca92f4d2d1">
          <indicator:Title>MANITSME (FAMILY)</indicator:Title>
@@ -37603,29 +37442,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-32ce1273-fc66-4de6-9e1d-fc6c55cdcae9">
          <indicator:Title>SEASALT (FAMILY)</indicator:Title>
@@ -37791,29 +37607,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-9658ae72-3f2c-4fa9-850b-aa86e8d976d6">
          <indicator:Title>WEBC2-AUSOV (FAMILY)</indicator:Title>
@@ -38009,29 +37802,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-85b02254-b7a0-4eaa-876d-bec18dd3c55c">
          <indicator:Title>WARP (FAMILY)</indicator:Title>
@@ -38161,29 +37931,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f799cdd4-57ae-40e9-8ee6-bcacc3f39430">
          <indicator:Title>WEBC2-CSON (FAMILY)</indicator:Title>
@@ -38609,29 +38356,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-c8a6f10c-3540-45a0-a94b-c367374770a7">
          <indicator:Title>COMBOS (FAMILY)</indicator:Title>
@@ -38824,29 +38548,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-62355460-b3c7-4135-bfc8-c6c351391786">
          <indicator:Title>WEBC2-QBP (FAMILY)</indicator:Title>
@@ -39071,29 +38772,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8dcc62d5-e91a-4cde-bc28-121d6f25a7d3">
          <indicator:Title>MAPIGET (FAMILY)</indicator:Title>
@@ -39205,29 +38883,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-1922d28b-6257-4f14-9988-00c906c1274f">
          <indicator:Title>CALENDAR (FAMILY)</indicator:Title>
@@ -39405,29 +39060,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8b34f3bd-8176-4e33-a4ca-6b9970c2be2e">
          <indicator:Title>WEBC2-Y21K (FAMILY)</indicator:Title>
@@ -40086,29 +39718,6 @@ Communication with the command and control (C2) server uses a combination of sin
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-034a708a-2bb0-45ad-85c5-7505d90ce2a5">
          <indicator:Title>HACKSFASE (FAMILY)</indicator:Title>
@@ -40518,29 +40127,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-edc41062-7e8f-4603-9e62-5f4ec537e9af">
          <indicator:Title>SWORD (FAMILY)</indicator:Title>
@@ -40683,29 +40269,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f96c7900-0cf5-4199-b314-860a1cdc008e">
          <indicator:Title>WEBC2-RAVE (FAMILY)</indicator:Title>
@@ -41133,29 +40696,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-71a95442-f246-4c8c-8c4d-d24107401974">
          <indicator:Title>WEBC2-HEAD (FAMILY)</indicator:Title>
@@ -41607,29 +41147,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-27d9d4b8-9230-4472-9b5c-f3783982c752">
          <indicator:Title>GLOOXMAIL (FAMILY)</indicator:Title>
@@ -41777,29 +41294,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-9d11a416-43ba-42f4-bdfc-f142f04fec7a">
          <indicator:Title>NEWSREELS (FAMILY)</indicator:Title>
@@ -42434,29 +41928,6 @@ It usually communicates over port 443. Some variants use their own encryption, o
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2c6d4480-4276-416a-ba13-26c7598fe55c">
          <indicator:Title>TABMSGSQL (FAMILY)</indicator:Title>
@@ -42798,29 +42269,6 @@ The C2 server appears to act as just a database, allowing the clients to craft a
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-809eca7a-fb86-44eb-b355-403c58e2159a">
          <indicator:Title>COOKIEBAG (FAMILY)</indicator:Title>
@@ -43184,29 +42632,6 @@ Communication with the Command &amp; Control (C2) servers uses a combination of 
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-1c200d34-351f-47fa-bf6f-1c596d2779a7">
          <indicator:Title>DAIRY (FAMILY)</indicator:Title>
@@ -43333,29 +42758,6 @@ This malware may also add itself to the Authorized Applications list for the Win
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-b26314f3-956f-4340-bd9a-60f0e4ff210f">
          <indicator:Title>Appendix E - APT1 File Hashes</indicator:Title>
@@ -48487,29 +47889,6 @@ This malware may also add itself to the Authorized Applications list for the Win
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-b934ce84-ff5e-42d9-8c61-bee975f32b02">
          <indicator:Title>WEBC2-TABLE (FAMILY)</indicator:Title>
@@ -48677,29 +48056,6 @@ This malware may also add itself to the Authorized Applications list for the Win
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-10df11ab-c69e-4f7a-b44b-52b4d3824007">
          <indicator:Title>BISCUIT (FAMILY)</indicator:Title>
@@ -49579,29 +48935,6 @@ This malware may also add itself to the Authorized Applications list for the Win
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f97ec627-8a79-484e-b889-de21ed02a4d4">
          <indicator:Title>WEBC2-UGX (FAMILY)</indicator:Title>
@@ -49857,29 +49190,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-ee797e93-f583-4d6d-9523-11c47d2f1db9">
          <indicator:Title>GETMAIL (FAMILY)</indicator:Title>
@@ -50099,29 +49409,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d2ed1adc-26c9-48f8-881d-19dea55e0f5a">
          <indicator:Title>WEBC2-DIV (FAMILY)</indicator:Title>
@@ -50391,29 +49678,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f4e6caa1-f693-41eb-b8e7-1c20fca5c578">
          <indicator:Title>WEBC2-KT3 (FAMILY)</indicator:Title>
@@ -50583,29 +49847,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-ef180c46-8d36-46bc-b45c-d88cefa85002">
          <indicator:Title>WEBC2-CLOVER (FAMILY)</indicator:Title>
@@ -51113,29 +50354,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-fe6cb826-5c1a-42ac-bd7d-d505e9e93e64">
          <indicator:Title>BANGAT (FAMILY)</indicator:Title>
@@ -51868,29 +51086,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-21bf65fc-6b48-4f89-91bd-cd2e413a4c0b">
          <indicator:Title>WEBC2-GREENCAT (FAMILY)</indicator:Title>
@@ -52026,29 +51221,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d2acafe2-2f6a-4102-b96c-ba12300e6d7c">
          <indicator:Title>WEBC2-ADSPACE (FAMILY)</indicator:Title>
@@ -52167,29 +51339,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f668a9bf-4b6a-4f88-a5e0-3177dd01dcc8">
          <indicator:Title>TARSIP-ECLIPSE (FAMILY)</indicator:Title>
@@ -52798,29 +51947,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d8cf6bb8-48fe-4160-ba20-b336dbd74d1b">
          <indicator:Title>LIGHTBOLT (FAMILY)</indicator:Title>
@@ -53083,29 +52209,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-37cdc870-066f-4e90-a295-985372bfb9e6">
          <indicator:Title>STARSYPOUND (FAMILY)</indicator:Title>
@@ -53691,29 +52794,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-0ce3f149-586a-4e4b-a833-074bfe438557">
          <indicator:Title>AURIGA (FAMILY)</indicator:Title>
@@ -54065,29 +53145,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-330cf804-e267-42cb-820f-af444f1e9fd8">
          <indicator:Title>TARSIP-MOON (FAMILY)</indicator:Title>
@@ -54526,29 +53583,6 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8a57160c-53f6-4782-9c2f-d4b54c3e4201">
          <indicator:Title>GOGGLES (FAMILY)</indicator:Title>
@@ -54994,29 +54028,6 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2656e928-dd0f-49a5-b0d6-13c9a854a628">
          <indicator:Title>WEBC2-TOCK (FAMILY)</indicator:Title>
@@ -55189,29 +54200,6 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-3c18ada4-2f65-46e8-b5cc-80b9d47f4e5c">
          <indicator:Title>WEBC2-YAHOO (FAMILY)</indicator:Title>
@@ -55840,29 +54828,6 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
       <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-0302df0c-a056-48e2-99d2-7bfd23931cb6">
          <indicator:Title>LIGHTDART (FAMILY)</indicator:Title>
@@ -55987,29 +54952,6 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                </openiocTM:ioc>
             </indicator:Test_Mechanism>
          </indicator:Test_Mechanisms>
-         <indicator:Producer>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </indicator:Producer>
       </stix:Indicator>
    </stix:Indicators>
    <stix:Reports>
@@ -56020,29 +54962,6 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
             <report:Description>
             This package contains the IOCs referenced in Appendix G of the APT1 report.
         </report:Description>
-            <report:Information_Source>
-               <stixCommon:Identity>
-                  <stixCommon:Name>MITRE</stixCommon:Name>
-               </stixCommon:Identity>
-               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-               <stixCommon:Contributing_Sources>
-                  <stixCommon:Source>
-                     <stixCommon:Identity>
-                        <stixCommon:Name>Mandiant</stixCommon:Name>
-                     </stixCommon:Identity>
-                     <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                     <stixCommon:Time>
-                        <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                     </stixCommon:Time>
-                  </stixCommon:Source>
-               </stixCommon:Contributing_Sources>
-               <stixCommon:Time>
-                  <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-               </stixCommon:Time>
-               <stixCommon:References>
-                  <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-               </stixCommon:References>
-            </report:Information_Source>
          </report:Header>
          <report:Observables>
             <report:Observable idref="mandiant:observable-b7013416-7e77-4078-a0bd-a33b49c7cb2f"/>

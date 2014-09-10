@@ -375,8 +375,9 @@
             <report:Title>Zeus 1.x Artifacts and Characterization</report:Title>
             <report:Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</report:Intent>
          </report:Header>
-         <!-- Invalid because we didn't have a top-level ID yet -->
          <report:Observables>
+            <!-- Not valid, because we neglected to give one of the Observables an ID meaning it can't be included in a report -->
+            <!-- Leaving this to demonstrate the issue -->
             <report:Observable idref=""/>
          </report:Observables>
          <report:Indicators>

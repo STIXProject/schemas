@@ -39,6 +39,29 @@
             </marking:Marking_Structure>
          </marking:Marking>
       </stix:Handling>
+      <stix:Information_Source>
+         <stixCommon:Identity>
+            <stixCommon:Name>MITRE</stixCommon:Name>
+         </stixCommon:Identity>
+         <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
+         <stixCommon:Contributing_Sources>
+            <stixCommon:Source>
+               <stixCommon:Identity>
+                  <stixCommon:Name>Mandiant</stixCommon:Name>
+               </stixCommon:Identity>
+               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
+               <stixCommon:Time>
+                  <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
+               </stixCommon:Time>
+            </stixCommon:Source>
+         </stixCommon:Contributing_Sources>
+         <stixCommon:Time>
+            <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
+         </stixCommon:Time>
+         <stixCommon:References>
+            <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
+         </stixCommon:References>
+      </stix:Information_Source>
    </stix:STIX_Header>
    <stix:TTPs>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" xsi:type="ttp:TTPType">
@@ -159,29 +182,6 @@
                <stixCommon:TTP idref="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4"/>
             </ttp:Related_TTP>
          </ttp:Related_TTPs>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" xsi:type="ttp:TTPType">
          <ttp:Title>WEBC2 Backdoor</ttp:Title>
@@ -212,29 +212,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-6df42755-0721-436a-a211-2844cc9c583d" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" xsi:type="ttp:TTPType">
          <ttp:Title>HTRAN Malware C2</ttp:Title>
@@ -303,29 +280,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-6df42755-0721-436a-a211-2844cc9c583d" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
          <ttp:Resources>
@@ -377,29 +331,6 @@
                </ttp:Observable_Characterization>
             </ttp:Infrastructure>
          </ttp:Resources>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" xsi:type="ttp:TTPType">
          <ttp:Title>APT1 C2 Servers Infrstructure</ttp:Title>
@@ -421,29 +352,6 @@
 				</ttp:Description>
             </ttp:Infrastructure>
          </ttp:Resources>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" xsi:type="ttp:TTPType">
          <ttp:Title>Domain Names Infrastructure</ttp:Title>
@@ -486,29 +394,6 @@
                <stixCommon:TTP idref="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696"/>
             </ttp:Related_TTP>
          </ttp:Related_TTPs>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" xsi:type="ttp:TTPType">
          <ttp:Title>Registered DNS Zones infrastructure</ttp:Title>
@@ -699,29 +584,6 @@
 				</ttp:Description>
             </ttp:Infrastructure>
          </ttp:Resources>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" xsi:type="ttp:TTPType">
          <ttp:Title>Third-party Services Infrastructure</ttp:Title>
@@ -745,29 +607,6 @@
 				</ttp:Description>
             </ttp:Infrastructure>
          </ttp:Resources>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" xsi:type="ttp:TTPType">
          <ttp:Title>Hijacked FQDN Infrastructure</ttp:Title>
@@ -789,29 +628,6 @@
 				</ttp:Description>
             </ttp:Infrastructure>
          </ttp:Resources>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" xsi:type="ttp:TTPType">
          <ttp:Title>The Initial Compromise</ttp:Title>
@@ -869,29 +685,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-3356c179-d467-4530-a66a-7bb6b23ad946" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" xsi:type="ttp:TTPType">
          <ttp:Title>Establishing a Foothold</ttp:Title>
@@ -1013,29 +806,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-6df42755-0721-436a-a211-2844cc9c583d" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" xsi:type="ttp:TTPType">
          <ttp:Title>Privilege Escalation</ttp:Title>
@@ -1143,29 +913,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-bcde91d7-a3f9-4403-8550-87954d21f174" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" xsi:type="ttp:TTPType">
          <ttp:Title>Internal Reconnaisance</ttp:Title>
@@ -1231,29 +978,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-5692e7a4-5325-4237-a867-0bcc0ebbf2e0" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" xsi:type="ttp:TTPType">
          <ttp:Title>Lateral Movement</ttp:Title>
@@ -1292,29 +1016,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-48368014-7636-496e-a047-1d8b70027836" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" xsi:type="ttp:TTPType">
          <ttp:Title>Maintain Presence</ttp:Title>
@@ -1363,29 +1064,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-0d4b08b0-31c0-439a-a6a5-76e210d9b7b9" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" xsi:type="ttp:TTPType">
          <ttp:Title>Completing the Mission</ttp:Title>
@@ -1471,29 +1149,6 @@
          <ttp:Kill_Chain_Phases>
             <stixCommon:Kill_Chain_Phase phase_id="mandiant:kill-chain-phase-aab09f58-b67b-43b0-9343-cefc967c88a0" kill_chain_id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17"/>
          </ttp:Kill_Chain_Phases>
-         <ttp:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </ttp:Information_Source>
       </stix:TTP>
       <stix:Kill_Chains>
          <stixCommon:Kill_Chain id="mandiant:kill-chain-e9dfa013-41e2-4c71-83db-279d41a13e17" name="APT1 Attack Lifecycle Model" definer="Mandiant" number_of_phases="8">
@@ -1732,29 +1387,6 @@
                <stixCommon:Threat_Actor idref="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b"/>
             </threat-actor:Associated_Actor>
          </threat-actor:Associated_Actors>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
@@ -1821,29 +1453,6 @@
                </stixCommon:TTP>
             </threat-actor:Observed_TTP>
          </threat-actor:Observed_TTPs>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
@@ -1873,29 +1482,6 @@
                </xpil:Nationalities>
             </stix-ciq:Specification>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
@@ -1942,113 +1528,21 @@
                </stixCommon:TTP>
             </threat-actor:Observed_TTP>
          </threat-actor:Observed_TTPs>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
             <stixCommon:Name>Comment Crew</stixCommon:Name>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
             <stixCommon:Name>Comment Group</stixCommon:Name>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
             <stixCommon:Name>Shady Rat</stixCommon:Name>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
@@ -2060,29 +1554,6 @@
                <stixCommon:Threat_Actor idref="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b"/>
             </threat-actor:Associated_Actor>
          </threat-actor:Associated_Actors>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
@@ -2094,29 +1565,6 @@
                <stixCommon:Threat_Actor idref="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b"/>
             </threat-actor:Associated_Actor>
          </threat-actor:Associated_Actors>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity>
@@ -2128,29 +1576,6 @@
                <stixCommon:Threat_Actor idref="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d"/>
             </threat-actor:Associated_Actor>
          </threat-actor:Associated_Actors>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
@@ -2173,29 +1598,6 @@
             </stix-ciq:Specification>
             <stix-ciq:Role>Nation-State</stix-ciq:Role>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
       <stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" xsi:type="threat-actor:ThreatActorType">
          <threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
@@ -2218,29 +1620,6 @@
             </stix-ciq:Specification>
             <stix-ciq:Role>State-influenced Commercial Entity</stix-ciq:Role>
          </threat-actor:Identity>
-         <threat-actor:Information_Source>
-            <stixCommon:Identity>
-               <stixCommon:Name>MITRE</stixCommon:Name>
-            </stixCommon:Identity>
-            <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-            <stixCommon:Contributing_Sources>
-               <stixCommon:Source>
-                  <stixCommon:Identity>
-                     <stixCommon:Name>Mandiant</stixCommon:Name>
-                  </stixCommon:Identity>
-                  <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                  <stixCommon:Time>
-                     <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                  </stixCommon:Time>
-               </stixCommon:Source>
-            </stixCommon:Contributing_Sources>
-            <stixCommon:Time>
-               <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-            </stixCommon:Time>
-            <stixCommon:References>
-               <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-            </stixCommon:References>
-         </threat-actor:Information_Source>
       </stix:Threat_Actor>
    </stix:Threat_Actors>
    <stix:Reports>
@@ -2288,29 +1667,6 @@
 				&lt;/body&gt;
 			&lt;/html&gt;
 		</report:Description>
-            <report:Information_Source>
-               <stixCommon:Identity>
-                  <stixCommon:Name>MITRE</stixCommon:Name>
-               </stixCommon:Identity>
-               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-               <stixCommon:Contributing_Sources>
-                  <stixCommon:Source>
-                     <stixCommon:Identity>
-                        <stixCommon:Name>Mandiant</stixCommon:Name>
-                     </stixCommon:Identity>
-                     <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                     <stixCommon:Time>
-                        <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                     </stixCommon:Time>
-                  </stixCommon:Source>
-               </stixCommon:Contributing_Sources>
-               <stixCommon:Time>
-                  <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-               </stixCommon:Time>
-               <stixCommon:References>
-                  <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-               </stixCommon:References>
-            </report:Information_Source>
          </report:Header>
          <report:TTPs>
             <report:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" timestamp="2014-05-08T09:00:00.000000Z"/>

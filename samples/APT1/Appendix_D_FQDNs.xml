@@ -22,6 +22,29 @@
             </marking:Marking_Structure>
          </marking:Marking>
       </stix:Handling>
+      <stix:Information_Source>
+         <stixCommon:Identity>
+            <stixCommon:Name>MITRE</stixCommon:Name>
+         </stixCommon:Identity>
+         <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
+         <stixCommon:Contributing_Sources>
+            <stixCommon:Source>
+               <stixCommon:Identity>
+                  <stixCommon:Name>Mandiant</stixCommon:Name>
+               </stixCommon:Identity>
+               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
+               <stixCommon:Time>
+                  <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
+               </stixCommon:Time>
+            </stixCommon:Source>
+         </stixCommon:Contributing_Sources>
+         <stixCommon:Time>
+            <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
+         </stixCommon:Time>
+         <stixCommon:References>
+            <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
+         </stixCommon:References>
+      </stix:Information_Source>
    </stix:STIX_Header>
    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
       <cybox:Observable id="mandiant:observable-36fd3338-7051-43f5-81ec-c4fdf59409bc">
@@ -14355,29 +14378,6 @@
             <report:Description>
             This package contains the FQDNs referenced in Appendix D of the APT1 report.
         </report:Description>
-            <report:Information_Source>
-               <stixCommon:Identity>
-                  <stixCommon:Name>MITRE</stixCommon:Name>
-               </stixCommon:Identity>
-               <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Transformer/Translator</stixCommon:Role>
-               <stixCommon:Contributing_Sources>
-                  <stixCommon:Source>
-                     <stixCommon:Identity>
-                        <stixCommon:Name>Mandiant</stixCommon:Name>
-                     </stixCommon:Identity>
-                     <stixCommon:Role xsi:type="stixVocabs:InformationSourceRoleVocab-1.0">Initial Author</stixCommon:Role>
-                     <stixCommon:Time>
-                        <cyboxCommon:Produced_Time precision="day">2013-02-19T00:00:00Z</cyboxCommon:Produced_Time>
-                     </stixCommon:Time>
-                  </stixCommon:Source>
-               </stixCommon:Contributing_Sources>
-               <stixCommon:Time>
-                  <cyboxCommon:Produced_Time precision="day">2014-01-16T00:00:00Z</cyboxCommon:Produced_Time>
-               </stixCommon:Time>
-               <stixCommon:References>
-                  <stixCommon:Reference>http://intelreport.mandiant.com/Mandiant_APT1_Report.pdf</stixCommon:Reference>
-               </stixCommon:References>
-            </report:Information_Source>
          </report:Header>
          <report:Observables>
             <report:Observable idref="mandiant:observable-36fd3338-7051-43f5-81ec-c4fdf59409bc"/>
