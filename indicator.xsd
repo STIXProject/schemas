@@ -24,7 +24,8 @@
 	</xs:element>
 	<xs:complexType name="IndicatorType">
 		<xs:annotation>
-			<xs:documentation>The IndicatorType characterizes a cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc.</xs:documentation>
+			<xs:documentation>Represents a single STIX Indicator.</xs:documentation>
+			<xs:documentation>Indicators convey specific Observable patterns combined with contextual information intended to represent artifacts and/or behaviors of interest within a cyber security context. They consist of one or more Observable patterns potentially mapped to a related TTP context and adorned with other relevant metadata on things like confidence in the indicator’s assertion, handling restrictions, valid time windows, likely impact, sightings of the indicator, structured test mechanisms for detection, related campaigns, suggested courses of action, related indicators, the source of the Indicator, etc.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IndicatorBaseType">
