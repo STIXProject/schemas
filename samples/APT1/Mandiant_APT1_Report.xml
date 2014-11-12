@@ -372,7 +372,7 @@
 					<cybox:Observable>
 						<cybox:Object id="mandiant:object-232deffc-063f-4e83-9027-1b930af4a09f">
 							<cybox:Properties xsi:type="AddressObject:AddressObjectType" category="ipv4-addr">
-								<AddressObject:Address_Value condition="InclusiveBetween">223.166.0.0##comma##23.167.255.255</AddressObject:Address_Value>
+								<AddressObject:Address_Value condition="InclusiveBetween">223.166.0.0##comma##223.167.255.255</AddressObject:Address_Value>
 							</cybox:Properties>
 						</cybox:Object>
 					</cybox:Observable>
