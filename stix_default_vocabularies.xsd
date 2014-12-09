@@ -1204,7 +1204,6 @@
 			<xs:enumeration value="POS terminal"/>
 			<xs:enumeration value="Kiosk"/>
 			<xs:enumeration value="Tablet"/>
-			<xs:enumeration value="Telephone"/>
 			<xs:enumeration value="VoIP phone"/>
 			<xs:enumeration value="User Device"/>
 			<xs:enumeration value="Tapes"/>
@@ -1214,7 +1213,6 @@
 			<xs:enumeration value="Disk drive"/>
 			<xs:enumeration value="Smart card"/>
 			<xs:enumeration value="Payment card"/>
-			<xs:enumeration value="Media"/>
 			<xs:enumeration value="Administrator"/>
 			<xs:enumeration value="Auditor"/>
 			<xs:enumeration value="Call center"/>
