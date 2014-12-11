@@ -590,7 +590,7 @@
 					<xs:documentation>This incident was disclosed by the threat agent (e.g. public brag, private blackmail).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Fraud Detection">
+			<xs:enumeration value="External - Fraud Detection">
 				<xs:annotation>
 					<xs:documentation>This incident was discovered through external fraud detection means (e.g. CPP).</xs:documentation>
 				</xs:annotation>
@@ -635,7 +635,7 @@
 					<xs:documentation>This incident was discovered in the course of a financial audit and/or reconciliation process.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Fraud Detection">
+			<xs:enumeration value="Internal - Fraud Detection">
 				<xs:annotation>
 					<xs:documentation>This incident was discovered through internal fraud detection means.</xs:documentation>
 				</xs:annotation>
