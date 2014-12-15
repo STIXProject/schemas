@@ -99,7 +99,7 @@
 					</xs:element>
 					<xs:element name="Activity" type="stixCommon:ActivityType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Activity field characterizes actions taken in regards to this ThreatActor. This field is defined as of type ActivityType which is an abstract type enabling the extension and inclusion of various formats of Activity characterization.</xs:documentation>
+							<xs:documentation>The Activity field characterizes actions taken in regards to this Campaign. This field is defined as of type ActivityType which is an abstract type enabling the extension and inclusion of various formats of Activity characterization.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
