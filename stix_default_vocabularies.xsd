@@ -560,21 +560,21 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Discovery Method Vocabulary -->
-	<xs:complexType name="DiscoveryMethodVocab-1.0">
+	<xs:complexType name="DiscoveryMethodVocab-1.1">
 		<xs:annotation>
 			<xs:documentation>The DiscoveryMethodVocab is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
 				<xs:simpleType>
-					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.0"/>
+					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.1"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Discovery Method Vocabulary"/>
 				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:simpleType name="DiscoveryMethodEnum-1.0">
+	<xs:simpleType name="DiscoveryMethodEnum-1.1">
 		<xs:annotation>
 			<xs:documentation>
                 The possible values for expressing how an incident was discovered.
@@ -636,6 +636,123 @@
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="Internal - Fraud Detection">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered through internal fraud detection means.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HIPS">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered a host-based IDS or file integrity monitoring.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IT Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by an internal IT audit or scan.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Log Review">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered during a log review process or by a SIEM.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NIDS">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by a network-based intrustion detection/prevention system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Security Alarm">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by a physical security alarm.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="User">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a user.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>It is not known how this incident was discovered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DiscoveryMethodVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The DiscoveryMethodVocab is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Discovery Method Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="DiscoveryMethodEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>
+                The possible values for expressing how an incident was discovered.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Agent Disclosure">
+				<xs:annotation>
+					<xs:documentation>This incident was disclosed by the threat agent (e.g. public brag, private blackmail).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fraud Detection">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered through external fraud detection means (e.g. CPP).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Monitoring Service">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a managed security event monitoring service.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Law Enforcement">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by law enforcement.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Customer">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by a customer or partner affected by the incident.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unrelated Party">
+				<xs:annotation>
+					<xs:documentation>This incident was reported by an unrelated third party.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered during an external security audit or scan.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Antivirus">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered by an antivirus system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Incident Response">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered in the course of investigating a separate incident.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial Audit">
+				<xs:annotation>
+					<xs:documentation>This incident was discovered in the course of a financial audit and/or reconciliation process.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fraud Detection">
 				<xs:annotation>
 					<xs:documentation>This incident was discovered through internal fraud detection means.</xs:documentation>
 				</xs:annotation>
