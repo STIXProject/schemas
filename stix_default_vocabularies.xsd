@@ -560,21 +560,21 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Discovery Method Vocabulary -->
-	<xs:complexType name="DiscoveryMethodVocab-1.1">
+	<xs:complexType name="DiscoveryMethodVocab-2.0">
 		<xs:annotation>
 			<xs:documentation>The DiscoveryMethodVocab is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
 				<xs:simpleType>
-					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-1.1"/>
+					<xs:union memberTypes="stixVocabs:DiscoveryMethodEnum-2.0"/>
 				</xs:simpleType>
 				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Discovery Method Vocabulary"/>
-				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-1.0"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd#DiscoveryMethodVocab-2.0"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:simpleType name="DiscoveryMethodEnum-1.1">
+	<xs:simpleType name="stixVocabs:DiscoveryMethodEnum-2.0">
 		<xs:annotation>
 			<xs:documentation>
                 The possible values for expressing how an incident was discovered.
