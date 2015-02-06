@@ -1,0 +1,116 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-239c7459-efab-4a48-86e2-3347d93aafc7" version="1.1.1" timestamp="2013-08-25T21:59:04+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-af20a44c-8aec-458e-bb28-772a817f760d" timestamp="2014-05-10T00:58:19+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Mobile dating app Tinder appears to have exposed the physical location of its users for much longer than a “few hours,” as the company’s chief executive claimed. New evidence suggests the privacy breach dated back at least two weeks. +  Quartz reported yesterday that the data files sent from Tinder’s servers to its apps had been revealing sensitive information about users, including their last known location and Facebook ID. Reaction to the piece centered on the fact that Tinder hasn’t disclosed the issue to its users. CEO Sean Rad said one reason they haven’t is that the breach didn’t last very long: ”An engineer basically found a hole that was there for like an hour,” he said in an interview yesterday. +  But that wasn’t the first time the issue reared its head. Interviews with several people who have worked with Tinder’s API, which is how the company’s servers communicate with its apps, extend the timeline of the privacy breach considerably. Exactly when the issue began and at what points it remained a problem are still unclear. The company won’t provide details on the timing. +  Rad hasn’t returned emails and phone calls seeking comment today. Justine Sacco, a spokeswoman for IAC, which owns Tinder, acknowledged the earlier breach but said it was fixed quickly, which isn’t supported by Quartz’s reporting. In a statement today, Sacco said: +      On two different occasions, we became aware that our API was returning information that it should not have been. In both occasions, we promptly addressed and fixed the glitch. With respect to location data, we do not store the current location of a Tinder user but rather a vague/inaccurate point in space. We are extremely committed to upholding the highest standards of privacy and will continue to take all necessary steps to ensure our users’ data is protected from internal and external sources.     +  Tinder informed on July 8  Mike Soares, an engineer in San Francisco, says he discovered the issue on July 8 and immediately informed the company in an email to help@gotinder.com. The subject line was, “Privacy Hole With Your App,” and it detailed how Tinder’s API was returning more information than necessary, including the location and Facebook data. +  Tinder needs to record each user’s last known location in order to suggest other people within a certain distance. But no one is supposed to see a user’s exact location, a privacy violation that could be considered especially egregious because Tinder is used to find people to hook up with. An introductory screen when first signing up for Tinder assures, “Your location will never be shown to other users.” </incident:Title>
+            <incident:External_ID source="VERIS">4A5D8DD7-F411-4580-A9FF-023CFA93AFD4</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2013-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Tinder</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NY</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-6651415a-573d-42aa-a647-c16022834d53" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://qz.com/107739/tinders-privacy-breach-lasted-much-longer-than-the-company-claimed/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-6651415a-573d-42aa-a647-c16022834d53" timestamp="2014-12-22T16:26:06.209000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:26:06.209000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Developer</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:26:06.209000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,150 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-b0561b3e-2222-465e-bec0-367195c7533a" version="1.1.1" timestamp="2013-09-03T02:20:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-48b89793-a3d7-433e-97fa-ad74def2b5e7" timestamp="2014-12-22T16:31:37.861000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-91a7e146-87fd-43c6-b460-2a7929d1b1e1" timestamp="2014-05-18T15:34:56+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Syrian Electronic Army defaced marines.com, the official website of the Marine Corps Recruiting Command. Interestingly, the Syrian Electronic Army is trying to convince US Marines that the Syrian army should be considered an ally, not an enemy.</incident:Title>
+            <incident:External_ID source="VERIS">96935139-5B04-44FA-907F-158D81BB8BD0</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2013-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">whbaker</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">US Marine Corps</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Modify data,Defacement; Notes:Defacement text: This is a message written by your brothers in the Syrian Army, who have been fighting Al Qaeda for the last 3 years. We understand your patriotism and love for your country so please understand our love for ours. Obama is a traitor who wants to put your lives in danger to rescue Al Qaeda insurgents, the Syrian Electronic Army wrote to US Marines.  Marines, please take a look at what your comrades think about Obama's alliance with Al Qaeda against Syria. Your officer in charge probably has no qualms about sending you to die against soldiers just like you, fighting a vile common enemy. The Syrian army should be your ally not your enemy, they added.  Refuse your orders and concentrate on the real reason every soldier joins their military, to defend their homeland. You're more than welcome to fight alongside our army rather than against it.</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-48b89793-a3d7-433e-97fa-ad74def2b5e7" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-e788f934-3283-4e1a-9164-f09288e62fdf" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Agent Disclosure</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://news.softpedia.com/news/Syrian-Electronic-Army-Defaces-US-Marine-Corps-Website-to-Send-Them-a-Message-379692.shtml</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-e788f934-3283-4e1a-9164-f09288e62fdf" timestamp="2014-12-22T16:31:37.861000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>SY</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:31:37.861000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Hacktivist</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:31:37.861000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-48b89793-a3d7-433e-97fa-ad74def2b5e7" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

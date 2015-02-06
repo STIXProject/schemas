@@ -1,0 +1,103 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-53bf1d9b-b1d4-44f3-aef3-018816e05d72" version="1.1.1" timestamp="2013-09-10T20:13:32+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-e287e604-f7ba-476e-a044-4e617408fd84" timestamp="2014-04-27T19:37:03+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Four managers who left AMD to work for Nvidia are being sued by AMD for intellectual property theft.  AMD accused the former employees of setting up a spying ring in the company before leaving to work for rivaling company Nvidia.  One of the managers is accused of using two external hard drives to download Microsoft Outlook email files, licensing agreements, and strategic plans from his work computer before leaving AMD in July of 2012. Another employee is accused of taking an AMD technical work and development database with over 200 files.  The four employees are accused of taking over 150,000 documents.</incident:Title>
+            <incident:External_ID source="VERIS">B4972629-EE41-40B2-AAD0-7380909D213A</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2012-07-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Advanced Micro Devices (AMD)</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Disk drive</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-6c7f59b3-c7ee-4abe-a0b3-ef88181d6539" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.theregister.co.uk/2013/01/16/amd_nvidia_spying_lawsuit/, http://www.examiner.com/article/documents-stolen-by-ex-amd-employees-expose-next-generation-console-contracts</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-6c7f59b3-c7ee-4abe-a0b3-ef88181d6539" timestamp="2014-12-22T16:32:53.941000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:32:53.941000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Manager</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:32:53.941000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

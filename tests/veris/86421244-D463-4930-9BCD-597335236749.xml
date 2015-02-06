@@ -1,0 +1,154 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-c0f5380e-fbfd-4c09-b140-70352f722fe4" version="1.1.1" timestamp="2014-02-07T04:23:30+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-b805367a-6bf2-4d11-b1ec-cf26f511e7d0" timestamp="2014-12-22T16:30:50.952000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-ddcd0dfd-b5df-419e-8589-20c0e4d62503" timestamp="2014-05-10T00:58:19+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title> The account details of millions of online gamers have been stolen in a hack attack on games company Blizzard.  The company, which makes the World Of Warcraft, StarCraft and Diablo franchises posted a message on its website today advising players using North American servers to change their passwords for the account management service.  The compromised data relates to Battle.net accounts which are used for all of Blizzard's games.  In a posting today the company said: This week, our security team found an unauthorized and illegal access into our internal network here at Blizzard. We quickly took steps to close off this access and began working with law enforcement and security experts to investigate what happened.  The post goes on to explain that the data that was illegally accessed included a list of email addresses for global Battle.net users outside of China.  Players on North America servers (which includes users in North America, Latin America, Australia, New Zealand and Southeast Asia), had their security question details hacked as well as information relating to Mobile and Dial-In authentication.  Cryptographically scrambled Battle.net passwords were also taken.  The company has advised that gamers that play online via North American servers should change their passwords as a precaution.  The company has stressed it would be extremely difficult to access actual passwords using the scrambled data stolen.  They also stressed that no financial data had been accessed, such as credit cards or billing addresses.  Blizzard said that users should be aware of any potential phishing scams that may follow as a consequence of email details being out in the open.  Blizzard Entertainment boss Mike Morhaime said the hack had been discovered on August 4th, and that the company were:  truly sorry that this has happened.  The company said it had spent the time since August 4th fixing the vulnerability in their systems and finding out what information had been compromised.  Following the hack the company is likely to face criticism over its decision to make games that require a login via Battle.net and cannot be played offline.  Despite the loss of passwords and email data Blizzard's use of a Secure Remote Password protocol is likely to have minimised the consequences for users as the system makes it near impossible to brute-force a password, a method hackers use in which a computer attempts every possible key or password until it succeeds. </incident:Title>
+            <incident:External_ID source="VERIS">86421244-D463-4930-9BCD-597335236749</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2012-08-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Blizzard Entertainment, Inc.</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Credentials: 14000000, Personal: 14000000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-b805367a-6bf2-4d11-b1ec-cf26f511e7d0" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-a2c74c47-1b38-4c02-b7aa-b693737b038c" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>https://us.battle.net/support/en/article/important-security-update-faq#5</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.independent.co.uk/life-style/gadgets-and-tech/news/millions-of-gaming-account-details-are-stolen-in-massive-blizzard-hack-8031294.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-a2c74c47-1b38-4c02-b7aa-b693737b038c" timestamp="2014-12-22T16:30:50.952000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:30:50.952000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:30:50.952000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-b805367a-6bf2-4d11-b1ec-cf26f511e7d0" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

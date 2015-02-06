@@ -1,0 +1,189 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-82f613b4-7ded-41e1-a052-f01e1baa2ea6" version="1.1.1" timestamp="2013-06-06T18:16:08+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-80019fbc-578f-44bb-beed-7dfc457dd837" timestamp="2014-12-22T16:33:35.487000+00:00" xsi:type='ttp:TTPType'/>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-92fa3d8a-d0e1-4b44-a548-380020a31848" timestamp="2014-05-10T00:58:19+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Erica Hall was employed by Dr. Linda Green in Coral Springs as an office assistant from March 16, 2009 until February 2, 2011. As an office assistant, she had access to patients’ names, dates of birth, Social Security numbers, and medical information.  Hall is charged with providing the identity information to two of the other other defendants in the fraud/ID theft ring.  Also according to the indictment, Sharelle Finnie  was employed by  Dr. Linda Groene in Fort Lauderdale from January 8, 2009 to February 2, 2011 as a medical assistant. Finnie was authorized to access and copy  patient face sheets containing patients’ names, dates of birth, Social Security numbers, and medical information. She, too, is charged with providing patient information to other defendants in the ring.  Both women are charged with transmitting  ”multiple patient files” to three other defendants in the case.</incident:Title>
+            <incident:External_ID source="VERIS">C100D8E5-86E5-4BE3-923A-9A79592935AC</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2009-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Dr. Linda Green</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>FL</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+                <stix-ciqidentity:Role>End-user</stix-ciqidentity:Role>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical, Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Alter behavior</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Documents</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical, Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Alter behavior</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>End-user</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical, Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Alter behavior</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-80019fbc-578f-44bb-beed-7dfc457dd837" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-338d8a28-a691-4b05-9cca-0d95106fa4ef" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-05d3da0f-2a54-4fa8-9edf-ee4733b3b7f6" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.phiprivacy.net/?p=6404, http://www.phiprivacy.net/wp-content/uploads/EricaHall.pdf</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-338d8a28-a691-4b05-9cca-0d95106fa4ef" timestamp="2014-12-22T16:33:35.487000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:33:35.487000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">eCrime Actor - Organized Crime Actor</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:35.487000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-80019fbc-578f-44bb-beed-7dfc457dd837" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="example:threatactor-05d3da0f-2a54-4fa8-9edf-ee4733b3b7f6" timestamp="2014-12-22T16:33:35.487000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:33:35.487000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>End-user</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:35.487000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-80019fbc-578f-44bb-beed-7dfc457dd837" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

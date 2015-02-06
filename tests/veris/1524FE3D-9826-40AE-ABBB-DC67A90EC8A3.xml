@@ -1,0 +1,159 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-675caf48-d064-4209-b07f-1d0a2339f97a" version="1.1.1" timestamp="2014-05-04T20:48:06.358000+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Notes: Two Saudi Arabian hackers going with the handle of NeT-DeViL and Dr-TaiGaR from Group Hp-Hack have hacked and defaced the official website of City of Westminster, California earlier today.
+
+Hackers uploaded a .txt file as a deface page along with a message, telling the City of Westminster California to go to hell. The deface message can be read below:
+
+    City of Westminster California (Go to Hell) Hacked By: Group Hp-Hack!  NeT-DeViL &amp; Dr-TaiGaR. Saudi Arabia Hacker.
+
+Link of targeted website along with its mirror is available below:
+
+    http://www.westminster-ca.gov/
+    www.zone-h.org/mirror/id/22258086
+
+Group Hp-Hack is the same group which previously had hacked and defaced the official website of Bangladeshi Department of Immigration &amp; Passports and City of Waterville website.
+
+At the time of publishing this article, the deface page was removed and website of City of Westminster, California was working online.</stix:Title>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-8b4cbb94-c204-4a3c-8853-665cca29357d" timestamp="2014-12-22T16:22:43.958000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-b671afb6-976b-43fd-b9ea-f97494f6f0b8" timestamp="2014-05-04T20:48:06.358000+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Web site defacement</incident:Title>
+            <incident:External_ID source="VERIS">1524FE3D-9826-40AE-ABBB-DC67A90EC8A3</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-04-27T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">City of Westminster</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Defacement</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-8b4cbb94-c204-4a3c-8853-665cca29357d" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-6677220e-f54e-45a5-966e-d6f9cb45bfcc" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://hackread.com/group-hp-hacks-westminster-city-website/ (2014-05-04T20:48:06.358Z)</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-6677220e-f54e-45a5-966e-d6f9cb45bfcc" timestamp="2014-12-22T16:22:43.958000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>SA</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:22:43.958000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:22:43.958000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-8b4cbb94-c204-4a3c-8853-665cca29357d" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,167 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-3d049d99-4903-4103-b08b-d6020ff03e06" version="1.1.1" timestamp="2014-05-02T22:03:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-1d19833c-f8ad-49d1-8781-ff4fdb742f0b" timestamp="2014-12-22T16:26:40.179000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern capec_id="CAPEC-98"/>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-30df837c-26b5-405b-b78a-74e4cac0c610" timestamp="2014-05-02T22:03:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title> Tacomas Franciscan Health System is notifying some 8,300 patients that their personal information  including in some cases medical records and Social Security numbers  may have been shared with computer scammers who accessed staff email accounts.  Franciscan estimates more than 12,000 patients nationwide had files potentially breached.  Franciscans total of 8,300 patients potentially affected in the South Sound was the largest in the Catholic Health Initiatives network. CHI is the parent company of Franciscan.  The employees, most of them employed by Franciscan Medical Group, responded to late January phishing emails that appeared to be coming from CHI. Those messages, composed by computer hackers, not by CHI, asked Franciscan employees to go to another site where they were to enter their email user names and passwords.  While much of the information available to the scammers in the email accounts may have included routine biographical information on patients such as name, age, address and phone numbers, in some cases medical diagnoses and treatment plans also may have been included in the records exposed to the hackers.  Franciscan spokesman Scott Thompson said the phishing expedition was a nationwide effort targeting CHI health systems employees. Fewer than 20 Franciscan staff members responded to those email messages and entered their user names and passwords.  The health system, whose Puget Sound network includes St. Joseph Medical Center in Tacoma, St. Francis Hospital in Federal Way, Highline Medical Center in Burien, St. Elizabeth Hospital in Enumclaw, St. Clare Hospital in Lakewood, St. Anthony Hospital in Gig Harbor and Harrison Hospital in Bremerton and dozens of clinics and specialty centers, said it froze those affected email accounts.  The health system hired computer forensic experts to determine the extent of the data breach and to track down the perpetrators. The medical system also enlisted the FBI and the Secret Service in the investigation.  The FBI declined to comment or to even confirm that it was investigating the matter, citing its longstanding policy of not discussing complaints or pending investigations.  The computer forensic experts spent the past two months compiling lists of those whose information was exposed to the outsiders and trying to identify the scammers.  The Franciscan spokesman said it took the health system two months to notify patients because some of the information contained in the compromised emails was fragmentary.  It took some time to put that information together with names and addresses, he said.  Washington law requires businesses or individuals who collect personal data to disclose any breach of security in which their data was reasonably believed to have been obtained by unauthorized persons.The disclosure of the data compromise to those affected shall be made in the most expedient time possible and without unreasonable delay.  Donn Moyer, State Department of Health spokesman, said the department is considering opening a complaint file based on the breach.  We have not been notified by Franciscan nor have we received any complaint from someone whose data might be involved, said Moyer in a statement.  Federal health information privacy laws similarly require medical entities to provide notification following a breach of unsecured protected health information.  No one has yet been arrested in the data theft. Investigators have traced the original phony emails to an IP address at a small California college, Thompson said.  Patients whose personal information was potentially compromised are receiving letters from Franciscan detailing the computer incident. Those among them whose Social Security numbers were in the data accessible to the hackers are being offered a year of free credit monitoring.  The health system has established a toll-free phone line for Franciscan patients who have questions about whether their personal information was available to the hackers. That number is 877-283-6556.  Thompson said the health system has not been notified of any incidents in which the stolen information was used to gain access to patients bank or credit accounts or to apply for new credit in their names.  The data thieves also targeted other CHI medical employees, including those of Louisville-based KentuckyOne Health and other smaller CHI health facilities across the country. Franciscan and KentuckyOne were the only health systems where more than 500 patients records were potentially exposed to outsiders, said the Franciscan spokesman.  Franciscan has retrained the employees who responded to the email phishing effort, and the health care concern will soon be rolling out a systemwide phishing prevention update for all of its employees, the health system spokesman said.  Franciscan Medical Group is committed to protecting patient privacy, and we deeply regret any inconvenience this incident may have caused our patients, said Betty Doyle, regional privacy officer for Franciscan.   Followup:   Update: The 12,000 number includes 3,500 patients of KentuckyOne, who have also posted a statement on their website:      KentuckyOne Health is committed to protecting the security and confidentiality of our patients personal information. Regrettably, this notice is about an incident involving some of that information.      On January 27, 2014, we learned that phishing emails were sent to a small group of KentuckyOne Health employees who responded to the emails thinking they were legitimate requests. When we learned of this, we immediately secured the affected email accounts and began an investigation, including hiring an outside forensics expert firm. We undertook a comprehensive review of the affected employees e-mail accounts, which concluded on March 24, 2014. This investigation confirmed that the emails contained patient information from Jewish Hospital, Frazier Rehab Institute, Saint Joseph Berea and Flaget Memorial Hospital, and may have included patient demographic information (for example, name, address, date of birth, telephone number) and clinical information (for example, treating physician and/or department, diagnosis, treatment received, medical record number, medical service code, health insurance information).</incident:Title>
+            <incident:External_ID source="VERIS">52F008F1-E8F2-4A99-9D8A-F1239077DE23</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-01-27T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Franciscan Medical Group</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+                <stix-ciqidentity:Role>Unknown</stix-ciqidentity:Role>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 8300; Notes:From this http://www.thedenverchannel.com/news/front-range/englewood/privacy-breach-involving-englewood-health-organization we get the following breakdown of record numbers:  Tacoma area: 8,300 patients KentuckyOne Health: 3,543 patients Chattanooga, TN: 66 patients Des Moines, IA: 26 patients Reading, PA: 11 patients</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Alter behavior,Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Person</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 8300; Notes:From this http://www.thedenverchannel.com/news/front-range/englewood/privacy-breach-involving-englewood-health-organization we get the following breakdown of record numbers:  Tacoma area: 8,300 patients KentuckyOne Health: 3,543 patients Chattanooga, TN: 66 patients Des Moines, IA: 26 patients Reading, PA: 11 patients</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Alter behavior,Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-1d19833c-f8ad-49d1-8781-ff4fdb742f0b" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-aa1bc34b-3b57-4106-b40e-1c190c321397" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.thenewstribune.com/2014/03/31/3126217/phishing-e-mails-net-medical-records.html?sp=/99/261/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.scmagazine.com/medical-staffers-fall-for-phishing-emails-data-on-8300-compromised/article/340590/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.thedenverchannel.com/news/front-range/englewood/privacy-breach-involving-englewood-health-organization</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-aa1bc34b-3b57-4106-b40e-1c190c321397" timestamp="2014-12-22T16:26:40.179000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:26:40.179000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:26:40.179000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-1d19833c-f8ad-49d1-8781-ff4fdb742f0b" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,121 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-c601905f-11d3-4980-9fe3-7675a5f17a77" version="1.1.1" timestamp="2014-10-14T15:42:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-cfcf0e36-d577-4b0c-be18-ff891fa26e62" timestamp="2014-10-14T15:42:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Clinton resident going to prison for ID theft Posted on May 6, 2013 Identity theft victims often lack the satisfaction of seeing the perpetrators of these crimes brought to justice, or even knowing who cheated them. But sometimes, justice is served. A Clinton woman has been sentenced to prison and ordered to pay restitution after pleading guilty to identity theft and other crimes, according to a release from Attorney General Jim Hood today.  The release lists the crimes of Emily Kristen McLellan-Bilbo, 25, of Clinton. On Friday, McLellan-Bilbo pleaded guilty to one count of felonious identity theft, one count of uttering counterfeit instruments and two counts of felonious use of a Social Security number or identifying information to obtain goods.  Hinds County Circuit Court Judge William A. Gowan sentenced Bilbo to serve 10 years for identity theft with five suspended and four years post release supervision. She was also ordered to pay $13,825.35 in restitution to the victims, $1,000 to the Victims Compensation Fund, and $2,000 for investigative costs. All costs must be paid during her four years post-release supervision. In addition, Bilbo received five years for each of the two counts of felonious use of a Social Security number and five years for uttering a counterfeit instrument. The sentences are to run concurrently.  At the time the crimes were committed, Bilbo worked as a receptionist at Audibel (a hearing aid company) in Jackson where she obtained credit card and other personal identifying information of customers. She then used the information to purchase more than $13,000 in goods, cash, and services.  The release noted that 13 victims of identity theft have been identified. The business owner told the court that he and his wife had been taken in by Bilbo and it had cost them and their family-run business dearly. Other victims of Bilbos crimes asked that Bilbo be sent to jail, that she be held accountable, and that she get some counseling.  I hope Judge Gowans tough sentence and order of restitution for these victims will send a message to others contemplating identity theft, Hood noted.  This case was investigated by Investigator Arthur Kendrick and Auditor Gilda Holbrook of the Attorney Generals Medicaid Fraud Control Unit and prosecuted by Special Assistant Attorney General Sue Perry.  Good work, Attorney General Hood and staff. Good work.  - See more at: http://web.archive.org/web/20130624002442/http://blogs.clarionledger.com/consumerwatch/2013/05/06/clinton-resident-going-to-prison-for-id-theft#sthash.HWt9rnmp.dpuf</incident:Title>
+            <incident:External_ID source="VERIS">18060EFC-6A9D-41EF-B66B-352A19933DF7</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2013-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Audibel Hearing Healthcare</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>MS</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Payment card</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment: 13, Personal: 13</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Total_Loss_Estimation>
+                    <incident:Actual_Total_Loss_Estimation iso_currency_code="USD" amount="13000"/>
+                </incident:Total_Loss_Estimation>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-d0b199a5-50a9-44a8-8022-bb8a0fdc1f3a" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://web.archive.org/web/20130624002442/http://blogs.clarionledger.com/consumerwatch/2013/05/06/clinton-resident-going-to-prison-for-id-theft</stixCommon:Reference>
+                    <stixCommon:Reference>http://blogs.clarionledger.com/consumerwatch/2013/05/06/clinton-resident-going-to-prison-for-id-theft/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.ago.state.ms.us/wp-content/uploads/2013/08/May-6_Clinton-Resident-Going-to-Prison-for-Identity-Theft-and-other-Crimes.pdf</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-d0b199a5-50a9-44a8-8022-bb8a0fdc1f3a" timestamp="2014-12-22T16:22:51.139000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:22:51.139000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Cashier</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:22:51.139000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

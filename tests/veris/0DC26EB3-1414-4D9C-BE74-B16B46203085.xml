@@ -1,0 +1,158 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-dcd98eb5-152f-40c6-bd7e-0a287ab5ad54" version="1.1.1" timestamp="2014-10-30T18:25:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-c8289f07-37df-4d05-88aa-cfa8f73a1992" timestamp="2014-12-22T16:22:29.231000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern capec_id="CAPEC-119">
+                        <ttp:Title>Deplete Resources</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-acfef6a0-922d-4a64-895c-ec09b2a3b660" timestamp="2014-10-30T18:25:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>A computer whizzkid suspected of trying to hack into police websites has been jailed for refusing to hand over his password in the interests of national security.  University student Christopher Wilson caused the Northumbria Police website to shut down after ringing the force using a voice changing device to warn of a cyber attack.  Wilson, who suffers from Aspergers Syndrome, was caught sending online messages about trolling the Newcastle police department and infiltrating the secret files the Serious Organised Crime Agency.  He even suggested sending nasty messages on a condolence page set up for two female police officers shot dead in Manchester.  Wilson, who is currently excelling on a Masters degree in computers and has set up his own business programming artificial intelligence systems, was doing his degree at Northumbria University when he came to the attention of police.  After repeatedly refusing to provide his password for his encrypted computer, a judge last year ordered him to do so in the interests of national security.  However none of the 50 complex passwords he provided worked and now he has been jailed for six months for failing to provide his details.  Wilson admitted failing to disclose a password in breach of the Regulatory Investigatory Powers Act 2000, an offence under terrorism legislation.  Judge Simon Hickey told him: What you were doing was for your own satisfaction, showing what you could do with your undoubted skill with computers.  But this is a serious offence and I cant avoid an immediate custodial sentence.  Police first became aware of Wilson in October 2012, after two emails were sent to the Vice Chancellor of Newcastle University, saying a man had been making a threat to kill a member of staff on an internet chat room and that he had a handgun and ammunition.  The message was sent under the username Catch 22, which was linked to Wilsons server.  Police went to his home in Washington and seized computer equipment, including one system he had built himself which allowed remote access to other computers.  Wilson denied he had made the threats to kill and said he had fallen out with a couple of Dutch men online and that the allegations were malicious.  Newcastle Crown Court heard that prosecutors accept Wilson was telling the truth, and he was not charged with threats to kill.  However police still wanted to access his main computer and the two passwords he had provided didnt work.  Without the password the computer could not even be booted up as he had encrypted the hard drive.  During the investigation, police linked him to making a phone call to them on August 23, 2012, saying the Northumbria Police website was going to be attacked.  Prosecutor Neil Pallister said Wilson used a voice changing device while making the call.  The attack, aimed at bombarding the system to the point of collapse, lasted for eight minutes and the website began to slow down before being taken down as a precaution for four minutes.  Mr Pallister said: The police ICT department said an incident of this type caused many hours of disruption and wasted a lot of time.  Wilson was arrested in January last year and admitted making the call but claimed he was just warning them of a possible attack by someone else.  Wilson made the call on his Skype phone and a number of messages he had sent online were retrieved.  He had written: Gonna go harass some police stations and Lets troll Newcastle police department.  Using the Catch 22 moniker, he also encouraged others to report a hoax mugging outside the Centre for Life, in Newcastle.  Wilson, 22, of Mitford Close, Washington, also discussed hacking into the university network and getting passwords for 50 other students, the court heard.  He wrote: Nobody cares about hacking, there are real crimes to deal with.  When his phone was examined police found references to him carrying out another online attack on the Serious Organised Crime Agency. He wrote: They called me to stop me. Im committing a serious organised crime.  In another message, he wrote: You know those two coppers that got killed in Manchester, I heard theres a condolence book online. Lets troll it.  Mr Pallister said: The prosecution dont say he was successful in hacking the websites I have mentioned but it clearly shows he had an interest in doing so.  It was believed to be in the interests of national security to apply for a notice requiring him to disclose the password.  The prosecutor added: We say the only inference to draw from his willful refusal to disclose the password was that to allow access to the computer would reveal activity of the type mentioned, namely hacking Northumbria Police, SOCA and the university websites.  David Lister, defending, said: He has expressed genuine remorse, he bitterly regrets his actions.  He was 19 at the time and the impact of his Autism Spectrum Disorder or Aspergers meant he matured more slowly than others.  He is a bright and talented young man and is due to complete his Masters next January and is on course for a distinction having excelled.  He is aware he will struggle to find employment in this field now and as a consequence he has started his own business in real-time artificial intelligence based systems.</incident:Title>
+            <incident:External_ID source="VERIS">0DC26EB3-1414-4D9C-BE74-B16B46203085</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2014-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Northumbria Police</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>GB</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Degradation</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-c8289f07-37df-4d05-88aa-cfa8f73a1992" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-3466ac6e-d046-442c-a551-8ebee9de0adc" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Agent Disclosure</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.chroniclelive.co.uk/news/computer-whizzkid-jailed-failing-provide-7375293</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-3466ac6e-d046-442c-a551-8ebee9de0adc" timestamp="2014-12-22T16:22:29.231000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: student at Northumbria University</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>GB</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:22:29.231000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:22:29.231000+00:00">
+                <stixCommon:Value>Unaffiliated</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:22:29.231000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ego</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Motivation timestamp="2014-12-22T16:22:29.231000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-c8289f07-37df-4d05-88aa-cfa8f73a1992" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

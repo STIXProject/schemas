@@ -1,0 +1,119 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-22702a99-4889-4a86-a013-64e06069d30f" version="1.1.1" timestamp="2014-05-03T00:35:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-9043c1aa-b701-435e-a561-3d5c51ffc873" timestamp="2014-05-03T00:35:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>On January 4, Coulee Medical Center in Grand Coulee, Washington, posted this notice on its web site:      This notice is posted pursuant to federal Health Insurance Portability and Accountability Act of 1996 breach notification regulations found at 45 CFR Parts 160 and 164 and the Health Information Technology for Economic and Clinical Health Act Section 13402(e)(1).       On Nov. 5, 2013, it was discovered that a Coulee Medical Center employed physician had shared certain patient information with his wife. The information shared includes: patient account number (a number used solely by the hospital for purposes of identification), date of service, CPT code and description of health care services that the patient received at Coulee Medical Center. The information that was accessed may have, in some instances, also included the patients name.      Coulee Medical Center has taken measures to prevent further access to this information. Coulee Medical Center is committed to providing quality care and protecting patients  personal information, and apologizes for the inconvenience and concern this may be for affected patients.      The affected patients will receive direct mail correspondence from Coulee Medical Center. If you have questions about this incident or concerns about how it may impact you, please contact the Coulee Medical Center Privacy Officer at (509) 633-1753.  Although I havent yet found a copy of the actual notification letter mailed to patients, at least one recipient was not appreciative at all. And the doctor in question, who reportedly was not named in the letter sent to patients, publicly responded and indicated that he felt the medical center had unfairly tarnished his reputation:      In an interview, Dr. Andrew Castrodale said the HIPAA notice, made under the federal Health Insurance Portability and Accountability Act, implied the work had been about figuring out bonus pay, but was actually meant to devise a reliable tool for measuring and reporting the efficiency and productivity of health care providers at Coulee Medical Center.      Although it did not name Castrodale, the Notice of Patient Privacy Breach that arrived in mailboxes Jan. 3 and 4 said the doctor had improperly shared patient information with his wife.      Castrodale said his wife, Sherril, is an actuary, and was helping him build a standardized statistical tool that could be used by Coulee Medical Center.      None of this has to do with anyones medical history, he said.  I find it somewhat shocking that a physician would suggest that PHI that includes CPT codes, description of services, and in some cases, patients names, is not covered by HIPAA or that this was not a big deal  particularly in a small town where people might be recognized by unusual conditions or services.  In any event, unless the physician wishes to claim that PHI is not PHI, it seems hat the doctor shared patients PHI with his wife without authorization or consent of the patients. However noble his intentions, and however much he believes the medical center may have misrepresented his motivation, unless he had consent or a HIPAA waiver, I think its pretty clear he did violate HIPAAs Privacy Rule.  That said, was the hospitals notification accurate and appropriate? Did they have an obligation to explain to recipients that the disclosure to the doctors wife was reportedly so she could provide actuarial advice? Was this, as some of have suggested, a political dirty trick to discredit the doctor? The incident wound up contributing to the medical center hiring new legal counsel:      A majority of hospital district commissioners voted Thursday to immediately hire new legal counsel, then went into closed session with the new attorney.      Commissioner Jerry Kennedy said the boards reasons for changing attorneys had been compounded the week before when the hospital administration mailed a notice of a privacy breach, reportedly to thousands, saying a doctor had violated federal patient privacy rules.      One of the hopes that I had was that _ having legal counsel involved in that would help minimize reputational damage to the institution and to staff that might be potentially involved, Kennedy said. I didnt feel, as a lot of people didnt feel, that that happened.      The HIPAA notice, made under the Health Insurance Portability and Accountability Act, came at a time when the hospital administration has been at seemingly irreconcilable odds with its doctors, who have expressed no confidence in administration.  So how does a political controversy factor into a HIPAA breach notification? It shouldnt, of course, and if the medical center did not give patients the information they needed to assess their risk of harm because of any secondary or political agenda, then thats problematic.  Id love to see what HHS does with this one if they get all the facts.  But this is also a useful reminder of why covered entities should consult with lawyers and experts on breach response before making any statements or sending out any notification letters.</incident:Title>
+            <incident:External_ID source="VERIS">37E3CDE5-161F-4902-824E-E4C5D6293B79</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2013-11-05T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Coulee Medical Center</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-0192a8e4-aece-4372-8979-774435c9b07e" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.phiprivacy.net/required-hipaa-breach-notification-or-political-dirty-trick/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.grandcoulee.com/story/2014/01/08/opinion/appalled-at-hospitals-letter-on-breach/3467.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.grandcoulee.com/story/2014/01/15/news/doctor-building-a-tool-for-cmc-didnt-breach-privacy/3491.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.grandcoulee.com/story/2014/01/15/news/hospital-commission-forces-switch-in-attorneys/3488.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-0192a8e4-aece-4372-8979-774435c9b07e" timestamp="2014-12-22T16:24:48.835000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:24:48.835000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:24:48.835000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Opportunistic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

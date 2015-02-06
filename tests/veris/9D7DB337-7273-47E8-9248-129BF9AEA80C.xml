@@ -1,0 +1,117 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-e02e6768-859b-4b16-a98f-13eb4d423ba2" version="1.1.1" timestamp="2014-07-30T16:15:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-b5dac2ba-b6ee-4ddd-8614-fcc2a190cb2f" timestamp="2014-07-30T16:15:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>(7:30 a.m. EDT) -- Cunard has been forced to shut down its online booking system for guests after accidentally sending personal information of more than 1,200 passengers to an undisclosed number of people who are registered on the system.  Cruise Critic first became aware of the breach when member davyjones posted on the message boards that he'd received an e-mail with a spreadsheet attachment containing the contact information of 1,225 Cunard passengers. The information in the spreadsheet included booking reference numbers, names and email addresses.   Passport information was not sent out, a Cunard spokeswoman confirmed. However, it would theoretically be possible to access individuals' passport information using the booking reference numbers, names and email addresses.  Davyjones wrote: This information would allow me to see all the information such as address, contact number and passport information that you need to enter before your cruise.  Cunard spokeswoman Jackie Chase confirmed the mishap to Cruise Critic. "Cunard can confirm that an e-mail was sent in error to some guests containing details relating to other guests' bookings. We took swift action to close down the check-in system, Voyage Personalizer, until we are able to re-issue new secure log-in details to all affected guests. We are very sorry if this error has caused our guests any concern and we would like to reassure them that the issue has been dealt with and we are in the process of contacting relevant guests with new, secure log-in."   Cunard added in a statement: We are taking steps to ensure that this could not happen again.  Cruise Critic member bluemarble was among those who received notification that his booking number was being changed. He received an "Emergency Notification Urgent" e-mail stating, "Due to system issues, we will be issuing a new Booking Number for the booking referenced in this notification. Within 48 hours you will receive a new Booking Confirmation with a new Booking Number_ We apologize for any inconvenience this may cause."   The e-mail did not indicate whether or not bluemarble's contact information had been shared with other guests.   Though it is expected that cruise lines will keep their passengers' information safe, the lines' terms and conditions are written to protect them in circumstances such as this.   Cunard's legal and privacy policy states: "Cunard Line cannot guarantee the security of any information you transmit to us or from our site, and therefore you use our site at your own risk."   Cunard would not disclose how many people the email was sent to nor how the e-mail with the attachment was originally sent.  Passengers could be compensated as a result of the mishap, depending on circumstances. A line spokeswoman said: "We do not anticipate that any of our guests will suffer loss as a result of this error, but if they do they should contact us straightaway to make us aware of the circumstances."   Passport information can be used for identify theft, so anyone who believes their information was shared may want to contact the U.S. Bureau of Consular Affairs or the U.K.'s Information Commissioner's Office, which delas with data protection.  --by Dori Saltzman, News Editor</incident:Title>
+            <incident:External_ID source="VERIS">9D7DB337-7273-47E8-9248-129BF9AEA80C</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2012-06-23T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Cunard Line</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Desktop</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Credentials: 1225, Personal: 1225</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-3ffa7bb7-1b34-43fb-a163-a44a4f80132b" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.cruisecritic.co.uk/news/news.cfm?ID=4878</stixCommon:Reference>
+                    <stixCommon:Reference>http://boards.cruisecritic.com/showthread.php?t=1657908</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-3ffa7bb7-1b34-43fb-a163-a44a4f80132b" timestamp="2014-12-22T16:31:52.732000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:31:52.732000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:31:52.732000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

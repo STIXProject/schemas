@@ -1,0 +1,124 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-44605f2c-35ab-44dd-aaa4-f43dfbadd84a" version="1.1.1" timestamp="2014-10-24T21:22:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-f93d29cc-c278-49d6-9126-62087fa43641" timestamp="2014-10-24T21:22:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Former Pacific Grove police commander accused by attorney in ex-wife's identity theft case Ex-wife's attorney says John Nyunt 'was involved'  By JULIA REYNOLDS  Herald Staff Writer POSTED:   11/25/2013 08:35:14 PM PST0 COMMENTS| UPDATED:   11 MONTHS AGO  RELATED STORIES Jul 15: Wife of former Pacific Grove cop pleads guilty to ID theft, burglary Apr 24: Former Pacific Grove police Cmdr. Nyunt threatened to kill cops, investigators, prosecutors say Mar 3: Former Pacific Grove police commander arrested Dec 7: Amid investigations, ex-Pacific Grove policeman has quiet support Nov 27: Pacific Grove defends actions in Nyunt case Nov 22: Testimony sheds bad light on Pacific Grove police commander In a convoluted case fraught with ever stranger twists, more questions were raised Monday about a possible cover-up of crimes by a Pacific Grove police commander in the identity theft prosecution of his ex-wife.  After a three-day preliminary hearing, Kristin Nyunt, 39, was ordered by Judge Julie Culver to stand trial on 43 counts of theft, forgery, computer fraud and burglary, including downloading personal information of more than 25 potential victims from a law enforcement-sensitive database assigned for police use by her then-husband John Nyunt, a since retired commander in the Pacific Grove Police Department.  John Nyunt has not been charged in the case, although officials say the Monterey County District Attorney's office and the FBI are investigating him.  "John Nyunt and his family were among her many, many victims," said Juliet Peck, Nyunt's attorney. "He continues to be."  Adding to the confusion during court testimony this week and last is the fact that several of the case's victims were colleagues or relatives of John Nyunt, who has been on leave since Kristin's arrest in January. He retired from the force on Saturday.  According to testimony, Nyunt took charge of investigating his family's complaints for Pacific Grove police while his wife was a suspect.  What hasn't come out in court is why the commander chose to investigate cases involving his own family.  Judge Culver said that "whether or not another person was involved," Kristin Nyunt will have to stand trial.  Advertisement    The crimes were "very involved ... very sophisticated," Culver said.  Over multiple sustained objections of prosecutor Steve Somers, Kristin Nyunt's attorney Angela Johnson suggested John Nyunt looked the other way or failed to fully investigate his wife's alleged crimes, even after victims turned to him for help as a commander in the Pacific Grove Police Department.  "There's not only the possibility that he was involved," Johnson said. "He was involved."  There is ample evidence, she said, "that John Nyunt is part of this ... He took advantage of my client when she was not being treated for her bipolar condition ... He was part of it and he set her up."  In one instance, Nyunt's previous wife had contacted him after she discovered charges were made to credit cards in her name.  Seeing that items were ordered but not yet delivered to an empty rental house in Monterey, the victim allegedly asked Nyunt to stake out the house on the delivery date to see who picked up the package  a common police procedure in mail fraud cases.  But according to testimony, Nyunt never endeavored to see who came for the deliveries, nor did he ask his next-in-command to do so.  That subordinate, a Pacific Grove officer who has since left the area to work at another department, later became one of the scam's identity theft victims, according to testimony.  Johnson also suggested John Nyunt committed a security breach when he attended an FBI training in Quantico, Va., and failed to report to law enforcement he'd just discovered Kristin had apparently tapped into his cellphone.  According to testimony, district attorney investigator George Ramirez was the only law enforcement official to learn of the phone bugging, and that was after Ramirez asked John Nyunt about it.  As to whether John Nyunt could have been involved in crimes or cover-ups, prosecutor Somers said, "He could have ... It doesn't affect her culpability."  Somers said the case involved a "clear modus operandi" of running database searches for the names of people who somehow crossed Kristin's path. Then phony credit accounts were set up and merchandise ordered.  "A lot of the stuff ends up in Kristin Nyunt's home," he said. Among the items seized by police were several Victoria's Secret bras that were possibly ordered through the scam.  Forged checks were also traced to Kristin after she allegedly tried to cash them at a Carmel area grocery store.  Plenty of evidence tied her to the crimes, Somers said.  Kristin Nyunt is scheduled for arraignment on Dec. 10.  Julia Reynolds can be reached at 648-1187 or jreynolds@montereyherald.com.</incident:Title>
+            <incident:External_ID source="VERIS">EA243FE2-D42E-4F89-95A7-32C94BAB1997</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2013-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Pacific Grove Police Department</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 25</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-e3fdf5ea-6e7a-43ed-8b66-3da4eace7d53" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.montereyherald.com/localnews/ci_24601060/former-pacific-grove-police-commander-accused-by-attorney</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-e3fdf5ea-6e7a-43ed-8b66-3da4eace7d53" timestamp="2014-12-22T16:35:51.025000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Kristin Nyunt</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:35:51.025000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,125 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-6aff4119-bf3f-435f-85bf-99032b106a4f" version="1.1.1" timestamp="2014-09-12T19:17:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-0aee7f9e-c2a2-4ef5-a820-3261660f4537" timestamp="2014-09-12T19:17:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Alabama Man Sentenced to Prison for Million Dollar Scheme Using Prisoner Identities to Obtain False Tax Refunds  Harvey James was sentenced today to serve 110 months in prison for his role in a stolen identity refund fraud scheme, announced Assistant Attorney General Kathryn Keneally of the Justice Department's Tax Division and U.S. Attorney George L. Beck Jr. for the Middle District of Alabama.  James previously pleaded guilty to one count of mail fraud and one count of aggravated identity theft on Oct. 25, 2013.  James was also ordered to serve three years of supervised release and to pay $618,042 in restitution.   Between January 2010 and 2012, James and his sister, Jacqueline Slaton, obtained stolen identities from various individuals, including one person who had access to inmate information from the Alabama Department of Corrections.  James and others used those inmate names to file federal and state tax returns that claimed fraudulent refunds.  James directed some of the false refunds to prepaid debit cards, and directed others to be issued in the form of a Treasury check.  Vernon Harrison, a U.S. Postal Service employee, provided James with addresses from his postal route, which were used as mailing addresses for the fraudulent prepaid debit cards and state tax refund checks.  Harrison collected the debit cards and checks and provided them to another individual, who in turn gave them to James and Slaton.  In total, James filed over 1,000 federal and state income tax returns that claimed over $1 million in fraudulent tax refunds.  Slaton was sentenced to serve 70 months in jail, and Harrison was sentenced to serve 111 months in jail.   The case was investigated by Special Agents of the IRS - Criminal Investigation.  Trial Attorneys Jason H. Poole and Michael Boteler of the Justice Departments Tax Division and Assistant U.S. Attorney Todd Brown prosecuted the case.   Additional information about the Tax Division and its enforcement efforts may be found at the division website.</incident:Title>
+            <incident:External_ID source="VERIS">C312CE5A-7D8E-4739-BDAB-019617BC94F7</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2010-01-01T00:00:00</incident:Initial_Compromise>
+                <incident:Incident_Discovery precision="year">2012-01-01T00:00:00</incident:Incident_Discovery>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Alabama Department of Corrections</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>AL</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Documents</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 1000; Notes:Indicates 2000 federal and state income taxes returns filed.</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Total_Loss_Estimation>
+                    <incident:Actual_Total_Loss_Estimation iso_currency_code="USD" amount="2500000"/>
+                </incident:Total_Loss_Estimation>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-8c47bcb8-513e-4ee3-9309-cf1a7d66cba8" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.esecurityplanet.com/network-security/prison-medical-records-clerk-indicted-for-identity-theft.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.esecurityplanet.com/network-security/man-charged-with-2.5-million-fraud-scheme-using-prisoners-identities.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.justice.gov/opa/pr/2013/April/13-tax-482.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.justice.gov/opa/pr/2014/April/14-tax-453.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.justice.gov/opa/pr/2013/October/13-tax-1164.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.justice.gov/opa/pr/2012/October/12-tax-1278.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-8c47bcb8-513e-4ee3-9309-cf1a7d66cba8" timestamp="2014-12-22T16:33:38.679000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:33:38.679000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>System admin</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:38.679000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

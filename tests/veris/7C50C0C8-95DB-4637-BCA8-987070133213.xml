@@ -1,0 +1,116 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-c6d1498a-3948-4061-9a15-572cc1364e1c" version="1.1.1" timestamp="2014-07-24T00:24:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-4dc8784e-22d8-4f77-916b-41f4dabcfdf2" timestamp="2014-07-24T00:24:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title> bunch of folks have sent in variations on the following story involving Catherine Manizone, who had a nose job done a few years ago by plastic surgeon Grigoriy Mashkevich, but who is now suing him for $23 million. You might think that the lawsuit is about the nose job gone wrong. But, no, her complaint is that Dr. Mashkevich put "before" and "after" pictures he took of Manizone online as an example of his work. $23 million? New York does have a relatively strong "publicity rights" law -- which are state based laws that are being increasingly expanded and abused these days. However, at their core, the idea is that people wouldn't be put in advertisements or seen as endorsing a product or service without their permission. So, perhaps there's a small publicity rights claim here, though it would be surprising if Dr. Mashkevich never actually had patients sign a release form for the use of such photos (Update: there is evidence that she signed a form saying the photos were only for her confidential files, so it appears that he did fail to get the proper permission). Of course, even if he failed in that basic step, the idea that having these photos posted online should lead to a $23 million award is just insane.   Equally as ridiculous is the idea that finding these pictures online caused such horrible harm to Manizone and her reputation. In the lawsuit, she explains the "harm" the photos have caused: Plaintiff has been, is and will continue to be greatly distressed and humiliated, has been, is and will continue to be exposed to public ridicule and contempt; and the plaintiff has been, is and will continue to be greatly injured in her reputation and has been, is and will continue to be otherwise greatly injured.   As Plaintiff's photographs are still available for viewing on the World Wide Web, Plaintiff's damages continue to accrue to date and will continue for an undeterminable period of time. Of course, there are a few issues with this. First, the surgery happened in January of 2011 "to improve her appearance, self esteem and confidence" but she didn't notice the photos online until February 2013. If she didn't even know the photos were online for two years how could she possibly have been so greatly distressed by the photos online? If they were really causing her to be "exposed to public ridicule and contempt" then, um, wouldn't she have examples of that actually happening?   Second, I'm still trying to figure out why she would have been subject to "public ridicule and contempt" merely for getting a nose job. I mean, I guess it's possible, but wouldn't people who already knew her simply notice the nose job? And would people who didn't know her really care at all?   Finally, and most importantly, it seems likely that filing a highly questionable $23 million lawsuit against your plastic surgeon is a hell of a lot more likely to create public ridicule and contempt than any before and after photos of a nose job. So, will she be suing her lawyer next for being "greatly distressed and humiliated" while being "exposed to public ridicule and contempt" for filing this lawsuit? And, of course, if she was concerned that people would know she got a nose job because of the photos, which even she didn't realize existed for two years, shouldn't someone have pointed out to her that filing a public lawsuit like this would be a hell of a lot more likely to draw attention to the fact that she got a nose job?   Again, if it really is true that he used her images without signed permission, there may be a minor publicity rights issue, but the claims about public ridicule and contempt, along with the idea that the photos created massive damages, just don't make any sense. Combined with the insane request for $23 million, the whole thing really feels a lot more like a money grab than a serious complaint.</incident:Title>
+            <incident:External_ID source="VERIS">7C50C0C8-95DB-4637-BCA8-987070133213</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2013-02-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Grigoriy Mashkevich, M.D.</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NY</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Documents</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 2</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-4c1acbcc-3b78-4810-9731-02ab29ccfe14" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>https://www.techdirt.com/articles/20130627/18004323644/woman-sues-plastic-surgeon-23-million-because-he-put-beforeafter-pictures-her-web.shtml</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-4c1acbcc-3b78-4810-9731-02ab29ccfe14" timestamp="2014-12-22T16:30:21.776000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:30:21.776000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>End-user</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:30:21.776000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

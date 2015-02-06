@@ -1,0 +1,131 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-2d58227e-425a-42c7-a5a3-bb246a01757b" version="1.1.1" timestamp="2014-08-24T04:24:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-ea559a1d-d49b-4afb-a78e-6eb56cd270a0" timestamp="2014-08-24T04:24:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Credit card thieves are using a type of "digital pickpocketing" technology to steal credit card information from unsuspecting victims.  Technology has emerged in recent years that enables thieves to intercept credits card information with a simple swipe during a purchase. That information can be cloned to another card and used even as the original card remains securely inside its owner's purse or wallet.  Earlier this month, local authorities reported that more than 50 people, the majority from El Paso County, were victims of credit card skimming fraud. A multi-agency investigation was launched in April after members of ENT Federal Credit Union reported unauthorized purchases after visiting a 7-Eleven store in Monument.  The details of the technology used in the fraud were outlined in arrest warrants for three of the suspects identified in the case, including Geider Morales, who was arrested on suspicion of identity theft, money laundering, forgery, computer crimes and theft during in SWAT operation on July 1, authorities said.  In addition to the arrest, three skimming devices were recovered Colorado Springs police Detective Joshua Bliss in an email.  Police located one of the devices at a 7-Eleven at 3502 N. Academy Blvd.in April. Detectives and fraud investigators suspected another skimmer had been installed at the Shell gas station at 7805 N. Academy Blvd., although they didn't find anything.  Another device was found at a 7-Eleven on 624 Highway 105 in Monument, according to court documents.  Authorities tracked the fraudulent activities as far south as Pueblo and as far north as Denver. Suspects caught on camera used the rewritten or "farmed" cards at Chili's, Home Depot, and Walgreens.  Authorities reported that the theft amounted to more than $100,000.  The technology behind the fraud involves skimming devices that are covertly attached to a credit card reader, often inside of a gas pump.  The devices are designed to intercept credit card data as it's swiped through a reader. The information is stolen and loaded onto a memory chip capable of holding information from thousands of cards.  "Skimmers are found anywhere you can use your credit card," Bliss said.  Not only can skimmers be put anywhere, Bliss said that they are virtually undetectable. They majority of them are purchased, he said, but they can also be made by the thieves.  "You have to be aware of the internal setup of the device and know what you are looking for (to recognize it)," he said. "In other words, they are not too obvious."  That means the devices can often be installed and removed without ever being detected. And once the thieves have the information they want, they can rewrite it onto a blank or old credit card  It makes the victims of credit card skimming all the more unsuspecting.  In one victim's case, three $1,500 Home Depot cards were purchased with a card that had also been used to buy gas at the Shell station on North Academy Boulevard, according to court documents.  This type of crime is fairly new to Colorado Springs police. Since 2008, the police department has recovered two other skimmers, though neither was active when it was found.  "Unfortunately, by the time that we are alerted to a potential compromised purchase point, the skimmer has already been removed," Bliss said. "They were not presently in use, but had been used less than a day before we seized them."  Because of the complex nature of the current investigation and the capabilities of the devices, Bliss said there are likely many more skimming victims. And definitely more suspects.  There are two ways he says people can protecting themselves from this type of fraud.  "Regarding the skimmers placed on gas pumps, you can pay inside the store, essentially bypassing the possible point of compromise, which is usually located inside the gas pump," he said. "The best piece of advice is to check your account statements frequently for anomalies." </incident:Title>
+            <incident:External_ID source="VERIS">E52F20CC-0C4E-4CB3-AE34-18FEC59BA3E6</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2014-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">7-Eleven</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CO</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>ATM</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Bank</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Hardware tampering</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-686e81f9-a35b-45b0-a158-3f877bba573a" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://gazette.com/thieves-use-digital-pickpocketing-to-skim-credit-card-data-from-colorado-springs-customers/article/1534079</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-686e81f9-a35b-45b0-a158-3f877bba573a" timestamp="2014-12-22T16:35:34.743000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Lewys Martin</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:34.743000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:34.743000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

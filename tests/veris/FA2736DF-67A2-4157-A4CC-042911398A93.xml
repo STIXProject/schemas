@@ -1,0 +1,135 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-ae56e829-77ce-417a-af24-0fa7ef6ed34c" version="1.1.1" timestamp="2014-08-24T04:54:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-966fb288-fa72-48d0-ae78-0d3c0a19b931" timestamp="2014-08-24T04:54:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>A whitehat hacker from the Baltimore suburbs went too far in his effort to drive home a point about a security vulnerability he reported to a client. Now hes unemployed and telling all on reddit.  David Helkowski was working for Canton Group, a Baltimore-based software consulting firm on a project for the University of Maryland (UMD), when he claims he found malware on the universitys servers that could be used to gain access to personal data of students and faculty. But he says his employer and the university failed to take action on the report, and the vulnerability remained in place even after a data breach exposed more than 300,000 students and former students Social Security numbers.  As Helkowski said to a co-worker in Steam chat, I got tired of being ignored, so I forced their hand. He penetrated the universitys network from home, working over multiple VPNs, and downloaded the personal data of members of the universitys security task force. He then posted the data to Pastebin and e-mailed the members of the task force anonymously on March 15.  One day later, the FBI obtained a search warrant for Helkowskis home. While no charges have yet been filed against him, Helkowskis employment with Canton Group has ended. And yesterday, he took to reddit to tell everyone about it in a post entitled IamA Hacker who was Raided by the FBI and Secret Service AMAA! To prove his identity, he even posted a redacted copy of the search warrant he was served.  How did the FBI track him down so fast? It turns out that Helkowski told just about everyone (including co-workers) about what he was doing. And since the vulnerability he used was the same one Canton Group had reported to UMD on February 27, it didnt take a lot of sleuthing to follow a trail that pointed straight back to Helkowskis home in the Baltimore suburb of Parkville.  On the night of March 16, Helkowski and his wife arrived home to find the raid in progress.  There were 12 or so people. I wasn't home when they busted in my door. They actually busted in the side door. My dog was home. He ran out the doggie door then ran out the gate that they had opened. They let my dog run away basically.  I was driving up to my house, returning from dinner, and all the lights in my house were on, many cars parked out front, and cars in my driveway. I saw people walking around out front. I wondered why there was a party at my house.  As I slowed down to take a look, they yelled at me, pointed a gun (I saw one at least), and ordered me to stop the car and put my hands out the window. I did so. They then told me to use one hand to shut off the car and hold the key out the window as well. I did that. They took the key, and then demanded I get out of the car.  They then [put my hands] against the car and frisked me. They immediately took my cellphone from me, and then led me inside. Helkowski asked permission to call for his father to retrieve his dog while agents detained him and his wife. An agent called Helkowskis father, saying he was a friend and had noticed the dog was loose, Helkowski said. His father came to the scene to retrieve the dogand was then detained by federal agents. My dad of course had to accuse me in front of the FBI Are you gonna learn your lesson now and not do stuff like this? or something like that... in front of the FBI. Geez dad. Thanks.  Helkowski said that he cooperated fully with the agents. During the RAID I provided my 20+ character system encryption password, my Keepass password, the location of my keyfiles, and a full description of everything. I basically 'confessed' everything to the FBI already. My stance is that I did nothing 'morally wrong.' My attempt the entire time has been to help the university improve their security.  In a March 20 staff memo published by the University of Maryland from Ann G. Wiley, UMDs interim vice president and chief information officer, Wiley wrote, The FBI has informed the University that the intrusion resulted in no public release of any information and no damage to the institution, except for the release of personal data of one senior University official, who has been notified. We are unable to comment further on the intrusion at this time."</incident:Title>
+            <incident:External_ID source="VERIS">FA2736DF-67A2-4157-A4CC-042911398A93</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2014-02-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">University of Maryland</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>MD</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 300000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-914fd27e-363b-472c-b8f0-d24ef0fa3624" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Agent Disclosure</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://umd.edu/datasecurity/</stixCommon:Reference>
+                    <stixCommon:Reference>http://arstechnica.com/tech-policy/2014/04/whitehat-hacker-goes-too-far-gets-raided-by-fbi-tells-all/</stixCommon:Reference>
+                    <stixCommon:Reference>http://arstechnica.com/information-technology/2014/05/why-he-hacked-university-of-maryland-contractor-turned-hacker-tells-all/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.baltimoresun.com/news/maryland/politics/blog/bs-md-university-cyber-20140723,0,623215.story</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-914fd27e-363b-472c-b8f0-d24ef0fa3624" timestamp="2014-12-22T16:36:33.903000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Canton Group</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:36:33.903000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Motivation timestamp="2014-12-22T16:36:33.903000+00:00">
+                <stixCommon:Value>Grudge</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

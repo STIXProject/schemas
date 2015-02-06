@@ -1,0 +1,128 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-b4eb4210-1381-4e1c-a0b2-fc493e18f900" version="1.1.1" timestamp="2014-09-03T13:29:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-bf15fef4-db08-4c30-8490-66f5ef3536b8" timestamp="2014-09-03T13:29:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>First since WWII: Germany may start spying back on US after double-agent scandal  Germany may scrap its decades-old policy of not spying on key NATO allies in response to the latest spy scandal, which exposed a German intelligence officer as a double-agent leaking secret documents to the US.  READ: Officials admit US had recruited German spy  After the defeat of Nazis in World War II, the new authorities of West Germany adopted a policy of turning a blind eye to the intelligence activities of some of the victors, namely the US, Britain and France. However, Chancellor Angela Merkels government may change that situation, Interior Minister Thomas de Maizire told Bild newspaper.  He said Germany urgently needs to acquire 360-degree view on operations conducted on its soil, which means it must conduct surveillance of all foreign intelligence agents working in the country.  The newspaper says it has obtained a document detailing concrete countermeasures it plans to implement to that regard.  The possible change in Germanys stance follows the exposure of a German intelligence officer, who worked for the Federal Intelligence Service (BND), as an American double agent. The 31-year-old reportedly contacted the US embassy and offered cooperation, after which he leaked at least 218 secret documents in exchange for cash payments amounting more than $34,000.  Ironically, one of the prime interests for the US that the double agent was meant to meet was Berlins investigation into the alleged spying by the US National Security Agency on Chancellor Merkel and other German citizens.  The scandal reignited the outrage in Germany over American surveillance, with some lawmakers calling on expelling the handlers of the double agent from the country. The government so far refrained from commenting on the ongoing counter-espionage investigation, but Merkel said that if the allegations are proven to be true, it would be a serious case.  German Foreign Minister Frank-Walter Steinmeier said the relations between Germany and the US would change if the allegations are confirmed.  Should the suspicions be confirmed that American intelligence agencies were involved, then thats also a political matter where one cant just go back to the daily routine, his office cited him as saying during a visit to Mongolia.  German President Joachim Gauck said if the allegations were to turn out to be true, then it truly needs to be said: enough is enough.  Merkels government is facing criticism over the restrained response it demonstrated after the revelation of NSA snooping on Germany, and the new scandal gives critics more ammunition.  To respond to these allegations with the motto 'now we're going to spy back on you' is just absurd, and a sign of the government's helplessness, commented Konstantin von Notz, a member of the parliamentary investigation committee into the NSA activity. Either these surveillance activities are illegal and we do something to curb them, or not.  The revelation of bugging of Merkels phone in publications based on leaks by NSA whistleblower Edward Snowden triggered a heated debate in Germany, which is cautious of government surveillance due to a negative historic record the country had. The German government wanted the US to sign a no-spy deal to address the public concern, which Washington rejected.  The no-spy deals failure resurfaced this week after the new spy scandal. Former US Secretary of State Hillary Clinton told Der Spiegel magazine that Washington would never agree to one.  The US will never sign a no-spy agreement with any other countries, not with you, not with Britain or Canada, Clinton was quoted as saying. But that doesnt mean that the two countries and their intelligence agencies shouldnt clarify whats appropriate and what isnt.  The comment came shortly after Defense Minister, Ursula von der Leyen, made a personal appeal to Clinton, who was visiting Berlin.  "For God's sake, take a hard line with your secret services," the minister said. "Good friends don't spy on one another."</incident:Title>
+            <incident:External_ID source="VERIS">DB549F07-9FE3-43EC-BFD6-D02D78D1E90C</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2012-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">German Federal Intelligence Service</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>DE</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Documents</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Classified: 218</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-cab5bb20-05bf-47ee-abd0-e9e8189b5eb1" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://rt.com/news/171180-germany-spy-scandal-policy/</stixCommon:Reference>
+                    <stixCommon:Reference>http://rt.com/usa/171104-us-admits-recruiting-german-spy/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-cab5bb20-05bf-47ee-abd0-e9e8189b5eb1" timestamp="2014-12-22T16:35:19.128000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:19.128000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">State Actor / Agency</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:19.128000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

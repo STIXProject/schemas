@@ -1,0 +1,120 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-6556510c-6d75-4700-b495-db2d7554b111" version="1.1.1" timestamp="2014-09-11T21:54:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-909897f4-04fe-4051-94b9-23d12d8e630e" timestamp="2014-09-11T21:54:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Tesco Corp. sued the former vice president of its North American business unit in Texas state court Tuesday, accusing the executive of violating his employment agreement and stealing trade secrets before going to work for a Nabors Industries Ltd. unit.  The oilfield services company said that not long after Randall Nemeth left Tesco last year, he breached his employment separation agreement by taking a job with Canrig Drilling Technology Ltd., where he is using Tescos confidential pricing and business data to give his new employer an unfair competitive edge.  Nemeth has engaged, and will continue to engage in misappropriation of the trade secrets in that his job requires him to use and/or disclose the trade secrets without either the express or implied consent of Tesco, the suit said. Nemeth knew and understood that he had no authority to disclose or to utilize the trade secrets of Tesco, but upon information and belief, did so anyway.  Tesco, which describes itself as a leading manufacturer of top drive drilling rigs and related products, said it hired Nemeth in 2009 to head its North American business unit.  As the chief executive in charge of a division that accounts for 40 percent of Tescos annual revenue, Nemeth had access to all of the companys confidential information, including pricing data, customer information and business plans, according to the suit.  Tesco says that when it hired Nemeth, he signed a confidentiality agreement that prohibits him from disclosing the companys trade secrets. And when Nemeth decided to leave the company in the fall of 2013, he agreed to a one-year non-compete in exchange for $100,000, according to Tesco.  But the company says it recently discovered that Nemeth violated both contracts when he went to work for Canrig, a direct competitor in the oilfield services industry. Canrig is not named as a defendant in the lawsuit.  Tesco does not specify in the suit exactly how Nemeth has breached his confidentiality agreement, but said that it would be impossible for Nemeth to perform the services required of him at Canrig without disclosing Tescos proprietary information.  The company seems to be suggesting that, among other things, Nemeth is using his former employers pricing data and other sensitive information to help Canrig develop competitive project bids.  And Tesco said that its concerns are well founded, given that it learned during an internal investigation that Nemeth had forensically wiped the hard drive on his work computer.  This activity is more than a simple violation of company policy, the suit said. It constitutes a taking or misappropriation of Tescos property and an indictable felony offense. At a minimum, it indicates a strong desire that Tesco be kept in the dark about Nemeths activities.  Nemeth could not immediately be reached for comment Tuesday.  The suit alleges breach of contract, breach of fiduciary duty and violations of the Texas Trade Secrets Act. Tesco is seeking actual damages, punitive damages and injunctive relief.  Tesco is represented by Thomas M. Fulkerson and Ethan G. Gibson of Fulkerson Lotz LLP.  Counsel information for Nemeth was not immediately available.  The case is Tesco Corp. v. Nemeth, case number 2014-49976, in the 269th Judicial District Court of Harris County, Texas. </incident:Title>
+            <incident:External_ID source="VERIS">B262B582-C7EC-4C02-AB1B-215B31F99058</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2014-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Tesco Corp</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>TX</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Secrets</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-c793915f-afd9-43ae-9575-b0e551de9e55" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.law360.com/articles/573216/tesco-says-former-vp-took-trade-secrets-to-nabors-unit</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-c793915f-afd9-43ae-9575-b0e551de9e55" timestamp="2014-12-22T16:32:48.155000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:32:48.155000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:32:48.155000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Executive</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:32:48.155000+00:00">
+                <stixCommon:Value>Espionage</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

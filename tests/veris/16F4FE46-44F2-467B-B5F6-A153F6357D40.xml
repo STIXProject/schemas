@@ -1,0 +1,128 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-6e759200-5cfc-4b8e-aa9e-b091c5c3ed10" version="1.1.1" timestamp="2014-07-23T00:12:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-a63c5442-c884-4915-bfd2-2d55fdc028a6" timestamp="2014-07-23T00:12:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Burrows v. Purchasing Power, 12-cv-22800-UU (S.D. Fla.)  The most recent example is a proposed settlement in a class action lawsuit against Winn-Dixie and one of its service providers arising from a breach of personally identifiable information of Winn-Dixie grocery store employees.  The employees personally identifiable information was allegedly compromised when an employee of a company that provided an employee benefit program to Winn-Dixie employees misused his access to the PII and filed fraudulent tax returns with it.  Approximately 43,500 employees filed a class action lawsuit in the Southern District of Florida against Winn-Dixie and its employee benefits service provider.  The lawsuit includes counts of negligence, violation of Floridas Deceptive and Unfair Trade Practice statute, and invasion of privacy.  Plaintiffs alleged that Defendants failed to adequately protect and secure the plaintiffs personally identifiable information, and that the defendants failed to provide the plaintiffs with prompt and sufficient notice of the breach.  The defendants attempts to defeat the plaintiffs lawsuit on the pleadings failed.  Winn-Dixie was subsequently voluntarily dismissed from the lawsuit and the case proceeded against the service provider, which ultimately entered into a proposed settlement with the plaintiffs, agreeing to pay approximately $430,000 ($225,000 towards a settlement fund, $200,000 in attorneys fees and costs, and a $3,500 incentive aware to the named plaintiff).  The settlement states that it was entered into for the purpose of avoiding the burden, expense, risk, and uncertainty of continuing to litigate the Action, . . . and without any admission of any liability or wrongdoing whatsoever.  The settlement requires the service provider to maintain rigorous security safeguards to minimize the risk of a similar incident in the future.  The settlement fund will be divided into four groups:  (1) a tax refund fraud fund (class members who show they were victims of tax refund fraud can be compensated for a portion of lost interest); (2) a tax preparer loss fund (class members can be compensated for fees paid to tax preparers for notifying the IRS of a tax fraud claim or assisting in resolving issues arising from the tax refund fraud, not to exceed $100); (3) a credit card fraud fund (class members who show they were victims of identity theft other than tax refund fraud that resulted in fraudulent credit card charges that the credit card company did not waive, up to $500); and, (4) a credit monitoring fraud (class members who receive compensation in any of the previous three groups may receive credit monitoring services for one year).  To prove they were victims of fraud, plaintiffs must prepare a statement under penalty of perjury regarding the facts and circumstances of their stolen identity.  The settlement was preliminarily approved by the court on April 12, 2013, and a fairness hearing is scheduled for October 4, 2013.  The amount of money being paid to plaintiffs and their lawyers in this case should give corporate counsel monitoring these lawsuits pause for concern.  The District Courts order allowing the case to proceed beyond the pleadings phase will likely be used as an instruction manual for plaintiffs in future data breach cases. </incident:Title>
+            <incident:External_ID source="VERIS">16F4FE46-44F2-467B-B5F6-A153F6357D40</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2009-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Winn-Dixie</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>FL</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 43500</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-d8ecde0f-5e5c-41cd-bf93-81ac6dedbc14" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.datasecuritylawjournal.com/2013/04/17/data-breach-lawsuits-revisiting-the-risks/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.databreaches.net/wp-content/uploads/burrows_v_purchasingpower.pdf</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-d8ecde0f-5e5c-41cd-bf93-81ac6dedbc14" timestamp="2014-12-22T16:22:50.217000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Purchasing Power, LLC</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:22:50.217000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Motivation timestamp="2014-12-22T16:22:50.217000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

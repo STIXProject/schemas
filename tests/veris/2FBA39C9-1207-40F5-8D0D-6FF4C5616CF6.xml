@@ -1,0 +1,116 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-81f2f056-1cd2-4b1e-8a02-6eda5ad4ca66" version="1.1.1" timestamp="2014-07-30T15:53:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-c34d0646-e10a-4828-9be8-02f84c7c4af2" timestamp="2014-12-22T16:24:15.519000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-43d8a488-56e2-4a64-a66b-3378b7989e85" timestamp="2014-07-30T15:53:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Canadian authorities are investigating whether a hacker or healthcare insider used a physician's credentials to gain unauthorized access to a British Columbia prescription information network, accessing information on about 1,600 patients.  In a statement about the breach issued on July 11, the British Columbia Ministry of Health says that staff of its PharmaNet network conducted a forensic audit after noticing suspicious activity on the system. The audit discovered that between March 9 and June 19, an unknown, unauthorized person used a doctor's PharmaNet account without the physician's knowledge to access the personal information of about 1,600 patients.  The information inappropriately accessed includes patients' names, dates of birth, addresses, telephone numbers, and personal health numbers - BC Services Card or Care Card numbers. For 34 individuals, the unauthorized access also involved looking at medication histories.  Doctors throughout British Columbia use the PharmaNet network to check the drug histories of patients, enter prescription information and check for potential drug interactions before writing prescriptions, a spokesman in the B.C. ministry of health tells Information Security Media Group. While PharmaNet links all B.C. pharmacies to a central set of data systems, it is not used by healthcare providers to transmit and process prescriptions electronically to pharmacies, which ensures that the unauthorized individual cannot use the system to order or obtain fraudulent prescriptions, he says. Prescriptions are written out separately for patients to present to pharmacists, who enter the dispensing information into the PharmaNet system, he explains.  "It's still being determined whether the person who accessed the system worked for the doctor or is someone external," the spokesman tells ISMG.  Every prescription dispensed in British Columbia is entered into PharmaNet. In 2007, more than 47 million prescriptions were processed on PharmaNet and the system flagged more than 24 million potential drug interactions, says the ministry in its statement.  Investigation Continues The Ministry of Health and the British Columbia government's Office of the Chief Information Officer are investigating the incident, but authorities do not expect the number of breach victims to rise, the spokesman says. The incident was reported to the government's Information Privacy Commissioner, and the Ministry of Health is contacting all affected individuals by letter, offering free credit protection services.  "While this privacy breach did not include banking information, enough information was accessed to be used for identity theft," the ministry's statement says. "The ministry encourages affected people to keep a close eye on their bank accounts, credit cards, and online identity and services."  Additionally, those affected are being encouraged to contact their local pharmacy to put a "keyword" on their PharmaNet profile to notify pharmacists. "They can also request, through Health Insurance BC, a Medical Services Plan alert, which prompts health professionals to ask for a second piece of identification when a person uses his or her personal health number."  Unauthorized access incidents underscore the importance of active security monitoring and regular security assessments, says Dan Berger, CEO of Redspin, a data security services firm. "Without sophisticated security monitoring in place, it can be very difficult to detect an attack" and other intrusive breaches, he says.</incident:Title>
+            <incident:External_ID source="VERIS">2FBA39C9-1207-40F5-8D0D-6FF4C5616CF6</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-03-09T00:00:00</incident:Initial_Compromise>
+                <incident:Incident_Discovery precision="month">2014-07-27T00:00:00</incident:Incident_Discovery>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">British Columbia Ministry of Health</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 34, Personal: 1600</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-c34d0646-e10a-4828-9be8-02f84c7c4af2" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Log Review</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.govinfosecurity.com/prescription-information-network-breached-a-7057</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.phiprivacy.net/privacy-breach-in-british-columbias-prescription-system/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.britishcolumbia.name/news/pharmanet-privacy-breach-victims-to-be-offered-protection/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>

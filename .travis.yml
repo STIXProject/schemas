@@ -1,0 +1,10 @@
+language: python
+
+install:
+  - sudo apt-get update
+  - sudo apt-get install libxml2-dev libxslt-dev zlib1g-dev
+  - pip install -q stix
+  - pip install -q stix-validator
+
+script: python tests/runner.py --test-case-repository tests/issues --test-case-repository tests/veris tests/manifest.cfg
+

@@ -1,0 +1,118 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-fa6869e6-74de-42b8-8353-5d6dfe5d2822" version="1.1.1" timestamp="2014-11-13T15:46:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-6ff23a00-c4e8-4088-8ae8-3734de97a6aa" timestamp="2014-11-13T15:46:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>NC: Ex-Alamance County employee pleads guilty in identity theft case  Michael D. Abernathy reports:  A former Alamance County Department of Social Services employee pleaded guilty in federal court this week to using personal information of child abuse victims in a tax fraud scheme.  Rakecia Matrese Brame was indicted Oct. 28 on 33 total counts of identity theft, and wire fraud, aiding in tax fraud, according to federal court documents. She is accused of selling the personal identification of child abuse and neglect victims to Nothing But Taxes Inc. of Greensboro so clients there could claim the child abuse victims as dependents on tax returns.  Read more on News &amp; Record.  The U.S. Attorneys Office for the Middle District of North Carolina issued a press release yesterday:  Rakecia Matrese Brame, formerly of Greensboro, N.C., and now of Grand Prairie, Texas, pleaded guilty on Jan. 10, 2014, to identity theft, tax, and fraud charges, the Department of Justice and the Internal Revenue Service (IRS) announced today. Brame pleaded guilty to one count of wire fraud, one count of aggravated identity theft and one count of aiding and assisting the preparation of a false tax return. U.S. District Judge Thomas Schroeder for the Middle District of North Carolina set a sentencing hearing for May 16, 2014.  According to court documents, from approximately February 2009 to February 2011, Brame was employed as a social worker at the Alamance County Department of Social Services (Alamance DSS) in North Carolina. Brame was responsible for investigating claims of abuse and neglect against minors and disabled adults. As part of her official duties, Brame had authorized access to extensive identifying information  including names, dates of birth and Social Security numbers  of Alamance DSS clients, including abuse victims and recipients of various state benefits, and of witnesses in official investigations.  According to court documents, Brame used her access to identifying information contained in Alamance DSS records to illegally obtain the personal identifying information of Alamance DSS clients and others. Pursuant to an ongoing agreement, Brame sold that personal identifying information to Jennifer Bullock and Saichelle McNeill, two return preparers at the Greensboro branch of Nothing But Taxes, a tax return preparation firm. Bullock and McNeill used the stolen identities to claim false dependents on tax returns they prepared for Nothing But Taxes clients, thereby claiming inflated tax refunds on the clients behalf. Bullock and McNeill paid Brame $200 to $300 per identity they purchased, and Brame knowingly sold these identities to Bullock and McNeill to be used for tax fraud.  Court documents state that, as a social worker, Brame owed a legal and professional duty to keep the information she learned about victims and witnesses confidential. She had no authority to sell such information or otherwise use it for personal gain, and doing so violated the professional standards applicable to social workers, as well as federal and state law and Alamance DSS policy.  According to court documents, one victim of the identity theft scheme was referred to Alamance DSS for investigation on or about Feb. 15, 2010, and assigned to Brame. A few days later, Brame sold this victims identity to Bullock for use as a false dependent on a tax return. On or about March 3, 2010, Bullock prepared a 2009 tax return for a Nothing But Taxes client which falsely claimed that the victim was a dependent. As a result of the falsification, the tax return claimed a higher tax refund than the Nothing But Taxes client was actually entitled to receive. Approximately one year later, Brame sold the victims identity and that of her sister to McNeill, who then prepared 2010 tax returns for two different Nothing But Taxes clients that falsely claimed both victims as dependents.  Brame faces a statutory maximum of 20 years in prison on the wire fraud charge and a maximum of three years in prison for the charge of aiding and assisting in the preparation of a false tax return. The aggravated identity theft charge carries a mandatory two year sentence, which must run consecutively to any sentence on the other charges.  The related case against McNeill resulted in a guilty plea to federal criminal charges of wire fraud, aggravated identity theft and aiding and assisting in the preparation of false tax returns. McNeill was sentenced to serve 27 months in federal prison on Aug. 20, 2013. Brames co-defendant Bullock pleaded guilty to wire fraud, aggravated identity theft and tax charges on Dec. 4, 2013, and she is currently awaiting sentencing.  This case and related Nothing But Taxes cases were investigated by agents of the IRS -Criminal Investigation and were prosecuted by Assistant U.S. Attorney Frank Chut and Trial Attorney Jonathan Marx of the Tax Division. The prosecution team wishes to thank the Alamance DSS for their assistance and cooperation in the investigation.</incident:Title>
+            <incident:External_ID source="VERIS">021E91A0-7159-4675-80CF-E618C2E498FF</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2009-02-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Alamance County Department of Social Services</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NC</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 30</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-0c67f996-5ed4-4d21-a508-05645cb88b8c" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.databreaches.net/nc-ex-alamance-county-employee-pleads-guilty-in-identity-theft-case/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.news-record.com/news/article_7ffdbba0-7d1e-11e3-a75c-001a4bcf6878.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://archive.digtriad.com/news/local/article/312832/57/Former-Greensboro-Social-Worker-Pleads-Guilty-To-Identity-Theft-Tax-Crimes-</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-0c67f996-5ed4-4d21-a508-05645cb88b8c" timestamp="2014-12-22T16:21:58.021000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:21:58.021000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Other</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:21:58.021000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

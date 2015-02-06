@@ -1,0 +1,167 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-e208a6e9-87f8-4316-adab-38410ef0dd54" version="1.1.1" timestamp="2014-08-24T04:32:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-4f4104e7-efa9-46b0-96d4-6cfe01e50887" timestamp="2014-12-22T16:36:42.566000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-c87058ed-6cb9-4efd-a26b-a06c9f98f3be" timestamp="2014-08-24T04:32:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>A group of alleged hackers has been charged with breaking into the computer systems of the U.S Army, Microsoft, and several other firms to steal pre-release copies of popular video games like Call of Duty, simulation software for Apache attack helicopter pilots, and confidential data that was used to create counterfeit versions of the Xbox gaming system, The Smoking Gun has learned.  Three men have been named in a sealed federal indictment charging them each with 15 felony counts, including conspiracy, fraud, and computer hacking, according to a copy of the 54-page document obtained by TSG.  Two other alleged hackers--a North Carolina resident and an Australian teenager--have been identified as unindicted coconspirators in the scheme, which began in early-2011 and continued for more than two years.  A federal grand jury last July returned a sealed indictment against Nathan Leroux, 19; Sanadodeh Nesheiwat, 28; and David Pokora, a Canadian resident. FBI agents last week arrested Leroux at his Wisconsin home and collared Nesheiwat (seen above) at his New Jersey residence. Pokoras status could not be determined.  It is unclear why FBI agents served arrest warrants eight months after the indictment was returned by a grand jury empaneled in U.S. District Court in Wilmington, Delaware.  According to the indictment, the trio and their coconspirators identified vulnerabilities and network weak points to illegally access computer systems at Microsoft and video game developers Valve Corporation, Activision Blizzard, Zombie Studios, and Epic Games. The hacks allowed the defendants to illegally obtain copies of various games that, at the time, were still in development, like Gears of War 3 and Call of Duty: Modern Warfare 3.  The Zombie Studios intrusion, prosecutors allege, allowed the hackers to then gain access to a U.S. Army server, from which Apache Helicopter Pilot simulation software entitled AH-64D Apache Simulator was taken. The Army had contracted with the Seattle-based Zombie to design the simulator software.  Investigators allege that the Microsoft hack resulted in the theft of Log-In Credentials, Trade Secrets, and Intellectual Property relating to its Xbox gaming system. At the time of the intrusions--which spanned 2011 and 2012--Microsoft was developing its Xbox One system, which was officially released in November 2013.  As a result of the Microsoft intrusions, Leroux (pictured at left) and the two coconspirators--armed with internal design and technical specifications and pre-release operating system software code--were able to build a counterfeit, next-generation Xbox console that was sold on eBay for about $5000, the indictment charges.  Leroux allegedly constructed a second counterfeit Xbox console with hardware components purchased from NewEgg.com. That system was destined for a purchaser in the Republic of Seychelles, a small island nation off the eastern coast of Africa.  The counterfeit console, however, was intercepted by the FBI with the assistance of an individual identified in the indictment as Person A, a Delaware resident who was cooperating with agents. Leroux had given the console to Person A, who was supposed to mail it to the Republic of Seychelles.  The indictment makes it clear that Person A had been involved with the hacking crew since mid-2011. For example, Person A and others participated in a July 2011 Skype conversation during which Pokora sought assistance with the installation of encryption software on his hard drives. I need your help. Im going to get arrested, Pokora said.  During an October 2011 chat session cited in the indictment, Pokora and the Australian teen--who is identified by his initials, D.W.--discussed  the illegal computer intrusions. if we do this right, we will make a million dollars each, said Pokora. In a Skype audio call, Pokora reportedly also spoke of compromising a fuckton of Paypals from compromised databases, adding that we could have already sold them for Bitcoins which would have been untraceable if we did it right. It could have already been easily an easy 50 grand.  Australian media have identified D.W. as Dylan Wheeler. The teens Perth home was raided last February, and he was subsequently charged in Childrens Court with an assortment of crimes. Wheeler is pictured above.   Using the handle SuperDaE, Wheeler provided confidential Microsoft documents to Kotaku, and told the web site of his various hacking exploits. The indictment refers to Kotaku quoting D.W. discussing his unauthorized access to a next-generation Xbox gaming console. The web site only referred to the teenager as Dylan. (6 pages)</incident:Title>
+            <incident:External_ID source="VERIS">FDC003BF-D008-4894-9FF6-7108F2021D09</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2014-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Microsoft Corp</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Credentials, Copyrighted, Source code, Personal, Secrets</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-4f4104e7-efa9-46b0-96d4-6cfe01e50887" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-68712829-ff9a-46e9-a8e5-6c0c91c52bc7" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.thesmokinggun.com/documents/Microsoft-Xbox-hackers-576321</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-68712829-ff9a-46e9-a8e5-6c0c91c52bc7" timestamp="2014-12-22T16:36:42.566000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>AU</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:36:42.566000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:36:42.566000+00:00">
+                <stixCommon:Value>Unaffiliated</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:36:42.566000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-4f4104e7-efa9-46b0-96d4-6cfe01e50887" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

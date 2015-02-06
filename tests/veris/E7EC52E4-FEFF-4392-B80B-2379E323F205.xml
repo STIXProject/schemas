@@ -1,0 +1,114 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-145dfde5-f362-49b8-b67b-abe29279a2a3" version="1.1.1" timestamp="2014-08-22T20:59:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-284b1a94-2af9-4762-a2d4-409c3b0beba3" timestamp="2014-08-22T20:59:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>News release: 17 December 2012 There is an underlying problem with data protection in local government  Information Commissioner  The Information Commissioners Office (ICO) has criticised local governments attitude towards protecting personal data, after four local councils were issued civil monetary penalties.  Leeds City Council was served a monetary penalty of 95,000, Plymouth City Council 60,000 and Devon County Council 90,000 after separate incidents saw details of child care cases sent to the wrong recipients, while the London Borough of Lewisham was issued a penalty of 70,000 after social work papers were left on a train.  The penalties mean that nineteen local councils have now received monetary penalties for breaching the Data Protection Act, totalling 1,885,000.  Leeds City Council The case in Leeds saw sensitive personal details about a child in care sent to the wrong person, revealing details of a criminal offence, school attendance and information about the childs relationship with their mother.  When sending internal mail, the council re-use envelopes that have been used for external mail. But in this case the external address wasnt crossed out, and so the sensitive file was posted to someone who had nothing to do with this case.  More details can be found in the final penalty notice.  Plymouth City Council  The breach at Plymouth City Council followed a similar pattern, with information passed to the wrong recipient including highly sensitive personal information about two parents and four children, notably allegations of child neglect relating to ongoing care proceedings.  The breach occurred when two reports about separate child neglect cases were sent to the same shared printer. Three pages from the first report were mistakenly collected with the papers from the second case, and so were handed to the wrong family.  More details can be found in the final penalty notice.  Devon County Council In Devon, a social worker used a previous case as a template for an adoption panel report they were writing, but a copy of the old report was sent out instead of the new one.  The mistake revealed personal data of 22 people, including details of alleged criminal offences and mental and physical health.  More details can be found in the final penalty notice.  London Borough of Lewisham In Lewisham, a social worker left sensitive documents in a plastic shopping bag on a train, after taking them home to work on.  The files, which were later recovered from the rail companys lost property office, included GP and police reports and allegations of sexual abuse and neglect.  More details can be found in the final penalty notice.  Information Commissioner Christopher Graham said:  We are fast approaching two million pounds worth of monetary penalties issued to UK councils for breaching the Data Protection Act, with nineteen councils failing to have the most straightforward of procedures in place  It would be far too easy to consider these breaches as simple human error. The reality is that they are caused by councils treating sensitive personal data in the same routine way they would deal with more general correspondence. Far too often in these cases, the councils do not appear to have acknowledged that the data they are handling is about real people, and often the more vulnerable members of society.  The distress that these incidents would have caused to the people involved is obvious. The penalties we have issued will be of little solace to them, but we do hope it will stop other people having to endure similar distress by sending out a clear message that this type of approach to personal data will not be tolerated.  There is clearly an underlying problem with data protection in local government and we will be meeting with stakeholders from across the sector to discuss how we can support them in addressing these problems.  The ICO is pressing the Ministry of Justice for stronger powers to audit local councils data protection compliance, if necessary without consent.  The same powers are sought for NHS bodies across the UK following a series of data protection breaches in the health sector.  You can see details of the councils who have been issued with civil monetary penalties at: http://www.ico.gov.uk/enforcement/fines.aspx. All monetary penalties are paid into the Treasurys Consolidated Fund and are not kept by the Commissioner.  -----  </incident:Title>
+            <incident:External_ID source="VERIS">E7EC52E4-FEFF-4392-B80B-2379E323F205</incident:External_ID>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Leeds City Council</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>GB</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Documents</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 4</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Total_Loss_Estimation>
+                    <incident:Actual_Total_Loss_Estimation iso_currency_code="GBP" amount="95000"/>
+                </incident:Total_Loss_Estimation>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-77d4429e-9369-4c86-b2f7-646971c4fa6f" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://ico.org.uk/news/latest_news/2012/local-councils-fined-over-300000-for-losing-personal-data-17122012</stixCommon:Reference>
+                    <stixCommon:Reference>http://ico.org.uk/news/latest_news/2012/~/media/documents/library/Data_Protection/Notices/leeds_city_council_monetary_penalty_notice.ashx</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-77d4429e-9369-4c86-b2f7-646971c4fa6f" timestamp="2014-12-22T16:35:43.245000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:35:43.245000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>System admin</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:43.245000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

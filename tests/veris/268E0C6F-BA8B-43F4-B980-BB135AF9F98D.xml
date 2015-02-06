@@ -1,0 +1,158 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-869cda10-645d-48ff-aa28-524beea0e897" version="1.1.1" timestamp="2014-07-11T20:50:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-05a6e5bc-9905-47be-a807-e92c84e00c73" timestamp="2014-12-22T16:23:26.995000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type>Unknown</ttp:Type>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-15d259fb-10f5-4359-a8d7-86c0c7645564" timestamp="2014-07-11T20:50:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Analysis Saudi Aramco said that it had put its network back online on Saturday, 10 days after a malware attack floored 30,000 workstations at the oil giant.  In a statement, Saudi Arabia's national oil firm said that it had "restored all its main internal network services" hit by a malware outbreak that struck on 15 August. The firm said its core business of oil production and exploration was not affected by the attack, which resulted in a decision to suspend Saudi Aramco's website for a period of a few days, presumably as a precaution. Corporate remote access services were also suspended as a result of the attack.  Oil and production systems were run off "isolated network systems unaffected by the attack, which the firm has pledged to investigate. In the meantime, Saudi Aramco promised to improve the security of its network to guard against fresh assaults.  Saudi Aramco has restored all its main internal network services that were impacted on August 15, 2012, by a malicious virus that originated from external sources and affected about 30,000 workstations. The workstations have since been cleaned and restored to service. As a precaution, remote Internet access to online resources was restricted. Saudi Aramco employees returned to work August 25, 2012, following the Eid holidays, resuming normal business. The company confirmed that its primary enterprise systems of hydrocarbon exploration and production were unaffected as they operate on isolated network systems. Production plants were also fully operational as these control systems are also isolated.  A previously unknown group called Cutting Sword of Justice claimed responsibility for the attack, which affected three in four of the estimated 40,000 workstations used by the oil giant. The group said that it had hacked Saudi Aramco in retaliation against the Al-Saud regime for the "crimes and atrocities taking place in various countries around the world, especially in the neighboring countries such as Syria, Bahrain, Yemen, Lebanon [and] Egypt".  The group said it hacked Aramco after compromising systems in "several countries" before implanting malware to "destroy 30,000 computers" within Aramco's network. The infected machines claim was made days before Saudi Aramco confirmed the same number of machines had been hit, lending credibility to the hacker group's claims.  Neither victim nor perpetrator named the malware that featured in the attack but security researchers implicated the Shamoon malware in the security breach (analysis by Seculert here). Shamoon, which emerged days before the assault, has both the capability to over-write data on infected machines and to destroy Master Boot Record files, thus making infected Windows machines impossible to boot.  Over-written files were reportedly replaced by an image of a burning US flag.  According to researchers, the malware also has the capacity to extract information from compromised before uploading it to the internet.  Core router names and admin passwords along with email address and supposed password of Saudi Aramco chief exec, Khalid A Al-Falih, were uploaded to Pastebin on Monday. The latest leak may be a result of the threatened follow-up attack, due to take place last weekend, rather than the fruits of the original malware-fuelled assault.  Rob Rachwald, director of security strategy at Imperva, described that Saudi Aramco attack as the first hacktivist-style assault to use malware.  "In the past, hacktivists have typically used application or distributed denial of service (DDoS) attacks - in which they clog a website with traffic until it goes offline. However, the attack on Saudi Aramco is the first significant use of malware in a hacktivist attack. Hacktivists rarely use malware, if other hacktivists jump on this trend it could become very dangerous," he said.  A blog post by Imperva on the attack can be found here.  Similar data-wiping malware disrupted systems at Iranian oil exploration facilities in May in an attack that led researchers at Kaspersky Lab to the discovery of the Flame cyber-espionage tool. US gas prospecting firms have been hit by previous attacks, most of which are suspected to have been state-sponsored.  It seems wise to view claims that the Saudi Aramco assault was a case of politically motivated hacktivism with some skepticism, at least until a clearer picture of the previously unknown Cutting Sword of Justice group emerges. It could be the group is solely motivated at hitting back at Saudi's ruling royal family for the country's support in putting down Arab Spring-style revolts in other nations, such as Bahrain, but other motives are also possible.</incident:Title>
+            <incident:External_ID source="VERIS">268E0C6F-BA8B-43F4-B980-BB135AF9F98D</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2012-08-19T00:00:00</incident:Initial_Compromise>
+                <incident:Containment_Achieved precision="day">2012-08-29T00:00:00</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Saudi Aramco</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>SA</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Desktop</incident:Type>
+                    <incident:Description>General Notes: 30000 workstations </incident:Description>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Interruption</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Days</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-05a6e5bc-9905-47be-a807-e92c84e00c73" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-4108ab8d-3cf5-4e6d-bdfe-f3934d342abe" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://pastebin.com/HqAgaQRj</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.theregister.co.uk/2012/08/29/saudi_aramco_malware_attack_analysis/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.networkworld.com/article/2162884/security/worst-security-snafus-of-2012.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-4108ab8d-3cf5-4e6d-bdfe-f3934d342abe" timestamp="2014-12-22T16:23:26.995000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:23:26.995000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:23:26.995000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Hacktivist</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:23:26.995000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Ideological</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-05a6e5bc-9905-47be-a807-e92c84e00c73" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

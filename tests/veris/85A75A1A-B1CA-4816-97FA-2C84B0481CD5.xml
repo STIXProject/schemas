@@ -1,0 +1,116 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-5a58828e-cd66-48af-a2ee-b2b85593fa7f" version="1.1.1" timestamp="2014-11-19T18:40:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-d2ac0ab5-6165-49bb-a72a-47098b5c5c8b" timestamp="2014-11-19T18:40:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Two alleged identity thieves stole personal information of more than 1,000 Metro Detroit hospital patients and then schemed to receive nearly $500,000 in phony tax return refunds, according to the U.S. Attorneys Office.  Markitta Washington, 29, of Hampton, Georgia, previously of Farmington Hills, and Martez Lear, 29, of Farmington Hills were indicted on multiple counts of identity theft crimes, the U.S. Attorneys Office said Tuesday.  Washington, a former employee of Henry Ford West Bloomfield Hospital and DMC Harper Hospital, allegedly took patient records and used the information to file false tax returns in other peoples names, according to Barbara L. McQuade, U.S. attorney for the Eastern District.  During a search of the home Washington and Lear shared, authorities recovered the personal information of 1,400 people, including names, dates of birth and Social Security numbers. Authorities also recovered re-encoded credit cards and gifts cards.  Washington and Lear are accused of filing false tax returns with the information of at least 305 victims during tax years 2011 and 2012, receiving about $489,000. Most of the refunds were received through prepaid debit cards, officials said.  On Tuesday, officials with both hospitals said they were providing credit protection and monitoring for affected patients.  We take very seriously the misuse of patient information, said David Olejarz, spokesman for Henry Ford Health System. The conduct of this former worker does not reflect the integrity and honesty of our more than 23,000 employees.  Olejarz said the information theft was limited to 141 patients who received inpatient neurology or outpatient radiology care at Henry Ford West Bloomfield Hospital between Jan. 1, 2012, and Dec. 31, 2013. He said the hospital has taken increased security precautions, although he did not elaborate.  DMC Harper University Hospital officials were made aware of the allegations in March, said Sarah Collica, spokeswoman for the hospital.  The hospital conducted an internal review and immediately revoked Washingtons access to the computer systems, officials said.  The entire Detroit Medical Center takes the protection of its patients personal information very seriously, Melanie Moss, spokeswoman for DMC-Harper University Hospital, said in a statement Tuesday. Security of that information is paramount and medical center officials say they deeply regret that this situation has occurred.  The majority of identity theft occurs inside of institutions such as businesses, government agencies and hospitals, said Robert Siciliano, an identity theft expert with bestIDtheftcompanys.com.  Those that have access to the data are the most likely to have access to the crime, he said.  Siciliano advises that everyone pay for credit monitoring.  There are things (the hospitals) can do, Siciliano said. In the end, when you put people in a position of trust, youre hoping you can trust them. Theres no such thing as 100 percent security.  Washington was arrested in Georgia and will be arraigned in the Eastern District of Michigan. Lear is serving a sentence in a Michigan prison for gun-related charges.  Criminals should know that while technology has made it easier than ever for them to commit identify fraud, technology is also making it easier for law enforcement to catch them, McQuade said in a statement. We are making enforcement of identity theft a high priority because this crime has become so pervasive and can be so damaging to victims. </incident:Title>
+            <incident:External_ID source="VERIS">85A75A1A-B1CA-4816-97FA-2C84B0481CD5</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2011-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Henry Ford West Bloomfield Hospital</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>MI</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 305</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-017ad334-7f55-45fc-a2f9-4323b6035f8d" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.detroitnews.com/story/news/local/metro-state/2014/11/18/two-indicted-identity-theft-tax-return-charges/19252631/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-017ad334-7f55-45fc-a2f9-4323b6035f8d" timestamp="2014-12-22T16:30:46.607000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:30:46.607000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:30:46.607000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

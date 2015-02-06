@@ -1,0 +1,116 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-67a8fe21-08cf-448f-889a-d8b6d7dceae3" version="1.1.1" timestamp="2014-08-25T16:48:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-054195d0-df7a-4f9b-8d46-a26949ca27ac" timestamp="2014-08-25T16:48:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Please read This Important Notice Regarding: your mortgage loan number(s) ending in 0146, 1234. Dear Joe Smith, Protecting the privacy and security of your personal information is extremely important to us.  We are writing to let you know about a recent incident in which certain personal information related to your mortgage loan serviced by Cole Taylor Mortgage, a division of Cole Taylor Bank, was inadvertently made accessible to employees of another federally regulated bank.  This information included your name, address, social security number,loan number and certain loan information(such as balance and payment infroamtion).  This incident occurred because of an inadvertent tecnical error by our third-party vendor that provides information technology services and solutions to both Cole Taylor Mortgage and the other bank. This error allowed the other bank the ability to access certain information related to Cole Taylor mortgage-serviced mortgage loans.  The third-party vendor and the other bank reported this to us as soon as they learned of this incident on February 7, 2014.  To be clear, we have carefully researched this incident and are not aware of any misuse of your information.  We deeply regret this incident and any inconvenience or concern that it may cause you.  Upon discvoery of the incident, we promptly launched an ivnestigation and worked with the vendor and the other bank to resolve this incident.  We also received assurance from the other bank that your personal information was not subject to any known unauthorized access, use, or disclosure.  You should know that the other bank is subject to the same federal regulations as Cole Taylor Mortgage and is therefore obligated to keep your personal information confidential.  As noted above, we are not aware of any misuse of your personal information due to this incident, and we believe it is unlikely that your personal information will be misused in the future due to this incident.  However, our customer-focused operating philosophy includes transparency to our customers, and as such, we felt it important to notify you of this incident, what we have done to address the incident, and additional steps you can take to safeguard against potential misuse of your information.  As a precaution to help you detect any possible misuse of your personal information, we recommend that you regularly review your financial account statements and credit reports.  Out of an abundance of caution, we are offering you a complimentary one-year membership of Experian's ProtectMyID Alert.  This product helps detect possible misuse of your personal information and provides you with identity protection services focused on immediate identification and resolution of identity theft.  ProtectMyID Alert is completely free to you and enrolling in this program will not hurt your credit score.  For more information on identity theft prevention and ProtectMyID Alert, including instructions on how to activate your complimentary one-year membership, please see the additional information in the attachment to this letter.  Even if you do not choose to enroll in the ProtectMyID Alert credit monitoring product, there are other steps you can take to protect yourself.  Please see the "Information About Identity Theft Prevention" attachment ot this letter for information on how you can place a fraud alert and/or security freeze on your credit file and how you can obtain a free copy of your credit report.    In addition, we have established a dedicated toll-free hotline that you can call if you have any questions.  The toll-free telephone number is 800-572-9809.   We appreciate the opportunity to meet your financial needs.  We apologize for any inconvenience or concern this incident may cause and want to assure you that safeguarding your personal information is a top priority.</incident:Title>
+            <incident:External_ID source="VERIS">DF63C96F-04ED-408B-97FF-9DADA885402A</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-02-07T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Cole Taylor Mortgage</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>OR</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Server</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Bank, Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-51ebef86-8853-4cba-846b-b8b8e402631d" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>https://oag.ca.gov/system/files/Template%20Letter%20for%20California%20Submission_1.pdf</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-51ebef86-8853-4cba-846b-b8b8e402631d" timestamp="2014-12-22T16:35:21.733000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:35:21.733000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>System admin</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:21.733000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

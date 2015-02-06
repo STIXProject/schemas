@@ -1,0 +1,160 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-4a9fab9a-440c-4068-b6b7-92bc1ea10519" version="1.1.1" timestamp="2014-10-01T14:48:00+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Notes: May 2, 2011  Dear Valued Sony Online Entertainment Customer: Our ongoing investigation of illegal intrusions into Sony Online Entertainment systems has discovered that hackers may have obtained personal customer information from SOE systems.  We are today advising you that the personal information you provided us in connection with your SOE account may have been stolen in a cyber-attack.   Stolen information includes, to the extent you provided it to us, the following: name, address (city, state, zip, country), email address, gender, birthdate, phone number, login name and hashed password.  Customers outside the United States should be advised that we further discovered evidence that information from an outdated database from 2007 containing approximately 12,700 non-US customer credit or debit card numbers and expiration dates (but not credit card security codes) and about 10,700 direct debit records listing bank account numbers of certain customers in Germany, Austria, Netherlands and Spain may have also been obtained. We will be notifying each of those customers promptly.  There is no evidence that our main credit card database was compromised. It is in a completely separate and secured environment.  We had previously believed that SOE customer data had not been obtained in the cyber-attacks on the company, but on May 1st we concluded that SOE account information may have been stolen and we are notifying you as soon as possible.  We apologize for the inconvenience caused by the attack and as a result, we have:  Temporarily turned off all SOE game services; Engaged an outside, recognized security firm to conduct a full and complete investigation into what happened; and Quickly taken steps to enhance security and strengthen our network infrastructure to provide you with greater protection of your personal information. We greatly appreciate your patience, understanding and goodwill as we do whatever it takes to resolve these issues as quickly and efficiently as practicable.  For your security, we encourage you to be especially aware of email, telephone, and postal mail scams that ask for personal or sensitive information. Sony will not contact you in any way, including by email, asking for your credit card number, social security number or other personally identifiable information. If you are asked for this information, you can be confident Sony is not the entity asking. When SOE's services are fully restored, we strongly recommend that you log on and change your password. Additionally, if you use your Station or SOE game account name or password for other unrelated services or accounts, we strongly recommend that you change them, as well.  To protect against possible identity theft or other financial loss, we encourage you to remain vigilant, to review your account statements and to monitor your credit reports. We are providing the following information for those who wish to consider it:  U.S. residents are entitled under U.S. law to one free credit report annually from each of the three major credit bureaus. To order your free credit report, visit www.annualcreditreport.com or call toll-free (877) 322-8228.  We have also provided names and contact information for the three major U.S. credit bureaus below. At no charge, U.S. residents can have these credit bureaus place a "fraud alert" on your file that alerts creditors to take additional steps to verify your identity prior to granting credit in your name. This service can make it more difficult for someone to get credit in your name. Note, however, that because it tells creditors to follow certain procedures to protect you, it also may delay your ability to obtain credit while the agency verifies your identity. As soon as one credit bureau confirms your fraud alert, the others are notified to place fraud alerts on your file. Should you wish to place a fraud alert, or should you have any questions regarding your credit report, please contact any one of the agencies listed below.  Experian: 888-397-3742; www.experian.com; P.O. Box 9532, Allen, TX 75013 Equifax: 800-525-6285; www.equifax.com; P.O. Box 740241, Atlanta, GA 30374-0241 TransUnion: 800-680-7289; www.transunion.com; Fraud Victim Assistance Division, P.O. Box 6790, Fullerton, CA 92834-6790  You may wish to visit the web site of the U.S. Federal Trade Commission at www.consumer.gov/idtheft or reach the FTC at 1-877-382-4357 or 600 Pennsylvania Avenue, NW, Washington, DC 20580 for further information about how to protect yourself from identity theft. Your state Attorney General may also have advice on preventing identity theft, and you should report instances of known or suspected identity theft to law enforcement, your State Attorney General, and the FTC. For North Carolina residents, the Attorney General can be contacted at 9001 Mail Service Center, Raleigh, NC 27699-9001; telephone (877) 566-7226; or www.ncdoj.gov. For Maryland residents, the Attorney General can be contacted at 200 St. Paul Place, 16th Floor, Baltimore, MD 21202; telephone: (888) 743-0023; or www.oag.state.md.us.  We are committed to helping our customers protect their personal data and we will provide a complimentary offering to assist users in enrolling in identity theft protection services and/or similar programs. The implementation will be at a local level and further details will be made available shortly in regions in which such programs are commonly utilized.  We thank you for your patience as we complete our investigation of this incident, and we regret any inconvenience. Our teams are working around the clock on this, and services will be restored as soon as possible. Sony takes information protection very seriously and will continue to work to ensure that additional measures are taken to protect personally identifiable information. Providing quality and secure entertainment services to our customers is our utmost priority. Please contact us at 1 (866) 436-6698 should you have any additional questions.  Sincerely, Sony Online Entertainment LLC</stix:Title>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-98e3f035-7f27-4bdf-84a7-2f055213be78" timestamp="2014-12-22T16:33:20.957000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-4169067c-7155-4c97-af9b-f9494213e2ab" timestamp="2014-10-01T14:48:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>SOE hacked: 12,700 credit card numbers and 24.6 million accounts may have been compromised  Earlier today Sony Online Entertainment shut down service because of an intrusion into the system, and now weve learned thousands of users credit card numbers were stolen. The news was originally reported by Japanese news site Nikkei.com (via BGR), but SOE has since released a press release detailing even deeper attacks.  The report states that more than 12,700 customers credit card numbers may have been stolen. SOE believes hackers stole customer information on April 16 and April 17. Engineers and security consultants reviewing SOE systems discovered that personal information from approximately 24.6 million SOE accounts may have been stolen, as well as certain information from an outdated database from 2007. The outdated database had approximately 12,700 non-U.S. credit or debit card numbers and expiration dates, but no security cards. There may also have been 10,700 direct debit records stolen from customers in Austria, Germany, Netherlands, and Spain.  Given the attacks on the PlayStation Network, SOE had already undertaken an intensive investigation into its system. Upon discovering the additional information, SOE shut down all servers related to SOE services while it reviewed and upgraded all of its online security.</incident:Title>
+            <incident:External_ID source="VERIS">BC4BE9C4-58B0-4D32-A584-D244D80DA642</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2011-04-16T00:00:00</incident:Initial_Compromise>
+                <incident:First_Data_Exfiltration precision="day">2011-04-18T00:00:00</incident:First_Data_Exfiltration>
+                <incident:Incident_Discovery precision="day">2011-04-19T00:00:00</incident:Incident_Discovery>
+                <incident:Containment_Achieved precision="day">2011-04-22T00:00:00</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Sony Online Entertainment</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment: 23400, Internal: 24600000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-98e3f035-7f27-4bdf-84a7-2f055213be78" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-9e2fe37e-84f0-4ebc-883e-09ca74da85d2" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.psu.com/news/11514/SOE-hacked--12700-credit-card-numbers-and-246-million-accounts-may-have-been-compromised</stixCommon:Reference>
+                    <stixCommon:Reference>https://www.soe.com/securityupdate/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-9e2fe37e-84f0-4ebc-883e-09ca74da85d2" timestamp="2014-12-22T16:33:20.957000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:33:20.957000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:20.957000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-98e3f035-7f27-4bdf-84a7-2f055213be78" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

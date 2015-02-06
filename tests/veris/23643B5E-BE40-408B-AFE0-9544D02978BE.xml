@@ -1,0 +1,124 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-10d28c6f-1077-462f-b181-94a997bc58b6" version="1.1.1" timestamp="2014-02-13T04:54:20+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-24805a3a-a6c9-445b-925c-4c35680e5a26" timestamp="2014-05-10T00:58:19+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>One bank fails its responsibilities to protect consumers, resulting in the disclosure of personal data for millions of people.  The Florida Attorney General calls it alarming, and so do area residents after hearing the Bank of New York Mellon Shareowner Services (BNY Mellon SS) lost the data of 12.5 million consumers nationwide.  More than 742,000 Florida residents may have had their personal data disclosed in the breach.  Concerned citizen Keith Hull said, "I'd be pretty angry. I'd be really mad. In fact, I'd take my money out of that bank and go to another one immediately because I'm mad at them."  Envision Credit Union is not involved, but helps point out that while financial institutions have protection measures, it's usually third parties that cause security breaches.  Leslie Smith, the Director of Marketing Services at Envision Credit Union, said, "Such as a restaurant, a company or a doctor's office. Their files are stolen, their computers are hacked into and their information is stolen. The people then use that stolen information to open up other accounts."  In the case of BNY Mellon, the attorney general's alert says on February 27th, an archive vendor lost six back-up tapes during transport to a storage facility.  The attorney general says not only should those millions who received notification letters promptly review their bank statements, but everyone should check for fraudulent activity on a regular basis.  Tallahassee resident Jared Scott Finnegan said, "The fact that if my personal information could be out there and people could be using it for whatever reason, it's kind of uncomfortable."  Smith says to safeguard your identity, you should: check you credit report and don't give personal information to anyone you don't know.    PRESS RELEASE:  TALLAHASSEE - Attorney General Bill McCollum today issued a consumer alert following a significant loss of data from The Bank of New York Mellon Shareowner Services (BNY Mellon SS). More than 742,000 Florida residents may have had their personal data disclosed as a result, out of a total of 12.5 million consumers nationwide whose data was involved in the breach.  The Attorney General cautioned consumers who are or have been clients of BNY Mellon to closely review their accounts for unauthorized charges and monitor their bank and credit card statements.  The magnitude of this data breach is truly alarming and emphasizes the need for consumers to be vigilant about checking their bank and credit card activity on a regular basis, said Attorney McCollum. I urge all Floridians to be aware and active in protecting themselves against fraud and identity theft.  The data breach occurred on February 27, 2008 when an archive vendor for BNY Mellon lost six back-up tapes during transport to a storage facility.  Those back-up tapes contained personally identifiable information for approximately 12.5 million shareholders. Because the back-up tapes contained data that had been used for different purposes and stored in different file types, the timing of notification to individuals varied.  BNY Mellon began mailing an initial group of easily-identifiable individuals in March 2008, another group of individuals who were harder to identify in May 2008, and a third group in late August 2008. Mailings to the last group are expected to be completed in the next few weeks.  All consumers who have received a notification from BNY Mellon should promptly review bank statements and transactions to check for unusual activity and report fraudulent charges to banks or credit card issuers for investigation, reversal, or card reissuance. BNY Mellon has established a website for consumers to learn about the data breach: http://www.bnymellon.com/tapequery/faqs.html and a link with specific information concerning the February 27, 2008 BNY Mellon breach: http://www.bnymellon.com/tapequery/shareownerservices.html. BNY Mellon also has established a toll-free help line that consumers may contact: 1-877-289-0136.  BNY Mellon is offering each affected individual two years of free credit monitoring and $25,000 in identity theft insurance coverage for all affected individuals who enroll or have enrolled in the credit monitoring service. In addition, BNY Mellon will reimburse affected individuals for the cost of one placement and one removal of a credit freeze for each of the three credit reporting agencies.  Consumers who believe they may have been a victim of identity theft related to this or any other data breach are encouraged to contact the Attorney Generals Fraud Hotline at 1-866-9-NO-SCAM (1-866-966-7226).  Other steps to take include contacting police and requesting that the national credit bureaus place a fraud alert on your credit report. Notify banks and creditors involved of questionable charges or accounts, keep records of all telephone calls and follow up in writing with credit bureaus, banks and creditors. For additional tips on combating identity theft, log onto the Attorney Generals website at http://myfloridalegal.com.</incident:Title>
+            <incident:External_ID source="VERIS">23643B5E-BE40-408B-AFE0-9544D02978BE</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2008-02-27T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Bank of New York Mellon Corp/The</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Tapes</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Bank: 12500000, Payment: 12500000, Personal: 12500000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-c3b2c676-e791-40f2-a257-c36d45abaedb" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.wctv.tv/news/headlines/28132494.html?storySection=comments</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-c3b2c676-e791-40f2-a257-c36d45abaedb" timestamp="2014-12-22T16:23:22.025000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:23:22.025000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

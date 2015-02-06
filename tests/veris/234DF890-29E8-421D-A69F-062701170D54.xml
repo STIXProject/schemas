@@ -1,0 +1,121 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-a458f730-4c37-40d4-9cb3-ee40634f5a49" version="1.1.1" timestamp="2014-09-29T16:19:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-d9a35938-e08c-4f42-92ef-c1da441a856b" timestamp="2014-09-29T16:19:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>A Chinese engineer who worked in Waukesha for a subsidiary of GE Healthcare stole about 2.4 million files of trade secrets and other confidential company information and sent it to China, according to GE and the FBI.  Jun Xie, 41, who joined the medical equipment giant in 2008, had been suspended and hit with a civil suit by the company in July.  Then on Wednesday, just as that action appeared closed with Xie's agreement to an injunction ordering him to return what he could and cooperate with the company's investigation, he was charged in federal court with criminal theft of trade secrets and appeared in court.  The case is at least the second involving theft of sensitive technical data by a Chinese citizen working in the Milwaukee area. Last year, a cancer researcher at the Medical College of Wisconsin was charged with economic espionage before later pleading guilty to a lesser charge.  According to the criminal complaint, GE officials discovered in June that Xie had accessed and copied about 2.4 million files  about 1.4 gigabytes of data  from the company's secure network, starting in February 2013. Much of the information was of the type Xie was not authorized to use and was not necessary to his work writing source code for magnetic resonance technology.  The files included engineering designs, testing data, business strategy and source code for magnetic resonance systems. In court documents, GE said it would suffer "irreparable harm" if the trade secrets were disclosed.  Xie agreed to talk with FBI agents in June and said he began downloading GE's materials after his wife moved back to China from Waukesha early last year, and he realized he would return there, too, and would need to find work.  He told agents he downloaded lots of materials he knew were important to GE Healthcare, copied it to separate storage devices and sent them to his wife and brother in China.  Xie also said he planned to join a Chinese company that competes with GE in the MRI field but said he never gave the other firm the GE information and only intended to use it himself.  On Wednesday, the same day a federal magistrate judge in Milwaukee granted a permanent injunction to prevent Xie from obtaining any more GE information and ordering that he try to get back the storage devices he sent to China, he was arrested in Waukesha.  General Electric sued Xie in federal court in July, alleging claims of conversion, breach of contract, state and federal computer fraud, and violations of the trade secrets act.  GE asked for damages as well as court orders that Xie return all confidential, proprietary information to GE, cease accessing, copying or disclosing such information, and preserve all documents relative to his actions.  Xie has not retained an attorney, according to court records, but on his own agreed to cooperate with GE.  Xie joined GE Healthcare in 2008 as an engineer to write source code for GE's magnetic resonance technology. GE Healthcare is a major manufacturer of magnetic resonance imaging machines. The criminal complaint says he was in the U.S. under an H1B non-immigrant work visa and had been in the country since 2002.  Amanda Gintoft, a spokeswoman for GE Healthcare Systems, issued this statement late Thursday after an inquiry to the company's attorney in the civil suit:  "GE considers theft of its intellectual property a very serious matter and will take all steps necessary to pursue those who engage in such acts. We will cooperate fully with the government in its criminal investigation but, as a company policy, GE does not comment on ongoing litigation." </incident:Title>
+            <incident:External_ID source="VERIS">234DF890-29E8-421D-A69F-062701170D54</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2014-06-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">GE Healthcare</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WI</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Secrets: 2400000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-334b875b-f820-4be2-b18f-eea1ac9afc12" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.jsonline.com/news/crime/chinese-engineer-accused-of-stealing-trade-secrets-from-ge-unit-b99344912z1-274122821.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://media.jrn.com/documents/gecomplaint.pdf</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-334b875b-f820-4be2-b18f-eea1ac9afc12" timestamp="2014-12-22T16:23:21.869000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:23:21.869000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:23:21.869000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>End-user</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:23:21.869000+00:00">
+                <stixCommon:Value>Espionage</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

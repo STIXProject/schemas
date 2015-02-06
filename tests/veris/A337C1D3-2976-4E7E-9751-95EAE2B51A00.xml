@@ -1,0 +1,118 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-44685a60-9f2e-45da-8adb-eaf48d1c60a2" version="1.1.1" timestamp="2014-03-24T04:31:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-7cd2d1ea-e955-4641-8e4d-cca5c91f200e" timestamp="2014-03-24T04:31:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title> A former senior software architect at Microsoft has been arrested and charged over allegedly stealing Windows 8 trade secrets and passing them along to a tech blogger in France.  Former senior architect Alex Kibkalo, apparently because he was unhappy with a recent performance review, is accused of passing the secrets that included vital details about Windows 8 RT and ARM devices, as well as a server SDK that could have allowed hackers to reverse engineer-critical code.  Kibkalo is alleged to have leaked vital Windows 8 code to an unnamed blogger in 2012 prior to the release of the software.  Microsoft had noticed something was amiss when screenshots started appearing in tech blogs across the world revealing details of the upcoming release.  Having spent seven years working for Microsoft, Kibkalo is alleged to have leaked Windows 8 code to a French technology blogger in mid-2012, prior to the softwares release. Kibkalo was apparently angry over a poor performance review.  Writing the court, a Seattle-based FBI special agent said Microsoft brought its concerns to him in July, nearly a year after corporate investigators suspected Kibkalo had leaked parts of Windows 8. He is said to have admitted to passing the information to the blogger  unidentified in charging papers  after a meeting in an online forum.  Kibkalo, a Russian national who worked there and in Lebanon for Microsoft, also alleged to have stolen Microsofts Activation Server Software Development Kit, a propriety system used to prevent the unauthorized copying of Microsoft programs.  Corporate investigators confronted Kibkalo in September 2012 during an interview in which hes alleged to have admitted to sharing the software. Kibkalo is alleged to have admitted to sharing unreleased Windows programs as well as company memos and documents; Microsoft investigators claim he was angry after a poor performance review.  According to charging papers, the blogger posted screenshots of a pre-release version of Windows 8, presumably due to Kibkalos leak.  On Sept. 3, 2012, the blogger sent the stolen software development kit code to a Microsoft employee asking that he or she verify it, the FBI agent said in court papers. The worker went to a Microsoft executive instead.  The code was later confirmed to be authentic, prompting corporate investigators to dredge the Hotmail account the blogger used to contact the Microsoft worker. While the blogger took pains to protect his identity  he claimed falsely to be in Quebec and used an assumed name online  a Microsoft team dubbed Trustworthy Computing Investigations attempted to track the blogger down.  While searching the bloggers account, Microsoft investigators found an email from Kibkalo in which he shared Windows 8 hot fixes through an online hosting system, the FBI agent continued. Windows 8 had not been released to the public at the time, and was the subject of much speculation in the industry.</incident:Title>
+            <incident:External_ID source="VERIS">A337C1D3-2976-4E7E-9751-95EAE2B51A00</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2012-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Microsoft Corp</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>S - Code repository</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Secrets</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-83b4d759-3c3f-468f-bc80-1b16155dce7f" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3.0</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.theguardian.com/technology/2014/mar/20/former-microsoft-employee-arrested-over-windows-8-leaks</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.siliconrepublic.com/enterprise/item/36198-ex-microsoft-worker-arreste</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.seattlepi.com/local/article/Ex-Microsoft-employee-charged-with-passing-5331715.php</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-83b4d759-3c3f-468f-bc80-1b16155dce7f" timestamp="2014-12-22T16:32:16.285000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:32:16.285000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Developer</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:32:16.285000+00:00">
+                <stixCommon:Value>Grudge</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,217 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-b64839bd-d351-4010-b8f7-8bd83397259d" version="1.1.1" timestamp="2014-09-12T17:25:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-23ce28d3-2ade-4bfa-8b6d-7c14b13845a6" timestamp="2014-09-12T17:25:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Man faces prison for computer-related fraud  Kate White Ricky Joe Mitchell told a federal judge he had found out he was going to be fired the night he shut down his former company's computer network and phone system for a month.   Mitchell, 34, pleaded guilty to one count of fraudulent activity connected with computers on Tuesday. He faces a maximum of 10 years in prison when U.S. District Court Judge John Copenhaver sentences him April 24.  As a network engineer for EnerVest Operating, an oil and gas company with an office in Charleston, the indictment alleged Mitchell deleted backup information and transmitted a command to disable the data replication process, which is designed to transmit backup data to the company's Houston location.  "Out of anger and being upset," Mitchell told the judge he sent the commands from his Hurricane home in June 2012. "I expected it to actually be more of a window more so than hurting the entire company."  Mitchell said he only expected company employees wouldn't be able to log on to computers, access the Internet, or check e-mails for one day after he sent the command.   Instead, the company couldn't conduct business for a month, and lost $1 million because of Mitchell, according to the indictment. Mitchell, however, only admitted to causing the company to lose a "substantial" amount of money.  "In 2014, it goes without saying that any business's electronic communication capabilities and data storage are nearly as important to its success as the product or service it provides," U.S. Attorney Booth Goodwin said in a statement. "The prosecution of Mr. Mitchell for his reckless conduct underscores my commitment to help protect small businesses from any threat - both inside and out."  Mitchell, now living in Mableton, Ga., worked for EnerVest from August 2009 through June 26, 2012 - the date the computer system damage occurred.  He agreed to pay restitution, which Copenhaver will determine at a later date and also faces a fine of up to $250,000.  The plea agreement drops one count of recklessly damaging a protected computer. He could have faced a maximum of 15 years in prison and a $500,000 fine, Goodwin previously said.  Earlier Tuesday, Mitchell's attorney, public defender David Bungard, told Copenhaver his client was having second thoughts about his plea and asked for more time to meet with prosecutors.  Copenhaver gave Mitchell until 3 p.m., but said if an agreement hadn't been made by then, to be prepared for trial Monday.  When Mitchell was 17 and went by the nickname "RickDogg" online he was accused of attempting to plant viruses in the computer system at Capital High School. He was suspended and later forced to transfer schools, in a case that reached the West Virginia Supreme Court.  Mitchell told the judge Tuesday he had a bachelor's degree in computer science from West Virginia University Institute of Technology.  Copenhaver told Mitchell that a clerk would speak to him after the hearing about his financial standing. A magistrate judge had previously ordered Mitchell to make payments for his public defender, because he obviously had some assets, Copenhaver said, noting the order showed a 2013 and a 2014 BMW plus an "upscale home" Mitchell was making payments on.  In 1997, Mitchell graduated from East Bank High School, but not without a fight to be reinstated at Capital High that reached the Supreme Court.  The previous summer, he was suspended for three days from Capital for copying "108 computer viruses from floppy diskettes to disk space allocated and assigned to another student on the Capital High School computer system," according to a memo to Kanawha County school board members, available in court documents from the earlier case.  The memo also states that Mitchell bragged about the incident and admitted it to school officials.  During the summer of 1996, according to the memo, Mitchell published derogatory statements about teachers and made threats to students he believed reported the virus.  He was given the option of transferring to South Charleston or East Bank to finish high school, but Mitchell wanted to keep taking Advanced Placement courses at Capital. His lawyer, Basil Legg, requested an injunction in Kanawha Circuit Court to let him remain at Capital.  Kanawha Circuit Judge Paul Zakaib decided an emergency injunction wasn't necessary and that Mitchell could wait for a hearing before Kanawha Circuit Judge Tod Kaufman. The state Supreme Court agreed with Zakaib.  In 1998, Kaufman dismissed the case, noting the matter was no longer relevant because Mitchell had graduated.</incident:Title>
+            <incident:External_ID source="VERIS">E5D427C6-B22B-47E8-8A3A-9FF7B99C07EC</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2012-06-01T00:00:00</incident:Initial_Compromise>
+                <incident:Incident_Discovery precision="minute">2012-06-01T00:00:30</incident:Incident_Discovery>
+                <incident:Containment_Achieved precision="month">2012-06-29T00:00:30</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">EnerVest Operating</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WV</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>PBX</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Backup</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>File</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Telephone</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Proxy</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Mail</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>S - Authentication</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Directory</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Database</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>SAN</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Destruction</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Permanent</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Total_Loss_Estimation>
+                    <incident:Actual_Total_Loss_Estimation iso_currency_code="USD" amount="1000000"/>
+                </incident:Total_Loss_Estimation>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-fb4962ff-9036-46c4-9f48-fc3b5472ce5e" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.wvgazette.com/News/201401280098</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-fb4962ff-9036-46c4-9f48-fc3b5472ce5e" timestamp="2014-12-22T16:35:35.895000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Found out he would be fired imminently.</ta:Description>
+            <ta:Type timestamp="2014-12-22T16:35:35.895000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:35:35.895000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>System admin</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:35.895000+00:00">
+                <stixCommon:Value>Grudge</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

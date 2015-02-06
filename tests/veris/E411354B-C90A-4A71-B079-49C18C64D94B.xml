@@ -1,0 +1,216 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-ac9f5e74-0364-4947-ad2b-5b7b5709351b" version="1.1.1" timestamp="2014-11-20T21:19:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-8af6da35-ef0f-4b22-86f1-1596154cd1f3" timestamp="2014-12-22T16:35:31.096000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior/>
+        </stix:TTP>
+        <stix:TTP id="example:ttp-3a903541-5427-4d9f-a844-11d74e64d870" timestamp="2014-12-22T16:35:31.096000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type>Capture stored data</ttp:Type>
+                        <ttp:Type>Capture app data</ttp:Type>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-6d06ce99-7c9a-443e-86db-9e924872cc80" timestamp="2014-11-20T21:19:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>A nationwide data breach has Jimmy John's with a fiasco on its hands.   The company released a statement today saying that it became aware of the incident at the end of July.  Many customers think that the place that promises "freaky fast delivery" took its time alerting them.  And that left many Jimmy John's customers that  with a bad taste in their mouths.  For more details including the reactions of employees and customers, watch the video for the complete report.   Eighteen locations were affected by the breach in Michigan including two in Sterling Heights, Novi, Livonia and East Lansing. Other stores were Madison Heights, Warren, Ypsilanti, Canton, Niles, Royal Oak, Bloomfield Hills, Marquette and Bay City.  For a full list of locations and addresses, click here.  An excerpt of the company's statement said:  "We apologize for any inconvenience this incident may have on our customers. Jimmy John's values the privacy and security of its customers' information, and is offering identity protection services to impacted customers, although Jimmy John's does not collect its customers' Social Security numbers.   To take advantage of these services, please visit Contacts &amp; Information here.  For more information, call (855) 398-6442.   In addition, customers are encouraged to monitor their credit and debit card accounts, and notify their bank if they notice any suspicious activity. Additional recommendations for protecting your information can be found here.   Additional info will be posted at jimmyjohns.com."   ignature Systems responsible for the payment information leak at the 216 Jimmy John's sandwich stores Vendor of point-of-sale (PoS) equipment Signature Systems announced that an unauthorized person managed to infiltrate malware on its payment terminals in 324 restaurant locations across the United States.  The incident impacted credit and debit cards at 216 Jimmy Johns stores and franchised locations, announced by the sandwich chain on Wednesday.  Signature Systems has been blamed for compromising card data of Jimmy Johns customers, but the disclosure statement did not give any names, saying that an intruder stole log-in credentials from Jimmy Johns point-of-sale vendor.   In an official statement issued on Friday, Signature Systems informed that 108 other restaurant locations using its payment terminals were affected, apart from the Jimmy Johns ones. It took three months to clear all affected systems of malware  The first sign of intrusion was traced back to June 16, when an unauthorized person used Signature Systems credentials for remote access to the PoS systems in the restaurants.  Once logged in, the perpetrator proceeded to install malware designed to capture payment card data from cards that were swiped through terminals in certain restaurants.  The information exposed consisted of the name of the cardholder, credit and debit card number, as well as expiration date and verification code from the magnetic stripe.  After receiving alerts of a possible breach on July 30 and during the ensuing week, the company cleared the malicious software from the payment terminals in most of the affected locations.  Removing the malware from all machines was not possible until mid-September. In the case of Jimmy Johns, the last unauthorized access happened on September 5. Number of impacted customers is unknown  The company says that it could not identify the cards impacted by the incident and it does not have names or addresses of the potentially affected customers. As such, it falls in the hands of each individual that used their card at one of the compromised locations to notice fraudulent charges and notify the bank that issued the card.  A list of all affected locations and the timeframe of the compromise is provided in the disclosure announcement. In some cases, the breach lasted only a few days, but there are restaurants where even a three-month compromise period is given.  Most of the locations are pizza shops, but places serving other dishes are also on the list, such as Wings to Go, Costello's Italian Ristorante, Romanellis or Austin's Bar &amp; Grill.  Signature Systems also provides details on what potentially affected customers can do in the case of fraudulent transactions on their cards.</incident:Title>
+            <incident:External_ID source="VERIS">E411354B-C90A-4A71-B079-49C18C64D94B</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-06-16T00:00:00</incident:Initial_Compromise>
+                <incident:Incident_Discovery precision="month">2014-07-28T00:00:00</incident:Incident_Discovery>
+                <incident:Containment_Achieved precision="month">2014-10-20T00:00:00</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Signature Systems</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>PA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>POS controller</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>POS terminal</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-8af6da35-ef0f-4b22-86f1-1596154cd1f3" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-3a903541-5427-4d9f-a844-11d74e64d870" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-9b316749-a5de-4cdf-9da2-1ee200351efc" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-7adf2522-2a33-4b75-96fa-c59eb4eb8b05" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://krebsonsecurity.com/2014/07/sandwich-chain-jimmy-johns-investigating-breach-claims/?utm_source=twitterfeed&amp;utm_medium=twitter</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.pymnts.com/news/2014/cyberthieves-reportedly-crack-into-sandwich-chain-jimmy-johns-pos/#.U-AbuFaFr7Q</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.myfoxdetroit.com/story/26622236/customers-say-jimmy-johns-data-breach-release-anything-but-freaky-fast</stixCommon:Reference>
+                    <stixCommon:Reference>http://news.softpedia.com/news/PoS-Vendor-Signature-Systems-Informs-of-Credit-Card-Breach-Affecting-324-Restaurant-Locations-460160.shtml#hyperanchor1.3%3A%2F%2Fdiv%5B%40id%3D%26quot%3Bnewsbody%26quot%3B%5D%2Fp%5B1%5D%2Fstrong%5B1%5D%280%29%283%29%28Ven%29%26%2F%2Fdiv%5B%40id%3D%26quot%3Bnewsbody%26quot%3B%5D%2Fp%5B1%5D%2Fstrong%5B1%5D%28204%29%283%29%28es.%29%26border%3A%20thin%20dotted%20</stixCommon:Reference>
+                    <stixCommon:Reference>http://krebsonsecurity.com/2014/09/signature-systems-breach-expands/</stixCommon:Reference>
+                    <stixCommon:Reference>http://nakedsecurity.sophos.com/2014/09/29/point-of-sale-vendor-loses-password-causes-breaches-at-324-us-restaurants/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+nakedsecurity+%28Naked+Security+-+Sophos%29</stixCommon:Reference>
+                    <stixCommon:Reference>https://nakedsecurity.sophos.com/2014/09/29/point-of-sale-vendor-loses-password-causes-breaches-at-324-us-restaurants/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+nakedsecurity+%28Naked+Security+-+Sophos%29</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.pdqpos.com/notice.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-9b316749-a5de-4cdf-9da2-1ee200351efc" timestamp="2014-12-22T16:35:31.096000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:31.096000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:31.096000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-8af6da35-ef0f-4b22-86f1-1596154cd1f3" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-3a903541-5427-4d9f-a844-11d74e64d870" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="example:threatactor-7adf2522-2a33-4b75-96fa-c59eb4eb8b05" timestamp="2014-12-22T16:35:31.096000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Signature Systems</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:35:31.096000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Motivation timestamp="2014-12-22T16:35:31.096000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-8af6da35-ef0f-4b22-86f1-1596154cd1f3" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-3a903541-5427-4d9f-a844-11d74e64d870" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

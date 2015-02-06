@@ -1,0 +1,100 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-5886682b-9054-400b-8ead-06eb5bf1ee29" version="1.1.1" timestamp="2014-08-12T14:22:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-f3be5c72-7703-4e11-89ab-0f21e5dc3cc2" timestamp="2014-08-12T14:22:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Some customers suffer a one-two punch after Exchange Online and Lync Online experience outages less than a day apart. Cloud outages are nothing new. Yet on Tuesday, Microsoft and its business customers discovered just how disruptive one can be when it affects email, which is often considered the lifeblood of modern business. The Redmond, Wash.-based company suffered a black eye on June 24 after a service interruption affected its cloud-based Exchange Online service. Making matters worse, the hours-long outage took place during most of the workday for many U.S. customers. "On Tuesday, June 24th, 2014, at approximately 6:30 a.m.EDT, some North American customers experienced email delays with Exchange Online. The issue has since been resolved, and the service is now functioning normally," explained a Microsoft spokesperson in an email to eWEEK. "We sincerely apologize to our customers for any inconvenience this incident may have caused." The unexpected downtime shouldn't dissuade businesses from adopting cloud services, according to TJ Keitt, a Forrester Research Senior Analyst. "As for its implications on business utilization of the Office 365 service, I don't believe occasional service interruptions are cause, in and of themselves, for not going down the services route," he told eWEEK.   7 Reasons Leading Companies Manage Their APIs in the Cloud Download Now Nonetheless, enterprise customers will want to go into service agreements with their eyes wide open, he said. "While vendors like Microsoft are providing highly available infrastructure, that should never be misconstrued as infallible infrastructure.    "I've said this in relation to Google outages and the same applies here: You should judge the vendor on how quickly it reports the outage, how soundly it makes the fix and how it communicates the problem and its resolution to clients and prospects," advised Keitt. Exchange Online is now back in service after it had been rendered inaccessible for at least 8 hours for some customers. In the early morning hours of Tuesday, the company's customers flocked to the Office 365 forums to report that their organizations were unable to send or receive email using Exchange Online or the Outlook Web App. The Azure-backed service, used mainly by businesses, provides practically the same email, calendar and contacts services and management capabilities as its namesake on-premises, server-based software. David Zhang, of Microsoft Support, confirmed that the service failed at 8:30 a.m. EDT June 24. "Microsoft has identified an issue in which a portion of capacity responsible for facilitating connectivity to the Exchange Online service has entered into a degraded state. Engineers are actively working on a solution to remediate impact," quoted Zhang from a status page. At 2:07 p.m. EDT June 24, the official Office 365 (@Office365) Twitter account posted the following: "Some Exchange customers are experiencing email delays, we are working to resolve, please see the SHD for service status" As the hours dragged on, irate customers reported a complete email shutdown across their entire organizations, long wait times on the customer support phone lines and service health dashboards that reported no issues while Exchange Online remained clearly inaccessible. For some customers, the situation amounted to rubbing salt on some very recent wounds.  A day earlier, on June 23, Lync Online also suffered an outage that began at approximately 8 a.m. EDT. Lync Online is the cloud-based version of Microsoft's enterprise voice, video and instant messaging communications service.  A status update from Microsoft read:  "Engineers have determined that a portion of network infrastructure which routes network traffic was in a degraded state. Engineers have shifted traffic to alternate capacity and are now checking service health." After 7 p.m. EDT, Edward Qu of Microsoft Support reported on the company's support forum that the issue had finally been resolved. "Engineers continued analyzing network traffic to further isolate the source of the issue for the remaining affected customers, and identified an additional degraded portion of network infrastructure that was preventing connections from being routed successfully," explained Qu. Microsoft's engineers were able to restore service after they "implemented a configuration change to bypass the affected network infrastructure to restore service," added Qu. </incident:Title>
+            <incident:External_ID source="VERIS">B040AF5E-E527-4193-A95D-01592F7B6FA1</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2014-06-24T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Microsoft Corp</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>WA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Router or switch</incident:Type>
+                    <incident:Description>General Notes: Network service outtage.</incident:Description>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Degradation</incident:Type_Of_Availability_Loss>
+                            <incident:Duration_Of_Availability_Loss xsi:type="stixVocabs:LossDurationVocab-1.0">Hours</incident:Duration_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.eweek.com/enterprise-apps/exchange-online-back-in-service-after-extended-outage.html?utm_source=twitterfeed&amp;utm_medium=twitter</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>

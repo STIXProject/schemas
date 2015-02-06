@@ -1,0 +1,155 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-fef0fb7c-fa43-46c5-8457-6551a1fa9983" version="1.1.1" timestamp="2014-11-21T08:32:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-162778e6-e555-4c09-8d2d-f3f42b4f2916" timestamp="2014-12-22T16:35:44.879000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type>Unknown</ttp:Type>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-0df055e8-7426-4f36-98f5-0fa6985897d1" timestamp="2014-11-21T08:32:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Central Dermatology Center (Central) announced on November 7, 2014 that on September 25, 2014 it became aware that one of its servers had been compromised by malicious software (malware). Central immediately consulted with forensic IT experts to identify and remove the malware and determine exactly what information on the server may have been accessed. The malware was removed and the server has been disconnected from Centrals system.  The information on the server that may or may not have been accessed included patients name, address, phone numbers, date of birth, social security number, billing and diagnostic codes, insurance company, insurance co-payment information, healthcare provider, employer information, sex, treatment date, account balance, email address, and race.  Based on Centrals forensic investigation to date it is believed that patient bank account and payment card information were not compromised and electronic medical records were not on this server as they were encrypted by Central prior to the malware being placed on the server.  Taking aggressive action early and confronting this issue is consistent with the practices core value of behaving in an ethical and transparent fashion, said Greg Catt, Practice Administrator at Central Dermatology Center &amp; Carolina Medi-Spa. Central hired a prominent forensics security expert firm and an information technology firm that investigated this incident, reviewed all systems, and Central has improved our security wherever necessary to help protect our community. On behalf of the people of Central Dermatology Center, we sincerely apologize for any inconvenience this may cause.  As part of our investigation in this matter, we consulted with an IT forensics firm and a separate IT company who specialize in this area. The investigation revealed that malware compromised a password protected Central server on or about August 9, 2012 despite safeguards in place, including software on the server designed to prevent such malware. We contacted, and will continue to work with, local law enforcement, the Federal Bureau of Investigation, North Carolina Attorney General, nationwide consumer reporting agencies, and the U.S. Department of Health and Human Services regarding this matter.  Central is notifying potentially affected patients and patients are being offered free credit monitoring and identity theft protection. Patients are encouraged to take advantage of these services being provided by Equifax. Additionally, Central created a data security incident call center to answer patient questions, including whether your information was included in this incident. That number is (800) 448-6104. The call center hours are Monday-Friday from 11am-7pm Eastern Time.  Moreover, you can remain vigilant by reviewing account statements and you can order a free credit report at www.annualcreditreport.com, or by calling toll-free (877) 322-8228, or by completing the Annual Credit Report Request Form on the U.S. Federal Trade Commissions website at www.ftc.gov and mail it to Annual Credit Report Services, P.O. Box 105281, Atlanta, GA 30348-5281. Further, you may obtain information from the three major consumer credit reporting agencies, Equifax, (800) 525-6285, Equifax Credit Information Services, Inc., P.O. Box 740241, Atlanta, GA 30374; Experian (888) 397-3742, P.O. Box 4500, Allen, TX 75013 (mailing address for disputes, all other services available at www.experian.com); and TransUnion (800) 680-7289, TransUnion LLC, P.O. Box 2000, Chester, PA 19022-2000.  You can obtain information about preventing identity theft, fraud alerts, and credit freezes from the U.S. Federal Trade Commission and the North Carolina Attorney Generals Office. You can call the U.S. Federal Trade Commission at (877) 382-4357 and the address for the U.S. Federal Trade Commission is 600 Pennsylvania Ave, NW, Washington, DC 20580. You can obtain information from the North Carolina Attorney Generals Office through their website at www.ncdoj.gov, call toll free to (877) 566-7226, or send mail to 9001 Mail Service Center, Raleigh, NC 27699-9001.  Additionally, you should report any identify theft to local law enforcement and the state attorney general of your state of residence.  SOURCE: Central Dermatology Center</incident:Title>
+            <incident:External_ID source="VERIS">E8A6C956-69A9-4423-9376-42680DDBA3AE</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2012-08-12T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Central Dermatology Center</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NC</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-162778e6-e555-4c09-8d2d-f3f42b4f2916" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-2f0782cf-a4d1-4de2-ae3c-c7be77fc4175" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.phiprivacy.net/nc-central-dermatology-center-notifies-patients-after-discovering-malware-had-been-inserted-in-their-system-in-2012/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.centralderm.net/protects.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://healthitsecurity.com/2014/11/10/potential-health-data-breach-hits-dermatology-facility/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-2f0782cf-a4d1-4de2-ae3c-c7be77fc4175" timestamp="2014-12-22T16:35:44.879000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:44.879000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:44.879000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-162778e6-e555-4c09-8d2d-f3f42b4f2916" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

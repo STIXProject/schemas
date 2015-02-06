@@ -1,0 +1,134 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-ae81ca47-2aac-4b41-b6cb-add802670ded" version="1.1.1" timestamp="2014-09-30T18:54:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-b89fe9ff-f325-45ca-9f5d-25a9d34de44a" timestamp="2014-09-30T18:54:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>One of the busiest medical clinics in Santa Fe has reported a security breach affecting patients who were treated at Santa Fe Family Health Center during two weeks in July. The clinic, 2801 Rodeo Road, released a statement Friday afternoon saying the breach occurred July 14 for patients who had office visits between June 30 and July 13. We are sorry to report to you that on July 14, Santa Fe Medical Group became aware of a breach to your personal health information, the company said in a statement. An unidentified man entered the clinic at about 3 a.m. July 14, according to the statement. There was a theft of voice-recorded files from the providers, as well as cash and checks taken from the safe of Santa Fe Family Health. No credit card information was stolen, the clinic said. The clinic is owned by Atrinea Health, a company founded by Dr. Philip Briggs, a physician who started practicing in Santa Fe and has since opened offices statewide. In addition to Santa Fe Family Health, Atrinea also owns Coraz_n Family Health on Rodeo Lane and clinics in Espaola, Los Alamos, Las Vegas, N.M., Albuquerque, Rio Rancho and Los Lunas. Santa Fe Family Health offers both urgent and primary care. No other clinics were affected, said Tammy Payne, medical records supervisor with Atrinea. She could not say if patients were notified before Friday, adding that the company is doing what it is required under federal laws. We had to do an investigation with regards to the information, Payne said. She said Atrinea was providing the press the same information as it was providing patients, and that she could not elaborate. In its statement, the company said it filed a police report July 14, initiated a forensics security investigation, changed locks as well as policies and procedures, and initiated operational or technology updates or changes triggered by the incident to improve confidentiality. Celina Espinoza, a Santa Fe Police Department spokeswoman, said the initial dispatch log from 1:46 p.m. July 14 indicates that deposits were stolen from the safe, it but does not refer to other items. I dont know if they made us aware there was personal information, she said. A full incident report was not available Friday. It is possible, Espinoza said, that further investigation by the company showed the possibility of identification theft and that is why the company was now alerting the public. Contact Bruce Krasnow at brucek@sfnewmexican.com. What to do if you are affected In a letter to patients, Atrinea Health advises patients at Santa Fe family Health Clinic to:  Register a fraud alert with the three credit bureaus listed here and order credit reports. Experian: 888-397-3742, www.experian.com, P.O. Box 9532, Allen, TX 75013 TransUnion: 800-680-7289; www.transunion.com, Fraud Victim Assistance Division, P.O. box 6790, Fullerton, CA 92834-6790 Equifax: 800-525-6285; www.equifax.com, P.O. Box 740241, Atlanta, GA 30374-0241  Monitor account statements, explanations of benefits and credit bureau reports closely.  Contact the Consumer Protection Agency: www.nmag.gov/the_office/Communications-Division/consumer-protection.  Notify law enforcement to assist in the investigation: Case No. 14-009636.  Access helpful Web links to learn additional information on consumer protection when personal information is compromised, such as http://library.ahima.org/xpedio/groups/public/documents/ahima/bok1_039114.pdf. The company also said patients can contact its representatives at 877-356-8089 during business hours or at privacy@atrineahealth.com.</incident:Title>
+            <incident:External_ID source="VERIS">DFF8DC5B-7D4D-4A36-BD3C-36FEEF13CFD2</incident:External_ID>
+            <incident:Time>
+                <incident:First_Malicious_Action precision="hour">2014-07-13T23:30:00</incident:First_Malicious_Action>
+                <incident:Initial_Compromise precision="day">2014-07-14T00:00:00</incident:Initial_Compromise>
+                <incident:First_Data_Exfiltration precision="hour">2014-07-14T00:30:00</incident:First_Data_Exfiltration>
+                <incident:Incident_Discovery precision="hour">2014-07-14T11:00:00</incident:Incident_Discovery>
+                <incident:Containment_Achieved precision="day">2014-07-14T23:00:00</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">gdbassett</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Santa Fe Family Medical Group</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NM</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Media</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Unknown; Notes:Theaft of voice-recorded files</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-68286fad-63cb-4cc0-b30e-f30c28fe5cdc" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Security Alarm</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.santafenewmexican.com/news/health_and_science/santa-fe-health-clinic-says-patient-information-stolen/article_da003586-4ff9-5d6d-a914-36a7a27867ab.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-68286fad-63cb-4cc0-b30e-f30c28fe5cdc" timestamp="2014-12-22T16:35:22.545000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:22.555000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:22.555000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,114 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-b02964f6-6930-4493-8d69-7761cf2782e3" version="1.1.1" timestamp="2014-10-30T17:48:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-4013332a-d49d-409d-bc2b-0e24eeda7a81" timestamp="2014-10-30T17:48:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>The Northland Regional Council breached the Privacy Act when staff accessed text messages sent by the victim of a brutal bleach attack, the Privacy Commissioner has found.  Former council employee Mike Nager was driving to Whangarei in June last year to give evidence in court against two Far North men accused of illegally digging up swamp kauri when he stopped for a car flashing its lights. He was attacked by unknown assailants who threw bleach into his eyes and slashed his face with a knife.  He returned to his job soon afterwards but went on sick leave after getting flashbacks of the attack. He was fired in March after he went public about the council's refusal to destroy a confidential report it had received in an ACC error.  Mr Nager has since lodged a complaint for unjustified dismissal with the Employment Relations Authority. He also took his concerns about his employer's actions to the Privacy Commissioner, who has ruled that the council breached the Privacy Act when it accessed text messages sent by Mr Nager in the days following the attack. The council is appealing the Commissioner's finding.  When contacted by the Advocate, Mr Nager said he exchanged about half a dozen text messages with his former boss at the Taranaki Regional Council, Bruce Pope, two days after the attack.  He thought his former colleagues would have worked out he was the attack victim and wanted to assure them he was recovering. An exchange of texts followed in which they discussed how he was faring, the Northland Regional Council's response, and the attackers' possible motivation.  Mr Nager's manager at the Northland Regional Council, Tess Dacre, learnt he had been in contact with Mr Pope and asked him for copies of the text messages. Mr Pope obliged, treating it as a request under the Official Information Act.  Mr Nager said he found out the NRC had obtained his text messages when he requested his personnel file.  "I thought, 'What's this?' I gave my ex-boss a call and it all unfolded from there. They (NRC) got my messages off someone else's phone. That's really underhanded. You don't expect that degree of snooping. I don't know what they were hoping to find."  Mr Nager said he was not seeking redress when he complained to the Commissioner, only a ruling that the council had done wrong.  From correspondence sighted by the Advocate it appears the regional council requested the texts in the hope of finding evidence to counter Mr Nager's complaint that it had not been doing enough for him after the attack. The council was also unhappy that Mr Nager had told someone outside the organisation that he was the victim of the high-profile attack.  A date has yet to be set for Mr Nager's Employment Court hearing. An attempt at mediation in August failed. NRC chief executive Malcolm Nicolson could not be contacted yesterday.  The Privacy Act states that personal information must not be collected unless for a lawful purpose connected with a function of the agency collecting the information; and it is necessary to collect the information for that purpose.</incident:Title>
+            <incident:External_ID source="VERIS">9C8E5C20-25E9-4765-B08D-DC0B907AD2C2</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2013-06-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Northland Regional Council</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NZ</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Mobile phone</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Other</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-12abbd31-08a9-4c99-93f3-e882684fccca" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.phiprivacy.net/nz-council-breached-workers-privacy/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.nzherald.co.nz/northern-advocate/news/article.cfm?c_id=1503450&amp;objectid=11340706</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-12abbd31-08a9-4c99-93f3-e882684fccca" timestamp="2014-12-22T16:31:47.548000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:31:47.548000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:31:47.548000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,150 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-84aecac3-6a30-471c-959d-c622bacf2324" version="1.1.1" timestamp="2014-07-11T21:12:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-e0d3eae2-9200-43c8-957c-c47a2a3b88bf" timestamp="2014-12-22T16:35:19.799000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type xsi:type="stixVocabs:MalwareTypeVocab-1.0">Remote Access Trojan</ttp:Type>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-1d3e7dfc-0aeb-4f08-8546-7f26ec990e92" timestamp="2014-07-11T21:12:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Unknown attackers compromised a download mirror server for the SourceForge software repository, rigging the installer package for phpMyAdmin, a popular Web-based MySQL database administration tool, with a backdoor.SourceForge is a Web-based collaborative software development and repository system that hosts over 324,000 software development projects and serves 46 million users. The service is operated by Geeknet, a company based in Fairfax County, Virginia, U.S.  "One of the SourceForge.net mirrors, namely cdnetworks-kr-1, was being used to distribute a modified archive of phpMyAdmin, which includes a backdoor," the phpMyAdmin development team said Tuesday in a security advisory. "This backdoor is located in file server_sync.php and allows an attacker to remotely execute PHP code."  The modified package was phpMyAdmin-3.5.2.2-all-languages.zip and, according to access logs from the compromised mirror server, it was downloaded by approximately 400 users.  An identifier of CVE-2012-5159 was assigned to the vulnerability introduced by the phpMyAdmin backdoor code. Security vendor Secunia rates the vulnerability as extremely critical because it provides system access and can be exploited remotely.  A module targeting the vulnerability was added to the Metasploit penetration testing framework on Tuesday.  The affected mirror server was based in Korea and was compromised on or around Sept. 22, the SourceForge team said Tuesday in a blog post. "The mirror provider has confirmed the attack vector has been identified and is limited to their mirror," the SourceForge team said.  The mirror server was removed from rotation after SourceForge learned of the compromise on Tuesday. However, the team is still investigating whether the phpMyAdmin archive was the only package modified by the attackers.  The mirror provider appears to be a company called CDNetworks that specializes in Internet content delivery. CDNetworks has been operating SourceForge mirror servers in the U.S. and Asia since 2009. A spokeswoman for CDNetworks in the U.S. said she was looking into the incident, but was not immediately able to provide more information about the apparent security breach.  RESOURCES  WHITE PAPER SIP Migration: Addressing CIOs' Concerns  WHITE PAPER SBIC: Transforming Information Security SEE ALL   Go It's not clear why the rogue package modification wasn't detected earlier since by definition mirror servers should mirror the content from a central repository. "Automated mirror validation occurs on an ongoing basis and SHA1/MD5 sums [file digital fingerprints] are provided for validation client-side," Rich Bowen, a SourceForge official, said Tuesday via email.  Users who downloaded and deployed the phpMyAdmin-3.5.2.2-all-languages.zip package recently are advised to check whether heir phpMyAdmin installations contain the rogue server_sync.php file. If the file is found, the software should be deleted and a fresh copy of the package should be downloaded.  Web server administrators are also advised to check the server logs in order to determine whether the backdoor was accessed and used to execute rogue code on their servers.  The phpMyAdmin development team regularly publishes the MD5 checksums for the software's official install packages on its website. For example, the legitimate phpMyAdmin-3.5.2.2-all-languages.zip archive has an MD5 checksum of "6f284e973809af8cda998eeaa9aa7884".  Users should calculate the MD5 checksum of the package they download and compare it to the one published by the phpMyAdmin developers in order to verify that it is legitimate. A modified package will have a different MD5 checksum.  In fact, users should always perform a checksum verification when downloading software for use on their computers or servers, whenever the developer provides an MD5 or other type of checksum for the installer. Some browsers, like Mozilla Firefox, have extensions that make checksum checking easier.  This is not the first time that a download server has been compromised and the installer of a popular application has been backdoored.  In June 2011, the WordPress development team warned that some fairly popular WordPress plug-ins had been backdoored through the official plug-in repository.  In July 2011, the maintainer of vsftpd (Very Secure FTP Daemon), a popular FTP server software, announced that the master vsftpd download site was compromised and the software's official packages were rigged with a backdoor.  In December 2010, unknown hackers compromised the main distribution server of the ProFTPD Project -- another popular FTP server software -- and added a root shell backdoor to the source code. </incident:Title>
+            <incident:External_ID source="VERIS">DCE38CAA-1105-4FF0-A43C-19CF2905F084</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2012-09-22T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">SourceForge</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>VA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>S - Code repository</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Modify data,Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-e0d3eae2-9200-43c8-957c-c47a2a3b88bf" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-020f8e63-540f-4c76-949b-0c800714316f" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.networkworld.com/article/2160201/smb/compromised-sourceforge-mirror-distributes-backdoored-phpmyadmin-package.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.networkworld.com/article/2162884/security/worst-security-snafus-of-2012.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-020f8e63-540f-4c76-949b-0c800714316f" timestamp="2014-12-22T16:35:19.799000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:35:19.799000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:35:19.799000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-e0d3eae2-9200-43c8-957c-c47a2a3b88bf" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

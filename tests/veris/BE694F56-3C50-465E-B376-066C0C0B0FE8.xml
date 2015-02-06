@@ -1,0 +1,154 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-a3c45b2f-67a8-4fe8-904d-1f295ab48f60" version="1.1.1" timestamp="2014-07-23T00:21:00+00:00">
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-1807b4de-7b33-4cdc-8540-953681a800ee" timestamp="2014-12-22T16:33:32.724000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-1dc3debe-e0bb-4bbb-ae03-8dc637e02a01" timestamp="2014-07-23T00:21:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>The Equifax credit bureau confirmed Tuesday that criminals have stolen credit reports from AnnualCreditReport.com, the website designed to allow consumers free access to their own credit reports.  The theft  suggests criminals have outfoxed AnnualCreditReport.coms defenses, potentially giving them access to potentially 200 million Americans credit reports. According to the Consumer Financial Protection Bureau, 16 million consumers use AnnualCreditReport.com annually.  The nation's three largest credit bureaus -- Equifax, Experian and TransUnion -- were required by federal legislation passed in 2003 to offer consumers one free credit report every year. The three jointly operate AnnualCreditReport.com to fulfill that obligation.  Entertainment news website TMZ first reported Monday that highly detailed personal information on international celebrities and political figures  including Jay-Z, Beyonce, Attorney General Eric Holder and Hillary Clinton  had been published on a website, and that the FBI was investigating. The same website identified in that report published additional data on Tuesday, including details about first lady Michelle Obama and Vice President Joe Biden, leading to a flurry of interest in the source of the data.  Later Tuesday, Equifax confirmed that some of the data associated with those identity thefts had been stolen from AnnualCreditReport.com.  "Equifax can confirm that fraudulent and unauthorized access to four consumer credit reports has occurred through the AnnualCreditReport.com channel, a free public service that allows all consumers to get annual access to their credit report," the company said in a statement.  "Our initial investigation shows the perpetrators had the (personal information) of the individuals whose files were accessed and were therefore able to pass the required authentication measures in place. We have launched a full investigation into this matter and we are also working closely with law enforcement authorities on this matter."  The statement did not identify which credit reports had been accessed through the website or explain why more than four reports had been published on the website.   TransUnion and Experian also confirmed unauthorized persons had managed to access the credit report data.  "TransUnions systems were not hacked or compromised in any way," the firm said in a statement to CNBC. "The sophisticated perpetrators of these fraudulent activities had considerable amounts of information about the victims, including Social Security numbers and other sensitive, personal identifying information that enabled them to successfully impersonate the victims over the Internet in order to illegally and fraudulently access their credit reports. TransUnion is taking steps to assist the individuals affected to help minimize any potential impact. We are conducting our own internal investigation and working closely with law enforcement."  Experian also said its systems weren't hacked, adding that "this looks to be an isolated situation."  Consumers who attempt to obtain their credit reports from AnnualCreditReport.com must answer a series of authentication questions. Many of these are what's known as "out-of-wallet" questions -- questions that a criminal who had stolen a wallet couldn't answer -- such as, "which bank holds your mortgage" or "which of these former addresses are valid."  That means the criminals who stole the credit reports probably had access to a host of personal information about their targets, allowing them to successfully answer the authentication questions. Some of that data can be purchased from other online data brokers, culled from web pages or even determined through guesswork and the process of elimination.  The Federal Trade Commission regulated the creation of AnnualCreditReport.com and its security procedures.   FTC spokesman Jay Mayfield said the data theft serves as another reminder to consumers that they should protect their personal information, but said the agency still recommends that consumers visit AnnualCreditReport.com or call the credit bureaus to get a free copy of their credit report every year. He would not comment specifically about the theft of the celebrity credit reports, or about the security of AnnualCreditReport.com  Consumers who hear that AnnualCreditReport.com has been compromised might be dissuaded from using the site in the future, and perhaps paying another third-party firm for their credit reports. Doing so would not enhance their security, however.  The data available at AnnualCreditReport.com could be accessed by criminals, even if the consumer never asks for it.  Issues with the authentication procedures at credit report websites have been raised in the past. Last year, security analyst Dan Clements of CloudEyez.com gave NBCNews.com a tour of websites that sell stolen credit reports. Several of the stolen credit reports viewed at the time indicated they'd been taken from AnnualCreditReport.com or other third-party websites that charge a fee for access to credit reports.  "I'm selling super prime credit reports and scores which include all three bureaus and other information," bragged one advertisement on a credit reports for-sale site.  Most of the websites were hosted in the .su domain, assigned to the former Soviet Union. The recently celebrity credit reports are also hosted on a .su web site.  In one how-to posted on a hacker bulletin board, a hacker describes one brute-force attack used to gain access to credit report websites. Most sites are protected by "challenge" questions such as, "Which bank holds the mortgage on your home?"  But there's a critical flaw, the hacker said:  "Normally all ... of them will ask you the same question," the hacker wrote.  Because the sites use the multiple choice format, it's easy to use the process of elimination and determine the correct answers, he claims.  The hacker explained that the trick is to open several credit report sites and keep trying random answers until one set works.  The recipe is highly detailed, including helpful tips such as, "Take a shot of screen to remember what answers you gave. After that click the submit button and see what it says."  </incident:Title>
+            <incident:External_ID source="VERIS">BE694F56-3C50-465E-B376-066C0C0B0FE8</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="year">2013-01-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Equifax Inc</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>GA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-1807b4de-7b33-4cdc-8540-953681a800ee" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-7744431f-b157-49dd-ba7a-058bb496d1b1" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Agent Disclosure</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://usnews.nbcnews.com/_news/2013/03/12/17287204-sophisticated-id-thieves-swipe-info-on-michelle-obama-beyonce-ashton-kutcher-and-others</stixCommon:Reference>
+                    <stixCommon:Reference>http://redtape.nbcnews.com/_news/2013/03/12/17286101-celebrity-hackers-stole-data-from-annualcreditreportcom-equifax-says?lite</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-7744431f-b157-49dd-ba7a-058bb496d1b1" timestamp="2014-12-22T16:33:32.724000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:33:32.724000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:32.724000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-1807b4de-7b33-4cdc-8540-953681a800ee" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

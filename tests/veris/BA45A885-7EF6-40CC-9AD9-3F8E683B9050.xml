@@ -1,0 +1,159 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-4e1bacf0-8a5b-4a6f-9677-64f03dcf5f03" version="1.1.1" timestamp="2014-10-15T20:50:00+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Notes: Large, ongoing incident.  FBI Investigation.  Multiple banks.</stix:Title>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-a9f28c22-b488-4710-90bd-00294cac8720" timestamp="2014-12-22T16:33:19.525000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>Unknown</ttp:Title>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-a2710a80-a05c-4a52-b194-b398a4f7b2ce" timestamp="2014-10-15T20:50:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>The Manhattan headquarters of JPMorgan Chase, which securities filings revealed was attacked by hackers over the summer. The Manhattan headquarters of JPMorgan Chase, which securities filings revealed was attacked by hackers over the summer. Documents: JPMorgans S.E.C. Filing Updated, 9:03 p.m. | A cyberattack this summer on JPMorgan Chase compromised the accounts of 76 million households and seven million small businesses, a tally that dwarfs previous estimates by the bank and puts the intrusion among the largest ever.  The details of the breach  disclosed in a securities filing on Thursday  emerge at a time when consumer confidence in the digital operations of corporate America has already been shaken. Target, Home Depot and a number of other retailers have sustained major data breaches. Last year, the information of 40 million cardholders and 70 million others were compromised at Target, while an attack at Home Depot in September affected 56 million cards.  But unlike retailers, JPMorgan, as the largest bank in the nation, has financial information in its computer systems that goes beyond customers credit card details and potentially includes more sensitive data.  Weve migrated so much of our economy to computer networks because they are faster and more efficient, but there are side effects, said Dan Kaminsky, a researcher who works as chief scientist at White Ops, a security company.  Until just a few weeks ago, executives at JPMorgan said they believed that only one million accounts were affected, according to several people with knowledge of the attacks.  As the severity of the intrusion  which began in June but was not discovered until July  became more clear in recent days, bank executives scrambled for the second time in three months to contain the fallout and to reassure skittish customers that no money had been taken and that their financial information remained secure.  The hackers appeared to have obtained a list of the applications and programs that run on JPMorgans computers  a road map of sorts  which they could crosscheck with known vulnerabilities in each program and web application, in search of an entry point back into the banks systems, according to several people with knowledge of the results of the banks forensics investigation, all of whom spoke on the condition of anonymity.  Operating overseas, the hackers gained access to the names, addresses, phone numbers and emails of JPMorgan account holders. In its regulatory filing on Thursday, JPMorgan said that there was no evidence that account information, including passwords or Social Security numbers, had been taken. The bank also noted that there was no evidence of fraud involving the use of customer information.  Still, until the JPMorgan breach surfaced in July, banks were viewed as relatively safe from online assaults because of their investment in defenses and trained security staff. Most previous breaches at banks have involved stealing personal identification numbers for A.T.M. accounts, not burrowing deep into the internal workings of a banks computer systems.  Even if no customer financial information was taken, the apparent breadth and depth of the JPMorgan attack shows how vulnerable Wall Street institutions are to cybercrime. In 2011, hackers broke into the systems of the Nasdaq stock market, but did not penetrate the part of the system that handles trades.  Jamie Dimon, JPMorgans chairman and chief executive, has acknowledged the growing digital threat. In his annual letter to shareholders, Mr. Dimon said, Were making good progress on these and other efforts, but cyberattacks are growing every day in strength and velocity across the globe.  Even though the bank has fortified its defenses against the attacks, Mr. Dimon wrote, the battle is continual and likely never-ending.  On Thursday, some lawmakers weighed in. Edward J. Markey, Democrat of Massachusetts and a member of the Senate Commerce Committee, said the data breach at JPMorgan Chase is yet another example of how Americans most sensitive personal information is in danger.  Hackers drilled deep into the banks vast computer systems, reaching more than 90 servers, the people with knowledge of the investigation said. As they analyze the contours of the breach, investigators in law enforcement remain puzzled, partly because there is no evidence that the attackers looted any money from customer accounts.  That lack of any apparent profit motive has generated speculation among the law enforcement officials and security experts that the hackers, which some thought to be from Russia and may have been sponsored by elements of the Russian government, the people with knowledge of the investigation said.  By the time the banks security team discovered the breach in late July, hackers had already obtained the highest level of administrative privilege to dozens of the banks computer servers, according to the people with knowledge of the investigation. It is still unclear how hackers managed to gain such deep access.  The people with knowledge of the investigation said it would take months for the bank to swap out its programs and applications and renegotiate licensing deals with its technology suppliers, possibly giving the hackers time to mine the banks systems for unpatched, or undiscovered, vulnerabilities that would allow them re-entry into JPMorgans systems.  Beyond its disclosures, JPMorgan did not comment on what its investigation had found. Kristin Lemkau, a JPMorgan spokeswoman, said that describing the banks breach as among the largest was comparing apples and oranges.  Preparing for the disclosure on Thursday, JPMorgan retained the law firm WilmerHale to help with its regulatory filing with the Securities and Exchange Commission, people with knowledge of the matter said. Earlier on Thursday, some executives  Barry Sommers, the chief executive of Chases consumer bank  flew back to New York from Naples, Fla., where they had convened for a leadership conference, these people said.  The initial discovery of the hack sent chills down Wall Street and prompted an investigation by the Federal Bureau of Investigation. The bank was also forced to update its regulators, including the Federal Reserve, on the extent of the breach.  Faced with the rising threat of online crime, JPMorgan has said it plans to spend $250 million on digital security annually, but had been losing many of its security staff to other banks over the last year, with others expected to leave soon.</incident:Title>
+            <incident:External_ID source="VERIS">BA45A885-7EF6-40CC-9AD9-3F8E683B9050</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2014-06-01T00:00:00</incident:Initial_Compromise>
+                <incident:Incident_Discovery precision="year">2014-11-16T00:00:00</incident:Incident_Discovery>
+                <incident:Containment_Achieved precision="year">2015-05-03T00:00:00</incident:Containment_Achieved>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">eludom</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">JPMorgan Chase</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Bank: 76000000, Personal: 76000000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-a9f28c22-b488-4710-90bd-00294cac8720" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-ce45ea62-608b-4d6e-bb5d-be539d2113e4" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://dealbook.nytimes.com/2014/10/02/jpmorgan-discovers-further-cyber-security-issues/?_php=true&amp;_type=blogs&amp;_php=true&amp;_type=blogs&amp;_r=1</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.consumerreports.org/cro/news/2014/10/protect-yourself-from-chase-mystery-breach/index.htm</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.zdnet.com/fbi-investigates-hack-of-jpmorgan-other-us-banks-7000033080/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.nytimes.com/2014/08/28/technology/hackers-target-banks-including-jpmorgan.html</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.nytimes.com/interactive/2014/10/03/business/dealbook/jpmorgan-documents.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-ce45ea62-608b-4d6e-bb5d-be539d2113e4" timestamp="2014-12-22T16:33:19.525000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:33:19.525000+00:00">
+                <stixCommon:Value>Nation-state</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:33:19.525000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-a9f28c22-b488-4710-90bd-00294cac8720" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,188 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-95c4eabb-5995-4b14-a609-8fa30c9d0747" version="1.1.1" timestamp="2014-10-30T17:57:00+00:00">
+    <stix:STIX_Header>
+        <stix:Title>Notes: Additional Investigation Details Disclosed In addition to details previously released, the investigation to date has determined the following:  Criminals used a third-party vendor's user name and password to enter the perimeter of Home Depot's network. These stolen credentials alone did not provide direct access to the company's point-of-sale devices. The hackers then acquired elevated rights that allowed them to navigate portions of Home Depot's network and to deploy unique, custom-built malware on its self-checkout systems in the U.S. and Canada. In addition to the previously disclosed payment card data, separate files containing approximately 53 million email addresses were also taken during the breach. These files did not contain passwords, payment card information or other sensitive personal information. The company is notifying affected customers in the U.S. and Canada. </stix:Title>
+    </stix:STIX_Header>
+    <stix:TTPs>
+        <stix:TTP id="example:ttp-5e93e47d-5232-4895-8b9b-1aaa881b99dc" timestamp="2014-12-22T16:31:44.592000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior/>
+        </stix:TTP>
+        <stix:TTP id="example:ttp-638a7b16-b353-43a8-aebd-480fa9b6c9f3" timestamp="2014-12-22T16:31:44.592000+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Behavior>
+                <ttp:Malware>
+                    <ttp:Malware_Instance>
+                        <ttp:Type>Unknown</ttp:Type>
+                    </ttp:Malware_Instance>
+                </ttp:Malware>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-8de9b9ef-75a3-4ab8-b3ac-c2fc5b901fc6" timestamp="2014-10-30T17:57:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>The Home Depot, the world's largest home improvement retailer, today confirmed that the malware used in its recent breach has been eliminated from its U.S. and Canadian networks. The company also has completed a major payment security project that provides enhanced encryption of payment data at point of sale in the companys U.S. stores, offering significant new protection for customers. Roll-out of enhanced encryption to Canadian stores will be complete by early 2015. Canadian stores are already enabled with EMV Chip and PIN technology. The company said its fiscal third quarter sales, including sales in September, are on plan. Additional guidance is provided below. Investigation Details The investigation into a possible breach began on Tuesday morning, September 2, immediately after The Home Depot received reports from its banking partners and law enforcement that criminals may have breached its systems. Since then, the companys IT security team has been working around the clock with leading IT security firms, its banking partners and the Secret Service to rapidly gather facts, resolve the problem and provide information to customers. The companys ongoing investigation has determined the following:  Criminals used unique, custom-built malware to evade detection. The malware had not been seen previously in other attacks, according to Home Depots security partners.  The cyber-attack is estimated to have put payment card information at risk for approximately 56 million unique payment cards.  The malware is believed to have been present between April and September 2014. To protect customer data until the malware was eliminated, any terminals identified with malware were taken out of service, and the company quickly put in place other security enhancements. The hackers method of entry has been closed off, the malware has been eliminated from the companys systems, and the company has rolled out enhanced encryption of payment data to all U.S. stores. -more- _-2- There is no evidence that debit PIN numbers were compromised or that the breach has impacted stores in Mexico or customers who shopped online at HomeDepot.com or HomeDepot.ca. The Home Depot is offering free identity protection services, including credit monitoring, to any customer who used a payment card at a Home Depot store in 2014, from April on. Customers who wish to take advantage of these services can learn more at www.homedepot.com or by calling 1-800-HOMEDEPOT (800-466-3337). Customers in Canada can call 800-668-2266. We apologize to our customers for the inconvenience and anxiety this has caused, and want to reassure them that they will not be liable for fraudulent charges, said Frank Blake, chairman __and CEO. From the time this investigation began, our guiding principle has been to put our customers first, and we will continue to do so. Payment Security Enhancements The companys new payment security protection locks down payment data through enhanced encryption, which takes raw payment card information and scrambles it to make it unreadable and virtually useless to hackers. Home Depots new encryption technology, provided by Voltage Security, Inc., has been tested and validated by two independent IT security firms. The encryption project was launched in January 2014. The rollout was completed in all U.S. stores on Saturday, September 13, 2014. The rollout to Canadian stores will be completed by early 2015. EMV Chip and PIN technology, which began rolling out in early 2013 and already exists in Canadian stores, will be deployed to all U.S. stores by the end of the year, well ahead of a 2015 deadline established by the payments industry. These projects required writing tens of thousands of lines of new software code and deploying nearly 85,000 new pin pads to stores. Updated Guidance Based on its fiscal third quarter results to date, the company confirmed its previous fiscal 2014 sales growth guidance of approximately 4.8 percent. The company also revised its fiscal 2014 diluted earnings-per-share growth guidance and expects that fiscal 2014 diluted earnings per share will grow by 21 percent to approximately $4.54, versus the companys prior guidance of _$4.52. The companys fiscal 2014 diluted earnings-per-share guidance includes estimates for the cost to investigate the data breach, provide credit monitoring services to its customers, increase call center staffing, and pay legal and professional services, all of which are expensed as incurred in a gross amount of approximately $62 million, partially offset by a $27 million receivable for costs the company believes are reimbursable and probable of recovery under its insurance coverage. Further, the companys fiscal 2014 diluted earnings-per-share guidance includes a _-more- _-3- pre-tax gain of approximately $100 million related to the sale of 3.6 million shares of HD Supply common stock, which occurred and will be recognized in the third quarter of fiscal 2014. The companys ownership of HD Supply is now approximately 8.2 million shares. The companys fiscal 2014 diluted earnings-per-share guidance does not include an accrual for other yet-to-be determined estimated probable losses related to the breach. At this time, other than the breach-related costs contained in the companys updated fiscal 2014 diluted earnings- per-share guidance, the company is not able to estimate the costs, or a range of costs, related to the breach. Costs related to the breach may include liabilities to payment card networks for reimbursements of credit card fraud and card reissuance costs; liabilities related to the companys private label credit card fraud and card reissuance; liabilities from current and future civil litigation, governmental investigations and enforcement proceedings; future _expenses for legal, investigative and consulting fees; and incremental expenses and capital investments for remediation activities. Those costs may have a material adverse effect on The Home Depots financial results in the fourth quarter and/or future periods. The Home Depot is the worlds largest home improvement specialty retailer, with 2,266 retail stores in all 50 states, the District of Columbia, Puerto Rico, U.S. Virgin Islands, Guam, 10 Canadian provinces and Mexico. In fiscal 2013, The Home Depot had sales of $78.8 billion and earnings of $5.4 billion. The Company employs more than 300,000 associates. The Home Depot's stock is traded on the New York Stock Exchange (NYSE: HD) and is included in the Dow Jones industrial average and Standard &amp; Poor's 500 index. ### Certain statements contained in this release constitute forward-looking statements as defined in the Private Securities Litigation Reform Act of 1995. These forward-looking statements are based on our current assumptions and expectations (which may change) and may relate to, among other things, (a) the impact of the breach on our results of operations, including (i) costs related to the breach (including any costs not currently reflected in our guidance), the related ongoing investigation and resulting liabilities, (ii) the outcome of our ongoing investigation, including our potential discovery of new information related to the breach, such as the discovery that additional information has been stolen, and our customers and other stakeholders reaction to that new information, (iii) our ability to recover any proceeds under our insurance policies, (iv) the uncertainty regarding the outcome of any current or future civil litigation, governmental investigations and enforcement proceedings, _and their impact on our financial performance and operations, (v) loss of customer confidence in our ability to protect their information and the adverse impact this loss of confidence may have on sales, and (vi) our ability to effectively or timely implement adequate payment security enhancements and other remediation efforts and our potential inability to prevent future attacks; (b) the demand for our products, services and credit offerings; (c) net sales growth; (d) comparable store sales; (e) state of the credit markets; (f) continuation of share repurchase programs at previously announced levels; (g) net earnings performance; (h) earnings per share; (i) guidance for fiscal 2014 and beyond; and (j) financial outlook. Forward-looking _-more- -4- statements are based on currently available information and our current assumptions, expectations and projections about future events. You should not rely on our forward-looking statements. These statements are not guarantees of future performance and are subject to future events, risks and uncertainties  many of which are beyond our control or are currently unknown to us  as well as potentially inaccurate assumptions that could cause actual results to differ materially from our expectations and projections. These risks and uncertainties include but are not limited to those described in Item 1A, Risk Factors, and elsewhere in our Annual Report on Form 10-K for our fiscal year ended February 2, 2014, in our subsequent Quarterly Reports on Form 10-Q and in any other materials or reports we file with the Securities and Exchange Commission (the SEC).</incident:Title>
+            <incident:External_ID source="VERIS">99747F66-E0BC-4B56-8A4A-2DA12D90ED1B</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="month">2014-04-01T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Home Depot Inc/The</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>GA</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Unknown</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment: 56000000, Personal: 53000000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>POS terminal</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Payment: 56000000, Personal: 53000000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Integrity</incident:Property>
+                            <incident:Description_Of_Effect>Software installation</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Leveraged_TTPs>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-5e93e47d-5232-4895-8b9b-1aaa881b99dc" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+                <incident:Leveraged_TTP>
+                    <stixCommon:TTP idref="example:ttp-638a7b16-b353-43a8-aebd-480fa9b6c9f3" xsi:type='ttp:TTPType'/>
+                </incident:Leveraged_TTP>
+            </incident:Leveraged_TTPs>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-4f07f983-e990-4717-a3c1-d28df4f23e02" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Law Enforcement</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://krebsonsecurity.com/2014/09/banks-credit-card-breach-at-home-depot/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.csoonline.com/article/2602002/data-breach/new-details-suggest-that-home-depot-breach-is-nationwide.html?utm_content=7775563&amp;utm_medium=social&amp;utm_source=linkedin</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.heraldtribune.com/article/20140909/wire/140909703</stixCommon:Reference>
+                    <stixCommon:Reference>http://investmentwatchblog.com/alert-home-depot-admits-massive-customer-payment-data-breach/</stixCommon:Reference>
+                    <stixCommon:Reference>http://media.corporate-ir.net/media_files/IROL/63/63646/HD_Data_Update_II_9-18-14.pdf</stixCommon:Reference>
+                    <stixCommon:Reference>http://arstechnica.com/security/2014/09/home-depots-former-security-architect-had-history-of-techno-sabotage/?utm_medium=twitter&amp;utm_source=twitterfeed</stixCommon:Reference>
+                    <stixCommon:Reference>http://m.ajc.com/news/business/home-depot-breach-costs-credit-unions-more-than-57/nhxKS/#__federated=1</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.streetinsider.com/Corporate+News/Home+Depot+%28HD%29+Updates+on+Data+Breach%3B+About+53M+Email+Addresses+Said+Compromised/9986517.html</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-4f07f983-e990-4717-a3c1-d28df4f23e02" timestamp="2014-12-22T16:31:44.592000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:31:44.592000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">eCrime Actor - Organized Crime Actor</stixCommon:Value>
+            </ta:Type>
+            <ta:Type timestamp="2014-12-22T16:31:44.592000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:31:44.592000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+            <ta:Observed_TTPs>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-5e93e47d-5232-4895-8b9b-1aaa881b99dc" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+                <ta:Observed_TTP>
+                    <stixCommon:TTP idref="example:ttp-638a7b16-b353-43a8-aebd-480fa9b6c9f3" xsi:type='ttp:TTPType'/>
+                </ta:Observed_TTP>
+            </ta:Observed_TTPs>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

@@ -1,0 +1,140 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-fb5472ef-30c2-4523-a8f2-83e19de6b3e2" version="1.1.1" timestamp="2014-08-04T16:44:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-b3de22ec-5cc2-4159-8fed-5ca503a731e3" timestamp="2014-08-04T16:44:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Those affected by the student loan privacy breach announced on Jan. 11 are organizing and demanding government accountability. Student loan borrowers affected by the hrsdc privacy breach, a Facebook group of 2,459 borrowers (as of 12:27 a.m. PST on Jan. 31), has organized with more than 250 signing a letter released on Monday, Jan. 28. The letter expresses concerns over Human Resources and Skills Development Canadas (HRSDC) latest solution to the breach, an offer of a free fraud alert flag provided by credit bureau Equifax, something HRSDC said normally costs $5. What HRSDC purchased from Equifax was a unique solution that was designed specifically for this particular incident, said Alyson Queen, HRSDC communications director. Its not the free service. This is added for six years. Were currently trying to work with other authorized financial institutions, Queen said. On Jan. 23, two days before HRSDC began offering fraud alerts through Equifax, Canadas other national credit bureau, TransUnion, began charging $5 to enable fraud alerts. Both bureaus offer credit monitoring services starting at $14.95 per month. I cant afford the $30 to $40 per month in fees for credit monitoring packages from both bureaus, UBC grad Nick Hall said. Those affected should not be out of pocket for the way the government has mishandled their information. Amanda Thoy started the Facebook group on Jan. 12, hoping to provide a forum for those affected to voice concerns. The group grew quickly and Thoy struggled to keep up with membership demand. My husband logged into the group via our laptop and I accepted requests via my iPhone, she said. We have now become more of an awareness group speaking out against HRSDC, Thoy said, asserting the departments dealings with the public had not been honest. Many Canadians are still not aware this breach has happened. Wende Donaldson, a 2001 graduate of ICT Kikkawa College in Toronto, paid the $5 fraud alert fee to Equifax before HRSDCs announcement. Now shes attempting to be reimbursed. Its the principle, she said. Someone needs to be held accountable for this. Donaldson waited 76 hours for a supervisor to call. She was told shed receive a call within 24 to 48 hours. When the supervisor finally contacted her, there was nothing he could do. By then, Donaldson said she was angry and asked the supervisor, How would you feel if this was your information out there? Many borrowers are still awaiting promised correspondence from HRSDC containing information on credit protection services offered and further information about what to do next. When one Facebook group member asked the group if anyone had received a letter, not one of the 70 respondents had. The letters are going out for everyone for whom we have current contact information, Queen said. The department stopped sending letters for a short period of time, just so that any future letters that were being sent would have information on the credit protection. The department is missing current contact information for one-third of those affected, according to Queen. Meanwhile, the federal government is facing four class-action lawsuits. Bob Buckingham Law in St. Johns, N.L. is among the firms filing. The government has 30 days to file a defence to my action and we have 90 days to file the motion to certify, Buckingham said. I hope to be quicker than that. On Nov. 5, 2012, an HRSDC employee discovered a hard drive containing the personal information of 583,000 student loan borrowers was missing. The public was notified 67 days later. The information was compiled for the purposes of a customer satisfaction survey, Queen said. There are now going to be disciplinary measures in place if employees do not follow protocol, Queen said, but could not comment on disciplinary measures over this incident. The hard drive is still deemed missing, but at this point in HRSDCs investigation, Queen reaffirmed theres no reason to believe any fraudulent activity has occurred. HRSDC is asking students to contact them to learn if theyre affected or to arrange credit protection services. Students can call 1-866-885-1866 from within North America or 1-416-572-1113 from outside.</incident:Title>
+            <incident:External_ID source="VERIS">101278F2-8031-49FC-ABF9-0918E861F9B9</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2012-11-12T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Canada Human Resources and Skills Development</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>CA</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Disk drive</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Personal: 583000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Availability</incident:Property>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Loss</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-9ca2d5a4-a4d4-4271-95f2-2166138e3fb5" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-f30ab5e4-0aaa-4de6-b157-793974a4d010" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Unknown</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://truomega.ca/2013/01/31/hrsdc-faces-criticism-for-handling-of-student-loan-privacy-breach/</stixCommon:Reference>
+                    <stixCommon:Reference>http://www.theglobeandmail.com/news/politics/government-faces-class-action-lawsuits-over-student-loan-borrowers-lost-data/article7492261/</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-9ca2d5a4-a4d4-4271-95f2-2166138e3fb5" timestamp="2014-12-22T16:22:38.099000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Type timestamp="2014-12-22T16:22:38.099000+00:00">
+                <stixCommon:Value>Unknown</stixCommon:Value>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:22:38.099000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:MotivationVocab-1.1">Financial or Economic</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+        <stix:Threat_Actor id="example:threatactor-f30ab5e4-0aaa-4de6-b157-793974a4d010" timestamp="2014-12-22T16:22:38.099000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Type timestamp="2014-12-22T16:22:38.099000+00:00">
+                <stixCommon:Value xsi:type="stixVocabs:ThreatActorTypeVocab-1.0">Insider Threat</stixCommon:Value>
+                <stixCommon:Description>Unknown</stixCommon:Description>
+            </ta:Type>
+            <ta:Motivation timestamp="2014-12-22T16:22:38.099000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>

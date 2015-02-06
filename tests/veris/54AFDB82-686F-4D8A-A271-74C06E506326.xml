@@ -1,0 +1,125 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix-ciqidentity="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xal="urn:oasis:names:tc:ciq:xal:3"
+	xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3"
+	xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://stix.mitre.org/Incident-1 http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd
+	http://stix.mitre.org/ThreatActor-1 http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd
+	http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 http://stix.mitre.org/XMLSchema/extensions/identity/ciq_3.0/1.1.1/ciq_3.0_identity.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+	urn:oasis:names:tc:ciq:xal:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xAL.xsd
+	urn:oasis:names:tc:ciq:xnl:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xNL.xsd
+	urn:oasis:names:tc:ciq:xpil:3 http://stix.mitre.org/XMLSchema/external/oasis_ciq_3.0/xPIL.xsd" id="example:Package-33346636-1f1d-4891-a634-3d22f66681ad" version="1.1.1" timestamp="2014-11-21T08:01:00+00:00">
+    <stix:Incidents>
+        <stix:Incident id="example:incident-f862850a-a36e-485a-8869-469466d68321" timestamp="2014-11-21T08:01:00+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>The Martin Luther King Jr. Health Center (MLK)  in the Bronx, New York, recently notified 37,000 patients of a security breach that occurred in 2009. The incident was just added to HHSs breach list today.  I was unable to find any media coverage of the breach, but found a notice on the centers web site that was still prominently linked from their home page. Its one that you will want to read in its entirety.  Potential Disclosure of Personal Health Information  Bronx-Lebanon Hospital Center Dr. Martin Luther King, Jr. Health Center On August 27, 2013, we learned that Professional Transcription Company (PTC), a company that was hired by us to transcribe dictated physician reports, had hired a subcontractor, Bahoo.net (Bahoo), which allowed certain transcriptions to be publicly available through Bahoos website and through certain search engines (e.g., Google). Upon investigation, it was determined that Bahoo failed to adequately secure its File Transfer Protocol (FTP) site allowing certain transcriptions to be viewable. The information in the transcriptions included patient names, type of treatment/procedure, diagnoses and dates of service, but did not include social security numbers, financial information, contact information or any other personal information in the patients medical records. As soon as the incident was identified, Bahoo closed its website and destroyed the hard drive so that the public could no longer view such personal information on the website. The unintended consequence of Bahoos decision to destroy the hard drive is that it is not possible to identify the specific dates the personal information was posted or whose information was publicly viewable. To be cautious, we notified by mail all patients whose information was sent to PTC over the past four years.In addition to taking these steps, Bahoo worked with the internet provider to prevent the transcriptions from being viewable in the internet search. We also hired a technical consultant to work with the other search engines to ensure the removal of any transcriptions that might still be viewable. Although no financial information was included, patients were advised that if they become aware of any suspicious activity in their accounts, they should report it to immediately to us.  If you have any questions or wish to make a report, please call us at the Call Center, 877-451-9361 (toll free), Monday through Friday, 9 am to 6 pm.  The security of patient information is critically important to us, as it is to our patients. We will continue to take all steps necessary to meet this goal and in furtherance of our mission of needed health care to the communities we serve.  The reference to Professional Transcription Service sounded familiar to me, and I did some digging and found out that the PTS breach had been reported on this site back in December 2010, after another one of their clients, Newark Beth Israel Medical Center in New Jersey, had reported the incident to HHS. The New Jersey hospitals report did not mention Bahoo.net, so this is the first time were learning that it was their error. Interestingly, MLK did not seem to have named Professional Transcription Services or Bahoo.net in their computerized breach report to HHS, which means their names dont show up on HHSs breach list for this incident. To the extent that some people consider HHSs public breach tool a Wall of Shame (I dont view it that way), those responsible for the breach should have been names.  But why did other PTS clients find out about the breach in December 2010 but Martin luther King Jr. Health Center only find out in August 2013? Was it because Bahoo destroyed the hard drive before it was thoroughly analyzed?  If so, what an unfortunate over-reaction on their part.  Kudos to Martin Luther King Jr. Health Center for genuinely erring on the side of  caution to notify everyone in 4-year window. And Im impressed that they even explained the FTP error on Bahoos part.  Finally, did anyone else note that MLK told patients to call them if they wish to make a report of suspicious activity on their account? When entities tell patients to call law enforcement, they put themselves in a position of not knowing if problems have occurred related to their breach, which also limits their ability to actually support the patient or help mitigate any harm.  By telling patients to call them, MLK demonstrated to its patients that it was there for them and cared enough to want to know if they experienced any difficulty as a result of the breach. I think it was a smart move on their part. And if law enforcement should be notified, the hospitals call center staff can presumably instruct the patients to follow up by reporting the problem to the police.</incident:Title>
+            <incident:External_ID source="VERIS">54AFDB82-686F-4D8A-A271-74C06E506326</incident:External_ID>
+            <incident:Time>
+                <incident:Initial_Compromise precision="day">2009-08-27T00:00:00</incident:Initial_Compromise>
+            </incident:Time>
+            <incident:Reporter>
+                <stixCommon:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                    <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">swidup</xnl:NameLine>
+  </xpil:PartyName>
+</ExtSch:Specification>
+                </stixCommon:Identity>
+            </incident:Reporter>
+            <incident:Victim xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:PartyName xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xnl:NameLine xmlns:xnl="urn:oasis:names:tc:ciq:xnl:3">Martin Luther King Jr. Health Center</xnl:NameLine>
+  </xpil:PartyName>
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>US</xal:NameElement>
+      </xal:Country>
+      <xal:AdministrativeArea xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>NY</xal:NameElement>
+      </xal:AdministrativeArea>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </incident:Victim>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Web application</incident:Type>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+                            <incident:Description_Of_Effect>Medical: 37000</incident:Description_Of_Effect>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+            <incident:Impact_Assessment>
+                <incident:Impact_Qualification xsi:type="stixVocabs:ImpactQualificationVocab-1.0">Unknown</incident:Impact_Qualification>
+            </incident:Impact_Assessment>
+            <incident:Attributed_Threat_Actors>
+                <incident:Threat_Actor>
+                    <stixCommon:Threat_Actor idref="example:threatactor-a24cd9e4-c3cd-4c07-b633-df04e581962f" xsi:type='ta:ThreatActorType'/>
+                </incident:Threat_Actor>
+            </incident:Attributed_Threat_Actors>
+            <incident:Security_Compromise xsi:type="stixVocabs:SecurityCompromiseVocab-1.0">Yes</incident:Security_Compromise>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Customer</incident:Discovery_Method>
+            <incident:Information_Source>
+                <stixCommon:Identity>
+                    <stixCommon:Name>vcdb</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Tools>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>veris2stix</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>MITRE</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>0.1</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                    <cyboxCommon:Tool>
+                        <cyboxCommon:Name>VERIS schema</cyboxCommon:Name>
+                        <cyboxCommon:Vendor>Verizon</cyboxCommon:Vendor>
+                        <cyboxCommon:Version>1.3</cyboxCommon:Version>
+                    </cyboxCommon:Tool>
+                </stixCommon:Tools>
+                <stixCommon:References>
+                    <stixCommon:Reference>http://www.phiprivacy.net/ny-martin-luther-king-jr-health-center-learns-of-subcontractors-breach-four-years-later-responds-to-breach-admirably/</stixCommon:Reference>
+                    <stixCommon:Reference>http://bronxcare.org/HIPAA_Notice.php</stixCommon:Reference>
+                </stixCommon:References>
+            </incident:Information_Source>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="example:threatactor-a24cd9e4-c3cd-4c07-b633-df04e581962f" timestamp="2014-12-22T16:26:47.567000+00:00" xsi:type='ta:ThreatActorType'>
+            <ta:Description>Notes: Professional Transcription Company</ta:Description>
+            <ta:Identity xsi:type='stix-ciqidentity:CIQIdentity3.0InstanceType'>
+                <ExtSch:Specification xmlns:ExtSch="http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1">
+  <xpil:Addresses xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3">
+    <xpil:Address>
+      <xal:Country xmlns:xal="urn:oasis:names:tc:ciq:xal:3">
+        <xal:NameElement>Unknown</xal:NameElement>
+      </xal:Country>
+    </xpil:Address>
+  </xpil:Addresses>
+</ExtSch:Specification>
+            </ta:Identity>
+            <ta:Motivation timestamp="2014-12-22T16:26:47.567000+00:00">
+                <stixCommon:Value>NA</stixCommon:Value>
+            </ta:Motivation>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
