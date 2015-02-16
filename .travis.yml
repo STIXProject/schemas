@@ -1,0 +1,13 @@
+language: python
+
+before_install:
+  - git clone https://github.com/STIXProject/schemas-test.git tests
+
+install:
+  - sudo apt-get update
+  - sudo apt-get install libxml2-dev libxslt-dev zlib1g-dev
+  - pip install -q stix
+  - pip install -q stix-validator
+
+# manifest = a list of testfiles to run, i.e. `ls -1 $test_dir [...] >> manifest.cfg`
+script: python tests/runner.py --test-case-repository tests/issues --test-case-repository tests/veris tests/manifest.cfg

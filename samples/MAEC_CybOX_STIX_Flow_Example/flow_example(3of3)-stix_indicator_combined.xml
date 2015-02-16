@@ -13,7 +13,7 @@
     xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
     xmlns:ttp="http://stix.mitre.org/TTP-1"
-    xmlns:maecExtension="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
+    xmlns:stix-maec="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
     xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2"
     xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
     xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
@@ -99,7 +99,7 @@
                     <ttp:Title>MAEC Characterization of Zeus 1.x Tracker</ttp:Title>
                     <ttp:Behavior>
                         <ttp:Malware>
-                            <ttp:Malware_Instance xsi:type="maecExtension:MAEC4.1InstanceType">
+                            <ttp:Malware_Instance xsi:type="stix-maec:MAEC4.1InstanceType">
                                 <maecExtension:MAEC id="maec-anubis_to_maec-pkg-1" schema_version="2.1">
                                     <maecPackage:Malware_Subjects>
                                         <maecPackage:Malware_Subject id="maec-anubis_to_maec-sub-1">
