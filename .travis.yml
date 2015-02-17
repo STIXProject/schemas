@@ -11,3 +11,12 @@ install:
 
 # manifest = a list of testfiles to run, i.e. `ls -1 $test_dir [...] >> manifest.cfg`
 script: python tests/runner.py --test-case-repository tests/issues --test-case-repository tests/veris tests/manifest.cfg
+
+branches:
+  only:
+    - master
+    - version_1.2
+
+notifications:
+  email:
+    - stix-commits-list@lists.mitre.org
