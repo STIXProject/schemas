@@ -4,13 +4,12 @@ Created on Nov 7, 2014
 @author: rpiazza
 '''
 
-import sys
-import sdv
-import csv
-import sdv.utils
 import argparse
-from sdv.errors import ValidationError
+import csv
+from os.path import abspath, dirname
+import sys
 
+from sdv.errors import ValidationError
 from sdv.validators import STIXSchemaValidator
 
 
@@ -52,11 +51,6 @@ def _validate_args(args):
     if (args.LIST_FILE is None):
         raise ArgumentError("No test case list file given", show_help=True)
 
-    if all((args.stix_version, args.use_schemaloc)):
-        raise ArgumentError(
-            "Cannot set both --stix-version and --use-schemalocs"
-        )
-
 
 def _get_arg_parser():
     """Initializes and returns an argparse.ArgumentParser instance for this
@@ -68,29 +62,6 @@ def _get_arg_parser():
     """
     parser = argparse.ArgumentParser(
         description="STIX Regression Tester v%s" % "0.1"
-    )
-
-    parser.add_argument(
-        "--stix-version",
-        dest="stix_version",
-        default=None,
-        help="The version of STIX to validate against"
-    )
-
-    parser.add_argument(
-        "--schema-dir",
-        dest="schema_dir",
-        default=None,
-        help="Schema directory. If not provided, the STIX schemas bundled "
-             "with the stix-validator library will be used."
-    )
-
-    parser.add_argument(
-        "--use-schemaloc",
-        dest="use_schemaloc",
-        action='store_true',
-        default=False,
-        help="Use schemaLocation attribute to determine schema locations."
     )
 
     parser.add_argument(
@@ -129,12 +100,10 @@ def main():
         print ex
         return 1
 
-    if args.stix_version is None:
-        schemaVersion = "1.1.1"
-    else:
-        schemaVersion = args.stix_version
-
-    validator = STIXSchemaValidator(args.schema_dir)
+    # This test script should be in the root directory of the schema
+    # repository.
+    schema_dir = dirname(abspath(__file__))
+    validator = STIXSchemaValidator(schema_dir)
 
     with open(args.LIST_FILE, 'r') as testCaseListFile:
         numTestCases = 0
