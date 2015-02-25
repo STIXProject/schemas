@@ -110,7 +110,15 @@ def main():
         numNegTestCasesFail = 0
 
         for line in testCaseListFile:
-            testCaseFileName, posOrNeg = [x.strip() for x in line.split(',')]
+            line = line.strip()
+            # Allow premature exiting of test manifest. This makes testing one
+            # or two test cases much quicker (though the "--end--" should be
+            # removed before committing).
+            if line == "--end--":
+                break
+            if line.startswith("#"):
+                continue
+            testCaseFileName, posOrNeg = line.split(',')
             if args.test_case_repository is not None:
                 testCaseFileName = args.test_case_repository + "/" + testCaseFileName
             if args.verbose:
