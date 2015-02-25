@@ -5,7 +5,6 @@ Created on Nov 7, 2014
 '''
 
 import argparse
-import csv
 from os.path import abspath, dirname
 import sys
 
@@ -109,7 +108,9 @@ def main():
         numTestCases = 0
         numPosTestCasesFail = 0
         numNegTestCasesFail = 0
-        for testCaseFileName, posOrNeg in csv.reader(testCaseListFile):
+
+        for line in testCaseListFile:
+            testCaseFileName, posOrNeg = [x.strip() for x in line.split(',')]
             if args.test_case_repository is not None:
                 testCaseFileName = args.test_case_repository + "/" + testCaseFileName
             if args.verbose:
