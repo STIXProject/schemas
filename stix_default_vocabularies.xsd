@@ -574,7 +574,7 @@
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:simpleType name="stixVocabs:DiscoveryMethodEnum-2.0">
+	<xs:simpleType name="DiscoveryMethodEnum-2.0">
 		<xs:annotation>
 			<xs:documentation>
                 The possible values for expressing how an incident was discovered.
