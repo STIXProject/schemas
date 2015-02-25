@@ -11,6 +11,8 @@ import sdv.utils
 import argparse
 from sdv.errors import ValidationError
 
+from sdv.validators import STIXSchemaValidator
+
 class ArgumentError(Exception):
     """An exception to be raised when invalid or incompatible arguments are
     passed into the application via the command line.
@@ -130,6 +132,8 @@ def main():
         schemaVersion = "1.1.1"
     else:
         schemaVersion = args.stix_version
+
+    validator = STIXSchemaValidator(args.schema_dir)
         
     with open(args.LIST_FILE, 'r') as testCaseListFile:
         numTestCases = 0
@@ -141,10 +145,8 @@ def main():
             if args.verbose: 
                 print testCaseFileName
             try:
-                validator_results = sdv.validate_xml(testCaseFileName, 
-                                                     version=schemaVersion,
-                                                     schemas=args.schema_dir,
-                                                     schemaloc=args.use_schemaloc)
+                validator_results = validator.validate(testCaseFileName)
+
                 if posOrNeg == "pos" and not validator_results.is_valid:
                     numPosTestCasesFail += 1
                     print "FAIL - didn't pass positive case " + testCaseFileName 
