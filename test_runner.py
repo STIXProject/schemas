@@ -13,6 +13,7 @@ from sdv.errors import ValidationError
 
 from sdv.validators import STIXSchemaValidator
 
+
 class ArgumentError(Exception):
     """An exception to be raised when invalid or incompatible arguments are
     passed into the application via the command line.
@@ -29,6 +30,7 @@ class ArgumentError(Exception):
     def __init__(self, msg=None, show_help=False):
         super(ArgumentError, self).__init__(msg)
         self.show_help = show_help
+
 
 def _validate_args(args):
     """Checks that valid and compatible command line arguments were passed into
@@ -54,7 +56,8 @@ def _validate_args(args):
         raise ArgumentError(
             "Cannot set both --stix-version and --use-schemalocs"
         )
-        
+
+
 def _get_arg_parser():
     """Initializes and returns an argparse.ArgumentParser instance for this
     application.
@@ -97,7 +100,7 @@ def _get_arg_parser():
         default=False,
         help="More detailed output."
     )
-    
+
     parser.add_argument(
         "--test-case-repository",
         dest="test_case_repository",
@@ -125,50 +128,49 @@ def main():
             parser.print_help()
         print ex
         return 1
-        
-  
-    
+
     if args.stix_version is None:
         schemaVersion = "1.1.1"
     else:
         schemaVersion = args.stix_version
 
     validator = STIXSchemaValidator(args.schema_dir)
-        
+
     with open(args.LIST_FILE, 'r') as testCaseListFile:
         numTestCases = 0
         numPosTestCasesFail = 0
         numNegTestCasesFail = 0
-        for testCaseFileName, posOrNeg in csv.reader(testCaseListFile):   
+        for testCaseFileName, posOrNeg in csv.reader(testCaseListFile):
             if args.test_case_repository is not None:
-                testCaseFileName = args.test_case_repository + "/" + testCaseFileName 
-            if args.verbose: 
+                testCaseFileName = args.test_case_repository + "/" + testCaseFileName
+            if args.verbose:
                 print testCaseFileName
             try:
                 validator_results = validator.validate(testCaseFileName)
 
                 if posOrNeg == "pos" and not validator_results.is_valid:
                     numPosTestCasesFail += 1
-                    print "FAIL - didn't pass positive case " + testCaseFileName 
+                    print "FAIL - didn't pass positive case " + testCaseFileName
                     for e in validator_results.errors:
                         print e
                 elif posOrNeg == "neg" and validator_results.is_valid:
                     numNegTestCasesFail += 1
-                    print "FAIL - passed negative case " + testCaseFileName 
+                    print "FAIL - passed negative case " + testCaseFileName
                 elif not posOrNeg == "neg" and not posOrNeg == "pos":
-                    print "FAIL case not supported " +  posOrNeg
+                    print "FAIL case not supported " + posOrNeg
                 numTestCases += 1
             except ValidationError as ex:
                 print ex
                 return 1
-                
+
     totalNumFailed = numPosTestCasesFail + numNegTestCasesFail
-    
+
     print "Total: " + str(numTestCases)
-    print "Failed: "+ str(totalNumFailed)
-    
+    print "Failed: " + str(totalNumFailed)
+
     if totalNumFailed:
         return 1
-    
+
+
 if __name__ == '__main__':
     main()
