@@ -108,6 +108,7 @@
 			<xs:enumeration value="1.0.1"/>
 			<xs:enumeration value="1.1"/>
 			<xs:enumeration value="1.1.1"/>
+			<xs:enumeration value="1.2"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="STIXHeaderType">
