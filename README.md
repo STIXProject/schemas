@@ -6,6 +6,14 @@ Please visit the [STIX Web Site](http://stix.mitre.org) for more information abo
 
 The STIX Language operates under the [STIX Terms of Use](http://stix.mitre.org/about/termsofuse.html).
 
+## Getting Help
+
+[![Join the public chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/STIXProject/schemas)
+
+E-mail the developers at <stix@mitre.org>
+
+[Get started with a STIX tutorial](http://stixproject.github.io/getting-started/)
+
 ## Cloning the repository
 
 This STIX schemas repository uses [git submodules](http://git-scm.com/book/en/Git-Tools-Submodules) in order to include the CybOX schemas (which are a dependency of the STIX schemas).
