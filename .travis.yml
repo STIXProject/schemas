@@ -15,7 +15,6 @@ script: python test_runner.py --test-case-repository tests test_manifest.cfg
 branches:
   only:
     - master
-    - version_1.2
 
 notifications:
   email:
