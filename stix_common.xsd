@@ -32,6 +32,7 @@
 			<xs:element name="Role" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Role field is optional and enables characterization of the sourcing Role played by this Information Source.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationSourceRoleVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Contributing_Sources" type="stixCommon:ContributingSourcesType" minOccurs="0">

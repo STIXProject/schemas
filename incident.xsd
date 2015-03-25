@@ -25,7 +25,8 @@
 	</xs:element>
 	<xs:complexType name="IncidentType">
 		<xs:annotation>
-			<xs:documentation>The IncidentType characterizes a single cyber threat Incident.</xs:documentation>
+			<xs:documentation>Represents a single STIX Incident.</xs:documentation>
+			<xs:documentation>Incidents are discrete instances of Indicators affecting an organization along with information discovered or decided during an incident response investigation. They consist of data such as time-related information, parties involved, assets affected, impact assessment, related Indicators, related Observables, leveraged TTP, attributed Threat Actors, intended effects, nature of compromise, response Course of Action requested, response Course of Action taken, confidence in characterization, handling guidance, source of the Incident information, log of actions taken, etc.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IncidentBaseType">

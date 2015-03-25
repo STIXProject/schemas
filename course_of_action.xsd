@@ -24,7 +24,8 @@
 	</xs:element>
 	<xs:complexType name="CourseOfActionType">
 		<xs:annotation>
-			<xs:documentation>The CourseOfActionType characterizes a Course of Action to be taken in regards to one of more cyber threats. NOTE: This construct is still in its early stages of maturity and will require a good deal of review and refinement.</xs:documentation>
+			<xs:documentation>Represents a single STIX Course of Action.</xs:documentation>
+			<xs:documentation>CoursesOfAction are specific measures to be taken to address threat whether they are corrective or preventative to address ExploitTargets, or responsive to counter or mitigate the potential impacts of Incidents. In a structured sense, COA consist of their relevant stage in cyber threat management (e.g., remedy of an ExploitTarget or response to an Incident), type of COA, description of COA, objective of the COA, structured representation of the COA (e.g., IPS rule or automated patch/remediation), the likely impact of the COA, the likely cost of the COA, the estimated efficacy of the COA, observable parameters for the COA, handling guidance, etc.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:CourseOfActionBaseType">

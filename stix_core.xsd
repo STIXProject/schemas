@@ -108,6 +108,7 @@
 			<xs:enumeration value="1.0.1"/>
 			<xs:enumeration value="1.1"/>
 			<xs:enumeration value="1.1.1"/>
+			<xs:enumeration value="1.2"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="STIXHeaderType">
@@ -150,6 +151,7 @@
 			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Information_Source field details the source of this entry, including time information as well as information about the producer, contributors, tools, and references.</xs:documentation>
+					<xs:documentation>This Information_Source field applies both to the package metadata in the STIX_Header as well as individually to the contents of the STIX_Package (unless overriden by their own Information_Source field).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

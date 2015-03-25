@@ -24,6 +24,10 @@
 	</xs:element>
 	<!---->
 	<xs:complexType name="ThreatActorType">
+		<xs:annotation>
+			<xs:documentation>Represents a single STIX Threat Actor.</xs:documentation>
+			<xs:documentation>ThreatActors are characterizations of malicious actors (or adversaries) representing a cyber attack threat including presumed intent and historically observed behavior. In a structured sense, ThreatActors consist of a characterization of identity, suspected motivation, suspected intended effect, historically observed TTP used by the ThreatActor, historical Campaigns believed associated with the ThreatActor, other ThreatActors believed associated with the ThreatActor, handling guidance, confidence in the asserted characterization of the ThreatActor, source of the ThreatActor information, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:ThreatActorBaseType">
 				<xs:sequence>
