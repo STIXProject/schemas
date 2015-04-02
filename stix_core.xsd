@@ -128,12 +128,12 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of this package of STIX content.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field provides a short description of this package of STIX content.</xs:documentation>
 				</xs:annotation>

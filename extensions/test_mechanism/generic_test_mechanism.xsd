@@ -19,7 +19,7 @@
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
-                    <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+                    <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
                             <xs:documentation>A structured Description of this Generic Test Mechanism.</xs:documentation>
                         </xs:annotation>

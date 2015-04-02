@@ -17,7 +17,7 @@
 			<xs:documentation>The InformationSourceType details the source of a given data entry.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of this information source.</xs:documentation>
 				</xs:annotation>
@@ -70,7 +70,7 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of the confidence value and how it was derived.</xs:documentation>
 				</xs:annotation>
@@ -108,7 +108,7 @@
 					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of the activity.</xs:documentation>
 				</xs:annotation>
@@ -723,7 +723,7 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Specifies a prose description of the statement.</xs:documentation>
 				</xs:annotation>
@@ -753,20 +753,45 @@
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="StructuredTextType">
-		<xs:annotation>
-			<xs:documentation>The StructuredTextType is a type representing a generalized structure for capturing structured or unstructured textual information such as descriptions of things.</xs:documentation>
-		</xs:annotation>
-		<xs:simpleContent>
-			<xs:extension base="xs:string">
-				<xs:attribute name="structuring_format" type="xs:string" use="optional">
-					<xs:annotation>
-						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the STIX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EncodedCDATAType">
+  <xs:annotation>
+    <xs:documentation>The StructuredTextType is a type representing
+      a generalized structure for capturing structured or unstructured
+      textual information such as descriptions of things.</xs:documentation>
+  </xs:annotation>
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" type="xs:QName" use="optional">
+        <xs:annotation>
+          <xs:documentation>Specifies a globally unique identifier for
+            this Description.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="ordinality"  type="xs:positiveInteger" use="optional">
+        <xs:annotation>
+          <xs:documentation>Specifies the intended order position of this construct
+            instance (e.g. Description) within a set of potentially multiple peer
+            construct instances. If only a single construct instance is
+            present its ordinality can be assumed to be 1. If multiple
+            construct instances are present, the ordinality field should
+            be specified with unique values for each instance.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="structuring_format" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>Used to indicate a particular structuring format
+            (e.g., HTML5) used within an instance of StructuredTextType. Note
+            that if the markup tags used by this format would be interpreted
+            as XML information (such as the bracket-based tags of HTML) the
+            text area should be enclosed in a CDATA section to prevent the
+            markup from interferring with XML validation of the STIX document.
+            If this attribute is absent, the implication is that no markup is
+            being used.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+<xs:complexType name="EncodedCDATAType">
 		<xs:annotation>
 			<xs:documentation>
 				This type is used to represent data in an XML CDATA block. Data in a CDATA block may either be represented as-is or, in cases where it may contain characters that are not valid in CDATA, it may be encoded in Base64 per RFC4648. Data encoded in Base64 must be denoted as such using the encoded attribute.
@@ -912,7 +937,7 @@
 							<xs:documentation>The Title field provides a simple title for a single tool leveraged by this TTP item.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of a single tool leveraged by this TTP item.</xs:documentation>
 						</xs:annotation>

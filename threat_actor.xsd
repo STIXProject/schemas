@@ -21,6 +21,17 @@
 			<xs:selector xpath=".//stixCommon:*|.//stix:*|.//cybox:*|.//cyboxCommon:*|.//campaign:*|.//coa:*|.//et:*|.//incident:*|.//indicator:*|.//ta:*|.//ttp:*|.//marking:*"/>
 			<xs:field xpath="@id"/>
 		</xs:unique>
+		
+		<xs:key name="unique-ordinality-desc">
+    		<xs:selector xpath="./Description"/>
+    		<xs:field xpath="@ordinality"/>
+		</xs:key> 
+		<xs:key name="unique-ordinality-shortdesc">
+    		<xs:selector xpath="./Short_Description"/>
+    		<xs:field xpath="@ordinality"/>
+		</xs:key> 
+		
+		
 	</xs:element>
 	<!---->
 	<xs:complexType name="ThreatActorType">
@@ -36,12 +47,12 @@
 							<xs:documentation>The Title field provides a simple title for this ThreatActor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Description field is optional and provides an unstructured, text description of this ThreatActor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this ThreatActor.</xs:documentation>
 						</xs:annotation>
