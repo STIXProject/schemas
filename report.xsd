@@ -22,7 +22,7 @@
 			<xs:documentation>ReportType defines a contextual wrapper for a grouping of STIX constructs.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="stixCommon:CourseOfActionBaseType">
+			<xs:extension base="stixCommon:ReportBaseType">
 				<xs:sequence>
 					<xs:element name="Header" type="report:HeaderType" minOccurs="0">
 						<xs:annotation>
