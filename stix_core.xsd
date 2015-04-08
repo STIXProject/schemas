@@ -79,6 +79,12 @@
 					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included threat actors is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Threat actors in this list should only be embedded, not referenced.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="Reports" type="stix:ReportsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Characterizes one or more cyber threat Reports.</xs:documentation>
+					<xs:documentation>DEPRECATION NOTICE: The use of the @idref attribute on directly included reports is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications. Reports in this list should only be embedded, not referenced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Related_Packages" type="stix:RelatedPackagesType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more relationships to other Packages.</xs:documentation>
@@ -251,6 +257,16 @@
 				<xs:annotation>
 					<xs:documentation>Characterizes a single cyber Threat Actor.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReportsType">
+		<xs:sequence>
+			<xs:element name="Report" type="stixCommon:ReportBaseType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Characterizes a single cyber threat Report.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://stix.mitre.org/Report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
