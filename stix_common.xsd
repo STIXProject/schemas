@@ -480,6 +480,23 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="RelatedReportType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to a report.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Report" type="stixCommon:ReportBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A reference or representation of the related report.</xs:documentation>
+							<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://stix.mitre.org/Report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="RelatedIdentityType">
 		<xs:annotation>
 			<xs:documentation>Identifies or characterizes a relationship to an Identity.</xs:documentation>
@@ -654,6 +671,29 @@
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
+	<xs:complexType name="ReportBaseType">
+		<xs:annotation>
+			<xs:documentation>This type represents the STIX Report component. It is extended using the XML Schema Extension feature by the STIX Report type itself. Users of this type who wish to express a full report using STIX must do so using the xsi:type extension feature. The STIX-defined Report type is ReportType in the http://stix.mitre.org/Report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a report defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier for this Report. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>Specifies a globally unique identifier of a Report specified elsewhere.</xs:documentation>
+				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Report should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>Specifies a timestamp for the definition of a specific version of a Report. When used in conjunction with the id, this field is specifying the definition time for the specific version of the Report. When used in conjunction with the idref, this field is specifying a reference to a specific version of a Report defined elsewhere. This field has no defined semantic meaning if used in the absence of either the id or idref fields.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
 	<!-- End of component base types -->
 	<xs:complexType name="ExploitTargetsType">
 		<xs:sequence>
