@@ -12866,7 +12866,7 @@
         </cybox:Observable>
     </stix:Observables>
     <stix:Reports>
-      <stix:Report timestamp="2014-05-08T09:00:00.000000Z" id="fireeye:stix-24da7696-2561-4686-b429-c31d210e2f2b" xsi:type="report:ReportType">
+      <stix:Report timestamp="2015-05-15T09:00:00.000000Z" id="fireeye:stix-24da7696-2561-4686-b429-c31d210e2f2b" xsi:type="report:ReportType">
          <report:Header>
             <report:Title>PIVY Observables - Collected By FireEye</report:Title>
             <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Observations</report:Intent>
