@@ -6,10 +6,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:cybox="http://cybox.mitre.org/cybox-2"
     xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:report="http://stix.mitre.org/Report-1"
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
     xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
     xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
+    xmlns:maecExtension="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
     xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
     xmlns:ttp="http://stix.mitre.org/TTP-1"
@@ -26,6 +28,7 @@
     xsi:schemaLocation=
     "http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
     http://stix.mitre.org/stix-1 ../../stix_core.xsd
+    http://stix.mitre.org/Report-1 ../../report.xsd
     http://stix.mitre.org/Indicator-2 ../../indicator.xsd
     http://stix.mitre.org/TTP-1 ../../ttp.xsd
     http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd
@@ -40,14 +43,10 @@
     http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
     http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
-    timestamp="2014-05-08T09:00:00.000000Z" 
-    version="1.1.1">
-    <stix:STIX_Header>
-        <stix:Title>Zeus 1.x Artifacts and Characterization</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</stix:Package_Intent>
-    </stix:STIX_Header>
+    timestamp="2015-05-15T09:00:00.000000Z" 
+    version="1.2">
     <stix:Observables cybox_major_version="2" cybox_minor_version="1">
-        <cybox:Observable>
+        <cybox:Observable id="example:Observable-514169f8-e88f-48e1-83f7-08669f5fafd9">
             <cybox:Description>
                 The Zeus 1.x binary encoded as an Artifact Object
                 (for the purpose of this example, this is actually just dummy data)
@@ -63,7 +62,7 @@
         </cybox:Observable>
     </stix:Observables>
     <stix:Indicators>
-        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2014-05-08T09:00:00.000000Z">
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2015-05-15T09:00:00.000000Z">
             <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
             <indicator:Description>
                Zeus 1.x Instantiation/Persistence Related Artifacts
@@ -406,4 +405,18 @@
             </indicator:Indicated_TTP>
         </stix:Indicator>
     </stix:Indicators>
+    <stix:Reports>
+        <stix:Report xsi:type="report:ReportType" id="example:Report-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc" timestamp="2015-05-15T09:00:00.000000Z">
+            <report:Header>
+                <report:Title>Zeus 1.x Artifacts and Characterization</report:Title>
+                <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Indicators - Malware Artifacts</report:Intent>
+            </report:Header>
+            <report:Observables cybox_major_version="2" cybox_minor_version="1">
+                <cybox:Observable idref="example:Observable-514169f8-e88f-48e1-83f7-08669f5fafd9" />
+            </report:Observables>
+            <report:Indicators>
+                <report:Indicator id="example:Indicator-ad560917-6ede-4abb-a4aa-994568a2abf4" timestamp="2015-05-15T09:00:00.000000Z"/>
+            </report:Indicators>
+        </stix:Report>
+    </stix:Reports>
 </stix:STIX_Package>
