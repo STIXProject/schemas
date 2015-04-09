@@ -294,7 +294,7 @@
 				<xs:sequence>
 					<xs:element name="Related_Package" type="stix:RelatedPackageType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Characterizes a single relationship to another Packages.</xs:documentation>
+							<xs:documentation>Characterizes a single relationship to another Package.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
