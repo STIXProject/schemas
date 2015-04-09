@@ -121,6 +121,10 @@
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
+							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:appinfo>
+								<deprecated>true</deprecated>
+							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
