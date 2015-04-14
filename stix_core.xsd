@@ -40,36 +40,51 @@
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Indicators.</xs:documentation>
 				</xs:annotation>
+				
 			</xs:element>
 			<xs:element name="TTPs" type="stix:TTPsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat adversary Tactics, Techniques or Procedures.</xs:documentation>
 				</xs:annotation>
+				
+				
 			</xs:element>
 			<xs:element name="Exploit_Targets" type="stixCommon:ExploitTargetsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more potential targets for exploitation.</xs:documentation>
 				</xs:annotation>
+				<xs:key name="unique-ordinality-desc-exp">
+		    		<xs:selector xpath="./et:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-exp">
+		    		<xs:selector xpath="./et:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 			<xs:element name="Incidents" type="stix:IncidentsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Incidents.</xs:documentation>
 				</xs:annotation>
+				
 			</xs:element>
 			<xs:element name="Courses_Of_Action" type="stix:CoursesOfActionType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes Courses of Action to be taken in regards to one of more cyber threats.</xs:documentation>
 				</xs:annotation>
+				
 			</xs:element>
 			<xs:element name="Campaigns" type="stix:CampaignsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber threat Campaigns.</xs:documentation>
 				</xs:annotation>
+				
 			</xs:element>
 			<xs:element name="Threat_Actors" type="stix:ThreatActorsType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
 				</xs:annotation>
+				
 			</xs:element>
 			<xs:element name="Related_Packages" type="stix:RelatedPackagesType" minOccurs="0">
 				<xs:annotation>
@@ -164,6 +179,17 @@
 					<xs:documentation>Characterizes a single cyber threat Indicator.</xs:documentation>
 					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://stix.mitre.org/Indicator-2 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.1/indicator.xsd.</xs:documentation>
 				</xs:annotation>
+				
+				<xs:key name="unique-ordinality-desc-ind">
+		    		<xs:selector xpath="./indicator:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-ind">
+		    		<xs:selector xpath="./indicator:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				
+				
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -174,6 +200,14 @@
 					<xs:documentation>Characterizes a single cyber threat adversary Tactic, Technique or Procedure.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://stix.mitre.org/TTP-1 namespace. This type is defined in the ttp.xsd file or at the URL http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd.</xs:documentation>
 				</xs:annotation>
+				<xs:key name="unique-ordinality-desc-ttp">
+		    		<xs:selector xpath="./ttp:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-ttp">
+		    		<xs:selector xpath="./ttp:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 			<xs:element name="Kill_Chains" type="stixCommon:KillChainsType" minOccurs="0">
 				<xs:annotation>
@@ -189,6 +223,14 @@
 					<xs:documentation>Identifies or characterizes a single cyber threat Incident.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://stix.mitre.org/Incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd.</xs:documentation>
 				</xs:annotation>
+				<xs:key name="unique-ordinality-desc-inc">
+		    		<xs:selector xpath="./incident:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-inc">
+		    		<xs:selector xpath="./incident:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -199,6 +241,14 @@
 					<xs:documentation>The Course_Of_Action field characterizes a Course of Action to be taken in regards to one of more cyber threats.</xs:documentation>
 					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.1.1/course_of_action.xsd.</xs:documentation>
 				</xs:annotation>
+				<xs:key name="unique-ordinality-desc-coa">
+		    		<xs:selector xpath="./coa:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-coa">
+		    		<xs:selector xpath="./coa:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -209,6 +259,14 @@
 					<xs:documentation>Characterizes a single cyber threat Campaign.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://stix.mitre.org/Campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://stix.mitre.org/XMLSchema/campaign/1.1.1/campaign.xsd.</xs:documentation>
 				</xs:annotation>
+				<xs:key name="unique-ordinality-desc-camp">
+		    		<xs:selector xpath="./campaign:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-camp">
+		    		<xs:selector xpath="./campaign:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -219,6 +277,15 @@
 					<xs:documentation>Characterizes a single cyber Threat Actor.</xs:documentation>
 					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd.</xs:documentation>
 				</xs:annotation>
+				
+				<xs:key name="unique-ordinality-desc-ta">
+		    		<xs:selector xpath="./ta:Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
+				<xs:key name="unique-ordinality-shortdesc-ta">
+		    		<xs:selector xpath="./ta:Short_Description"/>
+		    		<xs:field xpath="@ordinality"/>
+				</xs:key> 
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
