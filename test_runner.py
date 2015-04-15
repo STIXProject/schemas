@@ -108,6 +108,7 @@ def main():
         numTestCases = 0
         numPosTestCasesFail = 0
         numNegTestCasesFail = 0
+        errors = 0
 
         for line in testCaseListFile:
             line = line.strip()
@@ -123,6 +124,7 @@ def main():
                 testCaseFileName = args.test_case_repository + "/" + testCaseFileName
             if args.verbose:
                 print testCaseFileName
+            numTestCases += 1
             try:
                 validator_results = validator.validate(testCaseFileName)
 
@@ -135,13 +137,13 @@ def main():
                     numNegTestCasesFail += 1
                     print "FAIL - passed negative case " + testCaseFileName
                 elif not posOrNeg == "neg" and not posOrNeg == "pos":
+                    errors += 1
                     print "FAIL case not supported " + posOrNeg
-                numTestCases += 1
             except ValidationError as ex:
-                print ex
-                return 1
+                errors += 1
+                print "ValidationError: %s - %s" % (ex, testCaseFileName)
 
-    totalNumFailed = numPosTestCasesFail + numNegTestCasesFail
+    totalNumFailed = numPosTestCasesFail + numNegTestCasesFail + errors
 
     print "Total: " + str(numTestCases)
     print "Failed: " + str(totalNumFailed)
