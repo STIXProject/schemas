@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/common-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.1" xml:lang="en">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/common-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
+			<notice>This file is part of a STIX RELEASE CANDIDATE (1.2 RC1) and is NOT INTENDED FOR PRODUCTION USE.</notice>
 			<schema>STIX Common</schema>
-			<version>1.1.1</version>
-			<date>05/08/2014 9:00:00 AM</date>
+			<version>1.2</version>
+			<date>05/15/2015 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Common - Schematic implementation for the common types of a structured cyber threat expression language architecture.</short_description>
 			<terms_of_use>Copyright (c) 2012-2015, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
@@ -32,7 +33,7 @@
 			<xs:element name="Role" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Role field is optional and enables characterization of the sourcing Role played by this Information Source.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationSourceRoleVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationSourceRoleVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Contributing_Sources" type="stixCommon:ContributingSourcesType" minOccurs="0">
@@ -66,7 +67,7 @@
 			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Specifies the level of confidence held in this direct assertion.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -759,7 +760,7 @@
 			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Specifies a value characterizing the statement within some vocabulary.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary may be provided by the field using this construct. If that's the case, the schema annotations on that element will describe which vocabulary to use. If not, the default vocabulary is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary may be provided by the field using this construct. If that's the case, the schema annotations on that element will describe which vocabulary to use. If not, the default vocabulary is HighMediumLowVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>

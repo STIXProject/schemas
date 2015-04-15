@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:report="http://stix.mitre.org/Report-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:ttp="http://stix.mitre.org/TTP-1" targetNamespace="http://stix.mitre.org/Report-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:report="http://stix.mitre.org/Report-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:coa="http://stix.mitre.org/CourseOfAction-1" xmlns:et="http://stix.mitre.org/ExploitTarget-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:ttp="http://stix.mitre.org/TTP-1" targetNamespace="http://stix.mitre.org/Report-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="en">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
+			<notice>This file is part of a STIX RELEASE CANDIDATE (1.2 RC1) and is NOT INTENDED FOR PRODUCTION USE.</notice>
 			<version>1.0</version>
 			<date>04/15/2015 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Schematic implementation for a structured cyber threat expression language architecture.</short_description>
@@ -104,7 +105,7 @@
 			<xs:element name="Intent" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Intent field characterizes the intended purpose(s) or use(s) for this Report.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ReportIntentVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.1.1/stix_default_vocabularies.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ReportIntentVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
