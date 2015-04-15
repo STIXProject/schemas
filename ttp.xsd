@@ -35,12 +35,12 @@
 							<xs:documentation>The Title field provides a simple title for this TTP.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Description field is optional and provides an unstructured, text description of this TTP.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this TTP.</xs:documentation>
 						</xs:annotation>
@@ -134,12 +134,12 @@
 					<xs:documentation>The Title field provides a simple title for an individual Attack Pattern.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field is optional and provides an unstructured, text description of an individual Attack Pattern.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of an individual Attack Pattern.</xs:documentation>
 				</xs:annotation>
@@ -190,12 +190,12 @@
 					<xs:documentation>The Title field is optional and provides an unstructured, text description of an individual Malware Instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides an text description of an individual Malware Instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field provides a short text description of an individual Malware Instance.</xs:documentation>
 				</xs:annotation>
@@ -223,12 +223,12 @@
 					<xs:documentation>The Title field provides a simple title for an individual Exploit instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field is optional and provides an unstructured, text description of an individual Exploit Instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of an individual Exploit Instance.</xs:documentation>
 				</xs:annotation>
@@ -272,12 +272,12 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field is optional and provides an unstructured, text description of specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of specific classes or instances of infrastructure utilized for cyber attack.</xs:documentation>
 				</xs:annotation>
