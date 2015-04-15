@@ -12,14 +12,145 @@
 	</xs:annotation>
 	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
 	<xs:import namespace="http://cybox.mitre.org/common-2" schemaLocation="cybox/cybox_common.xsd"/>
+	<!-- Report Intent Vocabulary -->
+	<xs:complexType name="ReportIntentVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>
+				The ReportIntentVocab is the default STIX vocabulary for the ReportType Intent field.
+				
+				Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:ReportIntentEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Report Intent Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd#ReportIntentVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ReportIntentEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for a report intent in STIX.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Collective Threat Intelligence">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe a broad characterization of a threat across multiple facets.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Threat Report">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe a broad characterization of a threat across multiple facets expressed as a cohesive report.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Phishing">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly phishing indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Watchlist">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly network watchlist indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Malware Artifacts">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly malware artifact indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Network Activity">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly network activity indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Indicators - Endpoint Characteristics">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly endpoint characteristics (hashes, registry values, installed software, known vulnerabilities, etc.) indicators.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Campaign Characterization">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of one or more campaigns.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Threat Actor Characterization">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of one or more threat actors.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Exploit Characterization">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of one or more exploits.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Attack Pattern Characterization">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of one or more attack patterns.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Characterization">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of one or more malware instances.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TTP - Infrastructure">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of attacker infrastructure.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TTP - Tools">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a characterization of attacker tools.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Courses of Action">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly a set of courses of action.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Incident">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly information about one or more incidents.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Observations">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly information about instantial observations (cyber observables).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Observations - Email">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe mainly information about instantial email observations (email cyber observables).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Malware Samples">
+				<xs:annotation>
+					<xs:documentation>Report is intended to describe a set of malware samples.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<!-- Package Intent Vocabulary -->
 	<xs:complexType name="PackageIntentVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>
                 The PackageIntentVocab is the default STIX vocabulary for Package Intent.
-            
-                Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
             </xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentVocab is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent field. Please use a Report and ReportIntentVocab-1.0 instead.</xs:documentation>
+			<xs:appinfo>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -34,8 +165,10 @@
 	<xs:simpleType name="PackageIntentEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The default set of values to use for a package intent in STIX.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentEnum is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent field. Please use a Report and ReportIntentEnum-1.0 instead.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
+				<deprecated>true</deprecated>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">

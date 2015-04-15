@@ -17,10 +17,11 @@
 -->
 <stix:STIX_Package
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e249"
-    timestamp="2014-05-08T09:00:00.000000Z"
-    version="1.1.1"
+    timestamp="2015-05-15T09:00:00.000000Z"
+    version="1.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:report="http://stix.mitre.org/Report-1"
     xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
@@ -33,6 +34,7 @@
     
     xsi:schemaLocation="
     http://stix.mitre.org/stix-1 ../../stix_core.xsd
+    http://stix.mitre.org/Report-1 ../../report.xsd
     http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd
     http://stix.mitre.org/common-1 ../../stix_common.xsd
     http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
@@ -45,14 +47,9 @@
     http://stix.mitre.org/extensions/Test_Mechanism#OpenIOC2010-1 ../../extensions/test_mechanism/open_ioc_2010_test_mechanism.xsd
     ">
     <stix:STIX_Header>
-        <stix:Title>APT1 Report - Appendix G (IOCs)</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
-        <stix:Description>
-            This package contains the IOCs referenced in Appendix G of the APT1 report.
-        </stix:Description>
         <stix:Handling>
             <marking:Marking xmlns="http://data-marking.mitre.org">
-                <marking:Controlled_Structure>//node()</marking:Controlled_Structure>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
                 <marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
                     <terms:Terms_Of_Use>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</terms:Terms_Of_Use>
                 </marking:Marking_Structure>
@@ -89,7 +86,7 @@
     	
     	As an example, we referenced the WEBC2 Indicators to the WEBC2 TTP in the main STIX document.
         -->
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8d88dd33-1e16-4814-814e-662fb0ac842f">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-8d88dd33-1e16-4814-814e-662fb0ac842f">
             <indicator:Title>GDOCUPLOAD (Family)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Utility</indicator:Type>
             <indicator:Description>
@@ -198,7 +195,7 @@
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d577b671-abca-4318-ad94-27c793544168">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-d577b671-abca-4318-ad94-27c793544168">
             <indicator:Title>GREENCAT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>            
             <indicator:Description>
@@ -1177,7 +1174,7 @@
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-554448f5-8e09-4c72-9dd9-5e2e1047eb33">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-554448f5-8e09-4c72-9dd9-5e2e1047eb33">
             <indicator:Title>HELAUTO (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -1488,7 +1485,7 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-36437a22-f0d7-4a48-bec4-153e19045f8d">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-36437a22-f0d7-4a48-bec4-153e19045f8d">
             <indicator:Title>BOUNCER (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>            
             <indicator:Description>
@@ -1659,7 +1656,7 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-dc2eb534-d2c4-421c-89d0-9bc6762009c5">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-dc2eb534-d2c4-421c-89d0-9bc6762009c5">
             <indicator:Title>LONGRUN (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -1750,7 +1747,7 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2322085d-c557-4278-affc-633be5f36fe5">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-2322085d-c557-4278-affc-633be5f36fe5">
             <indicator:Title>WEBC2-BOLID (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -1891,7 +1888,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-be16e289-114e-4f01-bc85-aa72f03a50dc">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-be16e289-114e-4f01-bc85-aa72f03a50dc">
             <indicator:Title>KURTON (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -2022,7 +2019,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-34a5f05a-f830-4d55-bb09-c1e8745a998d">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-34a5f05a-f830-4d55-bb09-c1e8745a998d">
             <indicator:Title>MINIASP (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -2168,7 +2165,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-706a8e36-77d0-41bb-81b4-05ca92f4d2d1">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-706a8e36-77d0-41bb-81b4-05ca92f4d2d1">
             <indicator:Title>MANITSME (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -2247,7 +2244,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-32ce1273-fc66-4de6-9e1d-fc6c55cdcae9">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-32ce1273-fc66-4de6-9e1d-fc6c55cdcae9">
             <indicator:Title>SEASALT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -2368,7 +2365,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-9658ae72-3f2c-4fa9-850b-aa86e8d976d6">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-9658ae72-3f2c-4fa9-850b-aa86e8d976d6">
             <indicator:Title>WEBC2-AUSOV (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -2518,7 +2515,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-85b02254-b7a0-4eaa-876d-bec18dd3c55c">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-85b02254-b7a0-4eaa-876d-bec18dd3c55c">
             <indicator:Title>WARP (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -2614,7 +2611,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f799cdd4-57ae-40e9-8ee6-bcacc3f39430">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-f799cdd4-57ae-40e9-8ee6-bcacc3f39430">
             <indicator:Title>WEBC2-CSON (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -2941,7 +2938,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-c8a6f10c-3540-45a0-a94b-c367374770a7">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-c8a6f10c-3540-45a0-a94b-c367374770a7">
             <indicator:Title>COMBOS (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -3083,7 +3080,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-62355460-b3c7-4135-bfc8-c6c351391786">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-62355460-b3c7-4135-bfc8-c6c351391786">
             <indicator:Title>WEBC2-QBP (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -3256,7 +3253,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8dcc62d5-e91a-4cde-bc28-121d6f25a7d3">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-8dcc62d5-e91a-4cde-bc28-121d6f25a7d3">
             <indicator:Title>MAPIGET (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Utility</indicator:Type>
             <indicator:Description>
@@ -3341,7 +3338,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-1922d28b-6257-4f14-9988-00c906c1274f">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-1922d28b-6257-4f14-9988-00c906c1274f">
             <indicator:Title>CALENDAR (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -3469,7 +3466,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8b34f3bd-8176-4e33-a4ca-6b9970c2be2e">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-8b34f3bd-8176-4e33-a4ca-6b9970c2be2e">
             <indicator:Title>WEBC2-Y21K (FAMILY)</indicator:Title>
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. Members of this family of backdoor malware talk to specific Web-based Command &amp; Control (C2) servers. The backdoor has a limited command set, depending on version. It is primarily a downloader, but it classified as a backdoor because it can accept a limited command set, including changing local directories, downloading and executing additional files, sleeping, and connecting to a specific IP &amp; port not initially included in the instruction set for the malware. Each version of the malware has at least one hardcoded URL to which it connects to receive its initial commands. This family of malware installs itself as a service, with the malware either being the executable run by the service, or the service DLL loaded by a legitimate service. The same core code is seen recompiled on different dates or with different names, but the same functionality. Key signatures include a specific set of functions (some of which can be used with the OS-provided rundll32.exe tool to install the malware as a service), and hardcoded strings used in communication with C2 servers to issue commands to the implant.
@@ -4006,7 +4003,7 @@ Communication with the command and control (C2) server uses a combination of sin
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-034a708a-2bb0-45ad-85c5-7505d90ce2a5">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-034a708a-2bb0-45ad-85c5-7505d90ce2a5">
             <indicator:Title>HACKSFASE (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -4321,7 +4318,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-edc41062-7e8f-4603-9e62-5f4ec537e9af">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-edc41062-7e8f-4603-9e62-5f4ec537e9af">
             <indicator:Title>SWORD (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -4430,7 +4427,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f96c7900-0cf5-4199-b314-860a1cdc008e">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-f96c7900-0cf5-4199-b314-860a1cdc008e">
             <indicator:Title>WEBC2-RAVE (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -4760,7 +4757,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-71a95442-f246-4c8c-8c4d-d24107401974">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-71a95442-f246-4c8c-8c4d-d24107401974">
             <indicator:Title>WEBC2-HEAD (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -5112,7 +5109,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-27d9d4b8-9230-4472-9b5c-f3783982c752">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-27d9d4b8-9230-4472-9b5c-f3783982c752">
             <indicator:Title>GLOOXMAIL (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -5226,7 +5223,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-9d11a416-43ba-42f4-bdfc-f142f04fec7a">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-9d11a416-43ba-42f4-bdfc-f142f04fec7a">
             <indicator:Title>NEWSREELS (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -5721,7 +5718,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2c6d4480-4276-416a-ba13-26c7598fe55c">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-2c6d4480-4276-416a-ba13-26c7598fe55c">
             <indicator:Title>TABMSGSQL (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -5986,7 +5983,7 @@ The C2 server appears to act as just a database, allowing the clients to craft a
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-809eca7a-fb86-44eb-b355-403c58e2159a">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-809eca7a-fb86-44eb-b355-403c58e2159a">
             <indicator:Title>COOKIEBAG (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -6266,7 +6263,7 @@ Communication with the Command &amp; Control (C2) servers uses a combination of 
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-1c200d34-351f-47fa-bf6f-1c596d2779a7">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-1c200d34-351f-47fa-bf6f-1c596d2779a7">
             <indicator:Title>DAIRY (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -6358,7 +6355,7 @@ This malware may also add itself to the Authorized Applications list for the Win
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-b26314f3-956f-4340-bd9a-60f0e4ff210f">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-b26314f3-956f-4340-bd9a-60f0e4ff210f">
             <indicator:Title>Appendix E - APT1 File Hashes</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Composite</indicator:Type>
             <indicator:Description>
@@ -10466,7 +10463,7 @@ This malware may also add itself to the Authorized Applications list for the Win
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-b934ce84-ff5e-42d9-8c61-bee975f32b02">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-b934ce84-ff5e-42d9-8c61-bee975f32b02">
             <indicator:Title>WEBC2-TABLE (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -10585,7 +10582,7 @@ This malware may also add itself to the Authorized Applications list for the Win
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-10df11ab-c69e-4f7a-b44b-52b4d3824007">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-10df11ab-c69e-4f7a-b44b-52b4d3824007">
             <indicator:Title>BISCUIT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -11265,7 +11262,7 @@ This malware may also add itself to the Authorized Applications list for the Win
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f97ec627-8a79-484e-b889-de21ed02a4d4">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-f97ec627-8a79-484e-b889-de21ed02a4d4">
             <indicator:Title>WEBC2-UGX (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -11458,7 +11455,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-ee797e93-f583-4d6d-9523-11c47d2f1db9">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-ee797e93-f583-4d6d-9523-11c47d2f1db9">
             <indicator:Title>GETMAIL (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Utility</indicator:Type>
             <indicator:Description>
@@ -11616,7 +11613,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d2ed1adc-26c9-48f8-881d-19dea55e0f5a">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-d2ed1adc-26c9-48f8-881d-19dea55e0f5a">
             <indicator:Title>WEBC2-DIV (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -11821,7 +11818,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f4e6caa1-f693-41eb-b8e7-1c20fca5c578">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-f4e6caa1-f693-41eb-b8e7-1c20fca5c578">
             <indicator:Title>WEBC2-KT3 (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -11949,7 +11946,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-ef180c46-8d36-46bc-b45c-d88cefa85002">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-ef180c46-8d36-46bc-b45c-d88cefa85002">
             <indicator:Title>WEBC2-CLOVER (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -12350,7 +12347,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-fe6cb826-5c1a-42ac-bd7d-d505e9e93e64">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-fe6cb826-5c1a-42ac-bd7d-d505e9e93e64">
             <indicator:Title>BANGAT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -12902,7 +12899,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-21bf65fc-6b48-4f89-91bd-cd2e413a4c0b">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-21bf65fc-6b48-4f89-91bd-cd2e413a4c0b">
             <indicator:Title>WEBC2-GREENCAT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -13004,7 +13001,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d2acafe2-2f6a-4102-b96c-ba12300e6d7c">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-d2acafe2-2f6a-4102-b96c-ba12300e6d7c">
             <indicator:Title>WEBC2-ADSPACE (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -13099,7 +13096,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-f668a9bf-4b6a-4f88-a5e0-3177dd01dcc8">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-f668a9bf-4b6a-4f88-a5e0-3177dd01dcc8">
             <indicator:Title>TARSIP-ECLIPSE (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -13583,7 +13580,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-d8cf6bb8-48fe-4160-ba20-b336dbd74d1b">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-d8cf6bb8-48fe-4160-ba20-b336dbd74d1b">
             <indicator:Title>LIGHTBOLT (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Utility</indicator:Type>
             <indicator:Description>
@@ -13777,7 +13774,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-37cdc870-066f-4e90-a295-985372bfb9e6">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-37cdc870-066f-4e90-a295-985372bfb9e6">
             <indicator:Title>STARSYPOUND (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -14235,7 +14232,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-0ce3f149-586a-4e4b-a833-074bfe438557">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-0ce3f149-586a-4e4b-a833-074bfe438557">
             <indicator:Title>AURIGA (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -14498,7 +14495,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-330cf804-e267-42cb-820f-af444f1e9fd8">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-330cf804-e267-42cb-820f-af444f1e9fd8">
             <indicator:Title>TARSIP-MOON (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
@@ -14851,7 +14848,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-8a57160c-53f6-4782-9c2f-d4b54c3e4201">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-8a57160c-53f6-4782-9c2f-d4b54c3e4201">
             <indicator:Title>GOGGLES (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -15213,7 +15210,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-2656e928-dd0f-49a5-b0d6-13c9a854a628">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-2656e928-dd0f-49a5-b0d6-13c9a854a628">
             <indicator:Title>WEBC2-TOCK (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -15336,7 +15333,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-3c18ada4-2f65-46e8-b5cc-80b9d47f4e5c">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-3c18ada4-2f65-46e8-b5cc-80b9d47f4e5c">
             <indicator:Title>WEBC2-YAHOO (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Downloader</indicator:Type>
             <indicator:Description>
@@ -15820,7 +15817,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                 </indicator:Test_Mechanism>
             </indicator:Test_Mechanisms>
         </stix:Indicator>
-        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:indicator-0302df0c-a056-48e2-99d2-7bfd23931cb6">
+        <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-0302df0c-a056-48e2-99d2-7bfd23931cb6">
             <indicator:Title>LIGHTDART (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Utility</indicator:Type>
             <indicator:Description>
@@ -15916,4 +15913,62 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
             </indicator:Test_Mechanisms>
         </stix:Indicator>
     </stix:Indicators>
+    <stix:Reports>
+        <stix:Report timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e249" xsi:type="report:ReportType">
+            <report:Header>
+                <report:Title>APT1 Report - Appendix G (IOCs) - No Observables</report:Title>
+                <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Indicators</report:Intent>
+                <report:Description>This report contains the IOCs referenced in Appendix G of the APT1 report.</report:Description>
+            </report:Header>
+            <report:Indicators>
+                <report:Indicator idref="mandiant:indicator-8d88dd33-1e16-4814-814e-662fb0ac842f" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-d577b671-abca-4318-ad94-27c793544168" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-554448f5-8e09-4c72-9dd9-5e2e1047eb33" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-36437a22-f0d7-4a48-bec4-153e19045f8d" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-dc2eb534-d2c4-421c-89d0-9bc6762009c5" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-2322085d-c557-4278-affc-633be5f36fe5" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-be16e289-114e-4f01-bc85-aa72f03a50dc" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-34a5f05a-f830-4d55-bb09-c1e8745a998d" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-706a8e36-77d0-41bb-81b4-05ca92f4d2d1" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-32ce1273-fc66-4de6-9e1d-fc6c55cdcae9" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-9658ae72-3f2c-4fa9-850b-aa86e8d976d6" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-85b02254-b7a0-4eaa-876d-bec18dd3c55c" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-f799cdd4-57ae-40e9-8ee6-bcacc3f39430" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-c8a6f10c-3540-45a0-a94b-c367374770a7" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-62355460-b3c7-4135-bfc8-c6c351391786" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-8dcc62d5-e91a-4cde-bc28-121d6f25a7d3" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-1922d28b-6257-4f14-9988-00c906c1274f" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-8b34f3bd-8176-4e33-a4ca-6b9970c2be2e" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-034a708a-2bb0-45ad-85c5-7505d90ce2a5" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-edc41062-7e8f-4603-9e62-5f4ec537e9af" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-f96c7900-0cf5-4199-b314-860a1cdc008e" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-71a95442-f246-4c8c-8c4d-d24107401974" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-27d9d4b8-9230-4472-9b5c-f3783982c752" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-9d11a416-43ba-42f4-bdfc-f142f04fec7a" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-2c6d4480-4276-416a-ba13-26c7598fe55c" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-809eca7a-fb86-44eb-b355-403c58e2159a" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-1c200d34-351f-47fa-bf6f-1c596d2779a7" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-b26314f3-956f-4340-bd9a-60f0e4ff210f" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-b934ce84-ff5e-42d9-8c61-bee975f32b02" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-10df11ab-c69e-4f7a-b44b-52b4d3824007" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-f97ec627-8a79-484e-b889-de21ed02a4d4" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-ee797e93-f583-4d6d-9523-11c47d2f1db9" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-d2ed1adc-26c9-48f8-881d-19dea55e0f5a" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-f4e6caa1-f693-41eb-b8e7-1c20fca5c578" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-ef180c46-8d36-46bc-b45c-d88cefa85002" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-fe6cb826-5c1a-42ac-bd7d-d505e9e93e64" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-21bf65fc-6b48-4f89-91bd-cd2e413a4c0b" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-d2acafe2-2f6a-4102-b96c-ba12300e6d7c" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-f668a9bf-4b6a-4f88-a5e0-3177dd01dcc8" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-d8cf6bb8-48fe-4160-ba20-b336dbd74d1b" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-37cdc870-066f-4e90-a295-985372bfb9e6" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-0ce3f149-586a-4e4b-a833-074bfe438557" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-330cf804-e267-42cb-820f-af444f1e9fd8" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-8a57160c-53f6-4782-9c2f-d4b54c3e4201" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-2656e928-dd0f-49a5-b0d6-13c9a854a628" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-3c18ada4-2f65-46e8-b5cc-80b9d47f4e5c" timestamp="2015-05-15T09:00:00.000000Z"/>
+                <report:Indicator idref="mandiant:indicator-0302df0c-a056-48e2-99d2-7bfd23931cb6" timestamp="2015-05-15T09:00:00.000000Z"/>
+            </report:Indicators>
+        </stix:Report>
+    </stix:Reports>
 </stix:STIX_Package>
