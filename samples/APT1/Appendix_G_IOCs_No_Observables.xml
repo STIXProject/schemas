@@ -15916,7 +15916,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
     <stix:Reports>
         <stix:Report timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e249" xsi:type="report:ReportType">
             <report:Header>
-                <report:Title>APT1 Report - Appendix G (IOCs)</report:Title>
+                <report:Title>APT1 Report - Appendix G (IOCs) - No Observables</report:Title>
                 <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Indicators</report:Intent>
                 <report:Description>This report contains the IOCs referenced in Appendix G of the APT1 report.</report:Description>
             </report:Header>
