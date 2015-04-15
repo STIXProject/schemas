@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1.1" xml:lang="English">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stixCommon="http://stix.mitre.org/common-1" targetNamespace="http://stix.mitre.org/default_vocabularies-1" elementFormDefault="qualified" version="1.1.1" xml:lang="en">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
@@ -2322,6 +2322,45 @@
 			<xs:enumeration value="Transformer/Translator">
 				<xs:annotation>
 					<xs:documentation>A party that transforms or translates a preexisting set of information into a different representation (e.g., translating an unstructured prose threat analysis report into STIX).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VersioningVocab-1.0">
+		<xs:annotation>
+			<xs:documentation>The VersioningVocab is the default STIX vocabulary for representing versioning of STIX content.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
+				<xs:simpleType>
+					<xs:union memberTypes="stixVocabs:VersioningEnum-1.0"/>
+				</xs:simpleType>
+				<xs:attribute name="vocab_name" type="xs:string" use="optional" fixed="STIX Default Versioning Vocabulary"/>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional" fixed="http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd#VersioningVocab-1.0"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="VersioningEnum-1.0">
+		<xs:annotation>
+			<xs:documentation>The default set of values to use for representing versioning of STIX content.</xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Updates - Revises">
+				<xs:annotation>
+					<xs:documentation>The new content represents a modified or expanded form of the previous content with existing information refined for improved quality or confidence.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Updates - Corrects">
+				<xs:annotation>
+					<xs:documentation>The new content represents a modified form of the previous content with corrections to errors in the existing information. The previous content should be considered invalid and the new content should be used in its place.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Revokes">
+				<xs:annotation>
+					<xs:documentation>The previous content is asserted to be invalid and should not be considered for operational purposes.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
