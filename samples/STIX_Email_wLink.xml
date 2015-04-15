@@ -1,7 +1,7 @@
 <!--
 	STIX Email w/ Link Example
 	
-	Copyright (c) 2014, The MITRE Corporation. All rights reserved. 
+	Copyright (c) 2015, The MITRE Corporation. All rights reserved. 
     The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html.
     
 	This example demonstrates a real-world use-case for STIX. Cyber operations and malware analysis centers often share a representation of e-mails and the files available at links within those e-mails with other operations centers. This STIX package describes a single e-mail along with an artifact that contains a file downloaded from a link within that e-mail.
@@ -37,13 +37,9 @@
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-95141684-9092-4080-93fe-956a452a4acd"
-    timestamp="2014-05-08T09:00:00.000000Z"
-    version="1.1.1"
+    timestamp="2015-05-15T09:00:00.000000Z"
+    version="1.2"
     >
-    <stix:STIX_Header>
-        <stix:Title>Email with a link.</stix:Title>
-        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Observations - Email</stix:Package_Intent>
-    </stix:STIX_Header>
     <stix:Observables cybox_major_version="2" cybox_minor_version="1">
         <cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
             <cybox:Description>

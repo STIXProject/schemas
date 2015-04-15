@@ -30,8 +30,8 @@
 
 <stix:STIX_Package
 	id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf"
-	timestamp="2014-05-08T09:00:00.000000Z"
-	version="1.1.1"
+	timestamp="2015-05-15T09:00:00.000000Z"
+	version="1.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://data-marking.mitre.org/Marking-1"
 	xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
@@ -41,7 +41,8 @@
 	xmlns:AddressObject="http://cybox.mitre.org/objects#AddressObject-2"
 	xmlns:URIObject="http://cybox.mitre.org/objects#URIObject-2"
 	xmlns:LinkObject="http://cybox.mitre.org/objects#LinkObject-1"
-	xmlns:stix="http://stix.mitre.org/stix-1" 
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:report="http://stix.mitre.org/Report-1"
 	xmlns:stixCommon="http://stix.mitre.org/common-1"
 	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
 	xmlns:indicator="http://stix.mitre.org/Indicator-2" 
@@ -68,53 +69,12 @@
 		http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
 		http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 ../../extensions/identity/ciq_3.0_identity.xsd
 		http://stix.mitre.org/stix-1 ../../stix_core.xsd
+		http://stix.mitre.org/Report-1 ../../report.xsd
 		http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd">
 	<stix:STIX_Header>
-		<stix:Title>APT1: Exposing One of China's Cyber Espionage Units</stix:Title>
-		<stix:Package_Intent>Threat Actor Report</stix:Package_Intent>
-		<stix:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
-			<html>
-				<body>
-					<p>
-					Since 2004, Mandiant has investigated computer security breaches at hundreds of organizations around the world.
-                	The majority of these security breaches are attributed to advanced threat actors referred to as the "Advanced Persistent
-                	Threat" (APT). We first published details about the APT in our January 2010 M-Trends report. As we stated in the
-                	report, our position was that "The Chinese government may authorize this activity, but there’s no way to determine the
-                	extent of its involvement." Now, three years later, we have the evidence required to change our assessment. The details
-                	we have analyzed during hundreds of investigations convince us that the groups conducting these activities are based
-                	primarily in China and that the Chinese Government is aware of them.
-					</P>
-					<p>
-					Mandiant continues to track dozens of APT groups around the world; however, this report is focused on the most
-                	prolific of these groups. We refer to this group as "APT1" and it is one of more than 20 APT groups with origins in
-                	China. APT1 is a single organization of operators that has conducted a cyber espionage campaign against a broad
-                	range of victims since at least 2006. From our observations, it is one of the most prolific cyber espionage groups in
-                	terms of the sheer quantity of information stolen. The scale and impact of APT1’s operations compelled us to write this
-                	report.
-					</P>
-					<p>
-					The activity we have directly observed likely represents only a small fraction of the cyber espionage that APT1 has
-                	conducted. Though our visibility of APT1’s activities is incomplete, we have analyzed the group’s intrusions against
-                	nearly 150 victims over seven years. From our unique vantage point responding to victims, we tracked APT1 back
-                	to four large networks in Shanghai, two of which are allocated directly to the Pudong New Area. We uncovered a
-                	substantial amount of APT1’s attack infrastructure, command and control, and modus operandi (tools, tactics, and
-                	procedures). In an effort to underscore there are actual individuals behind the keyboard, Mandiant is revealing three
-                	personas we have attributed to APT1. These operators, like soldiers, may merely be following orders given to them by
-                	others.
-					</P>
-					<p>
-					Our analysis has led us to conclude that APT1 is likely government-sponsored and one of the most persistent of China’s
-                	cyber threat actors. We believe that APT1 is able to wage such a long-running and extensive cyber espionage campaign
-                	in large part because it receives direct government support. In seeking to identify the organization behind this activity,
-                	our research found that People’s Liberation Army (PLA’s) Unit 61398 is similar to APT1 in its mission, capabilities, and
-                	resources. PLA Unit 61398 is also located in precisely the same area from which APT1 activity appears to originate.
-					</P>
-				</body>
-			</html>]]>
-		</stix:Description>
 		<stix:Handling>
 			<marking:Marking>
-				<marking:Controlled_Structure>//node()</marking:Controlled_Structure>
+				<marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
 				<!-- Apply following marking to entire document -->
 				<marking:Marking_Structure xsi:type="terms:TermsOfUseMarkingStructureType">
 					<terms:Terms_Of_Use>APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report") is copyright 2013 by Mandiant Corporation and can be downloaded at intelreport.mandiant.com.  This XML file using the STIX standard was created by The MITRE Corporation using the content of the APT1 Report with Mandiant's permission.  Mandiant is not responsible for the content of this file.</terms:Terms_Of_Use>
@@ -148,7 +108,7 @@
 
 	<!-- Top-level APT1 TTP -->
 	<stix:TTPs>
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" xsi:type="ttp:TTPType">
 			<ttp:Title>APT1 Tactics, Techniques and Procedures</ttp:Title>
 			<ttp:Intended_Effect>
 				<stixCommon:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -257,7 +217,7 @@
 <!-- Only two of the APT1 malware families (WEBC2 & HTRAN) were expressed minimally here in STIX to show how they can fit into the overall picture. 
 			All of the other malware families could be similarly expressed and in greater detail.  -->
 
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" xsi:type="ttp:TTPType">
 			<ttp:Title>WEBC2 Backdoor</ttp:Title>
 			<ttp:Behavior>
 				<ttp:Malware>
@@ -292,7 +252,7 @@
 			</ttp:Kill_Chain_Phases>
 		</stix:TTP>
 
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" xsi:type="ttp:TTPType">
 			<ttp:Title>HTRAN Malware C2</ttp:Title>
 			<ttp:Behavior>
 				<ttp:Malware>
@@ -365,7 +325,7 @@
 
 
 		<!-- Net blocks corresponding to IP addresses that APT1 used to access their hop points -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Type>Hop Point Accessors</ttp:Type>
 				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1">
@@ -416,7 +376,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Servers infrastructure -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" xsi:type="ttp:TTPType">
 			<ttp:Title>APT1 C2 Servers Infrstructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -437,7 +397,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Domain names infrastructure -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" xsi:type="ttp:TTPType">
 			<ttp:Title>Domain Names Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -480,7 +440,7 @@
 		</stix:TTP>
 
 		<!-- Registered DNS Zones infrastructure -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" xsi:type="ttp:TTPType">
 			<ttp:Title>Registered DNS Zones infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -670,7 +630,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Third party services infrastructure -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" xsi:type="ttp:TTPType">
 			<ttp:Title>Third-party Services Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -693,7 +653,7 @@
 		</stix:TTP>
 
 		<!-- APT1 Hijacked FQDNs infrastructure -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" xsi:type="ttp:TTPType">
 			<ttp:Title>Hijacked FQDN Infrastructure</ttp:Title>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Description structuring_format="HTML5"><![CDATA[<!DOCTYPE html>
@@ -714,7 +674,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - The Initial Compromise -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" xsi:type="ttp:TTPType">
 			<ttp:Title>The Initial Compromise</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>The Initial Compromise represents the methods intruders
 				use to first penetrate a target organization’s network.</stixCommon:Description></ttp:Intended_Effect>
@@ -771,7 +731,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Establishing a Foothold -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" xsi:type="ttp:TTPType">
 			<ttp:Title>Establishing a Foothold</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Establishing a foothold involves actions that ensure
 				control of the target network’s systems from outside the network.</stixCommon:Description></ttp:Intended_Effect>
@@ -892,7 +852,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Privilege Escalation -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" xsi:type="ttp:TTPType">
 			<ttp:Title>Privilege Escalation</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Escalating privileges involves acquiring items (most
 				often usernames and passwords) that will allow access to more resources within
@@ -995,7 +955,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Internal Reconnaisance -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" xsi:type="ttp:TTPType">
 			<ttp:Title>Internal Reconnaisance</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>In the Internal Reconnaissance stage, the intruder
 				collects information about the victim environment.</stixCommon:Description></ttp:Intended_Effect>
@@ -1056,7 +1016,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Lateral Movement -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" xsi:type="ttp:TTPType">
 			<ttp:Title>Lateral Movement</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Expand foothold and access through lateral movement
 				within the target environment.</stixCommon:Description></ttp:Intended_Effect>
@@ -1092,7 +1052,7 @@
 		</stix:TTP>
 		
 		<!-- Killchain phase - Maintain Presence -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" xsi:type="ttp:TTPType">
 			<ttp:Title>Maintain Presence</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>In this stage, the intruder takes actions to ensure
 				continued, long-term control over key systems in the network environment from
@@ -1140,7 +1100,7 @@
 		</stix:TTP>
 
 		<!-- Killchain phase - Completing the Mission -->
-		<stix:TTP timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" xsi:type="ttp:TTPType">
+		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" xsi:type="ttp:TTPType">
 			<ttp:Title>Completing the Mission</ttp:Title>
 			<ttp:Intended_Effect><stixCommon:Description>Exfiltration information relevant to the mission.</stixCommon:Description></ttp:Intended_Effect>
 			<ttp:Intended_Effect><stixCommon:Value xsi:type="stixVocabs:IntendedEffectVocab-1.0">Theft - Theft of Proprietary Information</stixCommon:Value></ttp:Intended_Effect>
@@ -1245,7 +1205,7 @@
 
 	<stix:Threat_Actors>
 		<!-- ThreatActor characterization for APT1 -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-8dff0344-0c82-4079-8d04-6f3e4d9bd1df" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-8dff0344-0c82-4079-8d04-6f3e4d9bd1df" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stixCommon:Related_Identities>
 					<stixCommon:Related_Identity>
@@ -1485,7 +1445,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for UglyGorilla -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z"  id="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z"  id="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1544,7 +1504,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for DOTA -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1577,7 +1537,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for SuperHard -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1617,28 +1577,28 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Comment Crew -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Comment Crew</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Comment Group -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Comment Group</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Shady Rat -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>Shady Rat</stixCommon:Name>
 			</threat-actor:Identity>
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for GSD 3rd Department / 2nd Bureau -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>GSD 3rd Department / 2nd Bureau</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1651,7 +1611,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for GSD 3rd Department -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>GSD 3rd Department</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1664,7 +1624,7 @@
 		</stix:Threat_Actor>
 		
 		<!-- ThreatActor characterization for PLA General Staff -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity>
 				<stixCommon:Name>PLA General Staff</stixCommon:Name>
 			</threat-actor:Identity>
@@ -1677,7 +1637,7 @@
 		</stix:Threat_Actor>
 
 		<!-- ThreatActor characterization for Communist Party of China -->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1701,7 +1661,7 @@
 		</stix:Threat_Actor>
 		
 		<!-- ThreatActor characterization for China Telecom-->
-		<stix:Threat_Actor timestamp="2014-05-08T09:00:00.000000Z" id="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" xsi:type="threat-actor:ThreatActorType">
+		<stix:Threat_Actor timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" xsi:type="threat-actor:ThreatActorType">
 			<threat-actor:Identity xsi:type="stix-ciq:CIQIdentity3.0InstanceType">
 				<stix-ciq:Specification>
 					<xpil:PartyName>
@@ -1722,7 +1682,104 @@
 				</stix-ciq:Specification>
 				<stix-ciq:Role>State-influenced Commercial Entity</stix-ciq:Role>
 			</threat-actor:Identity>
-		</stix:Threat_Actor>
-		
+		</stix:Threat_Actor>		
 	</stix:Threat_Actors>
+	<stix:Reports>
+		<stix:Report timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:Report-e33ffe07-2f4c-48d8-b0af-ee2619d765cf" xsi:type="report:ReportType">
+			<report:Header>
+				<report:Title>APT1: Exposing One of China's Cyber Espionage Units</report:Title>
+				<report:Intent>Threat Actor Report</report:Intent>
+				<report:Description structuring_format="HTML5"><![CDATA[&lt;!DOCTYPE html&gt;
+					&lt;html&gt;
+					&lt;body&gt;
+					&lt;p&gt;
+					Since 2004, Mandiant has investigated computer security breaches at hundreds of organizations around the world.
+					The majority of these security breaches are attributed to advanced threat actors referred to as the "Advanced Persistent
+					Threat" (APT). We first published details about the APT in our January 2010 M-Trends report. As we stated in the
+					report, our position was that "The Chinese government may authorize this activity, but there&#8217;s no way to determine the
+					extent of its involvement." Now, three years later, we have the evidence required to change our assessment. The details
+					we have analyzed during hundreds of investigations convince us that the groups conducting these activities are based
+					primarily in China and that the Chinese Government is aware of them.
+					&lt;/P&gt;
+					&lt;p&gt;
+					Mandiant continues to track dozens of APT groups around the world; however, this report is focused on the most
+					prolific of these groups. We refer to this group as "APT1" and it is one of more than 20 APT groups with origins in
+					China. APT1 is a single organization of operators that has conducted a cyber espionage campaign against a broad
+					range of victims since at least 2006. From our observations, it is one of the most prolific cyber espionage groups in
+					terms of the sheer quantity of information stolen. The scale and impact of APT1&#8217;s operations compelled us to write this
+					report.
+					&lt;/P&gt;
+					&lt;p&gt;
+					The activity we have directly observed likely represents only a small fraction of the cyber espionage that APT1 has
+					conducted. Though our visibility of APT1&#8217;s activities is incomplete, we have analyzed the group&#8217;s intrusions against
+					nearly 150 victims over seven years. From our unique vantage point responding to victims, we tracked APT1 back
+					to four large networks in Shanghai, two of which are allocated directly to the Pudong New Area. We uncovered a
+					substantial amount of APT1&#8217;s attack infrastructure, command and control, and modus operandi (tools, tactics, and
+					procedures). In an effort to underscore there are actual individuals behind the keyboard, Mandiant is revealing three
+					personas we have attributed to APT1. These operators, like soldiers, may merely be following orders given to them by
+					others.
+					&lt;/P&gt;
+					&lt;p&gt;
+					Our analysis has led us to conclude that APT1 is likely government-sponsored and one of the most persistent of China&#8217;s
+					cyber threat actors. We believe that APT1 is able to wage such a long-running and extensive cyber espionage campaign
+					in large part because it receives direct government support. In seeking to identify the organization behind this activity,
+					our research found that People&#8217;s Liberation Army (PLA&#8217;s) Unit 61398 is similar to APT1 in its mission, capabilities, and
+					resources. PLA Unit 61398 is also located in precisely the same area from which APT1 activity appears to originate.
+					&lt;/P&gt;
+					&lt;/body&gt;
+					&lt;/html&gt;]]>
+				</report:Description>
+			</report:Header>
+			<report:TTPs>
+				<report:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-33159b98-3264-4e10-a968-d67975b6272f" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-36fa6965-c7b9-4ca4-bc3c-6f9c40bc29c4" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-1d04a399-dd12-49f8-aac9-fa781eb4beef" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-a6fa7315-04ff-4234-ad22-6c210ffe0f2b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-5c446bed-3bf6-4344-a4d2-5560d550fc82" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-3756130b-9a5f-47d4-8ed4-4350c9921696" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-3098c57b-d623-4c11-92f4-5905da66658b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-1e2c4237-d469-4144-9c0b-9e5c0c513c49" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-e13f3e6d-4f9c-4265-b1cf-f997a1bf7827" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-5728f45b-2eca-4942-a7f6-bc4267c1ab8d" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-0bea2358-c244-4905-a664-a5cdce7bb767" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-7151c6d0-7e97-47ce-9290-087315ea3db7" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:TTP idref="mandiant:ttp-0781fe70-4c94-4300-8865-4b08b98611b4" timestamp="2015-05-15T09:00:00.000000Z"/>
+			</report:TTPs>
+			<report:Threat_Actors>
+				<report:Threat_Actor idref="mandiant:threat-actor-8dff0344-0c82-4079-8d04-6f3e4d9bd1df" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-6d179234-61fc-40c4-ae86-3d53308d8e65" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-d84cf283-93be-4ca7-890d-76c63eff3636" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-02e7c48f-0301-4c23-b3e4-02e5a0114c21" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-f1ce5a9e-0fb7-465b-acb9-e7f75098eee9" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-5abb4d96-e3f2-4a1a-b025-c5b63ec6eb0b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-d9619c21-9d4f-414e-9471-36bb8fc42bbe" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-94624865-2709-443f-9b4c-2891985fd69b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-b5d1d28c-d824-49c0-80b6-9179202e297b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-5ac0fd8e-5804-4849-a170-4ec0d15a5e8b" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-d5b62b58-df7c-46b1-a435-4d01945fe21d" timestamp="2015-05-15T09:00:00.000000Z"/>
+				<report:Threat_Actor idref="mandiant:threat-actor-76dd3859-31a6-43c5-9f3e-9c6ac745b61b" timestamp="2015-05-15T09:00:00.000000Z"/>
+			</report:Threat_Actors>
+			<report:Related_Reports>
+				<report:Related_Report>
+					<stixCommon:Relationship>Appendix D</stixCommon:Relationship>
+					<stixCommon:Report idref="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e242" timestamp="2015-05-15T09:00:00.000000Z"/>
+				</report:Related_Report>
+				<report:Related_Report>
+					<stixCommon:Relationship>Appendix E</stixCommon:Relationship>
+					<stixCommon:Report idref="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e241" timestamp="2015-05-15T09:00:00.000000Z"/>
+				</report:Related_Report>
+				<report:Related_Report>
+					<stixCommon:Relationship>Appendix F</stixCommon:Relationship>
+					<stixCommon:Report idref="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e249" timestamp="2015-05-15T09:00:00.000000Z"/>
+				</report:Related_Report>
+				<report:Related_Report>
+					<stixCommon:Relationship>Appendix G</stixCommon:Relationship>
+					<stixCommon:Report idref="mandiant:Report-190593d6-1861-4cfe-b212-c016fce1e248" timestamp="2015-05-15T09:00:00.000000Z"/>
+				</report:Related_Report>
+			</report:Related_Reports>
+		</stix:Report>
+	</stix:Reports>
 </stix:STIX_Package>
