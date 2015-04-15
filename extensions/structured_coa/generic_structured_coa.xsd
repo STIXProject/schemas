@@ -19,7 +19,7 @@
         <xs:complexContent>
             <xs:extension base="coa:StructuredCOAType">
                 <xs:sequence>
-                    <xs:element name="Description" type="stixCommon:StructuredTextType">
+                    <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
                             <xs:documentation>A structured Description of this Generic Structured COA.</xs:documentation>
                         </xs:annotation>

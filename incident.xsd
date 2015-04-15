@@ -42,12 +42,12 @@
 							<xs:documentation>The Time field specifies relevant time values associated with this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Description field is optional and provides an unstructured, text description of this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this Incident.</xs:documentation>
 						</xs:annotation>
@@ -221,7 +221,7 @@
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description_Of_Effect" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description_Of_Effect" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description_Of_Effect field is optional and provides a brief prose description of how the security property was affected.</xs:documentation>
 				</xs:annotation>
@@ -256,12 +256,12 @@
 					<xs:documentation>The Type field is optional and specifies the type of the asset impacted by the incident (a security attribute was negatively affected).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field is optional and provides an unstructured, text description of the asset.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Business_Function_Or_Role" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Business_Function_Or_Role" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Business_Function_Or_Role field is optional and provides a brief description of the asset's role, mission, and importance within the organization.</xs:documentation>
 				</xs:annotation>

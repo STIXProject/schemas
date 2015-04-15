@@ -155,7 +155,7 @@
 					</xs:appinfo>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Description field provides a description of this package of STIX content.</xs:documentation>
 					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
@@ -164,7 +164,7 @@
 					</xs:appinfo>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0">
+			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Short_Description field provides a short description of this package of STIX content.</xs:documentation>
 					<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
