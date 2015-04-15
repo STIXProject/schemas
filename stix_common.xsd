@@ -759,21 +759,15 @@
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute name="id" type="xs:QName" use="optional">
-				    <xs:annotation>
-				      <xs:documentation>Specifies a globally unique identifier for
-				        this Description.</xs:documentation>
-				    </xs:annotation>
-				  </xs:attribute>
-				  <xs:attribute name="ordinality"  type="xs:positiveInteger" use="optional">
-				    <xs:annotation>
-				      <xs:documentation>Specifies the intended order position of this construct
-				        instance (e.g. Description) within a set of potentially multiple peer
-				        construct instances. If only a single construct instance is
-				        present its ordinality can be assumed to be 1. If multiple
-				        construct instances are present, the ordinality field should
-				        be specified with unique values for each instance.</xs:documentation>
-				    </xs:annotation>
-				  </xs:attribute>
+					<xs:annotation>
+						<xs:documentation>Specifies a globally unique identifier for this Description.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ordinality"  type="xs:positiveInteger" use="optional">
+					<xs:annotation>
+						<xs:documentation>Specifies the intended order position of this construct instance (e.g. Description) within a set of potentially multiple peer construct instances. If only a single construct instance is present its ordinality can be assumed to be 1. If multiple construct instances are present, the ordinality field should be specified with unique values for each instance.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
 				<xs:attribute name="structuring_format" type="xs:string" use="optional">
 					<xs:annotation>
 						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the STIX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
