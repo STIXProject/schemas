@@ -12,7 +12,3 @@ install:
 # manifest = a list of testfiles to run, i.e. `ls -1 $test_dir [...] >> manifest.cfg`
 script: python test_runner.py --test-case-repository tests test_manifest.cfg
 
-branches:
-  only:
-    - master
-
