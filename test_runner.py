@@ -4,6 +4,8 @@ Created on Nov 7, 2014
 @author: rpiazza
 '''
 
+# TODO refactor to drop manifest file, instead glob all files under tests/ and print filepath to stderr, total # to stdout
+
 import argparse
 from os.path import abspath, dirname
 import sys
