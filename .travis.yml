@@ -12,17 +12,3 @@ install:
 # manifest = a list of testfiles to run, i.e. `ls -1 $test_dir [...] >> manifest.cfg`
 script: python test_runner.py --test-case-repository tests test_manifest.cfg
 
-branches:
-  only:
-    - master
-
-notifications:
-  email:
-    - stix-commits-list@lists.mitre.org
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/1fbfa85a0bb8108ad060
-    on_success: change  
-    on_failure: always  
-    on_start: false     
-
