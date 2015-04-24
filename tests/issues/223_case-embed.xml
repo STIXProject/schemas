@@ -1,0 +1,80 @@
+<!-- Verify report allows for embedding content -->
+<report:Report 
+    xmlns:report="http://stix.mitre.org/Report-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:ttp="http://stix.mitre.org/TTP-1"
+    xmlns:et="http://stix.mitre.org/ExploitTarget-1"
+    xmlns:incident="http://stix.mitre.org/Incident-1"
+    xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+    xmlns:campaign="http://stix.mitre.org/Campaign-1"
+    xmlns:ta="http://stix.mitre.org/ThreatActor-1"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" timestamp="2015-02-19T19:03:15.523171+00:00">
+    <report:Observables cybox_major_version="2" cybox_minor_version="1">
+        <cybox:Observable id="a">
+            <cybox:Title>Test</cybox:Title>
+        </cybox:Observable>
+        <cybox:Observable id="b">
+            <cybox:Title>Test</cybox:Title>
+        </cybox:Observable>
+    </report:Observables>
+    <report:Indicators>
+        <report:Indicator id="c" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Test</indicator:Title>
+        </report:Indicator>
+        <report:Indicator id="d" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Test</indicator:Title>
+        </report:Indicator>
+    </report:Indicators>
+    <report:TTPs>
+        <report:TTP id="e" xsi:type="ttp:TTPType">
+            <ttp:Title>Test</ttp:Title>
+        </report:TTP>
+        <report:TTP id="f" xsi:type="ttp:TTPType">
+            <ttp:Title>Test</ttp:Title>
+        </report:TTP>
+    </report:TTPs>
+    <report:Exploit_Targets>
+        <stixCommon:Exploit_Target id="g" xsi:type="et:ExploitTargetType">
+            <et:Title>Test</et:Title>
+        </stixCommon:Exploit_Target>
+        <stixCommon:Exploit_Target id="h" xsi:type="et:ExploitTargetType">
+            <et:Title>Test</et:Title>
+        </stixCommon:Exploit_Target>
+    </report:Exploit_Targets>
+    <report:Incidents>
+        <report:Incident id="i" xsi:type="incident:IncidentType">
+            <incident:Title>Test</incident:Title>
+        </report:Incident>
+        <report:Incident id="j" xsi:type="incident:IncidentType">
+            <incident:Title>Test</incident:Title>
+        </report:Incident>
+    </report:Incidents>
+    <report:Courses_Of_Action>
+        <report:Course_Of_Action id="k" xsi:type="coa:CourseOfActionType">
+            <coa:Title>Test</coa:Title>
+        </report:Course_Of_Action>
+        <report:Course_Of_Action id="l" xsi:type="coa:CourseOfActionType">
+            <coa:Title>Test</coa:Title>
+        </report:Course_Of_Action>
+    </report:Courses_Of_Action>
+    <report:Campaigns>
+        <report:Campaign id="m" xsi:type="campaign:CampaignType">
+            <campaign:Title>Test</campaign:Title>
+        </report:Campaign>
+        <report:Campaign id="n" xsi:type="campaign:CampaignType">
+            <campaign:Title>Test</campaign:Title>
+        </report:Campaign>
+    </report:Campaigns>
+    <report:Threat_Actors>
+        <report:Threat_Actor id="o" xsi:type="ta:ThreatActorType">
+            <ta:Title>Test</ta:Title>
+        </report:Threat_Actor>
+        <report:Threat_Actor id="p" xsi:type="ta:ThreatActorType">
+            <ta:Title>Test</ta:Title>
+        </report:Threat_Actor>
+    </report:Threat_Actors>
+</report:Report>

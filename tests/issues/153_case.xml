@@ -1,0 +1,32 @@
+<!--
+    test case for https://github.com/STIXProject/schemas/issues/153
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:incident="http://stix.mitre.org/Incident-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:example="http://example.com/"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    
+    <!-- show that vocab is enforced on the type of availability lost-->
+    <stix:Incidents>
+        <stix:Incident xsi:type="incident:IncidentType" >
+            <incident:Affected_Assets xsi:type="incident:AffectedAssetsType">
+                <incident:Affected_Asset>
+                    <incident:Nature_Of_Security_Effect>
+                        <incident:Property_Affected>
+                            <incident:Type_Of_Availability_Loss xsi:type="stixVocabs:AvailabilityLossTypeVocab-1.1.1">Degradation</incident:Type_Of_Availability_Loss>
+                        </incident:Property_Affected>
+                    </incident:Nature_Of_Security_Effect>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+        </stix:Incident>
+    </stix:Incidents>
+    
+</stix:STIX_Package>

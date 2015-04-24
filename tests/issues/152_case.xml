@@ -1,0 +1,34 @@
+<!--
+test case for https://github.com/ST
+    IXProject/schemas/issues/152
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:example="http://example.com/"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    <stix:Indicators>
+        <stix:Indicator xsi:type="indicator:IndicatorType" >
+         <indicator:Related_Campaigns>
+             
+             <indicator:Related_Campaign>
+                <stixCommon:Confidence><stixCommon:Value>50</stixCommon:Value></stixCommon:Confidence> 
+                 <stixCommon:Information_Source><stixCommon:Description>"Internal security team"</stixCommon:Description>
+                     <stixCommon:Identity><stixCommon:Name>MITRE Infosec</stixCommon:Name></stixCommon:Identity>
+                 </stixCommon:Information_Source>
+                 <stixCommon:Relationship>"connected to"</stixCommon:Relationship>
+                  <stixCommon:Campaign><stixCommon:Names>
+                     <stixCommon:Name>"Comment Crew"</stixCommon:Name>
+                 </stixCommon:Names></stixCommon:Campaign>
+             </indicator:Related_Campaign>
+         </indicator:Related_Campaigns>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

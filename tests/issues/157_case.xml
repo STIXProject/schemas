@@ -1,0 +1,29 @@
+<!--
+test case for https://github.com/STIXProject/schemas/issues/157
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:example="http://example.com/"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    <stix:Indicators>
+        <stix:Indicator xsi:type="indicator:IndicatorType" >
+         <!-- show that confidence is of type InformationSource, and contains Identity -->
+            <indicator:Confidence> <stixCommon:Confidence_Assertion_Chain>
+             <stixCommon:Confidence_Assertion>
+                 <stixCommon:Source>
+                     <stixCommon:Identity>
+                         <stixCommon:Name>Secret Squirrels</stixCommon:Name>
+                     </stixCommon:Identity></stixCommon:Source></stixCommon:Confidence_Assertion>
+         </stixCommon:Confidence_Assertion_Chain></indicator:Confidence>
+            
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

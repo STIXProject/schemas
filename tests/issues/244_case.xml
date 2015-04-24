@@ -1,0 +1,26 @@
+<!--
+    test case for https://github.com/STIXProject/schemas/issues/244
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" 
+    xmlns:example="http://example.com/"
+    version="1.2"
+    >
+    <stix:Indicators>
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:ef67ed13-a7a2-4685-acd4-9240dff62fb7" timestamp="2015-05-15T09:00:00.000000Z" >
+            <indicator:Title>Wrong Title!</indicator:Title>
+        </stix:Indicator>
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:83499eed-9f08-46d3-ac32-6839ee65f657" timestamp="2015-05-15T09:00:00.000000Z" >
+            <indicator:Title>Wrong Title!</indicator:Title>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Relationship xsi:type="VersioningVocab-1.0">Updates - Corrects</stixCommon:Relationship>
+                    <stixCommon:Indicator idref="example:ef67ed13-a7a2-4685-acd4-9240dff62fb7" timestamp="2015-05-15T09:00:00.000000Z" />
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

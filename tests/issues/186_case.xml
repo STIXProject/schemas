@@ -1,0 +1,210 @@
+<!--
+Covers cases of multiple descriptions on various elements
+- campaign.xsd
+- course_of_action.xsd
+- exploit_target.xsd
+- incident.xsd
+- indicator.xsd
+- threat_actor.xsd
+- ttp.xsd
+-->
+
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:URIObject="http://cybox.mitre.org/objects#URIObject-2"
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:example="http://example.co/"
+    xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:ttp="http://stix.mitre.org/TTP-1" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:coa="http://stix.mitre.org/CourseOfAction-1"
+    xmlns:incident="http://stix.mitre.org/Incident-1"
+    xmlns:et="http://stix.mitre.org/ExploitTarget-1"
+
+    xsi:schemaLocation="
+    http://stix.mitre.org/stix-1 ../stix_core.xsd
+    http://stix.mitre.org/Indicator-2 ../indicator.xsd
+    http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
+    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
+    http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd"
+    id="example:package-4cc56b6b-748f-440b-9f01-03bcf3ce7c68"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    <stix:STIX_Header>
+        <stix:Title>test file</stix:Title>
+    </stix:STIX_Header>
+
+
+<stix:Indicators>
+        <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2014-05-08T09:00:00.000000Z">
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1" >URL Watchlist</indicator:Type>
+            
+            <indicator:Description id="example:Description-2e20c5b2-56fa-46cd-9662-8f199c69d2c9"
+                         ordinality="1">A malicious URL</indicator:Description>
+            <indicator:Description id="example:Description-970ebd99-3d50-4a44-8ef7-aa012a0c4a52"
+                         ordinality="2">It might be a newfangled TLD</indicator:Description>       
+            
+            <indicator:Short_Description id="example:Description-2e20c5b2-56fa-46cd-9662-8f199c69d2b9"
+                         ordinality="1">A malicious URL</indicator:Short_Description>
+            <indicator:Short_Description id="example:Description-970ebd99-3d50-4a44-8ef7-aa012a0c4a22"
+                         ordinality="2">It might be a newfangled TLD</indicator:Short_Description>      
+            
+            <indicator:Sightings sightings_count="1">
+			    <indicator:Sighting timestamp="2012-12-01T09:30:47Z">
+					
+					<indicator:Description id="example:Description-2e20c5b2-56fa-46cd-9662-8f199c69d2c0"
+                         ordinality="1">A malicious URL</indicator:Description>
+                    <indicator:Description id="example:Description-970ebd99-3d50-4a44-8ef7-aa012a0c4a51"
+                         ordinality="2">It might be a newfangled TLD</indicator:Description>       
+				</indicator:Sighting>
+			</indicator:Sightings>
+			
+        </stix:Indicator>
+    </stix:Indicators>
+
+<stix:TTPs>
+<stix:TTP id="example:ttp-8ac90ff3-ecf8-4835-95b8-6aea6a623df5" xsi:type="ttp:TTPType" version="1.1.1">
+<ttp:Title>Phishing</ttp:Title>
+<ttp:Behavior>
+<ttp:Attack_Patterns>
+<ttp:Attack_Pattern capec_id="CAPEC-98">
+<ttp:Description id="example:Description-6620c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></ttp:Description>
+<ttp:Description id="example:Description-7720c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></ttp:Description>
+
+<ttp:Short_Description id="example:Short_Description-8820c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></ttp:Short_Description>
+<ttp:Short_Description id="example:Short_Description-9920c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></ttp:Short_Description>
+
+</ttp:Attack_Pattern>
+</ttp:Attack_Patterns>
+</ttp:Behavior>
+</stix:TTP>
+</stix:TTPs>
+
+
+<stix:Exploit_Targets>
+<stixCommon:Exploit_Target xsi:type="et:ExploitTargetType" id="example:et-48a276f7-a8d7-bba2-3575-e8a63fcd488" timestamp="2014-05-08T09:00:00.000000Z">
+<et:Title>Javascript vulnerability in MSIE 6-11</et:Title>
+<et:Description id="example:Description-aa20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></et:Description>
+<et:Description id="example:Description-ab20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></et:Description>
+
+<et:Short_Description id="example:Short_Description-ac20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></et:Short_Description>
+<et:Short_Description id="example:Short_Description-ad20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></et:Short_Description>
+
+</stixCommon:Exploit_Target>
+</stix:Exploit_Targets>
+
+<stix:Incidents>
+<stix:Incident id="example:incident-8236b4a2-abe0-4b56-9347-288005c4bb92" timestamp="2014-11-18T23:40:08.061362+00:00" xsi:type="incident:IncidentType" version="1.1.1">
+
+<incident:Description id="example:Description-da20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></incident:Description>
+<incident:Description id="example:Description-db20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></incident:Description>
+
+<incident:Short_Description id="example:Short_Description-dc20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></incident:Short_Description>
+<incident:Short_Description id="example:Short_Description-dd20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></incident:Short_Description>
+
+<incident:Affected_Assets>
+<incident:Affected_Asset>
+<incident:Type count_affected="1">Database</incident:Type>
+<incident:Description  id="example:Description-de20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">Database server at hr-data1.example.com</incident:Description>
+<incident:Description  id="example:Description-df20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it also hosts email</incident:Description>
+<incident:Business_Function_Or_Role>Hosts the database for example.com</incident:Business_Function_Or_Role>
+<incident:Ownership_Class xsi:type="stixVocabs:OwnershipClassVocab-1.0">Internally-Owned</incident:Ownership_Class>
+<incident:Management_Class xsi:type="stixVocabs:ManagementClassVocab-1.0">Internally-Managed</incident:Management_Class>
+<incident:Location_Class xsi:type="stixVocabs:LocationClassVocab-1.0">Internally-Located</incident:Location_Class>
+<incident:Nature_Of_Security_Effect>
+<incident:Property_Affected>
+<incident:Property xsi:type="stixVocabs:LossPropertyVocab-1.0">Confidentiality</incident:Property>
+<incident:Description_Of_Effect id="example:Description_Of_Effect-ee20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">
+Data was exfiltrated, has not been determined which data or how.
+</incident:Description_Of_Effect>
+<incident:Description_Of_Effect id="example:Description_Of_Effect-1120c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="2">
+who's to say how it worked
+</incident:Description_Of_Effect>
+
+<incident:Non_Public_Data_Compromised data_encrypted="false">Yes</incident:Non_Public_Data_Compromised>
+</incident:Property_Affected>
+</incident:Nature_Of_Security_Effect>
+</incident:Affected_Asset>
+</incident:Affected_Assets>
+</stix:Incident>
+</stix:Incidents>
+
+
+
+<stix:Courses_Of_Action>
+<stix:Course_Of_Action id="example:coa-495c9b28-b5d8-11e3-b7bb-000c29789db9" xsi:type="coa:CourseOfActionType" version="1.1.1">
+<coa:Title>Block traffic to PIVY C2 Server (10.10.10.10)</coa:Title>
+<coa:Stage xsi:type="stixVocabs:COAStageVocab-1.0">Response</coa:Stage>
+<coa:Type xsi:type="stixVocabs:CourseOfActionTypeVocab-1.0">Perimeter Blocking</coa:Type>
+
+<coa:Description id="example:Description-ff20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></coa:Description>
+<coa:Description id="example:Description-fe20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></coa:Description>
+
+<coa:Short_Description id="example:Short_Description-5f20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></coa:Short_Description>
+<coa:Short_Description id="example:Short_Description-6f20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></coa:Short_Description>
+
+
+</stix:Course_Of_Action>
+</stix:Courses_Of_Action>
+
+
+    
+    <stix:Campaigns>
+<stix:Campaign id="example:Campaign-e5268b6e-4931-42f1-b379-87f48eb41b1e" timestamp="2014-08-08T15:50:10.983728+00:00" xsi:type="campaign:CampaignType" version="1.1.1">
+<campaign:Title>Compromise of ATM Machines</campaign:Title>
+<campaign:Description id="example:Description-2e20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></campaign:Description>
+<campaign:Description id="example:Description-2e20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></campaign:Description>
+
+<campaign:Short_Description id="example:Short_Description-2e20c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></campaign:Short_Description>
+<campaign:Short_Description id="example:Short_Description-2e20c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></campaign:Short_Description>
+
+</stix:Campaign>
+</stix:Campaigns>
+
+
+<stix:Threat_Actors>
+<stix:Threat_Actor xsi:type="ta:ThreatActorType" id="example:threatactor-d98aaf55-ce5b-4c2e-aa05-2e57a07e45cf" timestamp="2014-05-08T09:00:00.000000Z">
+<ta:Title>Threat Actor Group</ta:Title>
+<ta:Description id="example:Description-2220c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></ta:Description>
+<ta:Description id="example:Description-3320c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></ta:Description>
+
+<ta:Short_Description id="example:Short_Description-4420c5b2-56fa-46cd-9662-8f199c69d2e1"
+                         ordinality="1">The malicious intrusion></ta:Short_Description>
+<ta:Short_Description id="example:Short_Description-5520c5b2-56eb-46cd-9662-8f199c69d2e1"
+                         ordinality="2">it's super secret></ta:Short_Description>
+
+</stix:Threat_Actor>
+</stix:Threat_Actors>
+
+
+
+</stix:STIX_Package>

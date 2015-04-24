@@ -1,0 +1,14 @@
+<stix:STIX_Package 
+	xmlns:report="http://stix.mitre.org/Report-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="1.2">
+    <stix:Reports>
+        <stix:Report id="a" xsi:type="report:ReportType">
+            <report:Header>
+                <report:Title>Some report</report:Title>    
+            </report:Header>
+        </stix:Report>
+        <stix:Report idref="a" />
+    </stix:Reports>
+</stix:STIX_Package>

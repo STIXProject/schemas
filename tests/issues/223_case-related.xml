@@ -1,0 +1,21 @@
+<!-- Verify report allows for related reports (embed + reference) -->
+<report:Report 
+    xmlns:report="http://stix.mitre.org/Report-1"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" timestamp="2015-02-19T19:03:15.523171+00:00">
+    <report:Related_Reports>
+        <report:Related_Report>
+            <stixCommon:Relationship>Related</stixCommon:Relationship>
+            <stixCommon:Report xsi:type="report:ReportType" id="a">
+                <report:Header>
+                    <report:Title>Report Title!</report:Title>
+                </report:Header>
+            </stixCommon:Report>
+        </report:Related_Report>
+        <report:Related_Report>
+            <stixCommon:Report idref="b" />
+        </report:Related_Report>
+    </report:Related_Reports>
+</report:Report>

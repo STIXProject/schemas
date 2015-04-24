@@ -1,0 +1,22 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-c15ecf99-369c-4a7d-b773-eca30722dc7e" version="1.2" timestamp="2015-02-19T19:03:15.520902+00:00">
+    <stix:STIX_Header>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Incident</stix:Package_Intent>
+        <stix:Description>Sample breach report</stix:Description>
+    </stix:STIX_Header>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-e27dbc3c-fc44-4bd9-9c46-6096756ce9b4" timestamp="2015-02-19T19:03:15.521389+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Breach of CyberTech Dynamics</incident:Title>
+            <incident:Discovery_Method xsi:type="stixVocabs:DiscoveryMethodVocab-1.0">Fraud Detection</incident:Discovery_Method>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>

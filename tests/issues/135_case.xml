@@ -1,0 +1,47 @@
+<!--
+    test case for https://github.com/STIXProject/schemas/issues/135
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:et="http://stix.mitre.org/ExploitTarget-1"
+    xmlns:stix-cvrf="http://stix.mitre.org/extensions/Vulnerability#CVRF-1"
+    xmlns:cvrf="http://www.icasi.org/CVRF/schema/cvrf/1.1"
+    xmlns:example="http://example.com/"
+    version="1.2">
+    
+    <stix:Exploit_Targets>
+        <stixCommon:Exploit_Target xsi:type="et:ExploitTargetType">
+            <et:Title>Test CVRF Extension</et:Title>
+            <et:Vulnerability xsi:type="stix-cvrf:CVRF1.1InstanceType">
+                <et:Title>Test</et:Title>
+                <cvrfdoc xmlns="http://www.icasi.org/CVRF/schema/cvrf/1.1">
+                    <DocumentTitle>Test</DocumentTitle>
+                    <DocumentType>Test</DocumentType>
+                    <DocumentPublisher Type="Vendor" VendorID="000">
+                        <ContactDetails>Test</ContactDetails>
+                        <IssuingAuthority>Test</IssuingAuthority>
+                    </DocumentPublisher>
+                    <DocumentTracking>
+                        <Identification>
+                            <ID>test</ID>
+                        </Identification>
+                        <Status>Final</Status>
+                        <Version>1.0</Version>
+                        <RevisionHistory>
+                            <Revision>
+                                <Number>1.0</Number>
+                                <Date>2015-05-15T00:00:00+00:00</Date>
+                                <Description>Test.</Description>
+                      	    </Revision>
+                        </RevisionHistory>
+                        <InitialReleaseDate>2015-05-15T00:00:00+00:00</InitialReleaseDate>
+                        <CurrentReleaseDate>2015-05-15T00:00:00+00:00</CurrentReleaseDate>
+                    </DocumentTracking>
+                </cvrfdoc>
+            </et:Vulnerability>
+        </stixCommon:Exploit_Target>
+    </stix:Exploit_Targets>
+    
+</stix:STIX_Package>

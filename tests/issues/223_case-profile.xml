@@ -1,0 +1,11 @@
+<!-- NOT VALID STIX - NEGATIVE TEST CASE -->
+<!-- Verify report does not allow fields that only exist on package -->
+<report:Report 
+    xmlns:report="http://stix.mitre.org/Report-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" timestamp="2015-02-19T19:03:15.523171+00:00">
+    <report:Header>
+        <report:Profiles></report:Profiles>
+    </report:Header>
+</report:Report>

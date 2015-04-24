@@ -1,0 +1,29 @@
+<!--
+    test case for https://github.com/STIXProject/schemas/issues/134
+-->
+<stix:STIX_Package
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stix="http://stix.mitre.org/stix-1"
+    xmlns:indicator="http://stix.mitre.org/Indicator-2"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:genericTM="http://stix.mitre.org/extensions/TestMechanism#Generic-1" 
+    xmlns:example="http://example.com/"
+    
+    
+    
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
+    timestamp="2014-05-08T09:00:00.000000Z"
+    version="1.1.1"
+    >
+    <stix:Indicators>
+        <stix:Indicator xsi:type="indicator:IndicatorType" >
+          
+            <indicator:Test_Mechanisms>
+                <indicator:Test_Mechanism id="example:TestMechanism-5f5fde43-ee30-4582-afaa-238a672f70b1" 
+                    xsi:type="genericTM:GenericTestMechanismType">
+                <!-- leaving Desc, Spec, and Type out to test that it still validates -->    
+                </indicator:Test_Mechanism>
+            </indicator:Test_Mechanisms>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>

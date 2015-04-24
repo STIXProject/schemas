@@ -1,0 +1,19 @@
+<!-- Verify report allows for all header fields -->
+<report:Report 
+    xmlns:report="http://stix.mitre.org/Report-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" timestamp="2015-02-19T19:03:15.523171+00:00">
+    <report:Header>
+        <report:Title>Report</report:Title>
+        <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Incident</report:Intent>
+        <report:Description>Sample report description</report:Description>
+        <report:Short_Description>S.R.D.</report:Short_Description>
+        <report:Handling>
+            
+        </report:Handling>
+        <report:Information_Source>
+            
+        </report:Information_Source>
+    </report:Header>
+</report:Report>

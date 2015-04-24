@@ -6,7 +6,7 @@ install:
   - pip install -q stix-validator
 
 # checks against the latest commit to master of schema (may be ahead of official release)
-script: python test_runner.py --test-case-repository tests 
+script: python tests/test_runner.py --test-case-repository tests 
 
 branches:
   only:

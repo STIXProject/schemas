@@ -1,0 +1,29 @@
+<stix:STIX_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:example="http://example.com"
+	xmlns:incident="http://stix.mitre.org/Incident-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 id="example:Package-706fcdd4-6688-4f73-b9db-39889049ac52" version="1.2" timestamp="2015-02-19T19:02:04.122712+00:00">
+    <stix:STIX_Header>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Incident</stix:Package_Intent>
+        <stix:Description>Sample breach report</stix:Description>
+    </stix:STIX_Header>
+    <stix:Incidents>
+        <stix:Incident id="example:incident-74fd4ef8-fc84-4a85-9a65-a5104c9aad85" timestamp="2015-02-19T19:02:04.123031+00:00" xsi:type='incident:IncidentType'>
+            <incident:Title>Breach of CyberTech Dynamics</incident:Title>
+            <incident:Affected_Assets>
+                <incident:Affected_Asset>
+                    <incident:Type>Telephone</incident:Type>
+                </incident:Affected_Asset>
+                <incident:Affected_Asset>
+                    <incident:Type>Media</incident:Type>
+                </incident:Affected_Asset>
+            </incident:Affected_Assets>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>

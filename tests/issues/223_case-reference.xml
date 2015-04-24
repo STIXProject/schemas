@@ -1,0 +1,41 @@
+<!-- Verify report allows for referencing content -->
+<report:Report 
+    xmlns:report="http://stix.mitre.org/Report-1"
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" timestamp="2015-02-19T19:03:15.523171+00:00">
+    <report:Observables cybox_major_version="2" cybox_minor_version="1">
+        <cybox:Observable idref="a" />
+        <cybox:Observable idref="b" />
+    </report:Observables>
+    <report:Indicators>
+        <report:Indicator idref="c" />
+        <report:Indicator idref="d" />
+    </report:Indicators>
+    <report:TTPs>
+        <report:TTP idref="e" />
+        <report:TTP idref="f" />
+    </report:TTPs>
+    <report:Exploit_Targets>
+        <stixCommon:Exploit_Target idref="g" />
+        <stixCommon:Exploit_Target idref="h" />
+    </report:Exploit_Targets>
+    <report:Incidents>
+        <report:Incident idref="i" />
+        <report:Incident idref="j" />
+    </report:Incidents>
+    <report:Courses_Of_Action>
+        <report:Course_Of_Action idref="k" />
+        <report:Course_Of_Action idref="l" />
+    </report:Courses_Of_Action>
+    <report:Campaigns>
+        <report:Campaign idref="m" />
+        <report:Campaign idref="n" />
+    </report:Campaigns>
+    <report:Threat_Actors>
+        <report:Threat_Actor idref="o" />
+        <report:Threat_Actor idref="p" />
+    </report:Threat_Actors>
+</report:Report>
