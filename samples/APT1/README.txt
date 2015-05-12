@@ -92,4 +92,4 @@ For each of the XML files above, the stix_to_html utility was used to create HTM
 named identically to the XML files but with an HTML extension. Please note that because the stix_to_html tool is still
 experimental and still under development the HTML views are incomplete representations of the XML. In particular, some of
 the higher-level constructs like Campaign and Threat Actor are still under development in the tool so the HTML views of
-those components will be missing content that’s present in the XML.
+those components will be missing content that's present in the XML.
