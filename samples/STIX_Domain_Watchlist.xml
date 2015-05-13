@@ -29,7 +29,6 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://cybox.mitre.org/objects#DomainNameObject-1 ../cybox/objects/Domain_Name_Object.xsd"
     id="example:STIXPackage-f61cd874-494d-4194-a3e6-6b487dbb6d6e"
-    timestamp="2015-05-15T09:00:00.000000Z"
     version="1.2"
     >
     <stix:Indicators>

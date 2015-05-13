@@ -37,7 +37,7 @@ http://cybox.mitre.org/objects#AddressObject-2 ../cybox/objects/Address_Object.x
 http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
 http://cybox.mitre.org/objects#URIObject-2 ../cybox/objects/URI_Object.xsd
 http://cybox.mitre.org/objects#EmailMessageObject-2 ../cybox/objects/Email_Message_Object.xsd 
-http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd" id="example:Indicator-ba1d406e-937c-414f-9231-6e1dbe64fe8b" version="1.2" timestamp="2015-05-15T09:00:00.000000Z">
+http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd" id="example:Indicator-ba1d406e-937c-414f-9231-6e1dbe64fe8b" version="1.2">
 	<stix:Indicators>
 		<stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-19e5d914-cc0e-478f-a523-b099a34383f7" timestamp="2015-05-15T09:00:00.000000Z">
 			<indicator:Title>"US-China" Phishing Indicator</indicator:Title>

@@ -35,8 +35,7 @@
         http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd
         http://stix.mitre.org/extensions/Identity#CIQIdentity3.0-1 ../../extensions/identity/ciq_3.0_identity.xsd
     "
-    id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d"
-    timestamp="2015-05-15T09:00:00.000000Z" 
+    id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d" 
     version="1.2">
     <stix:STIX_Header>
         <stix:Title>Poison Ivy: Assessing Damage and Extracting Intelligence</stix:Title>

@@ -30,7 +30,6 @@
 
 <stix:STIX_Package
 	id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf"
-	timestamp="2015-05-15T09:00:00.000000Z"
 	version="1.2"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://data-marking.mitre.org/Marking-1"

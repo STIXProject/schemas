@@ -3,7 +3,7 @@
 xmlns:TTP="http://stix.mitre.org/TTP-1"
 xmlns:stix="http://stix.mitre.org/stix-1" 
 xmlns:stixCommon="http://stix.mitre.org/common-1" 
-version="1.1.1"
+version="1.2"
 xsi:schemaLocation="http://stix.mitre.org/TTP-1 ../../../ttp.xsd" >
 	<TTP:Kill_Chains>
 		<stixCommon:Kill_Chain id="stix:TTP-af3e707f-2fb9-49e5-8c37-14026ca0a5ff" name="LM Cyber Kill Chain" definer="LMCO" reference="http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf" number_of_phases="7">

@@ -33,7 +33,6 @@
     http://cybox.mitre.org/objects#WhoisObject-2 ../../cybox/objects/Whois_Object.xsd
     "
     id="fireeye:stix-24da7696-2561-4686-b429-c31d210e2f2b"
-    timestamp="2015-05-15T09:00:00.000000Z"
     version="1.2">
     <stix:STIX_Header>
         <stix:Handling>

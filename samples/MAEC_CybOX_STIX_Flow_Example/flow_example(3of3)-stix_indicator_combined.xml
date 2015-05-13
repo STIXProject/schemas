@@ -42,8 +42,7 @@
     http://cybox.mitre.org/objects#WinPipeObject-2 ../../cybox/objects/Win_Pipe_Object.xsd
     http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
     http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
-    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
-    timestamp="2015-05-15T09:00:00.000000Z" 
+    id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc" 
     version="1.2">
     <stix:Observables cybox_major_version="2" cybox_minor_version="1">
         <cybox:Observable id="example:Observable-514169f8-e88f-48e1-83f7-08669f5fafd9">

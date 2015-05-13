@@ -28,7 +28,6 @@
     http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
     http://stix.mitre.org/extensions/TestMechanism#Snort-1 ../extensions/test_mechanism/snort_test_mechanism.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
-    timestamp="2015-05-15T09:00:00.000000Z"
     version="1.2"
     >
     <stix:Indicators>

@@ -34,7 +34,6 @@
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd"
     id="example:STIXPackage-ac823873-4c51-4dd1-936e-a39d40151cc3"
-    timestamp="2015-05-15T09:00:00.000000Z"
     version="1.2">
     <stix:Indicators>
         <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-611935aa-4db5-4b63-88ac-ac651634f09b" timestamp="2015-05-15T09:00:00.000000Z">
