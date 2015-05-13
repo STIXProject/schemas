@@ -166,7 +166,7 @@
 							<xs:documentation>The Related_TTP field specifies a single TTP asserted to be related to this cyber threat Campaign.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-				</xs:sequence>			
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -175,7 +175,7 @@
 			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Name field specifies a Name used to identify this Campaign. This field can be used to capture various aliases used to identify this Campaign.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.1.1. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.2. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

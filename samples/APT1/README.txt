@@ -9,7 +9,7 @@ following disclaimer applies to all of the conversion results, including both th
 MITRE converted and the HTML representations of that content:
 
 APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report")
-is copyright 2013 by Mandiant Corporation and can be downloaded at 
+is copyright 2013 by Mandiant Corporation and can be downloaded at
 intelreport.mandiant.com.  This XML file using the STIX standard was created
 by The MITRE Corporation using the content of the APT1 Report with Mandiant's
 permission.  Mandiant is not responsible for the content of this file.
@@ -31,8 +31,8 @@ Mandiant's website at: http://intelreport.mandiant.com.
 Mandiant_APT1_Report.xml
 ------------------------
 This document is the result of a manual conversion of the APT1 report itself (Mandiant_APT1_Report.pdf)
-into a representative portion of that report in STIX 1.1.1. The process was to read through the report
-and manually create STIX 1.1.1 XML content to match the contents of the report, with the primary focus
+into a representative portion of that report in STIX 1.2. The process was to read through the report
+and manually create STIX 1.2 XML content to match the contents of the report, with the primary focus
 on TTPs, Threat Actors, and Campaigns. The intent was not to convert the whole report but to provide
 illustrative examples of the higher-level content that the APT1 report describes. As such, not all material
 in the original report is in the conversion and some of the material that was converted over may have small
@@ -82,7 +82,7 @@ bindings and APIs. Each document was the result of a conversion using slightly d
 	(including a top-level composite) are then referenced by the indicator as the pattern for that indicator. The
 	original OpenIOC content is not included.
 * Appendix_G_IOCs_Full.xml was created as a combination of the two approaches above. It includes both the original
-	OpenIOC as a TestMechanism and the converted CybOX as the indicator's CybOX pattern. 
+	OpenIOC as a TestMechanism and the converted CybOX as the indicator's CybOX pattern.
 
 ------------------------
 HTML Versions

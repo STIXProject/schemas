@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
     APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report")
-    is copyright 2013 by Mandiant Corporation and can be downloaded at 
+    is copyright 2013 by Mandiant Corporation and can be downloaded at
     intelreport.mandiant.com.  This XML file using the STIX standard was created
     by The MITRE Corporation using the content of the APT1 Report with Mandiant's
-    permission.  Mandiant is not responsible for the content of this file.  
+    permission.  Mandiant is not responsible for the content of this file.
 
-    This document was developed against STIX 1.1.1 and CybOX 2.1 using automated
+    This document was developed against STIX 1.2 and CybOX 2.1 using automated
     transforms from OpenIOC 2010. It is intended for demonstration purposes only
     and no guarantee is made to the accuracy or completeness of the information.
-    
+
     This document was automatically generated using an OpenIOC -> STIX/CybOX
     conversion tool. It takes each IOC definition and converts it into a single
     STIX Indicator with associated Name and Description (from the IOC). It includes
@@ -30,7 +30,7 @@
     xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
     xmlns:openiocTM="http://stix.mitre.org/extensions/TestMechanism#OpenIOC2010-1"
     xmlns:mandiant="http://www.mandiant.com"
-    
+
     xsi:schemaLocation="
     http://stix.mitre.org/stix-1 ../../stix_core.xsd
     http://stix.mitre.org/Report-1 ../../report.xsd
@@ -78,11 +78,11 @@
             </stixCommon:References>
         </stix:Information_Source>
     </stix:STIX_Header>
-    
+
     <stix:Indicators>
         <!--
     	If separate TTP entries were created for each of the malware entries in the Malware Arsenal appendix, the appropriate indicators defined here could directly reference the appropriate malware TTP entry for each rather than the single high-level APT1 TTP entry.
-    	
+
     	As an example, we referenced the WEBC2 Indicators to the WEBC2 TTP in the main STIX document.
         -->
         <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-8d88dd33-1e16-4814-814e-662fb0ac842f">
@@ -91,7 +91,7 @@
             <indicator:Description>
                 This family of malware is a utility designed to upload files to Google Docs. Nearly all communications are with docs.google.com are SSL encrypted. The malware does not use Google's published API to interact with their services. The malware does not currently work with Google Docs. It does not detect HTTP 302 redirections and will get caught in an infinite loop attempting to parse results from Google that are not present.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -196,11 +196,11 @@
         </stix:Indicator>
         <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-d577b671-abca-4318-ad94-27c793544168">
             <indicator:Title>GREENCAT (FAMILY)</indicator:Title>
-            <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>            
+            <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
                 Members of this family are full featured backdoors that communicates with a Web-based Command &amp; Control (C2) server over SSL. Features include interactive shell, gathering system info, uploading and downloading files, and creating and killing processes, Malware in this family usually communicates with a hard-coded domain using SSL on port 443. Some members of this family rely on launchers to establish persistence mechanism for them. Others contains functionality that allows it to install itself, replacing an existing Windows service, and uninstall itself. Several variants use %SystemRoot%\Tasks or %WinDir%\Tasks as working directories, additional malware artifacts may be found there.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -1180,7 +1180,7 @@
                 This family of malware is designed to operate as a service and provides remote command execution and file transfer capabilities to a fixed IP address or domain name. All communication with the C2 server happens over port 443 using SSL.
 This family can be installed as a service DLL. Some variants allow for uninstallation.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -1486,11 +1486,11 @@ This family can be installed as a service DLL. Some variants allow for uninstall
         </stix:Indicator>
         <stix:Indicator xsi:type="indicator:IndicatorType" timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:indicator-36437a22-f0d7-4a48-bec4-153e19045f8d">
             <indicator:Title>BOUNCER (FAMILY)</indicator:Title>
-            <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>            
+            <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
                 BOUNCER will load an extracted DLL into memory, and then will call the DLL's dump export.  The dump export is called with the parameters passed via the command line to the BOUNCER executable.  It requires at least two arguments, the IP and port to send the password dump information.  It can accept at most five arguments, including a proxy IP, port and an x.509 key for SSL authentication.  The DLL backdoor has the capability to execute arbitrary commands, collect database and server information, brute force SQL login credentials, launch arbitrary programs, create processes and threads, delete files, and redirect network traffic.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -1661,7 +1661,7 @@ This family can be installed as a service DLL. Some variants allow for uninstall
             <indicator:Description>
                 LONGRUN is a backdoor designed to communicate with a hard-coded IP address and provide the attackers with a custom interactive shell.  It supports file uploads and downloads, and executing arbitrary commands on the compromised machine.  When LONGRUN executes, it first loads configuration data stored as an obfuscated string inside the PE resource section. The distinctive string thequickbrownfxjmpsvalzydg is used as part of the input to the decoding algorithm.  When the configuration data string is decoded it is parsed and treated as an IP and port number.  The malware then connects to the host and begins interacting with it over a custom protocol.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -1753,7 +1753,7 @@ This family can be installed as a service DLL. Some variants allow for uninstall
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. This family of malware is a backdoor capable of downloading files and updating its configuration.
 Communication with the command and control (C2) server uses a combination of single-byte XOR and Base64 encoded data wrapped in standard HTML tags. The malware family installs a registry key as a persistence mechanism.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -1893,7 +1893,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 This family of malware is a backdoor that tunnels its connection through a preconfigured proxy. The malware communicates with a remote command and control server over HTTPS via the proxy. The malware installs itself as a Windows service with a service name supplied by the attacker but defaults to IPRIP if no service name is provided during install.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -2024,7 +2024,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 This family of malware consists of backdoors that attempt to fetch encoded commands over HTTP. The malware is capable of downloading a file, downloading and executing a file, executing arbitrary shell commands, or sleeping a specified interval.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -2170,7 +2170,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 This family of malware will beacon out at random intervals to the remote attacker. The attacker can run programs, execute arbitrary commands, and easily upload and download files. This IOC looks for both the dropper file and the backdoor.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -2249,7 +2249,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 The SEASALT malware family communicates via a custom binary protocol.  It is capable of gathering some basic system information, file system manipulation, file upload and download, process creation and termination, and spawning an interactive reverse shell.  The malware maintains persistence by installing itself as a service.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -2370,7 +2370,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. This malware family is a only a downloader which operates over the HTTP protocol with a hard-coded URL. If directed, it has the capability to download, decompress, and execute compressed binaries.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -2520,7 +2520,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 The WARP malware family is an HTTP based backdoor written in C++, and the majority of its code base is borrowed from source code available in the public domain.  Network communications are implemented using the same WWW client library (w3c.cpp) available from www.dankrusi.com/file_69653F3336383837.html.  The malware has system survey functionality (collects hostname, current user, system uptime, CPU speed, etc.) taken directly from the BO2K backdoor available from www.bo2k.com.  It also contains the hard disk identification code found at www.winsim.com/diskid32/diskid32.cpp.  When the WARP executing remote commands, the malware creates a copy of the ?%SYSTEMROOT%\system32\cmd.exe? file as '%USERPROFILE%\Temp\~ISUN32.EXE'.  The version signature information of the duplicate executable is zeroed out.  Some WARP variants maintain persistence through the use of DLL search order hijacking.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -2616,7 +2616,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. Members of this family of malware act only as downloaders and droppers for other malware. They communicate with a hard-coded C2 server, reading commands embedded in HTML comment fields. Some variants are executables which act upon execution, others are DLLs which can be attached to services or loaded through search order hijacking.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -2943,7 +2943,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 The COMBOS malware family is an HTTP based backdoor.  The backdoor is capable of file upload, file download, spawning a interactive reverse shell, and terminating its own process.  The backdoor may decrypt stored Internet Explorer credentials from the local system and transmit the credentials to the C2 server.  The COMBOS malware family does not have any persistence mechanisms built into itself.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -3083,9 +3083,9 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Title>WEBC2-QBP (FAMILY)</indicator:Title>
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
-                The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-QBP variant will search for two strings in a HTML comment. The first will be "2010QBP " followed by " 2010QBP//--".  Inside these tags will be a DES-encrypted string. 
+                The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-QBP variant will search for two strings in a HTML comment. The first will be "2010QBP " followed by " 2010QBP//--".  Inside these tags will be a DES-encrypted string.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -3258,7 +3258,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 This malware utility is a set of two files that operate in conjunction to extract email messages and attachments from an Exchange server. In order to operate successfully, these programs require authentication credentials for a user on the Exchange server, and must be run from a machine joined to the domain that has Microsoft Outlook installed (or equivalent software that provides the Microsoft 'Messaging API' (MAPI) service).
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -3343,7 +3343,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 This family of malware uses Google Calendar to retrieve commands and send results. It retrieves event feeds associated with Google Calendar, where each event contains commands from the attacker for the malware to perform. Results are posted back to the event feed. The malware authenticates with Google using the hard coded email address and passwords. The malware uses the deprecated ClientLogin authentication API from Google. The malware is registered as a service dll as a persistence mechanism. Artifacts of this may be found in the registry.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -3470,7 +3470,7 @@ Communication with the command and control (C2) server uses a combination of sin
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. Members of this family of backdoor malware talk to specific Web-based Command &amp; Control (C2) servers. The backdoor has a limited command set, depending on version. It is primarily a downloader, but it classified as a backdoor because it can accept a limited command set, including changing local directories, downloading and executing additional files, sleeping, and connecting to a specific IP &amp; port not initially included in the instruction set for the malware. Each version of the malware has at least one hardcoded URL to which it connects to receive its initial commands. This family of malware installs itself as a service, with the malware either being the executable run by the service, or the service DLL loaded by a legitimate service. The same core code is seen recompiled on different dates or with different names, but the same functionality. Key signatures include a specific set of functions (some of which can be used with the OS-provided rundll32.exe tool to install the malware as a service), and hardcoded strings used in communication with C2 servers to issue commands to the implant.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -4010,7 +4010,7 @@ Communication with the command and control (C2) server uses a combination of sin
 This family is designed to be a service DLL and does not contain an installation mechanism.
 It usually communicates over port 443. Some variants use their own encryption, others use SSL.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -4323,7 +4323,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
             <indicator:Description>
                 This family of malware provides a backdoor over the network to the attackers. It is configured to connect to a single host and offers file download over HTTP, program execution, and arbitrary execution of commands through a cmd.exe instance.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -4432,7 +4432,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. This family of malware will set itself up as a service and connect out to a hardcoded web page and read a modified base64 string from this webpage. The later versions of this malware supports three commands (earlier ones are just downloaders or reverse shells). The first commands will sleep the malware for N number of hours. The second command will download a binary from the encoded HTML comment and execute it on the infected host. The third will spawn an encoded reverse shell to an attacker specified location and port.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -4762,7 +4762,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-HEAD variant communicates over HTTPS, using the system's SSL implementation to encrypt all communications with the C2 server.  WEBC2-HEAD first issues an HTTP GET to the host, sending the Base64-encoded string containing the name of the compromised machine running the malware.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -5114,7 +5114,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
             <indicator:Description>
                 GLOOXMAIL communicates with Google's Jabber/XMPP servers and authenticates with a hard-coded username and password.  The malware can accept commands over XMPP that includes file upload and download, provide a remote shell, sending process listings, and terminating specified processes.  The malware makes extensive use of the open source gloox library (http://camaya.net/gloox/, version 0.9.9.12) to communicate using the Jabber/XMPP protocol.  All communications with the Google XMPP server are encrypted.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -5228,7 +5228,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
             <indicator:Description>
                 The NEWSREELS malware family is an HTTP based backdoor.  When first started, NEWSREELS decodes two strings from its resources section. These strings are both used as C2 channels, one URL is used as a beacon URL (transmitting) and the second URL is used to get commands (receiving).  The NEWSREELS malware family is capable of performing file uploads, downloads, creating processes or creating an interactive reverse shell.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -5725,7 +5725,7 @@ It usually communicates over port 443. Some variants use their own encryption, o
 All communications with the C2 server are sent over HTTP to a static URL, appending various URL parameters to the request. Some variants use a slightly different URL.
 The C2 server appears to act as just a database, allowing the clients to craft and execute SQL statements of their choosing. The malware also implements a special mode that provides full administrative access to the C2 server. This includes displaying the status of clients who have checked in with the C2 server, queuing commands to any client, and uploading or downloading files to the C2 server.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -5989,7 +5989,7 @@ The C2 server appears to act as just a database, allowing the clients to craft a
                 This family of malware is a backdoor capable of file upload and download as well as providing remote interactive shell access to the compromised machine.
 Communication with the Command &amp; Control (C2) servers uses a combination of single-byte XOR and Base64 encoded data in the Cookie and Set-Cookie HTTP header fields. Communication with the C2 servers is over port 80. Some variants install a registry key as means of a persistence mechanism. The hardcoded strings cited include a string of a command in common with several other APT1 families.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -6270,7 +6270,7 @@ Communication with the Command &amp; Control (C2) servers uses a combination of 
 
 This malware may also add itself to the Authorized Applications list for the Windows Firewall.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -6279,7 +6279,7 @@ This malware may also add itself to the Authorized Applications list for the Win
                     <openiocTM:ioc xmlns="http://schemas.mandiant.com/2010/ioc" id="8900aa6b-883d-48d3-a07d-d49b0429dd2b" last-modified="2013-02-10T13:00:00">
                         <short_description>DAIRY (FAMILY)</short_description>
                         <description>Members of this malware family are backdoors that provide file downloading, process listing, process killing, and reverse shell capabilities.
-                            
+
                             This malware may also add itself to the Authorized Applications list for the Windows Firewall.</description>
                         <authored_by>Mandiant</authored_by>
                         <authored_date>2013-02-10T06:11:53</authored_date>
@@ -6360,7 +6360,7 @@ This malware may also add itself to the Authorized Applications list for the Win
             <indicator:Description>
                 MD5 Hashes from APT 1 malware
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -10468,7 +10468,7 @@ This malware may also add itself to the Authorized Applications list for the Win
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. The WEBC2-TABLE variant looks for web pages containing 'background', 'align', and 'bgcolor' tags to be present in the requested Web page.  If the data in these tags are formatted correctly, the malware will decode a second URL and a filename.  This URL is then retrieved, written to the decoded filename and executed.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -10587,7 +10587,7 @@ This malware may also add itself to the Authorized Applications list for the Win
             <indicator:Description>
                 BISCUIT provides attackers with full access to an infected host.  BISCUIT capabilities include launching an interactive command shell, enumerating servers on a Windows network, enumerating and manipulating process, and transferring files.  BISCUIT communicates using a custom protocol, which is then encrypted using SSL.  Once installed BISCUIT will attempt to beacon to its command/control servers approximately every 10 or 30 minutes.  It will beacon its primary server first, followed by a secondary server. All communication is encrypted with SSL (OpenSSL 0.9.8i).
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -11266,9 +11266,9 @@ This malware may also add itself to the Authorized Applications list for the Win
             <indicator:Type vocab_name="Mandiant">Backdoor</indicator:Type>
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. Members of this family of malware provide remote command shell and remote file download and execution capabilities.
-The malware downloads a web page containing a crafted HTML comment that subsequently contains an encoded command. The contents of this command tell the malware whether to download and execute a program, launch a reverse shell to a specific host and port number, or to sleep for a period of time. 
+The malware downloads a web page containing a crafted HTML comment that subsequently contains an encoded command. The contents of this command tell the malware whether to download and execute a program, launch a reverse shell to a specific host and port number, or to sleep for a period of time.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -11460,7 +11460,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 Members of this family of malware are utilities designed to extract email messages and attachments from Outlook PST files. One part of this utility set is an executable, one is a dll. The malware may create a registry artifact related to the executable.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -11618,7 +11618,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-DIV variant searches for the strings "div safe:" and " balance" to delimit encoded C2 information. If the decoded string begins with the letter "J" the malware will parse additional arguments in the decoded string to specify the sleep interval to use.  WEBC2-DIV is capable of downloading a file, downloading and executing a file, or sleeping a specified interval.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -11823,7 +11823,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-KT3 variant searches for commands in a specific comment tag.  Network traffic starting with *!Kt3+v| may indicate WEBC2-KT3 activity.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -11951,7 +11951,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. The family of malware provides the attacker with an interactive command shell, the ability to upload and download files, execute commands on the system, list processes and DLLs, kill processes, and ping hosts on the local network. Responses to these commands are encrypted and compressed before being POSTed to the server. Some variants copy cmd.exe to Updatasched.exe in a temporary directory, and then may launch that in a process if an interactive shell is called. On initial invocation, the malware also attempts to delete previous copies of the Updatasched.exe file.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -12352,7 +12352,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The BANGAT malware family shares a large amount of functionality with the AURIGA backdoor.  The malware family contains functionality for keylogging, creating and killing processes, performing filesystem and registry modifications, spawning interactive command shells, performing process injection, logging off the current user or shutting down the local machine.  In addition, the malware also implements a custom VNC like protocol which sends screenshots of the desktop to the C2 server and accepts keyboard and mouse input.  The malware communicates to its C2 servers using SSL, with self signed SSL certificates.  The malware family will create a copy of cmd.exe to perform its C2 activity, and replace the "Microsoft corp" strings in the cmd.exe binary with different values.  The malware family typically maintains persistence through installing itself as a service.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -12904,7 +12904,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. This malware is a variant on the GREENCAT family, using a fixed web C2. This family is a full featured backdoor which provides remote command execution, file transfer, process and service enumeration and manipulation.  It installs itself persistently through the current user's registry Run key.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -13006,7 +13006,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 A WEBC2 backdoor is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands. This family of malware  is capable of downloading and executing a file. All variants represented here are the same file with different MD5 signatures. This malware attempts to contact its C2 once a week (Thursday at 10:00 AM). It looks for commands inside a set of HTML tags, part of which are in the File Strings indicator term below.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -13101,7 +13101,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The TARSIP malware family is a backdoor which communicates over encoded information in HTTPS headers.  Typical TARSIP malware samples will only beacon out to their C2 servers if the C2 DNS address resolves to a specific address.  The capability of TARSIP backdoors includes file uploading, file downloading, interactive command shells, process enumeration, process creation, process termination. The TARSIP-ECLIPSE family is distinguished by the presence of 'eclipse' in .pdb debug strings present in the malware samples. It does not provide a built in mechanism to maintain persistence.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -13585,7 +13585,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 LIGHTBOLT is a utility with the ability to perform HTTP GET requests for a list of user-specified URLs. The responses of the HTTP requests are then saved as MHTML files, which are added to encrypted RAR files. LIGHTBOLT has the ability to use software certificates for authentication.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -13779,7 +13779,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 STARSYPOUND provides an interactive remote shell over an obfuscated communications channel.  When it is first run, it loads a string (from the executable PE resource section) containing the beacon IP address and port.  The malware sends the beacon string "*(SY)# &lt;HOSTNAME&gt;" to the remote system, where &lt;HOSTNAME&gt; is the hostname of the victim system.  The remote host responds with a packet that also begins with the string "*(SY)# cmd". This causes the malware to launch a new cmd.exe child process. Further communications are forwarded to the cmd.exe child process to execute. The commands sent to the shell and their responses are obfuscated when sent over the network.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -14237,7 +14237,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The AURIGA malware family shares a large amount of functionality with the BANGAT backdoor.  The malware family contains functionality for keystroke logging, creating and killing processes, performing file system and registry modifications, spawning interactive command shells, performing process injection, logging off the current user or shutting down the local machine.  The AURIGA malware contains a driver component which is used to inject the malware DLL into other processes.  This driver can also perform process and IP connection hiding.  The malware family will create a copy of cmd.exe to perform its C2 activity, and replace the "Microsoft corp" strings in the cmd.exe binary with different values.  The malware family typically maintains persistence through installing itself as a service.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -14500,7 +14500,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
             <indicator:Description>
                 The TARSIP malware family is a backdoor which communicates over encoded information in HTTPS headers.  Typical TARSIP malware samples will only beacon out to their C2 servers if the C2 DNS address resolves to a specific address.  The capability of TARSIP backdoors includes file uploading, file downloading, interactive command shells, process enumeration, process creation, process termination. The TARSIP-MOON family is distinguished by the presence of 'moon' in .pdb debug strings present in the malware samples.  It does not provide a built in mechanism to maintain persistence.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -14854,7 +14854,7 @@ The malware downloads a web page containing a crafted HTML comment that subseque
                 A family of downloader malware, that retrieves an encoded payload from a fixed location, usually in the form of a file with the .jpg extension.
 Some variants have just an .exe that acts as a downloader, others have an .exe launcher that runs as a service and then loads an associated .dll of the same name that acts as the downloader. This IOC is targeted at the downloaders only. After downloading the file, the malware decodes the downloaded payload into an .exe file and launches it. The malware usually stages the files it uses in the %TEMP% directory or the %WINDIR%\Temp directory.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>
@@ -15215,7 +15215,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-TOCK variant looks for tags which include the name of the system in them as a parameter.  If those tags are formed correctly, the malware will decode the payload URL from the web page, then download and execute the payload.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -15338,7 +15338,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
             <indicator:Description>
                 The WEBC2 malware family is designed to retrieve a Web page from a pre-determined C2 server. It expects the Web page to contain special HTML tags; the backdoor will attempt to interpret the data between the tags as commands.  The WEBC2-YAHOO variant enters a loop where every ten minutes it attempts to download a web page that may contain an encoded URL.  The encoded URL will be found in the pages returned inside an attribute named 'sb' or 'ex' within a tag named 'yahoo'.  The embedded link can direct the malware to download and execute files.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <!-- References WEBC2 TTP rather than main APT1 TTP -->
                 <stixCommon:TTP idref="mandiant:ttp-0f01c5a3-f516-4450-9381-4dd9f2279411"/>
@@ -15822,7 +15822,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
             <indicator:Description>
                 LIGHTDART is a tool used to access a pre-configured web page that hosts an interface to query a database or data set. The tool then downloads the results of a query against that web page to an encrypted RAR file. This RAR file (1.rar) is renamed and uploaded to an attacker controlled FTP server, or uploaded via an HTTP POST with a .jpg extension. The malware will execute this search once a day. The target webpage usually contains information useful to the attacker, which is updated on a regular basis. Examples of targeted information include weather information or ship coordinates.
             </indicator:Description>
-            
+
             <indicator:Indicated_TTP>
                 <stixCommon:TTP idref="mandiant:ttp-c63f31ac-871b-4846-aa25-de1926f4f3c8"/>
             </indicator:Indicated_TTP>

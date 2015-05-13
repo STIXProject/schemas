@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- 
+<!--
     APT1: Exposing One of China's Cyber Espionage Units (the "APT1 Report")
-    is copyright 2013 by Mandiant Corporation and can be downloaded at 
+    is copyright 2013 by Mandiant Corporation and can be downloaded at
     intelreport.mandiant.com.  This XML file using the STIX standard was created
     by The MITRE Corporation using the content of the APT1 Report with Mandiant's
-    permission.  Mandiant is not responsible for the content of this file.  
+    permission.  Mandiant is not responsible for the content of this file.
 
-    This document was developed against STIX 1.1.1 and CybOX 2.1 using automated transforms
+    This document was developed against STIX 1.2 and CybOX 2.1 using automated transforms
     (https://github.com/CybOXProject/Tools/tree/master/scripts/x509_to_cybox) of text-based
     representations of X509 certificates from Appendix F of the Mandiant APT1 report. It is
     intended for demonstration purposes only and no guarantee is made to the accuracy or
@@ -22,12 +22,12 @@
     xmlns:stixCommon="http://stix.mitre.org/common-1"
     xmlns:marking="http://data-marking.mitre.org/Marking-1"
     xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2" 
-    xmlns:cyboxCommon="http://cybox.mitre.org/common-2" 
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" 
-    xmlns:X509CertificateObj="http://cybox.mitre.org/objects#X509CertificateObject-2" 
+    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:X509CertificateObj="http://cybox.mitre.org/objects#X509CertificateObject-2"
     xmlns:mandiant="http://www.mandiant.com"
-    
+
     xsi:schemaLocation="
     http://stix.mitre.org/stix-1 ../../stix_core.xsd
     http://stix.mitre.org/Report-1 ../../report.xsd
@@ -72,7 +72,7 @@
             </stixCommon:References>
         </stix:Information_Source>
     </stix:STIX_Header>
-    
+
     <stix:Observables cybox_major_version="2" cybox_minor_version="1">
         <cybox:Observable id="mandiant:observable-b3b380ee-d838-11e2-abd6-005056c00008">
             <cybox:Object>

@@ -137,7 +137,7 @@
 			<xs:element name="Indicator" type="stixCommon:IndicatorBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Characterizes a single cyber threat Indicator.</xs:documentation>
-					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://stix.mitre.org/Indicator-2 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.1/indicator.xsd.</xs:documentation>
+					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://stix.mitre.org/Indicator-2 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.2/indicator.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -147,7 +147,7 @@
 			<xs:element name="TTP" type="stixCommon:TTPBaseType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Characterizes a single cyber threat adversary Tactic, Technique or Procedure.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://stix.mitre.org/TTP-1 namespace. This type is defined in the ttp.xsd file or at the URL http://stix.mitre.org/XMLSchema/ttp/1.1.1/ttp.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://stix.mitre.org/TTP-1 namespace. This type is defined in the ttp.xsd file or at the URL http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -157,7 +157,7 @@
 			<xs:element name="Incident" type="stixCommon:IncidentBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Identifies or characterizes a single cyber threat Incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://stix.mitre.org/Incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://stix.mitre.org/XMLSchema/incident/1.1.1/incident.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://stix.mitre.org/Incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://stix.mitre.org/XMLSchema/incident/1.2/incident.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -167,7 +167,7 @@
 			<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Course_Of_Action field characterizes a Course of Action to be taken in regards to one of more cyber threats.</xs:documentation>
-					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.1.1/course_of_action.xsd.</xs:documentation>
+					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://stix.mitre.org/CourseOfAction-1 namespace. This type is defined in the course_of_action.xsd file or at the URL http://stix.mitre.org/XMLSchema/course_of_action/1.2/course_of_action.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -177,7 +177,7 @@
 			<xs:element name="Campaign" type="stixCommon:CampaignBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Characterizes a single cyber threat Campaign.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://stix.mitre.org/Campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://stix.mitre.org/XMLSchema/campaign/1.1.1/campaign.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://stix.mitre.org/Campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://stix.mitre.org/XMLSchema/campaign/1.2/campaign.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -187,7 +187,7 @@
 			<xs:element name="Threat_Actor" type="stixCommon:ThreatActorBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Characterizes a single cyber Threat Actor.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.1.1/threat_actor.xsd.</xs:documentation>
+					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://stix.mitre.org/ThreatActor-1 namespace. This type is defined in the threat_actor.xsd file or at the URL http://stix.mitre.org/XMLSchema/threat_actor/1.2/threat_actor.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

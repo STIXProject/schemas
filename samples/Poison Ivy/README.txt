@@ -14,7 +14,7 @@ The conversion resulted in 4 STIX documents, explained below. The source documen
 
 fireeye-pivy-report.xml
 ------------------------
-This document is the result of a manual conversion of the structured portions of the prose report itself (fireeye-poison-ivy-report.pdf) into a representative portion of that report in STIX 1.1.1. The process was to read through the report and manually create STIX 1.1.1 XML content to match the contents of the report, with the primary focus on TTPs, Threat Actors, and Campaigns. The intent was not to convert the whole report but to provide illustrative examples of the higher-level content that the PIVY report describes. As such, not all material in the original report is in the conversion and some of the material that was converted over may have small bugs or be incomplete. Please treat it as an example and not as a finished intelligence product.
+This document is the result of a manual conversion of the structured portions of the prose report itself (fireeye-poison-ivy-report.pdf) into a representative portion of that report in STIX 1.2. The process was to read through the report and manually create STIX 1.2 XML content to match the contents of the report, with the primary focus on TTPs, Threat Actors, and Campaigns. The intent was not to convert the whole report but to provide illustrative examples of the higher-level content that the PIVY report describes. As such, not all material in the original report is in the conversion and some of the material that was converted over may have small bugs or be incomplete. Please treat it as an example and not as a finished intelligence product.
 
 fireeye-pivy-observables.xml
 ------------------------
