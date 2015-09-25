@@ -19,21 +19,21 @@
 -->
 <stix:STIX_Package
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
+    xmlns:indicator="http://docs.oasis-open.org/cti/ns/stix/indicator-1"
+    xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
     xmlns:FileObject="http://cybox.mitre.org/objects#FileObject-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
     xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
     xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:stixVocabs="http://docs.oasis-open.org/cti/ns/stix/vocabularies-1"
     xmlns:example="http://example.com/"
     xsi:schemaLocation=
-    "http://stix.mitre.org/stix-1 ../stix_core.xsd
-    http://stix.mitre.org/Indicator-2 ../indicator.xsd
+    "http://docs.oasis-open.org/cti/ns/stix/core-1 ../stix_core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../indicator.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
     http://cybox.mitre.org/objects#EmailMessageObject-2 ../cybox/objects/Email_Message_Object.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../stix_default_vocabularies.xsd
     http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-075427ae-4021-410c-8d0b-2cde003a1e7b"
