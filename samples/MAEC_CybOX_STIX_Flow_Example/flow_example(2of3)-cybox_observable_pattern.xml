@@ -10,7 +10,7 @@
  xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:example="http://example.com/"
- xsi:schemaLocation="http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/cybox_core.xsd
+ xsi:schemaLocation="http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
  http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
  http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd"
  cybox_major_version="2" 

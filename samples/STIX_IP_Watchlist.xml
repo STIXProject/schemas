@@ -26,10 +26,10 @@
     xmlns:stixVocabs="http://docs.oasis-open.org/cti/ns/stix/vocabularies-1"
     xmlns:example="http://example.com/"
     xsi:schemaLocation="
-    http://docs.oasis-open.org/cti/ns/stix/core-1 ../stix_core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/core-1 ../core.xsd
     http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../indicator.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
-    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../stix_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../vocabularies.xsd
     http://cybox.mitre.org/objects#AddressObject-2 ../cybox/objects/Address_Object.xsd"
     id="example:STIXPackage-33fe3b22-0201-47cf-85d0-97c02164528d"
     version="1.2"

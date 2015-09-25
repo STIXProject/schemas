@@ -23,10 +23,10 @@
     xmlns:testMechSnort="http://docs.oasis-open.org/cti/ns/stix/extensions/test-mechanism/snort-1"
     xmlns:example="http://example.com/"
     xsi:schemaLocation=
-    "http://docs.oasis-open.org/cti/ns/stix/core-1 ../stix_core.xsd
+    "http://docs.oasis-open.org/cti/ns/stix/core-1 ../core.xsd
     http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../indicator.xsd
-    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../stix_default_vocabularies.xsd
-    http://docs.oasis-open.org/cti/ns/stix/extensions/test-mechanism/snort-1 ../extensions/test_mechanism/snort_test_mechanism.xsd"
+    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/stix/extensions/test-mechanism/snort-1 ../extensions/test-mechanism/snort-test-mechanism.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc"
     version="1.2"
     >

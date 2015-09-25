@@ -24,16 +24,16 @@
     xmlns:xpil="urn:oasis:names:tc:ciq:xpil:3" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        http://docs.oasis-open.org/cti/ns/stix/core-1 ../../stix_core.xsd
+        http://docs.oasis-open.org/cti/ns/stix/core-1 ../../core.xsd
         http://docs.oasis-open.org/cti/ns/stix/report-1 ../../report.xsd
-        http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../../stix_default_vocabularies.xsd
+        http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../../vocabularies.xsd
         http://docs.oasis-open.org/cti/ns/stix/campaign-1 ../../campaign.xsd
-        http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 ../../threat_actor.xsd
+        http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 ../../threat-actor.xsd
         http://docs.oasis-open.org/cti/ns/stix/ttp-1 ../../ttp.xsd
-        http://stix.mitre.org/COA-1 ../../course_of_action.xsd
-        http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data_marking.xsd
-        http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms_of_use_marking.xsd
-        http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 ../../extensions/identity/ciq_3.0_identity.xsd
+        http://stix.mitre.org/COA-1 ../../course-of-action.xsd
+        http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
+        http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
+        http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 ../../extensions/identity/ciq-3.0-identity.xsd
     "
     id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d" 
     version="1.2">

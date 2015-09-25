@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:marking="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" xmlns:tlpMarking="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/tlp-1" targetNamespace="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/tlp-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The Data Marking Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>Data Marking Extension - TLP</schema>
+			<version>1.2</version>
+			<date>05/15/2015 9:00:00 AM</date>
+			<short_description>Data Marking Extension - TLP Marking Instance - Schematic implementation for attaching a Traffic Light Protocol (TLP)designation to an idendified XML structure.</short_description>
+			<terms_of_use>Copyright (c) 2012-2015, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" schemaLocation="../../data-marking.xsd"/>
+	<xs:complexType name="TLPMarkingStructureType">
+		<xs:annotation>
+			<xs:documentation>The TLPMarkingStructureType is an implementation of the data marking schema that allows for a TLP Designation to be attached to an identified XML structure. Information about TLP is available here: http://www.us-cert.gov/tlp.</xs:documentation>
+			<xs:documentation>Nodes may be marked by multiple TLP Marking statements. When this occurs, the node should be considered marked at the most restrictive TLP Marking of all TLP Markings that were applied to it. For example, if a node is marked both GREEN and AMBER, the node should be considered AMBER.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="marking:MarkingStructureType">
+				<xs:attribute name="color" type="tlpMarking:TLPColorEnum">
+					<xs:annotation>
+						<xs:documentation>The TLP color designation of the marked structure.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="TLPColorEnum">
+		<xs:annotation>
+			<xs:documentation>The TLP color designation of the marked structure.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RED"/>
+			<xs:enumeration value="AMBER"/>
+			<xs:enumeration value="GREEN"/>
+			<xs:enumeration value="WHITE"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
