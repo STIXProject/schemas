@@ -1,19 +1,17 @@
 # STIX Schema Development
 
 **NOTE:** If you are looking for official releases of STIX, please see
-http://stix.mitre.org/language/ . The schemas in this respository (even the
+http://stixproject.github.io/releases/1.2/. The schemas in this respository (even the
 [tagged releases](https://github.com/STIXProject/schemas/releases)) are NOT
 OFFICIAL, as there are a couple post-processing steps not covered in the files
 in this repository.  If there are any inconsistencies between the files in this
-repository and the files on stix.mitre.org, the files there take precedence.
+repository and the files on https://stixproject.github.io/, the files there take precedence.
 
 ## About STIX
 
 Structured Threat Information eXpression (STIX) is a collaborative community-driven effort to define and develop a standardized language to represent structured cyber threat information. The STIX Language intends to convey the full range of potential cyber threat information and strives to be fully expressive, flexible, extensible, automatable, and as human-readable as possible. All interested parties are welcome to participate in evolving STIX as part of its open, collaborative community.
 
-Please visit the [STIX Web Site](http://stix.mitre.org) for more information about the STIX Language.
-
-The STIX Language operates under the [STIX Terms of Use](http://stix.mitre.org/about/termsofuse.html).
+Please visit the [STIX website](https://stixproject.github.io/) for more information about the STIX Language.
 
 ## Getting Help
 
