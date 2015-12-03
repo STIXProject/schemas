@@ -13,53 +13,57 @@
 	<xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/common-1" schemaLocation="common.xsd"/>
 	<xs:complexType name="MarkingType">
 		<xs:annotation>
-			<xs:documentation>MarkingType specifies a structure for marking information to be applied to portions of XML content.</xs:documentation>
+			<xs:documentation>The MarkingType specifies a set of zero or more data marking specifications to be applied to the STIX content.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Marking" type="marking:MarkingSpecificationType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>This field contains specification of marking information to be applied to portions of XML content.</xs:documentation>
+					<xs:documentation>The Marking property characterizes a data marking specification that is applied to STIX content.  Information captured includes the structured elements to which the data marking is to be applied, a set of marking structures, and source information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="MarkingStructureType">
 		<xs:annotation>
-			<xs:documentation>The MarkingStructureType contains the marking information to be applied to a portion of XML content.</xs:documentation>
+			<xs:documentation>The MarkingStructureType characterizes the marking information to be applied to STIX content.  </xs:documentation>
 			<xs:documentation>This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. The data marking structure is simply a mechanism for applying existing marking systems to nodes. The data marking systems themselves define the semantics of what the markings mean, how multiple markings to the same node should be applied, and what to do if a node is unmarked.</xs:documentation>
 			<xs:documentation>It is valid per this specification to mark a node with multiple markings from the same system or mark a node across multiple marking systems. If a node is marked multiple times using the same marking system, that system specifies the semantic meaning of multiple markings and (if necessary) how conflicts should be resolved. If a node is marked across multiple marking systems, each system is considered individually applicable. If there are conflicting markings across marking systems the behavior is undefined, therefore producers should make every effort to ensure documents are marked consistently and correctly among all marking systems.</xs:documentation>
 			<xs:documentation>STIX provides two marking system extensions: Simple, and TLP. Those who wish to use another format may do so by defining a new extension to this type. The STIX-provided extensions are:</xs:documentation>
-			<xs:documentation>1. Simple: The Simple marking structure allows for the specification of unstructured statements through the use of a string field. The type is named SimpleMarkingStructureType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/simple-1 namespace. The extension is defined in the file extensions/marking/simple-marking.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/data-marking/simple-data-marking.xsd.</xs:documentation>
+			<xs:documentation>1. Simple: The Simple marking structure allows for the specification of unstructured statements through the use of a string. The type is named SimpleMarkingStructureType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/simple-1 namespace. The extension is defined in the file extensions/marking/simple-marking.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/data-marking/simple-data-marking.xsd.</xs:documentation>
 			<xs:documentation>2. TLP: The TLP marking structure allows for the expression of Traffic Light Protocol statements through the use of a simple enumeration. The type is named TLPMarkingStructureType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/tlp-1 namespace. The extension is defined in the file extensions/marking/tlp-marking.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/data-marking/tlp-data-marking.xsd.</xs:documentation>
-			<xs:documentation>3. Terms of Use: The Terms of Use marking structure allows for the specification of unstructured terms of use statements through the use of a string field. The type is named TermsOfUseMarkingStructureType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 namespace. The extension is defined in the file extensions/marking/terms-of-use-marking.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/data-marking/terms-of-use-data-marking.xsd.</xs:documentation>
+			<xs:documentation>3. Terms of Use: The Terms of Use marking structure allows for the specification of unstructured terms of use statements through the use of a string. The type is named TermsOfUseMarkingStructureType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 namespace. The extension is defined in the file extensions/marking/terms-of-use-marking.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/data-marking/terms-of-use-data-marking.xsd.</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="marking_model_name" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>This field specifies the name of the marking model to be applied within this Marking_Structure.</xs:documentation>
+				<xs:documentation>The marking_model_name property specifies the name of the marking model to be applied within the marking structure.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="marking_model_ref" type="xs:anyURI">
 			<xs:annotation>
-				<xs:documentation>This field contains a reference to an authoritative source on the marking model to be applied within this Marking_Structure.</xs:documentation>
+				<xs:documentation>The marking_model_ref property specifies a reference URI for the location of the authoriative descriptive source on the marking model to be applied within the marking structure.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a unique ID for this Marking_Structure.</xs:documentation>
+				<xs:documentation>The id property specifies a globally unique identifier for the marking structure instance.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a reference to the ID of a Marking_Structure defined elsewhere.</xs:documentation>
-				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Marking_Structure should not hold content.</xs:documentation>
+				<xs:documentation>The idref property specifies a reference to the identifier of a marking structure instance specified elsewhere; the referenced data marking should be evaluated as if it were located where the data marking reference is defined. When idref is specified, the id property MUST NOT also be specified, any other properties of MarkingStructureType SHOULD NOT hold any content, and MarkingStructureType SHOULD NOT be extended.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="MarkingSpecificationType">
+		<xs:annotation>
+			<xs:documentation>The MarkingSpecificationType characterizes a data marking specification that is applied to the STIX content.  Information captured includes the structured elements to which the data marking is to be applied, a set of marking structures, and source information.
+			</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Controlled_Structure" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field utilizes XPath 1.0 to specify the structures for which the Marking is to be applied.</xs:documentation>
+					<xs:documentation>
+					The Controlled_Structure property specifies the full explicit set of STIX structured elements to which the marking is to be applied. The controlled structure MUST explicitly select all structured elements that the marking applies to; selecting a parent structured element may not imply that the marking also applies to its children. Specific syntax for how the set of STIX structured elements will be specified is dependent on the particular syntactic implementation (XML, JSON, etc.) of the STIX language and MUST be explicitly specified in a separate binding specification for that syntactic implementation (e.g. a STIX XML Binding Specification).  For example, a STIX XML Binding Specification could specify XPath 1.0  as an appropriate choice for the syntax of the Controlled_Structure property. </xs:documentation>
 					<xs:documentation>The XPath expression is NOT recursive and the marking structure does NOT apply to child nodes of the selected node. Instead, the expression must explicitly select all nodes that the marking is to be applied to including elements, attributes, and text nodes.</xs:documentation>
 					<xs:documentation>The context root of the XPath statement is this Controlled_Structure element. Any namespace prefix declarations that are available to this Controlled_Structure element are available to the XPath.</xs:documentation>
 					<xs:documentation>Note that all Controlled_Structure elements have a scope within the document for which their XPath is valid to reference.</xs:documentation>
@@ -68,29 +72,28 @@
 			</xs:element>
 			<xs:element name="Marking_Structure" type="marking:MarkingStructureType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>This field contains the marking information to be applied to the portions of XML content specified in the ControlledStructure field. This field is defined as MarkingStructureType which is an abstract type the enables the flexibility to utilize any variety of marking structures.</xs:documentation>
+					<xs:documentation>The Marking_Structure property characterizes the marking information to be applied to a portion of STIX content as specified in the Controlled_Structure property.  Its underlying type is intended to be extended to enable the expression of any structured or unstructured data marking mechanism. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+					<xs:documentation>The Information_Source property characterizes the source of the data marking specification information.  Examples of details captured include identifying characteristics (e.g., who marked the data) and time-related attributes (e.g., when the data was marked).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a unique ID for this Marking.</xs:documentation>
+				<xs:documentation>The id property specifies a globally unique identifier for a data marking specification instance.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a reference to the ID of a Marking defined elsewhere.</xs:documentation>
-				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Marking should not hold content.</xs:documentation>
+				<xs:documentation>The idref property specifies a reference to the identifier of a data marking specification instance specified elsewhere; the referenced data marking should be evaluated as if it were located where the data marking reference is defined. When the idref property is used, the id property MUST NOT also be specified and the other properties of MarkingSpecificationType SHOULD NOT hold any content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="version" type="xs:string">
 			<xs:annotation>
-				<xs:documentation>Specifies the relevant Data_Marking schema version for this content.</xs:documentation>
+				<xs:documentation>The version property specifies the version number of the STIX Data Marking data model used to capture the data marking associated with the STIX content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>

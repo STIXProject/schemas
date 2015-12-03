@@ -21,103 +21,102 @@
 	<!---->
 	<xs:complexType name="ThreatActorType">
 		<xs:annotation>
-			<xs:documentation>Represents a single STIX Threat Actor.</xs:documentation>
-			<xs:documentation>ThreatActors are characterizations of malicious actors (or adversaries) representing a cyber attack threat including presumed intent and historically observed behavior. In a structured sense, ThreatActors consist of a characterization of identity, suspected motivation, suspected intended effect, historically observed TTP used by the ThreatActor, historical Campaigns believed associated with the ThreatActor, other ThreatActors believed associated with the ThreatActor, handling guidance, confidence in the asserted characterization of the ThreatActor, source of the ThreatActor information, etc.</xs:documentation>
+			<xs:documentation>The ThreatActorType characterizes a cyber threat actor including their identity, sophistication, presumed intent, historically observed behavior (TTPs), and campaigns or other threat actors they are believed to be associated with. ThreatActorType extends ThreatActorBaseType from the Common schema, which provides the essential identifier (id) and identifier reference (idref) properties.  </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:ThreatActorBaseType">
 				<xs:sequence>
 					<xs:element name="Title" type="xs:string" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Title field provides a simple title for this ThreatActor.</xs:documentation>
+							<xs:documentation>The Title property captures a title for the Threat Actor and reflects what the content producer thinks the Threat Actor as a whole should be called.  The Title property is typically used by humans to reference a particular Threat Actor; however, it is not suggested for correlation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Description field is optional and provides an unstructured, text description of this ThreatActor.</xs:documentation>
+							<xs:documentation>The Description property captures a textual description of the Threat Actor.  Any length is permitted.  Optional formatting is supported via the structuring_format property of the StructuredTextType type.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this ThreatActor.</xs:documentation>
+							<xs:documentation>The Short_Description property captures a short textual description of the Threat Actor.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Identity field characterizes the identity of this Threat Actor.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.1/ciq_identity.xsd.</xs:documentation>
-							<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
+							<xs:documentation>The Identity property characterizes the identity of this Threat Actor.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.1/ciq_identity.xsd.</xs:documentation>
+							<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Type" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Type field characterizes the type(s) of this threat actor. It may be used multiple times to capture multiple types.</xs:documentation>
+							<xs:documentation>The Type property characterizes the type of this Threat Actor, which includes a Value property that specifies the particular type of the Threat Actor. Examples of potential types include black hat hacker, insider threat, and disgruntled customer (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary). It may be used multiple times to capture multiple types.</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is ThreatActorTypeVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Motivation" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Type field characterizes the motivations of this threat actor. It may be used multiple times to capture multiple motivations.</xs:documentation>
+							<xs:documentation>The Motivation property characterizes the motivation of this Threat Actor, which includes a Value property that specifies the type of motivation, such as ego, religious and anti-establishment (these specific types are only provided to help explain the Value property: they are neither recommended types nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is MotivationVocab-1.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Sophistication" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Sophistication field specifies the sophistication of this Threat Actor.</xs:documentation>
+							<xs:documentation>The Sophistication property characterizes the sophistication of this Threat Actor, which includes a Value property that specifies the level of sophistication. Examples of potential levels include innovator, expert, and novice (these specific levels are only provided to help explain the Value property: they are neither recommended levels nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is ThreatActorSophisticationVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd .</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Intended_Effect field specifies the suspected intended effect for this Threat Actor.</xs:documentation>
+							<xs:documentation>The Intended_Effect property characterizes the suspected intended effect of the Threat Actor, which includes a Value property that specifies the type of the effect. Examples of potential types include theft, disruption, and unauthorized access (these specific types are only provided to help explain the Value property: they are neither recommended types nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Planning_And_Operational_Support" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Planning_And_Operational_Support field specifies the suspected planning and operational support performed by this threat actor.</xs:documentation>
+							<xs:documentation>The Planning_And_Operational_Support property characterizes suspected planning and operational support available to this Threat Actor, which includes a Value property that specifies one type of support, such as financial, hiring and selecting targets (these specific types are only provided to help explain the Value property: they are neither recommended types nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is PlanningAndOperationalSupportVocab-1.0.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Observed_TTPs" type="ta:ObservedTTPsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Observed_TTPs field specifies the TTPs that this Threat Actor has been observed to leverage.</xs:documentation>
+							<xs:documentation>The Observed_TTPs property specifies a set of one or more TTPs asserted as observed to be leveraged by the Threat Actor (or in some way related to a Threat Actor).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Associated_Campaigns" type="ta:AssociatedCampaignsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Associated_Campaigns field specifies any known Campaigns attributed to this Threat Actor.</xs:documentation>
+							<xs:documentation>The Associated_Campaigns property specifies a set of one or more Campaigns asserted to be related to the Threat Actor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Associated_Actors" type="ta:AssociatedActorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Associated_Actors field specifies other Threat Actors asserted to be associated with this Threat Actor.</xs:documentation>
+							<xs:documentation>The Associated_Actors property specifies a set of one or more other Threat Actors asserted to be related to this Threat Actor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Threat Actor characterization. The valid marking scope is the nearest ThreatActorBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+							<xs:documentation>The Handling property specifies the appropriate data handling markings for the properties of this Threat Actor. The marking scope is limited to the Threat Actor and the content is contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Confidence field characterizes the level of confidence held in the characterization of this Threat Actor.</xs:documentation>
+							<xs:documentation>The Confidence property characterizes the level of confidence in the accuracy of the collection of information captured for the Threat Actor. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+							<xs:documentation>The Information_Source property characterizes the source of the Threat Actor information.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of tools used to collect the information.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
-							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:documentation>The Related_Packages property specifies a set of one or more STIX Packages that are related to the Threat Actor.</xs:documentation>
+							<xs:documentation>DEPRECATED: This property is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -126,7 +125,7 @@
 				</xs:sequence>
 				<xs:attribute name="version" type="ta:ThreatActorVersionType">
 					<xs:annotation>
-						<xs:documentation>Specifies the relevant STIX-ThreatActor schema version for this content.</xs:documentation>
+						<xs:documentation>The version property specifies the version number of the STIX Threat Actor data model used to capture the information associated with the Threat Actor.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -138,11 +137,7 @@
 			<xs:documentation>An enumeration of all versions of the Threat Actor type valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1.0"/>
-			<xs:enumeration value="1.0.1"/>
-			<xs:enumeration value="1.1" />
-			<xs:enumeration value="1.1.1" />
-			<xs:enumeration value="1.2" />
+			<xs:enumeration value="stix-1.2.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AssociatedActorsType">
@@ -151,7 +146,7 @@
 				<xs:sequence>
 					<xs:element name="Associated_Actor" type="stixCommon:RelatedThreatActorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Associated_Actor field specifies another Threat Actor asserted to be associated with this Threat Actor.</xs:documentation>
+							<xs:documentation>The Associated_Actor property specifies another Threat Actor asserted to be associated with this Threat Actor and characterizes the relationship between the Threat Actors by capturing information such as the level of confidence that the Threat Actors are related, the source of the relationship information, and type of the relationship.  A relationship between Threat Actors may represent assertions of general associativity or different versions of the same Threat Actor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -164,7 +159,7 @@
 				<xs:sequence>
 					<xs:element name="Associated_Campaign" type="stixCommon:RelatedCampaignType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Associated_Campaign field specifies a known Campaign attributed to this Threat Actor.</xs:documentation>
+							<xs:documentation>The Associated_Campaign property specifies a Campaign asserted to be associated with this Threat Actor and characterizes the relationship between the Campaign and the Threat Actor by capturing information such as the level of confidence that the Campaign and the Threat Actor are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -177,7 +172,7 @@
 				<xs:sequence>
 					<xs:element name="Observed_TTP" type="stixCommon:RelatedTTPType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Observed_TTP field specifies a TTP that this Threat Actor has been observed to leverage.</xs:documentation>
+							<xs:documentation>The Observed_TTP property specifies a TTP asserted as observed to be leveraged by the Threat Actor (or in some way related to a Threat Actor) and characterizes the relationship between the Threat Actor and the TTP by capturing information such as the level of confidence that the Threat Actor and the TTP are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

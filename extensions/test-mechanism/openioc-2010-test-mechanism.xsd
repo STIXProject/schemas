@@ -15,14 +15,14 @@
     <xs:import namespace="http://schemas.mandiant.com/2010/ioc/TR/" schemaLocation="../../external/open_ioc_2010/ioc-TR.xsd"/>
     <xs:complexType name="OpenIOC2010TestMechanismType">
         <xs:annotation>
-            <xs:documentation>The OpenIOC2010TestMechanismType provides an extension to the TestMechanismType which imports and leverages the 2010 Open IOC schema in order to include OpenIOC elements as the test mechanism.</xs:documentation>
+            <xs:documentation>The OpenIOC2010TestMechanismType specifies an extension from the abstract TestMechanismType intended to support OpenIOC indicators of compromise, as defined in the 2010 Open IOC data model, to be leveraged as test mechanisms of an Indicator.</xs:documentation>
         </xs:annotation>
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
                     <xs:element name="ioc" type="ioc:IndicatorOfCompromise">
                         <xs:annotation>
-                            <xs:documentation>The ioc field contains the structured specification of the OpenIOC test mechanism.</xs:documentation>
+                            <xs:documentation>The ioc property specifies the structured specification of an OpenIOC test mechanism, which will typically be semantically equivalent to the Observables captured in the Indicator.  An Indicator of Compromise (IOC) instance captures information such as a textual description of the indicator, keywords associated with the indicator, and author information, as well as the actual indicator definition pattern.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>

@@ -20,96 +20,95 @@
 	</xs:element>
 	<xs:complexType name="CourseOfActionType">
 		<xs:annotation>
-			<xs:documentation>Represents a single STIX Course of Action.</xs:documentation>
-			<xs:documentation>CoursesOfAction are specific measures to be taken to address threat whether they are corrective or preventative to address ExploitTargets, or responsive to counter or mitigate the potential impacts of Incidents. In a structured sense, COA consist of their relevant stage in cyber threat management (e.g., remedy of an ExploitTarget or response to an Incident), type of COA, description of COA, objective of the COA, structured representation of the COA (e.g., IPS rule or automated patch/remediation), the likely impact of the COA, the likely cost of the COA, the estimated efficacy of the COA, observable parameters for the COA, handling guidance, etc.</xs:documentation>
+			<xs:documentation>The CourseOfActionType characterizes a cyber threat-relevant course of action through informative (title and description), formally structured (type and parameter observables) and contextual (objective, efficacy, impact, cost) properties. CourseOfActionType extends CourseOfActionBaseType from the Common schema, which provides the essential identifier (id) and identifier reference (idref) properties.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:CourseOfActionBaseType">
 				<xs:sequence>
 					<xs:element name="Title" type="xs:string" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Title field provides a simple title for this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Title property captures a title for the Course of Action and reflects what the content producer thinks the Course of Action as a whole should be called.  The Title property is typically used by humans to reference a particular Course of Action; however, it is not suggested for correlation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Stage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Stage field specifies what stage in the cyber threat management lifecycle this CourseOfAction is relevant to (e.g. Remedy or Response).</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Stage property specifies what stage in the cyber threat management lifecycle this Course of Action is relevant to.  Examples of potential stages include remedy and response (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is COAStageVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Type field specifies the type of this CourseOfAction.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CourseOfActionTypeVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>The Type property specifies the type of action to be taken.  Examples of potential types include redirection, eradication and public disclosure (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CourseOfActionTypeVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Description field is optional and provides an unstructured, text description of this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Description property captures a textual description of the Course of Action.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Short_Description property captures a short textual description of the Course of Action. This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Objective" type="coa:ObjectiveType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Objective field characterizes the objective of this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Objective property characterizes the results that this Course of Action is intended to achieve.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Parameter_Observables" type="cybox:ObservablesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Parameter_Observables field enables the specification of technical parameters to this Course of Action expressed using the CybOX Language. It is intended that the combination of the Course of Action Type and the Parameter_Observables could be used to define automated courses of action.</xs:documentation>
+							<xs:documentation>The Parameter_Observables property enables the specification of structured technical parameters to this Course of Action expressed using the CybOX Language. It is intended that the combination of the Course of Action Type and the Parameter_Observables could be used to define unambiguous and potentially automated courses of action.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Structured_COA" type="coa:StructuredCOAType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Structured_COA field enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
-							<xs:documentation>	This field is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://docs.oasis-open.org/cti/ns/stix/extensions/structured-coa/generic-1 namespace. This type is defined in the extensions/structured-coa/generic-structured-coa.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/structured-coa/generic-structured-coa.xsd.</xs:documentation>
+							<xs:documentation>The Structured_COA property characterizes an alternative actionable structured representation for the Course of Action potentially for automated consumption and implementation. Its underlying abstract type MUST be extended to enable the expression of a structured Course of Action.</xs:documentation>
+							<xs:documentation>	This property is implemented through the xsi:type extension mechanism. While STIX has not defined a default type, it has provided support for passing proprietary or externally defined structured courses of action using the Generic Structured COA extension. The Generic Structured COA extension is captured in the GenericStructuredCOAType in the http://docs.oasis-open.org/cti/ns/stix/extensions/structured-coa/generic-1 namespace. This type is defined in the extensions/structured-coa/generic-structured-coa.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/structured-coa/generic-structured-coa.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Impact" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Impact field characterizes the estimated impact of applying this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Impact property characterizes the estimated impact of applying a Course of Action to achieve its targeted objective, which includes a Value property that specifies the level of impact. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Cost" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Cost field characterizes the estimated cost for applying this CourseOfAction.</xs:documentation>
+							<xs:documentation>The Cost property characterizes the estimated cost for applying a Course of Action to achieve its targeted objective, which includes a Value property that specifies the level of cost. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Efficacy" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Efficacy field characterizes the effectiveness of this CourseOfAction in achieving its targeted Objective.</xs:documentation>
+							<xs:documentation>The Efficacy property characterizes a measure of the likely effectiveness of a Course of Action to achieve its targeted objective, which includes a Value property that specifies the level of effectiveness. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+							<xs:documentation>The Information_Source property characterizes the source of the Course of Action information.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of tools used to collect the information.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this COA. The valid marking scope is the nearest CourseOfActionBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+							<xs:documentation>The Handling property specifies the appropriate data handling markings for the properties of this Course of Action. The marking scope is limited to the Course of Action and the content it contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_COAs" type="coa:RelatedCOAsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_COAs field identifies or characterizes relationships to one or more related courses of action.</xs:documentation>
+							<xs:documentation>The Related_COAs property specifies a set of one or more other Course of Actions related to this Course of Action.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
-							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:documentation>The Related_Packages property specifies a set of one or more STIX Packages that are related to the Course of Action. </xs:documentation>
+							<xs:documentation>DEPRECATED: This property is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -118,7 +117,7 @@
 				</xs:sequence>
 				<xs:attribute name="version" type="coa:CourseOfActionVersionType">
 					<xs:annotation>
-						<xs:documentation>Specifies the relevant STIX-COA schema version for this content.</xs:documentation>
+						<xs:documentation>The version property specifies the version number of the STIX Course of Action data model used to capture the information associated with the Course of Action.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -130,16 +129,12 @@
 			<xs:documentation>An enumeration of all versions of the Course of Action type valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1.0"/>
-			<xs:enumeration value="1.0.1"/>
-			<xs:enumeration value="1.1" />
-			<xs:enumeration value="1.1.1" />
-			<xs:enumeration value="1.2" />
+			<xs:enumeration value="stix-1.2.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="StructuredCOAType" abstract="true">
 		<xs:annotation>
-			<xs:documentation>The StructuredCOAType enables the specification of an actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
+			<xs:documentation>The StructuredCOAType enables the specification of an alternative actionable structured representation for the CourseOfAction potentially for automated consumption and implementation.</xs:documentation>
 			<xs:documentation>This type is defined as an abstract type and is intended to be extended using the XML Schema extension mechanism to allow for the expression of a variety of structured COA types. Instance documents representing structured COAs use the xsi:type attribute to specify which implementation of this type they wish to use.</xs:documentation>
 			<xs:documentation>STIX has provided one implementation to allow for the passing of proprietary or externally defined structured courses of action in a CDATA block. This implementation is captured in the Generic Structured COA extension, which provides the GenericStructuredCOAType in the http://docs.oasis-open.org/cti/ns/stix/extensions/structured-coa/generic-1 namespace. The extension is defined in the extensions/structured-coa/generic-structured-coa.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/structured-coa/generic-structured-coa.xsd.</xs:documentation>
 		</xs:annotation>
@@ -157,33 +152,36 @@
 	</xs:complexType>
 	<xs:complexType name="ObjectiveType">
 		<xs:annotation>
-			<xs:documentation>The ObjectiveType characterizes the objective of this CourseOfAction.</xs:documentation>
+			<xs:documentation>The ObjectiveType characterizes the results that this Course of Action is intended to achieve.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Description field is optional and provides an unstructured, text description of the objective of this CourseOfAction.</xs:documentation>
+					<xs:documentation>The Description property captures a textual description of the objective of this Course of Action.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of the objective of this CourseOfAction.</xs:documentation>
+					<xs:documentation>The Short_Description property captures a short textual description of the objective of this Course of Action.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Applicability_Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Applicability_Confidence field characterizes the level of confidence held in the applicability of this suggested COA for its targeted Objective.</xs:documentation>
+					<xs:documentation>The Applicability_Confidence property characterizes the level of confidence in the asserted applicability of the suggested Course of Action for its targeted objective.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RelatedCOAsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedCOAsType specifies a set of one or more other Course of Actions asserted to be related to this Course of Action and therefore is a self-referential relationship. It extends GenericRelationshipListType defined in the STIX Common data model, which specifics the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_COA" type="stixCommon:RelatedCourseOfActionType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_COA field specifies a single other course of action related to this course of action.</xs:documentation>
+							<xs:documentation>The Related_COA property specifies another Course of Action associated with this  Course of Action and characterizes the relationship between the  Courses of Action by capturing information such as the level of confidence that the  Courses of Actions are related, the source of the relationship information, and type of the relationship.  A relationship between Courses of Action may represent assertions of general associativity or different versions of the same Course of Action.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

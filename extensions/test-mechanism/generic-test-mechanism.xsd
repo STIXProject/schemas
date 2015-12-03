@@ -14,30 +14,30 @@
     <xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/common-1" schemaLocation="../../common.xsd"/>
     <xs:complexType name="GenericTestMechanismType">
         <xs:annotation>
-            <xs:documentation>The GenericTestMechanismType specifies an instantial extension from the abstract TestMechanismType intended to support the generic inclusion of any test mechanism content.</xs:documentation>
+            <xs:documentation>The GenericTestMechanismType specifies an extension from the abstract TestMechanismType intended to support the generic inclusion of any test mechanism content.</xs:documentation>
         </xs:annotation>
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
                     <xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
-                            <xs:documentation>A structured Description of this Generic Test Mechanism.</xs:documentation>
+                            <xs:documentation>The Description property captures a textual description of the generic test mechanism.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
                         <xs:annotation>
-                            <xs:documentation>Specifies the type of Generic Test Mechanism.</xs:documentation>
+                            <xs:documentation>The Type property specifies the type of the generic test mechanism.  No default vocabulary has been defined for STIX.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="Specification" type="stixCommon:EncodedCDATAType" minOccurs="0">
                         <xs:annotation>
-                            <xs:documentation>The Specification field encapsulates any test mechnism specification in its native format within a string field. The specification should be within a CDATA construct within the string field.</xs:documentation>
+                            <xs:documentation>The Specification property specifies a test mechanism specification in its native format. The specification should be encoded so that it is compliant with the chosen test mechanism formalism, however this is not a requirement of the STIX specification. The specification should be within a CDATA construct within the string field.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
                 <xs:attribute name="reference_location" type="xs:anyURI">
                     <xs:annotation>
-                        <xs:documentation>Specifies a reference URL for the location of the Generic Test Mechanism.</xs:documentation>
+                        <xs:documentation>The reference_location property specifies a reference URI for the location of the data model definition used for the generic test mechanism.</xs:documentation>
                     </xs:annotation>
                 </xs:attribute>
             </xs:extension>

@@ -19,7 +19,11 @@
         <xs:complexContent>
             <xs:extension base="stixCommon:AddressAbstractType">
                 <xs:sequence>
-                    <xs:element minOccurs="0" name="Location" type="a:AddressType"/>
+                    <xs:element minOccurs="0" name="Location" type="a:AddressType">
+						<xs:annotation>
+							<xs:documentation>The Location property specifies a potentially long set of address-related information including address type (e.g., business, rural), country, administrative area, locality, postcode, and geolocation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

@@ -15,19 +15,19 @@
     <xs:import namespace="http://oval.mitre.org/XMLSchema/oval-variables-5" schemaLocation="../../external/oval_5.10/oval-variables-schema.xsd"/>
     <xs:complexType name="OVAL5.10TestMechanismType">
         <xs:annotation>
-            <xs:documentation>The OVALTestMechanismType provides an extension to the TestMechanismType which imports and leverages the OVAL schema in order to include OVAL Definitions as the test mechanism.</xs:documentation>
+            <xs:documentation>The OVALTestMechanismType provides an extension to the TestMechanismType to support OVAL definitions and varibales as defined in the OVAL 5.10 data model, to be leveraged as test mechanisms of an Indicator.</xs:documentation>
         </xs:annotation>
         <xs:complexContent>
             <xs:extension base="indicator:TestMechanismType">
                 <xs:sequence>
                     <xs:element ref="oval-def:oval_definitions">
                         <xs:annotation>
-                            <xs:documentation>The oval_definitions field contains the structured specification of the OVAL test mechanism. When including OVAL Definition documents it is expected that at least one valid OVAL Definition Definition is included.</xs:documentation>
+                            <xs:documentation>The oval_definitions property specifies the structured specification of the OVAL test mechanism. When including OVAL definition documents it is expected that at least one valid OVAL definition is included.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element ref="oval-var:oval_variables" minOccurs="0">
                         <xs:annotation>
-                            <xs:documentation>The oval_variables field contains a valid OVAL Variables document and should only be used to supply external variable values needed by this OVAL Test Mechanism's OVAL Definitions.</xs:documentation>
+                            <xs:documentation>The oval_variables property specifies a valid OVAL Variables document and SHOULD only be used to supply external variable values needed by this OVAL Test Mechanism's OVAL definitions.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>

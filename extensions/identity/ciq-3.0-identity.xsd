@@ -14,19 +14,19 @@
     <xs:import namespace="urn:oasis:names:tc:ciq:xpil:3" schemaLocation="../../external/oasis_ciq_3.0/xPIL.xsd"/>
     <xs:complexType name="CIQIdentity3.0InstanceType">
         <xs:annotation>
-            <xs:documentation>The CIQIdentity3.0InstanceType provides an extension to the IdentityStructureAbstractType which imports and leverages version 3.0 of the OASIS CIQ-PIL schema for structured characterization of Identities.</xs:documentation>
+            <xs:documentation>The CIQIdentity3.0InstanceType extends the stixCommon:IdentityType class and belongs to the stix-ciqidentity package. It imports and leverages version 3.0 of the OASIS CIQ-PIL schema for structured characterization of identity information (e.g. threat actors, victims, and sources of information). </xs:documentation>
         </xs:annotation>
         <xs:complexContent>
             <xs:extension base="stixCommon:IdentityType">
                 <xs:sequence>
                     <xs:element name="Specification" type="stix-ciqidentity:STIXCIQIdentity3.0Type">
                         <xs:annotation>
-                            <xs:documentation>The Specification field contains the structured characterization of an Identity utilizing the CIQ-PIL schema.</xs:documentation>
+                            <xs:documentation>The Specification property specifies the structured characterization of an identity utilizing the CIQ-PIL schema.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="Role" type="xs:string" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
-                            <xs:documentation>The Role field specifies a relevant role played by this entity.</xs:documentation>
+                            <xs:documentation>The Role property specifies a relevant role played by the entity with the corresponding identity.</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                 </xs:sequence>
@@ -35,7 +35,7 @@
     </xs:complexType>
     <xs:complexType name="STIXCIQIdentity3.0Type">
         <xs:annotation>
-            <xs:documentation>The STIXCIQIdentityType provides a restriction and minor extension of the imported OASIS CIQ-PIL PartyType for use in characterizing STIX Identities.</xs:documentation>
+            <xs:documentation>The STIXCIQIdentityType provides a restriction and minor extension of the imported OASIS CIQ-PIL Party concept for use in characterizing STIX identities and belongs to the stix-ciqidentity namespace. Unlike the other extension classes, CIQIdentity3.0InstanceType does not contain a property that encompasses the whole data model for party identities from the OASIS CIQ-PIL definition.  Instead, it selects certain properties from that data model, which are aggregated in STIXCIQIdentityType.</xs:documentation>
         </xs:annotation>
         <xs:complexContent>
             <xs:restriction base="ciq:PartyType">
@@ -45,7 +45,7 @@
                     <xs:element minOccurs="0" ref="ciq:Addresses"/>
                     <xs:element minOccurs="0" ref="ciq:Accounts">
                         <xs:annotation>
-                            <xs:documentation>A container to define the accounts details of the party such as utility account, financil accounts</xs:documentation>
+                            <xs:documentation>A container to define the accounts details of the party such as utility account, financial accounts</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0" ref="ciq:ContactNumbers"/>

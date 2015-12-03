@@ -20,59 +20,59 @@
 	</xs:element>
 	<xs:complexType name="ReportType">
 		<xs:annotation>
-			<xs:documentation>ReportType defines a contextual wrapper for a grouping of STIX content.</xs:documentation>
+			<xs:documentation>The ReportType defines a contextual wrapper for a grouping of STIX content. ReportType extends ReportBaseType from the Common schema, which provides the essential identifier (id) and identifier reference (idref) properties. </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:ReportBaseType">
 				<xs:sequence>
 					<xs:element name="Header" type="report:HeaderType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Header field provides the contextual information for this grouping of STIX content.</xs:documentation>
+							<xs:documentation>The Header property characterizes the contextual information for this grouping of STIX content.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Observables" type="cybox:ObservablesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber observables.</xs:documentation>
+							<xs:documentation>The Observables property specifies a set of one or more cyber observables.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Indicators" type="report:IndicatorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber threat Indicators.</xs:documentation>
+							<xs:documentation>The Indicators property specifies a set of one or more cyber threat Indicators.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TTPs" type="report:TTPsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber threat adversary Tactics, Techniques or Procedures.</xs:documentation>
+							<xs:documentation>The TTPs property specifies a set of one or more cyber threat adversary Tactics, Techniques or Procedures.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Exploit_Targets" type="stixCommon:ExploitTargetsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more potential targets for exploitation.</xs:documentation>
+							<xs:documentation>The Exploit_Targets property specifies a set of one or more potential targets for exploitation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Incidents" type="report:IncidentsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber threat Incidents.</xs:documentation>
+							<xs:documentation>The Incidents property specifies a set of one or more cyber threat Incidents.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Courses_Of_Action" type="report:CoursesOfActionType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes Courses of Action to be taken in regards to one of more cyber threats.</xs:documentation>
+							<xs:documentation>The Courses_Of_Action property specifies a set of one or more Courses of Action to be taken in regards to one of more cyber threats.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Campaigns" type="report:CampaignsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber threat Campaigns.</xs:documentation>
+							<xs:documentation>The Campaigns property specifies a set of one or more cyber threat Campaigns.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Threat_Actors" type="report:ThreatActorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more cyber Threat Actors.</xs:documentation>
+							<xs:documentation>The Threat_Actors property specifies a set of one or more cyber Threat Actors.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Reports" type="report:RelatedReportsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes one or more relationships to other Reports.</xs:documentation>
+							<xs:documentation>The Related_Reports property specifies a set of one or more other Reports related to this Report.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -89,7 +89,7 @@
 			<xs:documentation>An enumeration of all versions of Report types valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1.0"/>
+			<xs:enumeration value="stix-1.2.1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="HeaderType">
@@ -99,106 +99,127 @@
 		<xs:sequence>
 			<xs:element name="Title" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Title field provides a simple title for this Report.</xs:documentation>
+					<xs:documentation>The Title property captures a title for the Report and reflects what the content producer thinks the Report as a whole should be called. The Title property is typically used by humans to reference a particular Report; however, it is not suggested for correlation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Intent" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Intent field characterizes the intended purpose(s) or use(s) for this Report.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ReportIntentVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Intent property specifies the intended purpose(s) or use(s) for the Report. Examples of potential purposes are collective threat intelligence, campaign characterization and malware samples (these specific values are only provided to help explain the property: they are neither recommended types nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ReportIntentVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Description field provides a description of this Report.</xs:documentation>
+					<xs:documentation>The Description property captures a textual description of the Report.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Short_Description field provides a short description of this Report.</xs:documentation>
+					<xs:documentation>The Short_Description property captures a short textual description of the Report.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Specifies the relevant handling guidance for this Report. The valid marking scope is the nearest ReportType ancestor of this Handling element and all its descendants.</xs:documentation>
+					<xs:documentation>The Handling property specifies the appropriate data handling markings for the properties of this Report. The marking scope is limited to the Report and the content it contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Information_Source field details the source of this Report, including time information as well as information about the producer, contributors, tools, and references.</xs:documentation>
+					<xs:documentation>The Information_Source property characterizes the source of the Report and all of its contained information unless that information specifies a different source.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!---->
 	<xs:complexType name="IndicatorsType">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Indicator" type="stixCommon:IndicatorBaseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Characterizes a single cyber threat Indicator.</xs:documentation>
-					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/indicator.xsd.</xs:documentation>
+					<xs:documentation>The Indicator property characterizes a cyber threat Indicator.</xs:documentation>
+					<xs:documentation>	This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/indicator.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TTPsType">
+		<xs:annotation>
+			<xs:documentation>The TTPsType specifies a set of zero or more cyber threat TTPs.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TTP" type="stixCommon:TTPBaseType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Characterizes a single cyber threat adversary Tactic, Technique or Procedure.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://docs.oasis-open.org/cti/ns/stix/ttp-1 namespace. This type is defined in the ttp.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/ttp.xsd.</xs:documentation>
+					<xs:documentation>The TTP property characterizes a cyber threat adversary Tactic, Technique or Procedure (TTP). </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://docs.oasis-open.org/cti/ns/stix/ttp-1 namespace. This type is defined in the ttp.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/ttp.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="IncidentsType">
+		<xs:annotation>
+			<xs:documentation>The IncidentsType specifies a set of one or more cyber threat Incidents.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Incident" type="stixCommon:IncidentBaseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Identifies or characterizes a single cyber threat Incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://docs.oasis-open.org/cti/ns/stix/incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/incident.xsd.</xs:documentation>
+					<xs:documentation>The Incident property characterizes a cyber threat Incident. </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://docs.oasis-open.org/cti/ns/stix/incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/incident.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CoursesOfActionType">
+		<xs:annotation>
+			<xs:documentation>The CoursesOfActionType specifies a set of one or more actions that could be taken in regard to cyber threats.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Course_Of_Action field characterizes a Course of Action to be taken in regards to one of more cyber threats.</xs:documentation>
-					<xs:documentation>	This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
+					<xs:documentation>The Course_Of_Action property characterizes a Course of Action that could be taken in regard to one of more cyber threats. </xs:documentation>
+					<xs:documentation>	This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CampaignsType">
+		<xs:annotation>
+			<xs:documentation>The CampaignsType specifies a set of one or more cyber threat Campaigns</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Campaign" type="stixCommon:CampaignBaseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Characterizes a single cyber threat Campaign.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://docs.oasis-open.org/cti/ns/stix/campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/campaign.xsd.</xs:documentation>
+					<xs:documentation>CThe Campaign property characterizes a cyber threat Campaign. </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://docs.oasis-open.org/cti/ns/stix/campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/campaign.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ThreatActorsType">
+		<xs:annotation>
+			<xs:documentation>The ThreatActorsType specifies a set of one or more cyber Threat Actors.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Threat_Actor" type="stixCommon:ThreatActorBaseType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Characterizes a single cyber Threat Actor.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 namespace. This type is defined in the threat-actor.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/threat-actor.xsd.</xs:documentation>
+					<xs:documentation>The ThreatActor property characterizes a cyber Threat Actor.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 namespace. This type is defined in the threat-actor.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/threat-actor.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RelatedReportsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedReportsType specifies a set of one or more STIX Reports related to this STIX Report and therefore is a self-referential relationship. It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Report" type="stixCommon:RelatedReportType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Report field is optional and enables content producers to express a relationship between the enclosing report (i.e., the subject of the relationship) and a disparate report (i.e., the object side of the relationship).</xs:documentation>
+							<xs:documentation>The Related_Report property specifies another Report associated with this Report and characterizes the relationship between the Reports by capturing information such as the level of confidence that the Reports are related, the source of the relationship information, and the type of the relationship. A relationship between Reports may represent assertions of general associativity or different versions of the same Report. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

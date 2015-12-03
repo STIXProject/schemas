@@ -20,42 +20,41 @@
 	</xs:element>
 	<xs:complexType name="IndicatorType">
 		<xs:annotation>
-			<xs:documentation>Represents a single STIX Indicator.</xs:documentation>
-			<xs:documentation>Indicators convey specific Observable patterns combined with contextual information intended to represent artifacts and/or behaviors of interest within a cyber security context. They consist of one or more Observable patterns potentially mapped to a related TTP context and adorned with other relevant metadata on things like confidence in the indicator’s assertion, handling restrictions, valid time windows, likely impact, sightings of the indicator, structured test mechanisms for detection, related campaigns, suggested courses of action, related indicators, the source of the Indicator, etc.</xs:documentation>
+			<xs:documentation>The IndicatorType characterizes a cyber threat indicator by capturing an asserted relationship between a pattern identifying certain observable conditions and a particular TTP likely in play if those observable conditions are seen, as well as contextual information about how and when it should be acted on and how it relates to other Indicators, Campaigns, and TTPs. IndicatorType extends IndicatorBaseType, which provides the essential identifier (id) and identifier reference (idref) properties.
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IndicatorBaseType">
 				<xs:sequence>
 					<xs:element name="Title" type="xs:string" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Title field provides a simple title for this Indicator.</xs:documentation>
+							<xs:documentation>The Title property captures a title for the Indicator and reflects what the content producer thinks the Indicator as a whole should be called.  The Title property is typically used by humans to reference a particular Indicator; however, it is not suggested for correlation. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Type" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Specifies the type or types for this Indicator.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IndicatorTypeVocab-1.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Type property characterizes the type of the Indicator. Examples of potential values include malicious e-mail, URL watchlist, and malware artifacts (these specific values are only provided to help explain the Type property: they are neither recommended values nor necessarily part of any existing vocabulary). </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IndicatorTypeVocab-1.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Alternative_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Specifies an alternative identifier (or alias) for the cyber threat Indicator.</xs:documentation>
+							<xs:documentation>The Alternative_ID property specifies an alternative identifier or alias for the Indicator. The Alternative_ID property is not intended to capture a STIX identifier; instead, it should be used for capturing identifiers from external systems (e.g., an incident ID from an organization’s Remedy system or the rule ID of a Snort rule in the Snort community repository).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Description field is optional and provides an unstructured, text description for this Indicator.</xs:documentation>
+							<xs:documentation>The Description property captures a textual description of the Indicator.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Short_Description field is optional and provides an unstructured, text description for this Indicator.</xs:documentation>
+							<xs:documentation>The Short_Description property captures a short textual description of the Indicator.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Valid_Time_Position" type="indicator:ValidTimeType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Specifies the time window for which this Indicator is valid.</xs:documentation>
+							<xs:documentation>The Valid_Time_Position property specifies the time window for which this Indicator is valid.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:choice>
@@ -64,69 +63,72 @@
 						</xs:annotation>
 						<xs:element name="Observable" type="cybox:ObservableType" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Specifies a relevant cyber observable for this Indicator.</xs:documentation>
+								<xs:documentation>The Observable property specifies a relevant cyber observable for this Indicator.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="Composite_Indicator_Expression" type="indicator:CompositeIndicatorExpressionType" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Specifies a multipartite composite Indicator.</xs:documentation>
+								<xs:documentation>The Composite_Indicator_Expression property specifies a multipartite composite Indicator.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:choice>
 					<xs:element name="Indicated_TTP" type="stixCommon:RelatedTTPType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Specifies the relevant TTP indicated by this Indicator.</xs:documentation>
+							<xs:documentation>The Indicated_TTP property specifies a TTP indicated by the presence of the observable pattern within this Indicator and characterizes the relationship between the TTP and the Indicator by capturing information such as the level of confidence that the observable pattern indicates the TTP, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Kill_Chain_Phases" type="stixCommon:KillChainPhasesReferenceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Specifies relevant kill chain phases indicated by this Indicator.</xs:documentation>
+							<xs:documentation>The Kill_Chain_Phases property specifies a set of one or more kill chain phases (from one or more kill chains defined elsewere) relevant to the Indicator.  The kill chain property is further defined in the Common data model.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Test_Mechanisms" type="indicator:TestMechanismsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The TestMechanisms field specifies Test Mechanisms effective at identifying the cyber Observables specified in this cyber threat Indicator.</xs:documentation>
+							<xs:documentation>The Test_Mechanisms property specifies a set of one or more test mechanisms effective at identifying the cyber Observable patterns characterized in the Indicator. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Likely_Impact" type="stixCommon:StatementType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Specifies the likely potential impact within the relevant context if this Indicator were to occur. This is typically local to an Indicator consumer and not typically shared. This field includes a Description of the likely potential impact within the relevant context if this Indicator were to occur and a Confidence held in the accuracy of this assertion. NOTE: This structure potentially still needs to be fleshed out more for structured characterization of impact. </xs:documentation>
+							<xs:documentation>The Likely_Impact property characterizes the probable impact if the TTP indicated by the presence of the indicator pattern were to occur, which includes a Value property that specifies the impact. Examples of potential impacts include none, minor, and moderate (these specific values are only provided to help explain the Value property: they are neither recommended impacts nor necessarily part of any existing vocabulary). </xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
+							<xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Suggested_COAs" type="indicator:SuggestedCOAsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Suggested_COAs field specifies suggested Courses of Action for this cyber threat Indicator.</xs:documentation>
+							<xs:documentation>The Suggested_COA property specifies a Course of Action suggested for this Indicator and characterizes the relationship between the Course of Action and the Indicator by capturing information such as the level of confidence that the Course of Action and the Indicator are related, the source of the relationship information, and the type of relationship. Indicator.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Specifies the relevant handling guidance for this Indicator. The valid marking scope is the nearest IndicatorBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+							<xs:documentation>The Handling property specifies data handling markings for the properties of this Indicator. The marking scope is limited to the Indicator and the content it contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Specifies a level of confidence held in the accuracy of this Indicator.</xs:documentation>
+							<xs:documentation>The Confidence property characterizes the level of confidence that an observed instance of the defined observable pattern actually indicates the presence of the TTP. (Recall that an Indicator asserts a relationship between an observable pattern and a TTP.)</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Sightings" type="indicator:SightingsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Characterizes a set of sighting reports for this Indicator.</xs:documentation>
+							<xs:documentation>The Sightings property characterizes sightings associated with the Indicator (observed instance).  Information captured includes a sightings count and a set of zero or more sighting reports.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Indicators" type="indicator:RelatedIndicatorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicators field is optional and enables content producers to express a relationship between the enclosing indicator (i.e., the subject of the relationship) and a disparate indicator (i.e., the object side of the relationship).</xs:documentation>
+							<xs:documentation>The Related_Indicators property specifies a set of one or more other Indicators related to this Indicator.  </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Campaigns" type="indicator:RelatedCampaignReferencesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Campaigns field captures references to related campaigns. Note that unlike most other relationship types, Related_Campaigns does not allow campaigns to be embedded, only referenced via name or ID.</xs:documentation>
+							<xs:documentation>The Related_Campaigns property specifies a set of one or more Campaigns for which the Indicator may be relevant. Note that unlike most other relationship types, Related_Campaigns does not allow campaigns to be embedded, only referenced via name or ID.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
-							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:documentation>The Related_Packages property specifies a set of one or more Packages for which the Indicator may be relevant.</xs:documentation>
+							<xs:documentation>DEPRECATED: This property is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -134,18 +136,18 @@
 					</xs:element>
 					<xs:element name="Producer" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Producer field details the source of this entry.</xs:documentation>
+							<xs:documentation>The Producer property characterizes the source of the Indicator information. Examples of details captured include identitifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
 				<xs:attribute name="version" type="indicator:IndicatorVersionType">
 					<xs:annotation>
-						<xs:documentation>Specifies the relevant STIX-Indicator schema version for this content.</xs:documentation>
+						<xs:documentation>The version property specifies the version identifier of the STIX Indicator data model used to capture the information associated with the Indicator.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 				<xs:attribute name="negate" type="xs:boolean" default="false">
 					<xs:annotation>
-						<xs:documentation>The negate field specifies the absence of the pattern.</xs:documentation>
+						<xs:documentation>The negate property specifies whether the absence (true) or presence (false) of the pattern constitutes the Indicator.  More explicitly, if the negate property is `false,’ then if the Indicator pattern is matched, the Indicator is true.  However, if the negate property is `true,’ then if the Indicator pattern is not matched, the Indicator is true.  Note that this property applies to the entire indicator, not to a specific part of the Indicator pattern.  The default value is 'false.'</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -156,29 +158,23 @@
 			<xs:documentation>An enumeration of all versions of the Indicator type valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="2.0"/>
-			<xs:enumeration value="2.0.1"/>
-			<xs:enumeration value="2.1" />
-			<xs:enumeration value="2.1.1" />
-			<xs:enumeration value="2.2" />
+			<xs:enumeration value="stix-1.2.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="ValidTimeType">
 		<xs:annotation>
 			<!-- NOTE: this is a very simple representation, if desired, the schema could import something more expressive like gml temporal semantics (see gml:timeposition here: http://schemas.opengis.net/gml/3.1.1/base/temporal.xsd). -->
-			<xs:documentation>A basic representation of a temporal window when the thing (e.g., indicator) is valid. </xs:documentation>
+			<xs:documentation>The ValidTimeType characterizes a temporal window during which the Indicator is able to accurately detect the TTP. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Start_Time" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If not present, the valid time position of the indicator does not have a lower bound (i.e., temporal window is only bounded by the end-time). </xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Start_Time property specifies the beginning of the temporal window in which an Indicator is able to accurately detect the TTP.  To avoid ambiguity, timestamps SHOULD include a specification of the time zone. In addition to capturing a date and time, the Start_Time property MAY also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If the Start_Time property is not present, then there is no constraint on the earliest time for which the Indicator is able to accurately detect the TTP (i.e., the temporal window is only bounded by the End_Time property, if present). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End_Time" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If not present, the valid time position of the indicator does not have an upper bound (i.e., temporal window is only bounded by the start-time). </xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The End_Time property specifies the end of the temporal window in which an Indicator is able to accurately detect the TTP.  To avoid ambiguity, timestamps SHOULD include a specification of the time zone.  In addition to capturing a date and time, the End_Time property MAY also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If the End_Time property is not present, then there is no constraint on the latest time for which the Indicator is able to accurately detect the TTP (i.e., the temporal window is only bounded by the Start_Time property, if present). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -189,24 +185,24 @@
 	<!-- *************************************************************************** -->
 	<xs:complexType name="CompositeIndicatorExpressionType">
 		<xs:annotation>
-			<xs:documentation>Type for allowing content creators to create composite indicator expressions using basic boolean logic. </xs:documentation>
+			<xs:documentation>The CompositeIndicatorExpressionType characterizes a composite Indicator expression through the specification of a single operator (the operator of the expression) and zero or more Indicators (the operands of the expression).  </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element ref="indicator:Indicator" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The indicator field specifies one cyber threat indicator made up of a pattern identifying certain observable conditions as well as contextual information about the patterns meaning, how and when it should be acted on, etc.</xs:documentation>
+					<xs:documentation>The Indicator property characterizes a cyber threat indicator by capturing an asserted relationship between a pattern identifying certain observable conditions and a particular TTP likely in play if those observable conditions are seen, as well as contextual information about how and when it should be acted on and how it relates to other Indicators, Campaigns, and TTPs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="operator" type="indicator:OperatorTypeEnum" use="required">
 			<xs:annotation>
-				<xs:documentation>Specifies the logical composition operator for this composite cyber threat Indicator.</xs:documentation>
+				<xs:documentation>The operator property specifies the logical composition operator for the composite Indicator expression.  The enumeration that defines valid operators in the Indicator v2.2 data model contains the operators AND and OR.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="OperatorTypeEnum">
 		<xs:annotation>
-			<xs:documentation>OperatorTypeEnum is an enumeration of valid operators.</xs:documentation>
+			<xs:documentation>The OperatorTypeEnum enumeration is an inventory of valid operators for CompositeIndicatorExpressionType, which is used to define a compound Indicator expression. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="AND"/>
@@ -216,7 +212,7 @@
 	<!---->
 	<xs:complexType name="TestMechanismType" abstract="true">
 		<xs:annotation>
-			<xs:documentation>The TestMechanismType specifies a non-standard Test Mechanism effective at identifying the cyber Observables specified in this cyber threat Indicator.</xs:documentation>
+			<xs:documentation>The TestMechanismType characterizes an alternative (non-CybOX) test mechanism effective for representing the desired observable pattern of the Indicator.  </xs:documentation>
 			<xs:documentation>This type is defined as abstract and is intended to be extended to enable the expression of any structured or unstructured test mechanism. STIX provides five default options, Generic, OpenIOC, OVAL, Snort, and YARA. Additionally, those who wish to use another format may do so by using either the existing Generic test mechanism and putting the mechanism specification in the CDATA block or by defining a new extension to this type. The information for the STIX-provided extensions is:</xs:documentation>
 			<xs:documentation>1. Generic: The Generic test mechanism allows for the specification of any generic test mechanism through the use of a raw CDATA section. The type is named GenericTestMechanismType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/test-mechanism/generic-1 namespace. The extension is defined in the file extensions/test-mechanism/generic-test-mechanism.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/test-mechanism/generic-test-mechanism.xsd.</xs:documentation>
 			<xs:documentation>2. OpenIOC: The OpenIOC test mechanism allows for the specification of an OpenIOC test by importing the OpenIOC schema. The type is named IOCTestMechanismType and is in the http://docs.oasis-open.org/cti/ns/stix/extensions/test-mechanism/openioc-2010-1 namespace. The extension is defined in the file extensions/test-mechanism/openioc-2010-test-mechanism.xsd or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/test-mechanism/openioc-2010-test-mechanism.xsd.</xs:documentation>
@@ -227,92 +223,99 @@
 		<xs:sequence>
 			<xs:element name="Efficacy" type="stixCommon:StatementType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Efficacy field provides an assertion of likely effectiveness of this TestMechanism to detect the targeted cyber Observables. The field includes a description of the asserted efficacy of this TestMechanism and a confidence held in the asserted efficacy of this TestMechanism to detect the targeted cyber Observables.</xs:documentation>
+					<xs:documentation>The Efficacy property characterizes a measure of the likely effectiveness of a TestMechanismType instance to detect the targeted cyber observable pattern, which includes a Value property that specifies the level of effectiveness. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
+					<xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Producer" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Producer field details the source of this entry.</xs:documentation>
+					<xs:documentation>The Producer property characterizes the source of the test mechanism information. Examples of details captured include identifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a unique ID for this Test Mechanism.</xs:documentation>
+				<xs:documentation>The id property specifies a globally unique identifier for the test mechanism instance.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="idref" type="xs:QName">
 			<xs:annotation>
-				<xs:documentation>Specifies a reference to the ID of a Test Mechanism specified elsewhere.</xs:documentation>
-				<xs:documentation>When idref is specified, the id attribute must not be specified, and any instance of this Test Mechanism should not hold content.</xs:documentation>
+				<xs:documentation>The idref property specifies an identifier reference to a test mechanism instance specified elsewhere. When the idref property is used, the id property MUST NOT also be specified and the other properties of TestMechanismType MUST NOT hold any content.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<!---->
 	<xs:complexType name="SightingsType">
+		<xs:annotation>
+			<xs:documentation>The SightingsType characterizes the sightings of the Indicator by capturing the number of sightings and a set of zero or more sighting reports. </xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Sighting" type="indicator:SightingType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>This field characterizes a single sighting report for this Indicator.</xs:documentation>
+					<xs:documentation>The Sighting property characterizes a single sighting report for the Indicator. Note that this property can occur zero times because it’s possible to just count the sightings, not capture any.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="sightings_count" type="xs:integer">
 			<xs:annotation>
-				<xs:documentation>The total number of times this Indicator was reported as sighted.</xs:documentation>
+				<xs:documentation>The sightings_count property specifies the total number of times the Indicator was sighted.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="SightingType">
 		<xs:annotation>
-			<xs:documentation>Describes a single sighting of an indicator.</xs:documentation>
+			<xs:documentation>The SightingType characterizes a single sighting report for an Indicator.  An Indicator sighting report may capture a variety of information associated with an observable instance that matches the Indicator’s observable pattern including the time the sighting occurred, a textual description of the sighting, the set of Observables (instances) related to the sighting, the source of the sighting information (e.g., tool or an analyst name), and the level of confidence that the sighting information actually represents a sighting of that particular Indicator.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field provides a name or description of the sighting source.</xs:documentation>
+					<xs:documentation>The Source property characterizes the organization or tool that is the source of the sighting of the sighting information. Examples of details captured include identifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Reference" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field provides a formal reference to the sighting source.</xs:documentation>
+					<xs:documentation>The Reference property specifies a formal reference to an external description of the sighting through the capture of a Uniform Resource Locator (URL).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field provides a confidence assertion in the accuracy of this sighting.</xs:documentation>
+					<xs:documentation>The Confidence property characterizes the level of confidence that the observed instance of the Sighting actually matches the Indicator pattern.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Description field is optional and enables an unstructured, text description of this Sighting.</xs:documentation>
+					<xs:documentation>The Description property captures a textual description of the Indicator sighting.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Related_Observables" type="indicator:RelatedObservablesType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Related_Observable field identifies or characterizes one or more cyber observables related to this sighting.</xs:documentation>
+					<xs:documentation>The Related_Observables property specifies a set of one or more Observable instances that represent the observations for this Indicator sighting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="timestamp" type="xs:dateTime">
 			<xs:annotation>
-				<xs:documentation>This field provides the date and time of the Indicator sighting.</xs:documentation>
-				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+				<xs:documentation>The timestamp property specifies the date and time of the Indicator sighting.  To avoid ambiguity, all timestamps SHOULD include a specification of the time zone.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
 			<xs:annotation>
-				<xs:documentation>Represents the precision of the associated timestamp value. If omitted, the default is "second", meaning the timestamp is precise to the full field value. Digits in the timestamp that are required by the xs:dateTime datatype but are beyond the specified precision should be zeroed out.</xs:documentation>
+				<xs:documentation>The timestamp_precision property specifies the granularity with which the timestamp property should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is ‘second.’ Digits in a timestamp that are beyond the specified precision should be zeroed out.  </xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RelatedIndicatorsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIndicatorsType specifies a set of one or more other Indicators asserted to be related to this Indicator and therefore is a self-referential relationship.  It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).  </xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Indicator" type="stixCommon:RelatedIndicatorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicator field is optional and enables content producers to express a relationship between the enclosing indicator (i.e., the subject of the relationship) and a disparate indicator (i.e., the object side of the relationship).</xs:documentation>
+							<xs:documentation>The Related_Indicator property specifies another Indicator associated with this Indicator and characterizes the relationship between the Indicators by capturing information such as the level of confidence that the Indicators are related, the source of the relationship information, and type of the relationship.  A relationship between Indicators may represent assertions of general associativity or different versions of the same Indicator.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -320,12 +323,15 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="SuggestedCOAsType">
+		<xs:annotation>
+			<xs:documentation>The SuggestedCOAsType specifies one or more suggested Courses of Action that could be taken if the Indicator is sighted.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Suggested_COA" type="stixCommon:RelatedCourseOfActionType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Suggested_COA field specifies a suggested Course of Action for this cyber threat Indicator.</xs:documentation>
+							<xs:documentation>The Suggested_COA property specifies a Course of Action suggested for this Indicator and characterizes the relationship between the Course of Action and the Indicator. The relationship between the Course of Action and the Indicator is characterized by capturing information such as the level of confidence that the Course of Action and the Indicator are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -333,21 +339,36 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="TestMechanismsType">
+		<xs:annotation>
+			<xs:documentation>The TestMechanismsType specifies a set of one or more test mechanisms effective at identifying the cyber observable pattern characterized in the Indicator. </xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Test_Mechanism" type="indicator:TestMechanismType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The TestMechanism field specifies a non-standard Test Mechanism effective at identifying the cyber Observables specified in this cyber threat Indicator. This field is defined as of type TestMechanismType which is an abstract type enabling the extension and inclusion of various formats of Test Mechanism specifications.</xs:documentation>
+					<xs:documentation>The Test_Mechanism property characterizes an alternative (non-CybOX) test mechanism representation for the desired observable pattern of the Indicator. Its underlying abstract type MUST be extended to enable the expression of a structured or unstructured test mechanism (e.g., Snort, OVAL).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+		<xs:sequence>
+			<xs:element name="Test_Mechanism" type="indicator:TestMechanismType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Test_Mechanism property characterizes an alternative (non-CybOX) test mechanism representation for the desired observable pattern of the Indicator. Its underlying abstract type MUST be extended to enable the expression of a structured or unstructured test mechanism (e.g., Snort, OVAL).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RelatedCampaignReferencesType">
+		<xs:annotation>
+			<xs:documentation>The RelatedCampaignReferencesType specifies a set of one or more Campaigns for which the Indicator may be relevant. It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group). 
+			</xs:documentation>
+		</xs:annotation> 
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Campaign" type="stixCommon:RelatedCampaignReferenceType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Campaign field captures a single relationship to a related campaign.</xs:documentation>
+							<xs:documentation>The Related_Campaign property specifies a Campaign for which the Indicator may be relevant.  Unlike most other relationships that are defined in STIX, the underlying RelatedCampaignReferencesType type does not allow a Campaign to be embedded; an already-defined Campaign MUST be specified by its Name property and/or a reference to its identifier. The relationship between the Indicator and the Campaign is characterized by capturing information such as the level of confidence that the Indicator and the Campaign are related, the source of the relationship information, and the type of the relationship. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -355,12 +376,16 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RelatedObservablesType">
+		<xs:annotation>
+			<xs:documentation>The RelatedObservablesType specifies one or more CybOX Observables (instances) representing the actual observations that are believed to be a match for the Indicator observable pattern.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).
+			</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Observable field captures a relationship to a cyber observable related to this sighting.</xs:documentation>
+							<xs:documentation>The Related_Observable property specifies an Observable instance that represents the observation for this Indicator sighting and characterizes the relationship between the Observable and the Indicator sighting by capturing information such as the level of confidence that the Observable accurately characterizes the observation for the Indicator sighting, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

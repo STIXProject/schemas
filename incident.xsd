@@ -21,166 +21,165 @@
 	</xs:element>
 	<xs:complexType name="IncidentType">
 		<xs:annotation>
-			<xs:documentation>Represents a single STIX Incident.</xs:documentation>
-			<xs:documentation>Incidents are discrete instances of Indicators affecting an organization along with information discovered or decided during an incident response investigation. They consist of data such as time-related information, parties involved, assets affected, impact assessment, related Indicators, related Observables, leveraged TTP, attributed Threat Actors, intended effects, nature of compromise, response Course of Action requested, response Course of Action taken, confidence in characterization, handling guidance, source of the Incident information, log of actions taken, etc.</xs:documentation>
+			<xs:documentation>The IncidentType characterizes a cyber threat Incident made up of sets of related security events affecting an organization, investigatory details of timing and personnel, as well as other characterizing information discovered or decisions reached during an incident response investigation.  IncidentType extends the IncidentBaseType from the Common data model, which provides the essential identifier (id) and identifier reference (idref) properties.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IncidentBaseType">
 				<xs:sequence>
 					<xs:element name="Title" type="xs:string" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Title field provides a simple title for this Incident.</xs:documentation>
+							<xs:documentation>The Title property provides a simple title for the Incident and reflects what the producer thinks the Incident as a whole should be called.  Titles are typically used by humans to reference a particular Incident; however, titles are not meant to be used for correlation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="External_ID" type="incident:ExternalIDType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The External_ID field provides a reference to an ID of an incident in a remote system.</xs:documentation>
+							<xs:documentation>The External_ID property captures an identifier for the Incident managed in an external non-STIX system.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Time" type="incident:TimeType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Time field specifies relevant time values associated with this Incident.</xs:documentation>
+							<xs:documentation>The Time property specifies a variety of time values associated with the Incident (e.g., the time the Incident was officially opened).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Description field is optional and provides an unstructured, text description of this Incident.</xs:documentation>
+							<xs:documentation>The Description property captures a textual description of the Incident.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this Incident.</xs:documentation>
+							<xs:documentation>The Short_Description property captures a short textual description of the Incident.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Categories" type="incident:CategoriesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Categories field provides a set of categories for this incident.</xs:documentation>
+							<xs:documentation>The Categories property specifies a set of categorization labels for the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Reporter" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Reporter field details information about the reporting source of this Incident.</xs:documentation>
+							<xs:documentation>The Reporter property characterizes the entity that reported the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Responder" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Responder field is optional and details information about the assigned responder for this Incident.</xs:documentation>
+							<xs:documentation>The Responder property characterizes the entity playing the role of the responder for the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Coordinator" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Coordinator field is optional and details information about the assigned coordinator for this Incident.</xs:documentation>
+							<xs:documentation>The Coordinator property characterizes the entity playing the role of coordinator for the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Victim" type="stixCommon:IdentityType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Victim field is optional and details information about a victim of this Incident.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.1/ciq_identity.xsd.</xs:documentation>
-							<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
+							<xs:documentation>The Victim property chracterizes information about a victim of the Incident. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.1/ciq_identity.xsd.</xs:documentation>
+							<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Affected_Assets" type="incident:AffectedAssetsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Affected_Assets field is optional and characterizes the particular assets affected during the Incident.</xs:documentation>
+							<xs:documentation>The Affected_Assets property characterizes the assets affected during the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Impact_Assessment" type="incident:ImpactAssessmentType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Impact_Assessment field specifies a summary assessment of impact for this cyber threat Incident. </xs:documentation>
+							<xs:documentation>The Impact_Assessment property characterizes an assessment of impact for the Incident. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Status" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Status describes the current status (sometimes called "state" or "disposition") of the incident.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentStatusVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Status property specifies the state or disposition of the Incident.  Examples of potential statuses are new, open, and closed (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentStatusVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Indicators" type="incident:RelatedIndicatorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicators field identifies or characterizes one or more cyber threat Indicators related to this cyber threat Incident.</xs:documentation>
+							<xs:documentation>The Related_Indicators property specifies a set of one or more other Indicators relevant to the Incident whether they were the triggers that initiated the incident response or they are a result of the incident investigation analysis and may be of value in detecting the adversary TTPs leveraged in the incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Observables" type="incident:RelatedObservablesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Observables field identifies or characterizes one or more cyber observables related to this cyber threat incident.</xs:documentation>
+							<xs:documentation>The Related_Observables property specifies a set of one or more observable instances that were observed in relation to the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Leveraged_TTPs" type="incident:LeveragedTTPsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Leveraged_TTPs field specifies TTPs asserted to be related to this cyber threat Incident.</xs:documentation>
+							<xs:documentation>The Leveraged_TTPs property specifies a set of one or more TTPs that are asserted as having been leveraged in the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Attributed_Threat_Actors" type="incident:AttributedThreatActorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Attributed_Threat_Actors field identifies ThreatActors asserted to be attributed for this Incident.</xs:documentation>
+							<xs:documentation>The Attributed_Threat_Actors property specifies a set of one or more other Threat Actors that have been attributed to the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Intended_Effect field specifies the suspected intended effect of this incident.</xs:documentation>
+							<xs:documentation>The Intended_Effect property characterizes the suspected intended effect of the Incident, which includes a Value property that specifies the type of the effect. Examples of potential types include theft, disruption, and unauthorized access (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply as a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Security_Compromise" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>Specifies knowledge of whether the Incident involved a compromise of security properties.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Security_Compromise property specifies an assertion of whether the Incident involved a compromise of security properties (e.g. confidentiality).  Examples of potential assertions are yes, no, and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Discovery_Method" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Discovery_Method field identifies how the incident was discovered.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is DiscoveryMethodVocab-2.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Discovery_Method property specifies the method by which the Incident was discovered.  Examples of potential methods are audit, NIDS, and user (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is DiscoveryMethodVocab-2.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Incidents" type="incident:RelatedIncidentsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Incidents field identifies or characterizes one or more other Incidents related to this cyber threat Incident. </xs:documentation>
+							<xs:documentation>The Related_Incidents property specifies a set of one or more Incidents related to this Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="COA_Requested" type="incident:COARequestedType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The COA_Requested field specifies and characterizes a requested CourseOfAction for this Incident as specified by the Producer for the Consumer of the Incident Report</xs:documentation>
+							<xs:documentation>The COA_Requested property specifies one or more Courses of Action for the Incident requested by the incident responders. This property is distinct from the COA_Taken property due to the fact that while incident responders often have rich context for requesting particular courses of action, the authority to actually implement a course of action typically lies with other parties.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="COA_Taken" type="incident:COATakenType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The COA_Taken field specifies and characterizes a CourseOfAction taken for this Incident.</xs:documentation>
+							<xs:documentation>The COA_Taken property specifies a Course of Action taken for the Incident. This property is distinct from the COA_Requested property due to the fact that while incident responders often have rich context for requesting particular courses of action, the authority to actually implement a course of action typically lies with other parties.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Confidence field characterizes the level of confidence held in the characterization of this Incident.</xs:documentation>
+							<xs:documentation>The Confidence property characterizes the level of confidence in the accuracy of the overall content captured in the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Contact" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Contact field identifies and characterizes organizations or personnel involved in this Incident.</xs:documentation>
+							<xs:documentation>The Contact property characterizes a point of contact for the organizations and personnel involved in the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="History" type="incident:HistoryType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The History field provides a log of events or actions taken during the handling of the Incident. </xs:documentation>
+							<xs:documentation>The History property captures a log of events or actions taken during the handling of the Incident. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+							<xs:documentation>The Information_Source property characterizes the source of the Incident information.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of tools used to collect the information.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Incident. The valid marking scope is the nearest IncidentBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+							<xs:documentation>The Handling property specifies the appropriate data handling markings for the properties of this Incident. The marking scope is limited to the Incident and the content is contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
-							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:documentation>The Related_Packages property specifies a set of one or more STIX Packages that are related to the Incident.</xs:documentation>
+							<xs:documentation>DEPRECATED: This property is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -189,12 +188,12 @@
 				</xs:sequence>
 				<xs:attribute name="version" type="incident:IncidentVersionType">
 					<xs:annotation>
-						<xs:documentation>Specifies the relevant STIX-Incident schema version for this content.</xs:documentation>
+						<xs:documentation>The version property specifies the version identifier of the STIX Incident data model used to capture the information associated with the Incident.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 				<xs:attribute name="URL">
 					<xs:annotation>
-						<xs:documentation>Specifies a URL referencing the location for the Incident specification.</xs:documentation>
+						<xs:documentation>The URL property specifies a URL referencing the location for an external representation of the Incident (e.g. in an incident tracking system).</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -206,103 +205,106 @@
 			<xs:documentation>An enumeration of all versions of the Incident type valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1.0"/>
-			<xs:enumeration value="1.0.1"/>
-			<xs:enumeration value="1.1"/>
-			<xs:enumeration value="1.1.1" />
-			<xs:enumeration value="1.2" />
+			<xs:enumeration value="stix-1.2.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PropertyAffectedType">
+		<xs:annotation>
+			<xs:documentation>The PropertyAffectedType characterizes aspects of how security properties of an asset, such as Availability, Confidentiality, etc., were affected in this Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Property" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The security property that was affected by the incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossPropertyVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Property property specifies the security property that was affected by the incident.  Examples of potential security properties are confidentiality, integrity and availability (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossPropertyVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description_Of_Effect" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Description_Of_Effect field is optional and provides a brief prose description of how the security property was affected.</xs:documentation>
+					<xs:documentation>The Description_Of_Effect property captures a textual description of how the security property was affected. Any length is permitted.  Optional formatting is supported via the structuring_format property.
+</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Type_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Type_Of_Availability_Loss field is optional and characterizes in what manner the availability of this asset was affected (e.g. Destruction, Deletion, Interruption).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AvailabilityLossTypeVocab-1.1.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Type_Of_Availability_Loss property specifies in what manner the availability of the particular asset was affected. Examples of potential values are destruction, deletion and interruption (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AvailabilityLossTypeVocab-1.1.1 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Duration_Of_Availability_Loss" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Duration_Of_Availability_Loss field is optional and specifies the approximate length of time availability was affected (e.g. Permanent, Seconds, Minutes, Hours, Days).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossDurationVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Duration_Of_Availability_Loss property specifies the approximate length of time availability was affected. Examples of potential values are permanent, seconds and days (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LossDurationVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Non_Public_Data_Compromised" type="incident:NonPublicDataCompromisedType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This field specifies whether non-public data was compromised or exposed and whether that data was encrypted or not.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Non_Public_Data_Compromised property specifies whether non-public data was compromised or exposed and whether that data was encrypted or not. Examples of potential values are yes, no and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AffectedAssetType">
+		<xs:annotation>
+			<xs:documentation>The AffectedAssetType characterizes various aspects of the asset negatively impacted by the Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Type" type="incident:AssetTypeType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Type field is optional and specifies the type of the asset impacted by the incident (a security attribute was negatively affected).</xs:documentation>
+					<xs:documentation>The Type property characterizes the type of the assets impacted by the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Description field is optional and provides an unstructured, text description of the asset.</xs:documentation>
+					<xs:documentation>The Description property captures a textual description of the asset.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Business_Function_Or_Role" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Business_Function_Or_Role field is optional and provides a brief description of the asset's role, mission, and importance within the organization.</xs:documentation>
+					<xs:documentation>The Business_Function_Or_Role captures a textual description of the asset's role, function, and importance within the organization. Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Ownership_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Ownership_Class field is optional and gives a high-level characterization of who owns (or controls) this asset (e.g. Internally-owned, Employee-owned, Partner-owned, Customer-owned).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is OwnershipClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Ownership_Class property specifies who owns (or controls) this asset. Examples of potential values are employee, customer and partner (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is OwnershipClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Management_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Management_Class field is optional and gives a high-level characterization of who is responsible for the day-to-day management and administration of this asset (e.g. Managed Internally, Managed by External Party, Co-managed).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ManagementClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Management_Class property specifies a high-level characterization of who is responsible for the day-to-day management and administration of the asset. Examples of potential values are internally, externally, and co-managed (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ManagementClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Location_Class" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Location_Class field is optional and gives a high-level characterization of where this asset is physically located (e.g. Internal location, External location, Co-located, Mobile).</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LocationClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Location_Class property specifies a high-level summarized characterization of the locality type for this asset Examples of potential values are internal, external, and mobile (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is LocationClassVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Location" type="stixCommon:AddressAbstractType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Location field specifies the physical location of the affected asset.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/address/ciq-address-3.0-1 namespace. This type is defined in the extensions/address/ciq-3.0-address.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/address/ciq-3.0-address.xsd.</xs:documentation>
-					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name field.</xs:documentation>
+					<xs:documentation>The Location property characterizes the actual physical location of the affected asset.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQAddressInstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/address/ciq-address-3.0-1 namespace. This type is defined in the extensions/address/ciq-3.0-address.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/address/ciq-3.0-address.xsd.</xs:documentation>
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Nature_Of_Security_Effect" type="incident:NatureOfSecurityEffectType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Nature_Of_Security_Effect field is optional and characterizes how the security properties of the Asset were affected.</xs:documentation>
+					<xs:documentation>The Nature_Of_Security_Effect property characterizes how the security properties of the asset were affected.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Structured_Description" type="cybox:ObservablesType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Structured_Description field is optional and provides a structured description of the asset.</xs:documentation>
+					<xs:documentation>The Structured_Description property characterizes the asset through specification of a structured cyber Observables instance.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -315,34 +317,34 @@
 		<xs:sequence>
 			<xs:element name="Direct_Impact_Summary" type="incident:DirectImpactSummaryType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Direct_Impact_Summary field is optional and characterizes (at a high level) losses directly resulting from the ThreatActor's actions against organizational assets within the Incident.</xs:documentation>
+					<xs:documentation>The Direct_Impact_Summary property characterizes (at a high level) impact directly resulting from the Threat Actor's actions against organizational assets within the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Indirect_Impact_Summary" type="incident:IndirectImpactSummaryType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Indirect_Impact_Summary field is optional and characterizes (at a high level) losses from other stakeholder reactions to the Incident.</xs:documentation>
+					<xs:documentation>The Indirect_Impact_Summary property characterizes (at a high level) impact from other stakeholder reactions to the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Total_Loss_Estimation" type="incident:TotalLossEstimationType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Total_Loss_Estimation field is optional and specifies the total estimated financial loss for the Incident.</xs:documentation>
+					<xs:documentation>The Total_Loss_Estimation property specifies the total estimated financial loss for the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Impact_Qualification" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Impact_Qualification field is optional and summarizes the subjective level of impact of the Incident.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactQualificationVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Impact_Qualification property specifies the subjective level of impact of the Incident. Examples of potential values are insignificant, catastrophic and damaging (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactQualificationVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Effects" type="incident:EffectsType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Effects field captures a list of effects of this incident from a controlled vocabulary.</xs:documentation>
+					<xs:documentation>The Effects property specifies a set of one or more effects of this incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="External_Impact_Assessment_Model" type="incident:ExternalImpactAssessmentModelType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The External_Impact_Assessment_Model field is optional and characterizes impact assessment details utilizing impact assessment characterization models defined external to STIX. It is defined utilizing an abstract type enabling the definition through extension of incident impact assessment models external to STIX.</xs:documentation>
+					<xs:documentation>The External_Impact_Assessment_Model property characterizes impact assessment details. It is defined utilizing an abstract type enabling the definition through extension of incident impact assessment models external to STIX.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -353,7 +355,7 @@
 		</xs:annotation>
 		<xs:attribute name="model_name" type="xs:string">
 			<xs:annotation>
-				<xs:documentation>Specifies the name of the externally defined impact assessment model.</xs:documentation>
+				<xs:documentation>The model_name property specifies the name of the externally defined impact assessment model.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="model_reference" type="xs:anyURI">
@@ -364,45 +366,48 @@
 	</xs:complexType>
 	<!---->
 	<xs:complexType name="COATakenType">
+		<xs:annotation>
+			<xs:documentation>The COATakenType specifies a Course of Action for the Incident requested by the incident responders.</xs:documentation>
+		</xs:annotation> 
 		<xs:sequence>
 			<xs:element name="Time" type="incident:COATimeType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Time field specifies the relative time criteria for this taken CourseOfAction.</xs:documentation>
+					<xs:documentation>The Time property specifies when this Course of Action was taken (start and end).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Contributors" type="incident:ContributorsType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Contributors field specifies contributing actors for the CourseOfAction taken.</xs:documentation>
+					<xs:documentation>The Contributors property specifies contributing actors for the Course of Action taken.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Course_Of_Action field specifies the actual CourseOfAction taken.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
+					<xs:documentation>The Course_Of_Action property specifies the actual Course of Action taken. </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="JournalEntryType">
 		<xs:annotation>
-			<xs:documentation>The JournalEntryType is optional and provides journal notes for information discovered during the handling of the Incident.</xs:documentation>
+			<xs:documentation>The JournalEntryType captures journal notes for information discovered during the handling of the Incident.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute name="author" type="xs:string">
 					<xs:annotation>
-						<xs:documentation>Specifies the author of the JournalEntry note.</xs:documentation>
+						<xs:documentation>The author property specifies the author of the JournalEntry note.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 				<xs:attribute name="time" type="xs:dateTime">
 					<xs:annotation>
-						<xs:documentation>Specifies the date and time that the JournalEntry note was written.</xs:documentation>
+						<xs:documentation>The time property specifies the date and time of the journal entry creation.</xs:documentation>
 						<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 				<xs:attribute name="time_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
 					<xs:annotation>
-						<xs:documentation>Represents the precision of the associated time value. If omitted, the default is "second", meaning the timestamp is precise to the full field value. Digits in the timestamp that are required by the xs:dateTime datatype but are beyond the specified precision should be zeroed out.</xs:documentation>
+						<xs:documentation>The time_precision property specifies the granularity with which the time property should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., hour, minute).  If omitted, the default precision is second. Digits in a timestamp that are beyond the specified precision should be zeroed out.  </xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -416,181 +421,216 @@
 			<xs:extension base="xs:string">
 				<xs:attribute name="source" type="xs:string">
 					<xs:annotation>
-						<xs:documentation>Specifies the source of the External ID.</xs:documentation>
+						<xs:documentation>The source property specifies the source of the External ID.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="COARequestedType">
+		<xs:annotation>
+			<xs:documentation>The COARequestedType specifies a Course of Action taken for the Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="incident:COATakenType">
 				<xs:attribute name="priority">
 					<xs:annotation>
-						<xs:documentation>Specifies a suggested level of priority to be applied to this requested COA.</xs:documentation>
+						<xs:documentation>The priority property characterizes a suggested level of priority to be applied to this requested COA.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ContributorsType">
+		<xs:annotation>
+			<xs:documentation>The ContributorType characterizes the actors involved in a course of action.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Contributor" type="cyboxCommon:ContributorType" maxOccurs="unbounded"/>
+			<xs:element name="Contributor" type="cyboxCommon:ContributorType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Contributor property characterizes an entity involved in this Course of Action. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="COATimeType">
+		<xs:annotation>
+			<xs:documentation>The COATimeType specifies the relevant time period for the execution of a courses of action were for this Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Start" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Start field specifies the time at which the CourseOfAction was begun.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Start property specifies the time in which the Course of Action was begun.  To avoid ambiguity, timestamps SHOULD include a specification of the time zone. In addition to capturing a date and time, the Start property MAY also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If the Start property is not present, then it is unknown when the Course of Action was started.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The End field specifies the time at which the CourseOfAction was completed.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The End property specifies the time at which the Course of Action was completed. In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known. In addition to capturing a date and time, the End property MAY also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If the End property is not present, then it is unknown when the Course of Action ended, or the Course of Action is ongoing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="LossEstimationType">
+		<xs:annotation>
+			<xs:documentation>The LossEstimationType characterizes an estimated financial loss.</xs:documentation>
+		</xs:annotation>
 		<xs:attribute name="amount">
 			<xs:annotation>
-				<xs:documentation>Specifies the estimated financial loss for the Incident.</xs:documentation>
+				<xs:documentation>The amount property specifies the estimated financial loss for the Incident.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="iso_currency_code">
 			<xs:annotation>
-				<xs:documentation>Specifies the ISO 4217 currency code if other than USD </xs:documentation>
+				<xs:documentation>SThe iso_currency_code property specifies the ISO 4217 currency code if other than USD.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="TotalLossEstimationType">
+		<xs:annotation>
+			<xs:documentation>The TotalLossEstimationType characterizes both the initial reported and actual estimated financial losses for this Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Initial_Reported_Total_Loss_Estimation" type="incident:LossEstimationType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Initial_Reported_Total_Loss_Estimation field is optional and specifies the initially reported level of total estimated financial loss for the Incident.</xs:documentation>
+					<xs:documentation>The Initial_Reported_Total_Loss_Estimation property specifies the initially reported level of total estimated financial loss for the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Actual_Total_Loss_Estimation" type="incident:LossEstimationType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Actual_Total_Loss_Estimation field is optional and specifies the actual level of total estimated financial loss for the Incident.</xs:documentation>
+					<xs:documentation>The Actual_Total_Loss_Estimation property specifies the actual level of total estimated financial loss for the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="IndirectImpactSummaryType">
+		<xs:annotation>
+			<xs:documentation>The IndirectImpactSummaryType qualitatively characterizes (at a high level) the indirect impact of the Incident, both financial and non-financial.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Loss_Of_Competitive_Advantage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Loss_Of_Competitive_Advantage field is optional and characterizes (at a high level) the level of impact based on loss of competitive advantage that occured in the Incident including loss/damage/exposure of IP, corporate wisdom, ability to compete, key personnel, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Loss_Of_Competitive_Advantage if a loss of competitive advantage occurred in the Incident. The impact could include: loss/damage/exposure of IP, corporate wisdom, ability to compete, key personnel, etc. Examples of potential statuses are yes, no and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Brand_And_Market_Damage" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Brand_And_Market_Damage field is optional and characterizes (at a high level) the level of impact based on brand or market damage that occured in the Incident including lost customers or partners, decrease in market value or share, advertising, rebranding, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Brand_And_Market_Damage property specifies the level of impact based on brand or market damage that occurred in the Incident. The impact could include: lost customers or partners, decrease in market value or share, advertising, rebranding, etc.  Examples of potential statuses are yes, no and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Increased_Operating_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Increased_Operating_Costs field is optional and characterizes (at a high level) the level of impact based on increased operating costs that occured in the Incident including cost of additional audits, new hires or training, mandatory action, higher insurance, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Increased_Operating_Costs property specifies if  increased operating costs occurred in the Incident. The impact could include: cost of additional audits, new hires or training, mandatory action, higher insurance, etc. Examples of potential statuses are yes, no and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Legal_And_Regulatory_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Legal_And_Regulatory_Costs field is optional and characterizes (at a high level) the level of impact based on legal and regulatory costs that occured in the Incident including legal fees, lawsuits, customer damages, contract violations, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Legal_And_Regulatory_Costs property specifies if legal and regulatory costs occurred in the Incident.  This includes legal fees, lawsuits, customer damages, contract violations, etc. Examples of potential statuses are yes, no and suspected (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is SecurityCompromiseVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DirectImpactSummaryType">
+		<xs:annotation>
+			<xs:documentation>The DirectImpactSummaryType quantitatively characterizes (at a high level) the direct impact of the Incident, both financial and non-financial.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Asset_Losses" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Asset_Losses field is optional and characterizes (at a high level) the level of asset-related losses that occured in the Incident, including lost or damaged assets, stolen funds, cash outlays, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Asset_Losses property specifies (at a high level) the level of asset-related losses that occured in the Incident, including lost or damaged assets, stolen funds, cash outlays, etc. Examples of potential levels are minor, major and none (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Business-Mission_Disruption" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Business-Mission_Disruption field is optional and characterizes (at a high level) the level of business or mission disruption impact that occured in the Incident including unproductive man-hours, lost revenue from system downtime, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Business-Mission_Disruption property specifies (at a high level) the level of business or mission disruption impact that occurred in the Incident including unproductive man-hours, lost revenue from system downtime, etc. Examples of potential levels are minor, major and none (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Response_And_Recovery_Costs" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Response_And_Recovery_Costs field is optional and characterizes (at a high level) the level of response and recovery related costs that occured in the Incident including cost of response, investigation, remediation, restoration, etc.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Response_And_Recovery_Costs property specifies (at a high level) the level of response and recovery related costs that occurred in the Incident including cost of response, investigation, remediation, restoration, etc. Examples of potential levels are minor, major and none (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="NatureOfSecurityEffectType">
+		<xs:annotation>
+			<xs:documentation>The NatureOfSecurityEffectType specifies a set of zero or more security properties affected by the Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Property_Affected" type="incident:PropertyAffectedType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Property_Affected field is optional and characterizes how a particular security property of the Asset was affected.</xs:documentation>
+					<xs:documentation>The Property_Affected property characterizes how a particular security property of the asset was affected.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AssetTypeType">
 		<xs:annotation>
-			<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AssetTypeVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-			<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+			<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is AssetTypeVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+			<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="stixCommon:ControlledVocabularyStringType">
 				<xs:attribute name="count_affected">
 					<xs:annotation>
-						<xs:documentation>This field specifies the number of assets of this type affected.</xs:documentation>
+						<xs:documentation>The count_affected property specifies the number of assets of this type affected in the Incident.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="HistoryItemType">
+		<xs:annotation>
+			<xs:documentation>The HistoryItemType specifies the choice of either an action or journal entry as an item in the Incident’s history.</xs:documentation>
+		</xs:annotation> 
 		<xs:choice>
 			<xs:element name="Action_Entry" type="incident:COATakenType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Action_Entry field is optional and provides a record of actions taken during the handling of the Incident.</xs:documentation>
+					<xs:documentation>The Action_Entry property captures a record of a Course of Action taken during the handling of the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Journal_Entry" type="incident:JournalEntryType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Journal_Entry field is optional and provides journal notes for information discovered during the handling of the Incident.</xs:documentation>
+					<xs:documentation>The Journal_Entry property captures journal notes for information discovered during the handling of the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="HistoryType">
+		<xs:annotation>
+			<xs:documentation>The HistoryType captures a record of events or actions taken as well as information discovered during the handling of the Incident.  This can include Courses of Action taken and general journal notes.  The time that the note is written, or the Course of Action taken and the author or actors involved may be specified.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="History_Item" type="incident:HistoryItemType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The History_Item field provides a log entry of an event or action taken during the handling of the Incident. </xs:documentation>
+					<xs:documentation>The History_Item property captures a log entry of either an event or action taken during the handling of the Incident or a journal entry containing information discovered during the investigation of the Incident. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RelatedIncidentsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIncidentsType specifies a list of one or more other Incidents asserted as related to the Incident and therefore is a self-referential relationship.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group). </xs:documentation>
+		</xs:annotation> 
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Incident" type="stixCommon:RelatedIncidentType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Incident field identifies or characterizes another Incident related to this Incident. </xs:documentation>
+							<xs:documentation>The Related_Incident property specifies another Incident associated with this Incident and characterizes the relationship between the Incidents by capturing information such as the level of confidence that the Incidents are related, the source of the relationship information, and type of the relationship.  A relationship between Incidents may represent assertions of general associativity or different versions of the same Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -598,12 +638,15 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="LeveragedTTPsType">
+		<xs:annotation>
+			<xs:documentation>The LeveragedTTPsType specifies one or more TTP that are asserted to have been leveraged during this Incident.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Leveraged_TTP" type="stixCommon:RelatedTTPType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Leveraged_TTP field specifies a single TTP asserted to be related to this cyber threat Incident.</xs:documentation>
+							<xs:documentation>The Leveraged_TTP property specifies a TTP asserted to have been leveraged in the Incident and characterizes the relationship between the Incident and the TTP by capturing information such as the level of confidence that the Incident and the TTP are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -611,12 +654,15 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RelatedObservablesType">
+		<xs:annotation>
+			<xs:documentation>The RelatedObservablesType specifies one or more CybOX Observable instances that were observed in relation to the Incident.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group). </xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Observable" type="stixCommon:RelatedObservableType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Observable field identifies or characterizes a cyber threat observable related to this Incident. </xs:documentation>
+							<xs:documentation>The Related_Observable property captures the properties of a cyber Observable instance that was observed in relation to the Incident.  In addition, the property characterizes the relationship between the Observable and the Incident by capturing additional information such as the level of confidence in the assertion that the Observable and the Incident are related, information on the source of the relationship information, and details on the type of the relationship between the Observable and the Incident.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -624,12 +670,16 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RelatedIndicatorsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIndicatorsType specifies one or more Indicators relevant to the Incident whether they were the triggers that initiated the incident response or they are a result of the incident investigation analysis and may be of value in detecting the adversary TTPs leveraged in the incident.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).
+			</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Indicator" type="stixCommon:RelatedIndicatorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicator field identifies or characterizes a cyber threat Indicator related to this Incident. </xs:documentation>
+							<xs:documentation>The Related_Indicator property characterizes an Indicator asserted to be relevant to the Incident whether they were the triggers that initiated the incident response or they are a result of the incident investigation analysis and may be of value in detecting the adversary TTPs leveraged in the incident. To further characterize the relationship to the Indicator, information captured includes the level of confidence that the Indicator is relevant, the source of the relationship information, and type of the relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -638,14 +688,14 @@
 	</xs:complexType>
 	<xs:complexType name="AttributedThreatActorsType">
 		<xs:annotation>
-			<xs:documentation>The AttributedThreatActorsType specifies a Threat Actor asserted to be attributed for this Incident.</xs:documentation>
+			<xs:documentation>The AttributedThreatActorsType specifies a list of one or more Threat Actors that have been attributed to the Incident.  It extends GenericRelationShipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).  </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Threat_Actor" type="stixCommon:RelatedThreatActorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Threat_Actor field specifies details of a Threat Actor asserted to be attributed for this Incident.</xs:documentation>
+							<xs:documentation>The Threat_Actor property captures a relationship to a Threat Actor that has been attributed to the Incident. To further characterize the relationship between the Incident and the Threat Actor, information captured includes the level of confidence that the Incident and the Threat Actor are related, the source of the relationship information, and type of the relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -653,96 +703,102 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AffectedAssetsType">
+		<xs:annotation>
+			<xs:documentation>The AffectedAssetsType specifies a list of one or more assets affected during the Incident. </xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Affected_Asset" type="incident:AffectedAssetType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Affected_Asset field is optional and characterizes a particular asset affected during the Incident.</xs:documentation>
+					<xs:documentation>The Affected_Asset property characterizes a particular asset affected during the Incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TimeType">
+		<xs:annotation>
+			<xs:documentation>The TimeType characterizes key time points of interest for the Incident.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="First_Malicious_Action" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The First_Malicious_Action field specifies the time that the first malicious action related to this Incident occured.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The First_Malicious_Action property specifies the time that the first malicious action related to the Incident occurred. </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Initial_Compromise" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Initial_Compromise field specifies the time that the initial compromise occured for this Incident.</xs:documentation>
+					<xs:documentation>The Initial_Compromise property specifies the time that the initial compromise occurred for the Incident.</xs:documentation>
 					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="First_Data_Exfiltration" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The First_Data_Exfiltration field specifies the first time at which non-public data was taken from the victim environment</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The First_Data_Exfiltration property specifies the first time at which non-public data was taken from the victim environment. </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Discovery" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Incident_Discovery field specifies the first time at which the organization learned the incident had occurred.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Incident_Discovery property specifies the first time at which the organization learned the Incident had occurred. </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Opened" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Incident_Opened field specifies the time at which the Incident was officially opened.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Incident_Opened property specifies the time at which the Incident was officially opened.</xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Containment_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Containment_Achieved field specifies the first time at which the incident is contained (e.g., the “bleeding is stopped”).</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Containment_Achieved property specifies the first time at which the Incident is contained (e.g., the “bleeding is stopped”). </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Restoration_Achieved" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Restoration_Achieved field specifies the first time at which the incident's assets are restored (e.g., fully functional)”.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Restoration_Achieved property specifies the first time at which the incident's assets are restored (e.g., fully functional). </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Reported" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Incident_Reported field specifies the time at which the Incident was reported.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Incident_Reported property specifies the time at which the Incident was reported.</xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Incident_Closed" type="stixCommon:DateTimeWithPrecisionType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Incident_Closed field specifies the time at which the Incident was officially closed.</xs:documentation>
-					<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+					<xs:documentation>The Incident_Closed property specifies the time at which the Incident was officially closed. </xs:documentation>
+					<xs:documentation>All timestamps specified using the stixCommon:DateTimeWithPrecisionType SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CategoriesType">
 		<xs:annotation>
-			<xs:documentation>Represents a list of incident categories that an incident is tagged with.</xs:documentation>
+			<xs:documentation>The CategoriesType specifies one or more category labels for the Incident.  </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Category" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Represents a single category that this incident is tagged with.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentCategoryVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Category property specifies a category label for the Incident.  Examples of potential categories are denial of service, improper usage, and scan (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentCategoryVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="EffectsType">
 		<xs:annotation>
-			<xs:documentation>Represents a list of incident effects that an incident is tagged with.</xs:documentation>
+			<xs:documentation>The EffectsType specifies one or more effects asserted as present for this Incident.  </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Effect" type="stixCommon:ControlledVocabularyStringType" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Represents a single effect that this incident is tagged with.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentEffectVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
-					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+					<xs:documentation>The Effect property represents a single effect asserted as present for this Incident.  Examples of potential statuses are denial of service, improper usage and scan (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is IncidentEffectVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -755,7 +811,7 @@
 			<xs:extension base="stixCommon:ControlledVocabularyStringType">
 				<xs:attribute name="data_encrypted" type="xs:boolean">
 					<xs:annotation>
-						<xs:documentation>Indicates whether the data that was compromised was encrypted or not.</xs:documentation>
+						<xs:documentation>The data_encrypted property specifies whether the data that was compromised was encrypted or not.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>

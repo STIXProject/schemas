@@ -147,7 +147,7 @@
 			<xs:documentation>
                 The PackageIntentVocab is the default STIX vocabulary for Package Intent.
             </xs:documentation>
-			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentVocab is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent field. Please use a Report and ReportIntentVocab-1.0 instead.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentVocab is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent property. Please use a Report and ReportIntentVocab-1.0 instead.</xs:documentation>
 			<xs:appinfo>
 				<deprecated>true</deprecated>
 			</xs:appinfo>
@@ -165,7 +165,7 @@
 	<xs:simpleType name="PackageIntentEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>The default set of values to use for a package intent in STIX.</xs:documentation>
-			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentEnum is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent field. Please use a Report and ReportIntentEnum-1.0 instead.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.2, the PackageIntentEnum is deprecated and should only be used with the deprecated STIXHeaderType/Package_Intent property. Please use a Report and ReportIntentEnum-1.0 instead.</xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<deprecated>true</deprecated>
@@ -334,23 +334,71 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Automated Transfer Scripts"/>
-			<xs:enumeration value="Adware"/>
-			<xs:enumeration value="Dialer"/>
-			<xs:enumeration value="Bot"/>
-			<xs:enumeration value="Bot - Credential Theft"/>
-			<xs:enumeration value="Bot - DDoS"/>
+			<xs:enumeration value="Adware">
+				<xs:annotation>
+					<xs:documentation>Any software that is funded by advertising. Adware may also gather sensitive user information from a system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Dialer">
+				<xs:annotation>
+					<xs:documentation>A program to automatically dial a telephone.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Bot">
+				<xs:annotation>
+					<xs:documentation>A program that resides on an infected system, communicating with and forming part of a botnet. The bot may be implanted by a worm or Trojan, which opens a backdoor. The bot then monitors the backdoor for further instructions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Bot - Credential Theft">
+				<xs:annotation>
+					<xs:documentation>A bot for the specific purpose to steal credentials.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Bot - DDoS">
+				<xs:annotation>
+					<xs:documentation>A bot for the specific purpose to cause a denial of service attack.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Bot - Loader"/>
-			<xs:enumeration value="Bot - Spam"/>
+			<xs:enumeration value="Bot - Spam">
+				<xs:annotation>
+					<xs:documentation>A bot for the specific purpose to send out spam email.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="DoS / DDoS"/>
 			<xs:enumeration value="DoS / DDoS - Participatory"/>
 			<xs:enumeration value="DoS / DDoS - Script"/>
 			<xs:enumeration value="DoS / DDoS - Stress Test Tools"/>
-			<xs:enumeration value="Exploit Kits"/>
-			<xs:enumeration value="POS / ATM Malware"/>
-			<xs:enumeration value="Ransomware"/>
-			<xs:enumeration value="Remote Access Trojan"/>
-			<xs:enumeration value="Rogue Antivirus"/>
-			<xs:enumeration value="Rootkit"/>
+			<xs:enumeration value="Exploit Kits">
+				<xs:annotation>
+					<xs:documentation>A software toolkit to target common vulnerabilities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="POS / ATM Malware">
+				<xs:annotation>
+					<xs:documentation>Malware that exclusively targets point of sale (POS) systems or automatic teller machines (ATMs).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ransomware">
+				<xs:annotation>
+					<xs:documentation>A type of malware that encrypts files on a victim's system, demanding payment of ransom in return for the access codes required to unlock files.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Remote Access Trojan">
+				<xs:annotation>
+					<xs:documentation>A remote access Trojan program or RAT, is a Trojan horse capable of controlling a machine through commands issue by a remote attacker.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Rogue Antivirus">
+				<xs:annotation>
+					<xs:documentation>A fake security product that demands money to clean phony infections.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Rootkit">
+				<xs:annotation>
+					<xs:documentation>A method of hiding files or processes from normal methods of monitoring, and is often used by malware to conceal its presence and activities. Rootkits can operate at a number of levels, from the application level - simply replacing or adjusting the settings of system software to prevent the display of certain information - through hooking certain functions or inserting modules or drivers into the operating system kernel, to the deeper level of firmware or virtualization rook kits, which are activated before the operating system and thus even harder to detect while the system is running.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Indicator Type Vocabulary -->
@@ -358,8 +406,6 @@
 		<xs:annotation>
 			<xs:documentation>
 				The IndicatorTypeVocab is the default STIX vocabulary for expressing indicator types.
-
-				Note that this vocabulary is under development. Feedback is appreciated and should be sent to the STIX discussion list.
 			</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
@@ -551,7 +597,7 @@
 	</xs:complexType>
 	<xs:simpleType name="COAStageEnum-1.0">
 		<xs:annotation>
-			<xs:documentation>The default set of stages of the threat management lifecycle that a COA may be applicable to.</xs:documentation>
+			<xs:documentation>The COAStageVocab enumeration is used to define the default STIX vocabulary for expressing the stages of the threat management lifecycle to which a COA is applicable. </xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 			</xs:appinfo>
@@ -572,7 +618,7 @@
 	<!-- Campaign Status Vocabulary -->
 	<xs:complexType name="CampaignStatusVocab-1.0">
 		<xs:annotation>
-			<xs:documentation>The CampaignStatusVocab is the default STIX vocabulary for expressing the status of a campaign.</xs:documentation>
+			<xs:documentation>The CampaignStatusVocab enumeration is used to define the default STIX vocabulary for expressing the status of a campaign.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -633,14 +679,42 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="New"/>
-			<xs:enumeration value="Open"/>
-			<xs:enumeration value="Stalled"/>
-			<xs:enumeration value="Containment Achieved"/>
-			<xs:enumeration value="Restoration Achieved"/>
+			<xs:enumeration value="Open">
+				<xs:annotation>
+					<xs:documentation>The incident is being investigated.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Stalled">
+				<xs:annotation>
+					<xs:documentation>The investigation of the incident is open but progress is not being made.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Containment Achieved">
+				<xs:annotation>
+					<xs:documentation>Any negative impacts of the incident have been mitigated.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Restoration Achieved">
+				<xs:annotation>
+					<xs:documentation>Any services or operations that were degraded or disrupted have been restored</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Incident Reported"/>
-			<xs:enumeration value="Closed"/>
-			<xs:enumeration value="Rejected"/>
-			<xs:enumeration value="Deleted"/>
+			<xs:enumeration value="Closed">
+				<xs:annotation>
+					<xs:documentation>The incident is no longer under investigation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Rejected">
+				<xs:annotation>
+					<xs:documentation>The incident was determined to be invalid.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Deleted">
+				<xs:annotation>
+					<xs:documentation>The incident was marked as “deleted”.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Enumerations from VERIS -->
@@ -813,6 +887,13 @@
 	<xs:complexType name="DiscoveryMethodVocab-1.0">
 		<xs:annotation>
 			<xs:documentation>The DiscoveryMethodVocab is the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
+			<xs:documentation>NOTE: As of STIX Version 1.2, DiscoveryMethodVocab-1.0 is deprecated. Please use version 2.0 instead.
+            </xs:documentation>
+			<xs:appinfo>
+				<version>1.0</version>
+				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+				<deprecated>true</deprecated>
+			</xs:appinfo>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="stixCommon:ControlledVocabularyStringType">
@@ -827,11 +908,14 @@
 	<xs:simpleType name="DiscoveryMethodEnum-1.0">
 		<xs:annotation>
 			<xs:documentation>
-                The possible values for expressing how an incident was discovered.
+                The DiscoveryMethodEnum is used to define the default STIX vocabulary for expressing how an incident was discovered.</xs:documentation>
+			<xs:documentation>
+				NOTE: As of STIX Version 1.2, DiscoveryMethodEnum-1.0 is deprecated. Please use version 2.0 instead.
             </xs:documentation>
 			<xs:appinfo>
 				<version>1.0</version>
 				<source>This vocabulary is a part of the VERIS framework and is used with their permission.</source>
+				<deprecated>true</deprecated>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
@@ -1297,7 +1381,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Insignificant">
 				<xs:annotation>
-					<xs:documentation>The impact is absorbed by normal activities.</xs:documentation>
+					<xs:documentation>The impact is insignificant because it is absorbed by normal activities.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="Distracting">
@@ -1406,14 +1490,54 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Backup"/>
-			<xs:enumeration value="Database"/>
-			<xs:enumeration value="DHCP"/>
-			<xs:enumeration value="Directory"/>
-			<xs:enumeration value="DCS"/>
-			<xs:enumeration value="DNS"/>
-			<xs:enumeration value="File"/>
-			<xs:enumeration value="Log"/>
+			<xs:enumeration value="Backup">
+				<xs:annotation>
+					<xs:documentation>A copy of data on a different storage device to be available in the case of destruction of the original data.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Database">
+				<xs:annotation>
+					<xs:documentation>Software for efficiently storing large amounts of data.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DHCP">
+				<xs:annotation>
+					<xs:documentation>Dynamic Host Configuration Protocol (DHCP) is a standardized network protocol used on Internet Protocol (IP) networks for dynamically distributing network configuration parameters, such as IP addresses for interfaces and services.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Directory">
+				<xs:annotation>
+					<xs:documentation>A file system artifact for storing a collection of other file system artifacts, including other directories
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DCS">
+				<xs:annotation>
+					<xs:documentation>A distributed control system (DCS) is a control system for a process or plant, where elements are distributed throughout the system.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DNS">
+				<xs:annotation>
+					<xs:documentation>Domain name system (DNS) is a collection of names of a computer hardware and/or software artifacts on a computer network
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="File">
+				<xs:annotation>
+					<xs:documentation>A file system artifact for storing data in a particular format
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Log">
+				<xs:annotation>
+					<xs:documentation>A digital recording of the activity of a device or process
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Mail"/>
 			<xs:enumeration value="Mainframe"/>
 			<xs:enumeration value="Payment switch"/>
@@ -1422,65 +1546,235 @@
 			<xs:enumeration value="Proxy"/>
 			<xs:enumeration value="Remote access"/>
 			<xs:enumeration value="SCADA"/>
-			<xs:enumeration value="Web application"/>
+			<xs:enumeration value="Web application">
+				<xs:annotation>
+					<xs:documentation>A software application running on a server, which is accessed over the internet using a browser.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Server"/>
-			<xs:enumeration value="Access reader"/>
-			<xs:enumeration value="Camera"/>
-			<xs:enumeration value="Firewall"/>
-			<xs:enumeration value="HSM"/>
-			<xs:enumeration value="IDS"/>
+			<xs:enumeration value="Access reader">
+				<xs:annotation>
+					<xs:documentation>A device that protects an access point, using credentials.  Both the access point and the credentials themselves can be virtual (password) or physical (access card).
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Camera">
+				<xs:annotation>
+					<xs:documentation>A device for taking a photograph or video
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Firewall">
+				<xs:annotation>
+					<xs:documentation>A network security system that limits access to trusted traffic
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HSM">
+				<xs:annotation>
+					<xs:documentation>A hardware security model (HSM) is a device that securely stores a digital cryptographic key.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IDS">
+				<xs:annotation>
+					<xs:documentation>An intrusion detection system (IDS) is a device or software application that monitors network or system activities for malicious activities or policy violations and produces reports to a management station
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Broadband"/>
-			<xs:enumeration value="PBX"/>
+			<xs:enumeration value="PBX">
+				<xs:annotation>
+					<xs:documentation>A private branch exchange (PBX) is a telephone switching system local to an organization
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Private WAN"/>
-			<xs:enumeration value="PLC"/>
+			<xs:enumeration value="PLC">
+				<xs:annotation>
+					<xs:documentation>A programmable logic controller (PLC) is a digital device used to control an electomechanical device.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Public WAN"/>
-			<xs:enumeration value="RTU"/>
+			<xs:enumeration value="RTU">
+				<xs:annotation>
+					<xs:documentation>Remote Terminal Unit (RTU)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Router or switch"/>
 			<xs:enumeration value="SAN"/>
 			<xs:enumeration value="Telephone"/>
 			<xs:enumeration value="VoIP adapter"/>
-			<xs:enumeration value="LAN"/>
-			<xs:enumeration value="WLAN"/>
-			<xs:enumeration value="Network"/>
-			<xs:enumeration value="Auth token"/>
-			<xs:enumeration value="ATM"/>
-			<xs:enumeration value="Desktop"/>
+			<xs:enumeration value="LAN">
+				<xs:annotation>
+					<xs:documentation>A local area network (LAN)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WLAN">
+				<xs:annotation>
+					<xs:documentation>Wireless local area network (WLAN)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Network">
+				<xs:annotation>
+					<xs:documentation>A collection of devices that are connected either physically or virtually
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Auth token">
+				<xs:annotation>
+					<xs:documentation>A token used during authenicationauthentication of an object, such as a user or system. 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ATM">
+				<xs:annotation>
+					<xs:documentation>An automatic teller machine.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Desktop">
+				<xs:annotation>
+					<xs:documentation>A personal computer that generally isn’t portable.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="PED pad"/>
-			<xs:enumeration value="Gas terminal"/>
-			<xs:enumeration value="Laptop"/>
-			<xs:enumeration value="Media"/>
-			<xs:enumeration value="Mobile phone"/>
-			<xs:enumeration value="Peripheral"/>
+			<xs:enumeration value="Gas terminal">
+				<xs:annotation>
+					<xs:documentation>An internet enabled gasoline dispencing device.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Laptop">
+				<xs:annotation>
+					<xs:documentation>A portable personal computer.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Media">
+				<xs:annotation>
+					<xs:documentation>An object used to store and deliver data
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Mobile phone">
+				<xs:annotation>
+					<xs:documentation>A portable telephone that communicates over a cellular network
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Peripheral">
+				<xs:annotation>
+					<xs:documentation>A device, which usually not logically or physically part of the main device, but connected physically or virtually.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="POS terminal"/>
 			<xs:enumeration value="Kiosk"/>
-			<xs:enumeration value="Tablet"/>
-			<xs:enumeration value="VoIP phone"/>
+			<xs:enumeration value="Tablet">
+				<xs:annotation>
+					<xs:documentation>A portable personal computer without a hardware keyboard
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VoIP phone">
+				<xs:annotation>
+					<xs:documentation>A telephone that communicates over voice internet protocol (VoIP)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="User Device"/>
-			<xs:enumeration value="Tapes"/>
+			<xs:enumeration value="Tapes">
+				<xs:annotation>
+					<xs:documentation>A data media that uses spools of magnetic tape
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Disk media"/>
 			<xs:enumeration value="Documents"/>
-			<xs:enumeration value="Flash drive"/>
-			<xs:enumeration value="Disk drive"/>
+			<xs:enumeration value="Flash drive">
+				<xs:annotation>
+					<xs:documentation>A solid state data storage device that does not contain any moving parts.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Disk drive">
+				<xs:annotation>
+					<xs:documentation>A device used to store data on a disk medium
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Smart card"/>
 			<xs:enumeration value="Payment card"/>
 			<xs:enumeration value="Administrator"/>
 			<xs:enumeration value="Auditor"/>
-			<xs:enumeration value="Call center"/>
-			<xs:enumeration value="Cashier"/>
-			<xs:enumeration value="Customer"/>
-			<xs:enumeration value="Developer"/>
+			<xs:enumeration value="Call center">
+				<xs:annotation>
+					<xs:documentation>A group of individuals that handles telephone inquiries for an organization
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Cashier">
+				<xs:annotation>
+					<xs:documentation>A cashier is a person who handles the cash register at various locations such as the point of sale in a retail store.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Customer">
+				<xs:annotation>
+					<xs:documentation>An individual or organization that purchases a product or service.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Developer">
+				<xs:annotation>
+					<xs:documentation>An individual that develops hadwarehardware, software, etc.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="End-user"/>
 			<xs:enumeration value="Executive"/>
 			<xs:enumeration value="Finance"/>
-			<xs:enumeration value="Former employee"/>
-			<xs:enumeration value="Guard"/>
-			<xs:enumeration value="Helpdesk"/>
-			<xs:enumeration value="Human resources"/>
+			<xs:enumeration value="Former employee">
+				<xs:annotation>
+					<xs:documentation>An individual who was previously employee by an organization
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Guard">
+				<xs:annotation>
+					<xs:documentation>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Helpdesk">
+				<xs:annotation>
+					<xs:documentation>An individual who secures a particular device or location
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Human resources">
+				<xs:annotation>
+					<xs:documentation>A department in an organization that performs personnel management.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Maintenance"/>
 			<xs:enumeration value="Manager"/>
 			<xs:enumeration value="Partner"/>
 			<xs:enumeration value="Person"/>
-			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>An unknown asset
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Attacker Infrastructure Vocabulary -->
@@ -1616,15 +1910,55 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Information Assets"/>
-			<xs:enumeration value="Information Assets - Corporate Employee Information"/>
-			<xs:enumeration value="Information Assets - Customer PII"/>
-			<xs:enumeration value="Information Assets - Email Lists / Archives"/>
-			<xs:enumeration value="Information Assets - Financial Data"/>
+			<xs:enumeration value="Information Assets">
+				<xs:annotation>
+					<xs:documentation>Non-specific information.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Information Assets - Corporate Employee Information">
+				<xs:annotation>
+					<xs:documentation>Data related to an employee, such as salary.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Information Assets - Customer PII">
+				<xs:annotation>
+					<xs:documentation>Data related to a customer, such as their SSN.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Information Assets - Email Lists / Archives">
+				<xs:annotation>
+					<xs:documentation>Email addresses collected by an organization.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Information Assets - Financial Data">
+				<xs:annotation>
+					<xs:documentation>Information such as credit card numbers, bank accounts, etc.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Information Assets - Intellectual Property"/>
-			<xs:enumeration value="Information Assets - Mobile Phone Contacts"/>
-			<xs:enumeration value="Information Assets - User Credentials"/>
-			<xs:enumeration value="Authentication Cookies"/>
+			<xs:enumeration value="Information Assets - Mobile Phone Contacts">
+				<xs:annotation>
+					<xs:documentation>Information related to associates from a cell phone.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Information Assets - User Credentials">
+				<xs:annotation>
+					<xs:documentation>Username and/or passwords
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Authentication Cookies">
+				<xs:annotation>
+					<xs:documentation>A small piece of data, usually stored to remember that a user has authenticated on a computer system.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Threat Actor Type Vocabulary -->
@@ -1698,20 +2032,72 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Ideological"/>
-			<xs:enumeration value="Ideological - Anti-Corruption"/>
-			<xs:enumeration value="Ideological - Anti-Establishment"/>
-			<xs:enumeration value="Ideological - Environmental"/>
-			<xs:enumeration value="Ideological - Ethnic / Nationalist"/>
-			<xs:enumeration value="Ideological - Information Freedom"/>
-			<xs:enumeration value="Ideological - Religious"/>
+			<xs:enumeration value="Ideological">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by non-specific ideological reasons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Corruption">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in corruption.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Establishment">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack established authority.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Environmental">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions detrimental to the environment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Ethnic / Nationalist">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either against or in favor of a nation state or ethnic group.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Information Freedom">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the belief in the freedom of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Religious">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets associated with a religion.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Ideological - Security Awareness"/>
-			<xs:enumeration value="Ideological - Human Rights"/>
-			<xs:enumeration value="Ego"/>
-			<xs:enumeration value="Financial or Economic"/>
-			<xs:enumeration value="Military"/>
-			<xs:enumeration value="Opportunistic"/>
-			<xs:enumeration value="Political"/>
+			<xs:enumeration value="Ideological - Human Rights">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either in favor or against human rights.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ego">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by enhancing their own self worth.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial or Economic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by financial gain.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Military">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some military advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Opportunistic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the relative vulnerability of the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Political">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some political advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="MotivationVocab-1.0.1">
@@ -1745,20 +2131,72 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Ideological"/>
-			<xs:enumeration value="Ideological - Anti-Corruption"/>
-			<xs:enumeration value="Ideological - Anti-Establishment"/>
-			<xs:enumeration value="Ideological - Environmental"/>
-			<xs:enumeration value="Ideological - Ethnic / Nationalist"/>
-			<xs:enumeration value="Ideological - Information Freedom"/>
-			<xs:enumeration value="Ideological - Religious"/>
+			<xs:enumeration value="Ideological">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by non-specific ideological reasons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Corruption">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in corruption.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Establishment">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack established authority.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Environmental">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions detrimental to the environment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Ethnic / Nationalist">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either against or in favor of a nation state or ethnic group.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Information Freedom">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the belief in the freedom of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Religious">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets associated with a religion.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Ideological - Security Awareness"/>
-			<xs:enumeration value="Ideological - Human Rights"/>
-			<xs:enumeration value="Ego"/>
-			<xs:enumeration value="Financial or Economic"/>
-			<xs:enumeration value="Military"/>
-			<xs:enumeration value="Opportunistic"/>
-			<xs:enumeration value="Policital"/>
+			<xs:enumeration value="Ideological - Human Rights">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either in favor or against human rights.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ego">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by enhancing their own self worth.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial or Economic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by financial gain.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Military">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some military advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Opportunistic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the relative vulnerability of the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Policital">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some political advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="MotivationVocab-1.0">
@@ -1790,20 +2228,72 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Ideological"/>
-			<xs:enumeration value="Ideological - Anti-Corruption"/>
-			<xs:enumeration value="Ideological - Anti-Establisment"/>
-			<xs:enumeration value="Ideological - Environmental"/>
-			<xs:enumeration value="Ideological - Ethnic / Nationalist"/>
-			<xs:enumeration value="Ideological - Information Freedom"/>
-			<xs:enumeration value="Ideological - Religious"/>
+			<xs:enumeration value="Ideological">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by non-specific ideological reasons.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Corruption">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in corruption.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Anti-Establisment">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack established authority.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Environmental">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions detrimental to the environment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Ethnic / Nationalist">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either against or in favor of a nation state or ethnic group.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Information Freedom">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the belief in the freedom of information.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ideological - Religious">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets associated with a religion.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Ideological - Security Awareness"/>
-			<xs:enumeration value="Ideological - Human Rights"/>
-			<xs:enumeration value="Ego"/>
-			<xs:enumeration value="Financial or Economic"/>
-			<xs:enumeration value="Military"/>
-			<xs:enumeration value="Opportunistic"/>
-			<xs:enumeration value="Policital"/>
+			<xs:enumeration value="Ideological - Human Rights">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated to attack targets engaging in actions either in favor or against human rights.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ego">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by enhancing their own self worth.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial or Economic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by financial gain.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Military">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some military advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Opportunistic">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the relative vulnerability of the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Policital">
+				<xs:annotation>
+					<xs:documentation>The threat actor is motivated by the desire to exercise some political advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Intended Effect Vocabulary -->
@@ -1830,27 +2320,95 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Advantage"/>
-			<xs:enumeration value="Advantage - Economic"/>
-			<xs:enumeration value="Advantage - Military"/>
-			<xs:enumeration value="Advantage - Political"/>
-			<xs:enumeration value="Theft"/>
-			<xs:enumeration value="Theft - Intellectual Property"/>
-			<xs:enumeration value="Theft - Credential Theft"/>
-			<xs:enumeration value="Theft - Identity Theft"/>
-			<xs:enumeration value="Theft - Theft of Proprietary Information"/>
-			<xs:enumeration value="Account Takeover"/>
-			<xs:enumeration value="Brand Damage"/>
-			<xs:enumeration value="Competitive Advantage"/>
-			<xs:enumeration value="Degradation of Service"/>
+			<xs:enumeration value="Advantage">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain some advantage over the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Advantage - Economic">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain some economic advantage over the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Advantage - Military">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain some military advantage over the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Advantage - Political">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain some political advantage over the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Theft">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to perpetrate a non-specific theft.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Theft - Intellectual Property">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to perpetrate a theft of intellectual property.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Theft - Credential Theft">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to perpetrate a theft of credentials.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Theft - Identity Theft">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to perpetrate a theft of the target’s identity.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Theft - Theft of Proprietary Information">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to perpetrate a theft of proprietary information</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Account Takeover">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain control over an account (financial, etc).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Brand Damage">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to cause some brand damage on the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Competitive Advantage">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was for the attacker to obtain some non-specific competitive advantage over the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Degradation of Service">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was reducing the level of services provided by the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Denial and Deception"/>
-			<xs:enumeration value="Destruction"/>
+			<xs:enumeration value="Destruction">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to cause the destruction of a software or hardware system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Disruption"/>
-			<xs:enumeration value="Embarrassment"/>
+			<xs:enumeration value="Embarrassment">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to expose a socially unacceptable action by the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Exposure"/>
-			<xs:enumeration value="Extortion"/>
+			<xs:enumeration value="Extortion">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was force the payment of some sort to prevent the attacker from taking some action.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Fraud"/>
-			<xs:enumeration value="Harassment"/>
+			<xs:enumeration value="Harassment">
+				<xs:annotation>
+					<xs:documentation>The intended effect of the incident was to pressure or intimidate the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="ICS Control"/>
 			<xs:enumeration value="Traffic Diversion"/>
 			<xs:enumeration value="Unauthorized Access"/>
@@ -1981,20 +2539,72 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Brand or Image Degradation"/>
-			<xs:enumeration value="Loss of Competitive Advantage"/>
-			<xs:enumeration value="Loss of Competitive Advantage - Economic"/>
-			<xs:enumeration value="Loss of Competitive Advantage - Military"/>
-			<xs:enumeration value="Loss of Competitive Advantage - Political"/>
-			<xs:enumeration value="Data Breach or Compromise"/>
-			<xs:enumeration value="Degradation of Service"/>
-			<xs:enumeration value="Destruction"/>
-			<xs:enumeration value="Disruption of Service / Operations"/>
-			<xs:enumeration value="Financial Loss"/>
-			<xs:enumeration value="Loss of Confidential / Proprietary Information or Intellectual Property"/>
-			<xs:enumeration value="Regulatory, Compliance or Legal Impact"/>
+			<xs:enumeration value="Brand or Image Degradation">
+				<xs:annotation>
+					<xs:documentation>The image or brand of the target related to the incident is damaged.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss of Competitive Advantage">
+				<xs:annotation>
+					<xs:documentation>The incident involved a non-specified loss of competitive advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss of Competitive Advantage - Economic">
+				<xs:annotation>
+					<xs:documentation>The incident involved an economic loss of competitive advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss of Competitive Advantage - Military">
+				<xs:annotation>
+					<xs:documentation>The incident involved a military loss of competitive advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Loss of Competitive Advantage - Political">
+				<xs:annotation>
+					<xs:documentation>The incident involved a political loss of competitive advantage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Data Breach or Compromise">
+				<xs:annotation>
+					<xs:documentation>The incident involved obtained or altered data.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		
+			<xs:enumeration value="Degradation of Service">
+				<xs:annotation>
+					<xs:documentation>The incident involved reducing the level of service of the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Destruction">
+				<xs:annotation>
+					<xs:documentation>The incident involved the destruction of a software or hardware system.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Disruption of Service / Operations">
+				<xs:annotation>
+					<xs:documentation>The incident involved terminating the service or operations of the target.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Financial Loss">
+				<xs:annotation>
+					<xs:documentation>The incident involved a financial loss by the target.</xs:documentation>
+				</xs:annotation>
+			<xs:enumeration value="Loss of Confidential / Proprietary Information or Intellectual Property">
+				<xs:annotation>
+					<xs:documentation>During the incident proprietary information or intellectual property (IP) was obtained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Regulatory, Compliance or Legal Impact">
+				<xs:annotation>
+					<xs:documentation>The incident caused some violation of law, regulation, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Unintended Access"/>
-			<xs:enumeration value="User Data Loss"/>
+			<xs:enumeration value="User Data Loss">
+				<xs:annotation>
+					<xs:documentation>During the incident, user data was obtained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Attacker Tool Type Vocabulary -->
@@ -2024,13 +2634,37 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Malware"/>
-			<xs:enumeration value="Penetration Testing"/>
-			<xs:enumeration value="Port Scanner"/>
-			<xs:enumeration value="Traffic Scanner"/>
-			<xs:enumeration value="Vulnerability Scanner"/>
+			<xs:enumeration value="Malware">
+				<xs:annotation>
+					<xs:documentation>Software designed to be used to attack or gain access to a computer system</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Penetration Testing">
+				<xs:annotation>
+					<xs:documentation>The process of investigating a computer system to find security weaknesses.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Port Scanner">
+				<xs:annotation>
+					<xs:documentation>A software application that reports on the status of the ports available on a host computer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Traffic Scanner">
+				<xs:annotation>
+					<xs:documentation>A software application that monitors data transferred on a network</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vulnerability Scanner">
+				<xs:annotation>
+					<xs:documentation>A type of software application used to discover vulnerabilities on a host, a network, or in a software product.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Application Scanner"/>
-			<xs:enumeration value="Password Cracking"/>
+			<xs:enumeration value="Password Cracking">
+				<xs:annotation>
+					<xs:documentation>The process of using a software application to recover a plain text password from its encrypted representation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Incident Category Vocabulary -->
@@ -2117,9 +2751,21 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Confidentiality"/>
-			<xs:enumeration value="Integrity"/>
-			<xs:enumeration value="Availability"/>
+			<xs:enumeration value="Confidentiality">
+				<xs:annotation>
+					<xs:documentation>Data can be obtained by an unauthorized user.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Integrity">
+				<xs:annotation>
+					<xs:documentation>Data produced by a computer system is unreliable.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Availability">
+				<xs:annotation>
+					<xs:documentation>The availability of a computer system has been compromised.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Accountability"/>
 			<xs:enumeration value="Non-Repudiation"/>
 		</xs:restriction>

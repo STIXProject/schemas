@@ -13,15 +13,15 @@
 	<xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" schemaLocation="../../data-marking.xsd"/>
 	<xs:complexType name="SimpleMarkingStructureType">
 		<xs:annotation>
-			<xs:documentation>The SimpleMarkingStructureType is a basic implementation of the data marking schema that allows for a string statement to be associated with the data being marked. One example might be the application of a copyright statement to some data set.</xs:documentation>
-			<xs:documentation>Nodes may be marked by multiple SimpleMarking statements. When this occurs, all SimpleMarking statements applied to that node are considered valid. There is no resolution for SimpleMarking Statements that appear to conflict: the behavior is undefined at the STIX level.</xs:documentation>
+			<xs:documentation>The SimpleMarkingStructureType extends the Data Marking MarkingStructureType and is a basic implementation of the Data Marking data model that allows for a string statement to be associated with the data being marked. It is contained in the simpleMarking namespace. One example is the application of a copyright statement to some data set.  </xs:documentation>
+			<xs:documentation>Nodes may be marked by multiple Simple Marking statements. When this occurs, all of the multiple Simple Marking statements apply. It is up to the organization adding an additional Simple Marking statement to ensure that the addition does not conflict with any previously applied Simple Marking statements.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="marking:MarkingStructureType">
 				<xs:sequence>
 					<xs:element name="Statement" type="xs:string">
 						<xs:annotation>
-							<xs:documentation>The statement to apply to the structure for which the Marking is to be applied.</xs:documentation>
+							<xs:documentation>The Statement property specifies the statement to apply to the structure for which the marking is to be applied.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

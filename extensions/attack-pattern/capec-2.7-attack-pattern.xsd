@@ -14,14 +14,14 @@
 	<xs:import namespace="http://capec.mitre.org/capec-2" schemaLocation="../../external/capec_2.7/ap_schema_v2.7.xsd"/>
 	<xs:complexType name="CAPEC2.7InstanceType">
 		<xs:annotation>
-			<xs:documentation>The CAPECInstanceType provides an extension to the APStructureAbstractType which imports and leverages the CAPEC 2.7 schema for structured characterization of Attack Patterns.</xs:documentation>
+			<xs:documentation>The CAPEC2.7InstanceType provides an extension to the STIX TTP AttackPatternType class and belongs to the stix-capec namespace. It imports and leverages the CAPEC 2.7 schema for a structured characterization of attack patterns.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="ttp:AttackPatternType">
 				<xs:sequence>
 					<xs:element name="CAPEC" type="capec:Attack_PatternType">
 						<xs:annotation>
-							<xs:documentation>The CAPEC field contains the structured specification of an Attack Pattern utilizing the CAPEC schema.</xs:documentation>
+							<xs:documentation>The CAPEC property specifies the structured specification of an attack pattern utilizing the CAPEC schema.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
