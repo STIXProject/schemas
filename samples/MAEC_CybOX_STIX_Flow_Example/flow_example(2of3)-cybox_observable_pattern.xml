@@ -4,13 +4,13 @@
     1) Existence of a file with a particular name in WINDOWS\system32\ directory
     2) Existence of said file in Winlogon\Userinit Registry key value for persistence after reboot
     Part 2 of MAEC -> CybOX -> STIX Chain Example -->
-<cybox:Observables xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
- xmlns:cybox="http://cybox.mitre.org/cybox-2"
+<cybox:Observables xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
+ xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
  xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
  xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:example="http://example.com/"
- xsi:schemaLocation="http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
+ xsi:schemaLocation="http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
  http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
  http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd"
  cybox_major_version="2" 

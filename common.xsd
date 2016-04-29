@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2" xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2" xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1" targetNamespace="http://docs.oasis-open.org/cti/ns/stix/common-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
+	<xs:annotation>
+		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:appinfo>
+			<schema>STIX Common</schema>
+			<version>1.2</version>
+			<date>05/15/2015 9:00:00 AM</date>
+			<short_description>Structured Threat Information eXpression (STIX) - Common - Schematic implementation for the common types of a structured cyber threat expression language architecture.</short_description>
+			<terms_of_use>Copyright (c) 2012-2015, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/cybox/common-2" schemaLocation="cybox/common.xsd"/>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/cybox/core-2" schemaLocation="cybox/core.xsd"/>
+	<xs:complexType name="InformationSourceType">
+		<xs:annotation>
+			<xs:documentation>The InformationSourceType specifies source information for the given STIX content. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Description property captures a textual description of the information source. Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Identity property characterizes the identity of the information source. </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.2/ciq_identity.xsd.</xs:documentation>
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Role" type="stixCommon:ControlledVocabularyStringType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Role property specifies a role played by the information source.  Examples of potential roles include initial author, aggregator, and transformer/translator (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is InformationSourceRoleVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Contributing_Sources" type="stixCommon:ContributingSourcesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Contributing_Sources property specifies a set of zero or more individual sources contributing to the STIX content. Note that this property captures secondary sources of information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Time" type="cyboxCommon:TimeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Time property characterizes the time-related attributes of the STIX content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tools" type="cyboxCommon:ToolsInformationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Tools property specifies a set of one or more tools contributing to the STIX content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="References" type="stixCommon:ReferencesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The References property specifies a set of one or more references to information source material related to the STIX content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="ConfidenceType">
+		<xs:annotation>
+			<xs:documentation>The ConfidenceType characterizes confidence in an assertion.  </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Value property specifies the level of confidence held in this direct assertion. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Description property captures a textual description of the confidence assertion.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Source property characterizes the organization or tool that is the source of the confidence assertion. Examples of details captured include identifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a free string.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Confidence_Assertion_Chain" type="stixCommon:ConfidenceAssertionChainType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Confidence_Assertion_Chain property specifies a set of one or more related confidence assertions.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the date and time of the confidence assertion.  </xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+			<xs:annotation>
+				<xs:documentation>The timestamp_precision property specifies the granularity with which the timestamp property should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is ‘second.’ Digits in a timestamp that are beyond the specified precision should be zeroed out.  </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="ActivityType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The ActivityType characterizes basic information about an activity a defender might use. It is an abstract type, so it MUST be extended to express additional activity information. STIX does not define a default subtype. Note that an activity defined by the ActivityType is fairly simple and includes only date/time information and a description. By contrast, a Course of Action construct contains detailed information such as the stage in the cyber threat management lifecycle to which the course of action is relevant, the impact and cost of applying the course of action, and efficacy of the course of action.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Date_Time" type="stixCommon:DateTimeWithPrecisionType">
+				<xs:annotation>
+					<xs:documentation>The Date_Time property specifies the date and time at which the activity occurred.</xs:documentation>
+					<xs:documentation>To avoid ambiguity, all timestamps SHOULD include a specification of the time zone.  In addition to specifying a date and time, the Date_Time property may also capture a precision property to specify the granularity with which the time should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Description property captures a textual description of the activity.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="KillChainsType">
+		<xs:annotation>
+			<xs:documentation>The KillChainsType specifies a set of one or more specific kill chain definitions. </xs:documentation>
+		</xs:annotation> 
+		<xs:sequence>
+			<xs:element name="Kill_Chain" type="stixCommon:KillChainType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A cyber kill chain is a phase-based model to describe the stages of an attack.  The Kill_Chain property characterizes a single kill chain that may be referenced elsewhere; for example, from within a TTP or an Indicator component.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KillChainType">
+		<xs:annotation>
+			<xs:documentation>A cyber kill chain is a phase-based model to describe the stages of an attack.  The KillChainType characterizes a kill chain definition that may be referenced elsewhere; for example, from within a TTP or an Indicator component.  Information captured includes a set of one or more kill chain phases that compose the kill chain.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kill_Chain_Phase" type="stixCommon:KillChainPhaseType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Kill_Chain_Phase property characterizes an individual phase within the kill chain.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the kill chain definition. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The name property captures a simple name for the kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="definer">
+			<xs:annotation>
+				<xs:documentation>The definer property specifies the organization or individual responsible for the kill chain definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="reference" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>The reference property specifies a reference associated with the kill chain using a Uniform Resource Identifier (URI).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="number_of_phases">
+			<xs:annotation>
+				<xs:documentation>The number_of_phases property specifies the number of phases in the kill chain.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="KillChainPhaseType">
+		<xs:annotation>
+			<xs:documentation>A cyber kill chain is a phase-based model to describe the stages of an attack, and a cyber kill chain phase is an individual phase within a kill chain definition.  The KillChainPhaseType characterizes an individual phase within a kill chain.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="phase_id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The phase_id property specifies a globally unique identifier for the kill chain phase.  When used within a kill chain definition (defined by KillChainType), it identifies the kill chain phase being defined.  When used within a kill chain reference (defined by KillChainPhaseReferenceType), it must reference an existing kill chain phase_id property (note that this use is similar to the use of the idref property elsewhere in STIX.)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The name property captures a descriptive name of the kill chain phase.  If KillChainPhaseType is extended by KillChainPhaseReferenceType, this attribute SHOULD be omitted, or if it is present, it MUST match the kill chain phase name used in the referenced kill chain.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ordinality" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The ordinality property specifies the ordinality (e.g., ‘1’, ‘2’, or ‘3’) of this phase within the kill chain definition. It should be omitted when the associated kill chain is being referenced (defined by  KillChainPhaseReferenceType), but if the property is present, it MUST match the ordinality of the corresponding phase in the kill chain that is referenced.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="KillChainPhasesReferenceType">
+		<xs:annotation>
+			<xs:documentation>A cyber kill chain is a phase-based model to describe the stages of an attack, and a cyber kill chain phase is an individual phase within a kill chain definition. The KillChainPhasesReferenceType specifies a set of one or more kill chain phases. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kill_Chain_Phase" type="stixCommon:KillChainPhaseReferenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Kill_Chain_Phase property specifies a single kill chain phase associated with this item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KillChainPhaseReferenceType">
+		<xs:annotation>
+			<xs:documentation>The KillChainPhaseReferenceType specifies a phase within a kill chain by extending KillChainPhaseType .  A kill chain reference in an Indicator component indicates that the indicator detects malicious behavior at that phase of the kill chain. A kill chain reference in a TTP component indicates that the TTP is used (malware, infrastructure, etc.) at that phase of the kill chain.</xs:documentation>
+			<xs:documentation>This type extends from stixCommon:KillChainPhaseType and contains several attributes that are redundant to the original kill chain definition: kill_chain_name, ordinality, and name. These attributes should not be used to redefine attributes in the referenced kill chain. Instead, it is strongly suggested that they either be omitted or, if they are present, they must contain the same values as the kill chain definition. This ensures data consistency across the kill chain itself and all references to it.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:KillChainPhaseType">
+				<xs:attribute name="kill_chain_id" type="xs:QName">
+					<xs:annotation>
+						<xs:documentation>The kill_chain_id property specifies the globally unique identifier for the referenced kill chain instance.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="kill_chain_name" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>The kill_chain_name property captures a descriptive name of the kill chain.  If a kill chain is referenced by the kill_chain_id property, this attribute SHOULD be omitted, or if it is present, it MUST match the name property of the corresponding kill chain phase that is referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="IdentityType">
+		<xs:annotation>
+			<xs:documentation>The IdentityType characterizes identity information for both individuals and organizations. </xs:documentation>
+			<xs:documentation>This type is extended through the xsi:type mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq-3.0-identity.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/identity/ciq-3.0-identity.xsd.</xs:documentation>
+			<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property of this type.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Name property captures a simple name for the identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Related_Identities" type="stixCommon:RelatedIdentitiesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Related_Identities property specifies a set of one or more identities related to this identify.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the identity.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies a globally unique identifier for an identity specified elsewhere. </xs:documentation>
+				<xs:documentation>When idref is specified, the id property must not be specified, and any instance of this Identity should not hold content.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- Relationships -->
+	<xs:complexType name="GenericRelationshipListType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The GenericRelationshipListType specifies how the relationships between a subject STIX construct and a set of one or more other STIX constructs should be interpreted.  It is an abstract type, and it MUST be extended to characterize the actual set of related constructs. </xs:documentation>
+			<xs:documentation>Extensions of GenericRelationshipListType are used to explicitly represent the one-to-many relationship between constructs. In this way, the model enables the ability to express a property of the set itself. Currently, the only property defined is the scope of the relationship – whether the elements of the set are related individually or as a group.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="scope" type="stixCommon:RelationshipScopeEnum" default="exclusive">
+			<xs:annotation>
+				<xs:documentation>The scope property specifies how the set of relationships should be interpreted.  Potential values are specified by the ScopeEnum enumeration.  If 'inclusive' is specified, then a single conceptual relationship is being defined between the subject construct and the combined collection of related constructs.  If 'exclusive' is specified (the default), then multiple relationships are being defined between the subject construct and each individual related construct.  </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="RelationshipScopeEnum">
+		<xs:annotation>
+			<xs:documentation>The RelationshipScopeEnum enumeration is an inventory of types of relationship groupings between a subject and a collection of objects. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="inclusive">
+				<xs:annotation>
+					<xs:documentation>A single relationship is being defined between the subject and the collection of objects indicated by the related items.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="exclusive">
+				<xs:annotation>
+					<xs:documentation>Multiple relationships are being defined between the subject and each object individually.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="GenericRelationshipType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The GenericRelationshipType captures attributes associated with a relationship between a subject STIX construct and another STIX construct.  It is an abstract type, and it MUST be extended to specify the other STIX constructs.   Use of GenericRelationshipType helps to define a consistent structure for relationships that go beyond a simple statement of “construct A is related to construct B.” Instead, additional properties of the relationship can be specified such as the nature of the relationship and the level of confidence in the presence and accuracy of the asserted relationship.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Confidence property characterizes the level of confidence in the presence and accuracy of the asserted relationship.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Information_Source property characterizes the source of the relationship information.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of tools used to collect the information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Relationship" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Relationship property specifies the nature of the relationship between two STIX constructs.  Examples of potential natures of relationship include Updates - Revises (for versioning of content), Asserted Same (for relating two Threat Actors), and Leverages (for relating two TTPs). These specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a free string.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedCampaignType">
+		<xs:annotation>
+			<xs:documentation>The RelatedCampaignType characterizes a relationship to a Campaign.  It extends GenericRelationshipType by specifying the Campaign.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Campaign" type="stixCommon:CampaignBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Campaign property characterizes a cyber threat Campaign. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CampaignType in the http://docs.oasis-open.org/cti/ns/stix/campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/campaign.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedCampaignReferenceType">
+		<xs:annotation>
+			<xs:documentation>The RelatedCampaignReferenceType characterizes a relationship to a Campaign.  It extends  GenericRelationshipType by specifying a reference to the Campaign. Unlike most other relationships that are defined in STIX, RelatedCampaignReferencesType does not allow a Campaign to be embedded; an already-defined Campaign MUST be specified by its Name property and/or a reference to its identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Campaign" type="stixCommon:CampaignReferenceType">
+						<xs:annotation>
+							<xs:documentation>The Campaign property captures a reference to the related Campaign.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CampaignReferenceType">
+		<xs:annotation>
+			<xs:documentation>The CampaignReferenceType captures a reference to a related Campaign.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Names" type="stixCommon:NamesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Names property specifies a set of one or more names (i.e., aliases) used to identify a referenced Campaign (specified by an idref property).  An organization may use names that are created internally or externally (outside the organization).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies a globally unique identifier for a Campaign defined elsewhere.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property, used in combination with the idref property, specifies a specific version of a Campaign defined elsewhere.  To avoid ambiguity, all timestamps SHOULD include a specification of the time zone.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="NamesType">
+		<xs:annotation>
+			<xs:documentation>The NamesType specifies a set of one or more names. Note that a similar type is defined in the Campaign data model (campaign:NamesType), which will likely be removed in the next major version of STIX; Campaign names will be then defined exclusively via this STIX Common NamesType. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Name property specifies a name used to identify a construct, such as an alias name.  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.2. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a free string.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedCourseOfActionType">
+		<xs:annotation>
+			<xs:documentation>The RelatedCourseOfActionType characterizes a relationship to a Course of Action.  It extendsGenericRelationshipType by specifying a related Course of Action.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Course_Of_Action" type="stixCommon:CourseOfActionBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Course_Of_Action property characterizes a Course of Action that could be taken in regard to one of more cyber threats. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedExploitTargetType">
+		<xs:annotation>
+			<xs:documentation>The RelatedExploitTargetType characterizes a relationship to an Exploit Target.  It extends GenericRelationshipType by specifying a related Exploit Target.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Exploit_Target" type="stixCommon:ExploitTargetBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Exploit_Target property characterizes an Exploit Target. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ExploitTargetType in the http://docs.oasis-open.org/cti/ns/stix/exploit-target-1 namespace. This type is defined in the exploit-target.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/exploit-target.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIncidentType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIdentityType characterizes a relationship to an identity.  It extends GenericRelationshipType  by specifying a related Identity. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Incident" type="stixCommon:IncidentBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Incident property characterizes a cyber threat Incident. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IncidentType in the http://docs.oasis-open.org/cti/ns/stix/incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/incident.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIndicatorType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIndicatorType characterizes a relationship to an Indicator.  It extends GenericRelationshipType by specifying a related Indicator. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Indicator" type="stixCommon:IndicatorBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Indicator property characterizes a cyber threat Indicator. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedObservableType">
+		<xs:annotation>
+			<xs:documentation>The RelatedObservableType characterizes a relationship to a CybOX Observable.  It extends GenericRelationshipType by specifying a related Observable. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Observable" type="cybox:ObservableType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Observable property characterizes the related cyber observable.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedThreatActorType">
+		<xs:annotation>
+			<xs:documentation>The RelatedThreatActorType characterizes a relationship to a Threat Actor.  It extends GenericRelationshipType by specifying a related Threat Actor. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Threat_Actor" type="stixCommon:ThreatActorBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The ThreatActor property characterizes a cyber Threat Actor. </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ThreatActorType in the http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 namespace. This type is defined in the threat-actor.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/threat-actor.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedTTPType">
+		<xs:annotation>
+			<xs:documentation>The RelatedTTPType characterizes a relationship to a TTP.  It extends GenericRelationshipType by specifying a related TTP. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="TTP" type="stixCommon:TTPBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The TTP property characterizes a cyber threat adversary Tactic, Technique or Procedure (TTP). </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is TTPType in the http://docs.oasis-open.org/cti/ns/stix/ttp-1 namespace. This type is defined in the ttp.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/ttp.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedReportType">
+		<xs:annotation>
+			<xs:documentation>The RelatedReportType characterizes a relationship to a Report.  It extends GenericRelationshipType by specifying a related Report.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Report" type="stixCommon:ReportBaseType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The Report property characterizes a STIX Report</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedIdentityType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes a relationship to an Identity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:sequence>
+					<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>A reference to or representation of the related Identity.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.2/ciq_identity_3.0.xsd.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- End of relationships -->
+	<!---->
+	<!--The following are a set of base, stub types defined for the decoupling of the different STIX component schemas. Each individual component schema type is defined as an extension of the relevant base type defined here. Inline usages of the main component structures will leverage these base types and instance content can simply include that structured content with the appropriate xsi:type reference. Alternatively, instances can use the base types themselves to reference using the @idref attribute -->
+	<xs:complexType name="IndicatorBaseType">
+		<xs:annotation>
+			<xs:documentation>The IndicatorBaseType is intended to be extended by a type which characterizes an indicator. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full indicator using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Indicator type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/indicator.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to an indicator defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName" use="optional">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Indicator instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to an Indicator instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of an Indicator. When used in conjunction with the id property, it specifies the definition time for the specific version of the Indicator instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of an Indicator instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="IncidentBaseType">
+		<xs:annotation>
+			<xs:documentation>The IncidentBaseType is intended to be extended by a type which characterizes an incident. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full incident using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Incident type is IncidentType in the http://docs.oasis-open.org/cti/ns/stix/incident-1 namespace. This type is defined in the incident.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/incident.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to an incident defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Incident instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to an Incident instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of an Incident. When used in conjunction with the id property, it specifies the definition time for the specific version of the Incident instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of an Incident instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TTPBaseType">
+		<xs:annotation>
+			<xs:documentation>The TTPBaseType is intended to be extended by a type which characterizes a TTP. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full TTP using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined TTP type is TTPType in the http://docs.oasis-open.org/cti/ns/stix/ttp-1 namespace. This type is defined in the ttp.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/ttp.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a TTP defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the TTP instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to a TTP instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of a TTP. When used in conjunction with the id property, it specifies the definition time for the specific version of the TTP instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of a TTP instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ExploitTargetBaseType">
+		<xs:annotation>
+			<xs:documentation>The ExploitTargetBaseType is intended to be extended by a type which characterizes an exploit target. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full exploit target using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Exploit Target type is ExploitTargetType in the http://docs.oasis-open.org/cti/ns/stix/exploit-target-1 namespace. This type is defined in the exploit-target.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/exploit-target.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to an exploit target defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Exploit Target instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to an Exploit Target instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of an Exploit Target. When used in conjunction with the id property, it specifies the definition time for the specific version of the Exploit Target instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of an Exploit Target instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="CourseOfActionBaseType">
+		<xs:annotation>
+			<xs:documentation>The CourseOfActionBaseType is intended to be extended by a type which characterizes a course of action. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full exploit target using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Course of Action type is CourseOfActionType in the http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 namespace. This type is defined in the course-of-action.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/course-of-action.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a course of action defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Course of Action instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to a Course of Action instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of a Course of Action. When used in conjunction with the id property, it specifies the definition time for the specific version of the Course of Action instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of a Course of Action instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="CampaignBaseType">
+		<xs:annotation>
+			<xs:documentation>The CampaignBaseType is intended to be extended by a type which characterizes a campaign. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full campaign using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Campaign type is CampaignType in the http://docs.oasis-open.org/cti/ns/stix/campaign-1 namespace. This type is defined in the campaign.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/campaign.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a campaign defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Campaign instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to a Campaign instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of a Campaign. When used in conjunction with the id property, it specifies the definition time for the specific version of the Campaign instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of a Campaign instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ThreatActorBaseType">
+		<xs:annotation>
+			<xs:documentation>The ThreatActortBaseType is intended to be extended by a type which characterizes a threat actor. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full threat actor using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Threat Actor type is ThreatActorType in the http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 namespace. This type is defined in the threat-actor.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/threat-actor.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a threat actor defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Threat Actor instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to a Threat Actor instance specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of a Threat Actor. When used in conjunction with the id property, it specifies the definition time for the specific version of the Threat Actor instance; when used in conjunction with the idref property, it specifies the definition time for a specific version of a Threat Actor instance defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ReportBaseType">
+		<xs:annotation>
+			<xs:documentation>The ReportBaseType is intended to be extended by a type which characterizes a report. The decision to define base types to be extended was made to minimize interdependence between STIX components; it was not made to enable structural variation. Users of this type who wish to express a full report using STIX must do so using the xsi:type extension feature. The strongly RECOMMENDED STIX-defined Report type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/report.xsd.</xs:documentation>
+			<xs:documentation>Alternatively, uses that require simply specifying an idref as a reference to a report defined elsewhere can do so without specifying an xsi:type.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="id" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The id property specifies a globally unique identifier for the Report.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="idref" type="xs:QName">
+			<xs:annotation>
+				<xs:documentation>The idref property specifies an identifier reference to a Report specified elsewhere. When the idref property is used, no properties other than idref and timestamp should be specified.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the definition time of a specific version of a Report. When used in conjunction with the id property, the timestamp property specifies the definition time for the specific version of the Report; when used in conjunction with the idref property, it specifies the definition time for a specific version of a Report defined elsewhere. The timestamp property has no defined semantic meaning if it is used without either the id or idref property.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<!-- End of component base types -->
+	<xs:complexType name="ExploitTargetsType">
+		<xs:annotation>
+			<xs:documentation>The ExploitTargetsType specifies a set of zero or more Exploit Targets .  </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Exploit_Target" type="stixCommon:ExploitTargetBaseType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Exploit_Target property characterizes an Exploit Target to be considered with respect to one or more cyber threats. </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ExploitTargetType in the http://docs.oasis-open.org/cti/ns/stix/exploit-target-1 namespace. This type is defined in the exploit-target.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/exploit-target.xsd.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressAbstractType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>The AddressAbstractType type characterizes geographic address information.  It is an abstract type, so it MUST be extended to capture an address.</xs:documentation>
+			<xs:documentation>This type is intended to be extended through the xsi:type mechanism. The default type is CIQAddress3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/address/ciq-address-3.0-1 namespace. This type is defined in the extensions/identity/ciq-3.0-address.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/address/ciq-3.0-address.xsd.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="ContributingSourcesType">
+		<xs:annotation>
+			<xs:documentation>The ContributingSourcesType specifies a set of one or more information sources contributing to the data entry.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Source property characterizes the organization or tool that is the contributing source.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/extensions/identity/ciq-3.0-identity.xsd.</xs:documentation>
+					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReferencesType">
+		<xs:annotation>
+			<xs:documentation>The ReferencesType specifies a set of one or more references.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Reference" type="xs:anyURI" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Reference property specifies a reference associated with the data entry using a Uniform Resource Identifier (URI).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelatedIdentitiesType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIdentitiesType specifies a set of one or more identities.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Related_Identity" type="stixCommon:RelatedIdentityType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Related_Identity property specifies a related identity associated with the data entry using a Uniform Resource Identifier (URI).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ConfidenceAssertionChainType">
+		<xs:annotation>
+			<xs:documentation>The ConfidenceAssertionChainType specifies a set of one or more related confidence levels in an assertion.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Confidence_Assertion" type="stixCommon:ConfidenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Confidence_Assertion property characterizes confidence in an assertion along with who made it, when it was made and how it was made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StatementType">
+		<xs:annotation>
+			<xs:documentation>The StatementType characterizes a statement associated with STIX content.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Value" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Value property specifies the statement’s level of importance. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary may be provided by the property using this construct. If that's the case, the schema annotations on that element will describe which vocabulary to use. If not, the default vocabulary is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Description property captures a textual description of the statement.  Any length is permitted.  Optional formatting is supported via the structuring_format property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Source" type="stixCommon:InformationSourceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Source property characterizes the organization or tool that is the source of the statement. Examples of details captured include identitifyingidentifying characteristics, time-related attributes, and a list of the tools used to collect the information.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.2. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a free string.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Confidence property characterizes the confidence in the statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="timestamp" type="xs:dateTime">
+			<xs:annotation>
+				<xs:documentation>The timestamp property specifies the date and time of the statement.  </xs:documentation>
+				<xs:documentation>In order to avoid ambiguity, it is strongly suggest that all timestamps include a specification of the timezone if it is known.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp_precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+			<xs:annotation>
+				<xs:documentation>The timestamp_precision property specifies the granularity with which the timestamp property should be considered, as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is ‘second.’ Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.  </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="StructuredTextType">
+		<xs:annotation>
+			<xs:documentation>The StructuredTextType data type specializes the basicDataTypes:BasicString data type by capturing structuring format information. An identifier is captured to allow for differential data marking of distinct construct instances, and an ordinality property indicates the order of the instances if more than one is specified.  </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:QName" use="optional">
+					<xs:annotation>
+						<xs:documentation>The id property specifies a globally unique identifier for the construct instance.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ordinality"  type="xs:positiveInteger" use="optional">
+					<xs:annotation>
+						<xs:documentation>The ordinality property specifies the order (e.g., ‘1’, ‘2’, or ‘3’) of this construct instance (e.g., Description) within a potential set of multiple peer construct instances. If only a single construct instance is present, its ordinality can be assumed to be 1. If multiple construct instances are present, the ordinality property SHOULD be specified with unique values for each instance.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				<xs:attribute name="structuring_format" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>Used to indicate a particular structuring format (e.g., HTML5) used within an instance of StructuredTextType. Note that if the markup tags used by this format would be interpreted as XML information (such as the bracket-based tags of HTML) the text area should be enclosed in a CDATA section to prevent the markup from interferring with XML validation of the STIX document. If this attribute is absent, the implication is that no markup is being used.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EncodedCDATAType">
+		<xs:annotation>
+			<xs:documentation>
+				This type is used to represent data in an XML CDATA block. Data in a CDATA block may either be represented as-is or, in cases where it may contain characters that are not valid in CDATA, it may be encoded in Base64 per RFC4648. Data encoded in Base64 must be denoted as such using the encoded attribute.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="encoded" type="xs:boolean" default="false">
+					<xs:annotation>
+						<xs:documentation>The encoded property specifies whether the data is Base64 encoded ('true') or not encoded ('false').  The default value is 'false.'</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ControlledVocabularyStringType">
+		<xs:annotation>
+			<xs:documentation>The ControlledVocabularyStringType is used as the basis for defining controlled vocabularies.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:attribute name="vocab_name" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>The vocab_name property specifies the name of the externally defined vocabulary.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="vocab_reference" type="xs:anyURI" use="optional">
+					<xs:annotation>
+						<xs:documentation>The vocab_reference property specifies the location of the externally defined vocabulary using a Uniform Resource Identifier (URI).</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="DateTimeWithPrecisionType">
+		<xs:annotation>
+			<xs:documentation>This type is used as a replacement for the standard xs:dateTime type but allows for the representation of the precision of the dateTime.  If the precision is given, consumers must ignore the portions of this property that is more precise than the given precision. Producers should zero-out (fill with zeros) digits in the dateTime that are required by the xs:dateTime datatype but are beyond the specified precision.</xs:documentation>
+			<xs:documentation>In order to avoid ambiguity, it is strongly suggested that all dateTimes include a specification of the timezone if it is known.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="precision" type="stixCommon:DateTimePrecisionEnum" default="second">
+					<xs:annotation>
+						<xs:documentation>The precision property specifies the granularity with which a timestamp should be considered as specified by the DateTimePrecisionEnum enumeration (e.g., 'hour,' 'minute').  If omitted, the default precision is 'second.' Digits in a timestamp that are beyond the specified precision SHOULD be zeroed out.  </xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!---->
+	<xs:simpleType name="DateTimePrecisionEnum">
+		<xs:annotation>
+			<xs:documentation>The DateTimePrecisionEnum enumeration is an inventory of values for representing time precision.  </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="year">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given year.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="month">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given month.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="day">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given day.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hour">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given hour.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="minute">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given minute.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="second">
+				<xs:annotation>
+					<xs:documentation>The given date/time is precise to the given second (including fractional seconds).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<!---->
+	<xs:complexType name="ProfilesType">
+		<xs:annotation>
+			<xs:documentation>The ProfilesType specifies a list of one or more STIX Profiles.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Profile" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The Profile property represents a reference to one STIX Profile. The profile is referenced as a URI and should include components for: the creator of the profile, the name of the profile, and the version of the profile. When publishing a profile, this URI should be published alongside the profile such that it can be referred to from this property.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!---->
+	<xs:complexType name="RelatedPackageRefType">
+		<xs:annotation>
+			<xs:documentation>The RelatedPackageRefType characterizes a relationship to a STIX Package.  It extends GenericRelationshipType by specifying the Package.</xs:documentation> 
+			<xs:documentation>Because it would not make sense to define a totally new STIX package in the context of any single STIX component, all relationships between a STIX Package and a component are reference type relationships using the RelatedPackageRefType(i.e., a RelatedPackageType is not defined).</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="stixCommon:GenericRelationshipType">
+				<xs:attribute name="idref" type="xs:QName">
+					<xs:annotation>
+						<xs:documentation>The idref property specifies a globally unique identifier of a STIX Package specified elsewhere.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="timestamp" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation>The timestamp property, used in combination with the idref property, specifies a specific version of a Package defined elsewhere.  To avoid ambiguity, all timestamps SHOULD include a specification of the time zone.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RelatedPackageRefsType">
+		<xs:annotation>
+			<xs:documentation>Identifies or characterizes relationships to set of related Packages.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Package_Reference" type="stixCommon:RelatedPackageRefType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Identifies or characterizes a relationship to a related Package defined elsewhere</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ToolInformationType">
+		<xs:annotation>
+			<xs:documentation>The ToolInformationType characterizes information about a hardware or software tool, including those related to instances of its use. It is extended from an identically-named type in CybOX and adds standard STIX descriptive properties.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cyboxCommon:ToolInformationType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Title property provides a simple title for the tool and reflects what the producer thinks the tool as a whole should be called.  Titles are typically used by humans to reference a particular tool; however, titles are not meant to be used for correlation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The Short_Description property captures a short textual description of the tool.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

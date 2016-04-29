@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<indicator:Indicator xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stixCommon="http://stix.mitre.org/common-1" xsi:schemaLocation="http://stix.mitre.org/Indicator-2 ../../../indicator.xsd" version="2.1.1">
+<indicator:Indicator xmlns:indicator="http://docs.oasis-open.org/cti/ns/stix/indicator-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1" xsi:schemaLocation="http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../../../indicator.xsd" version="2.1.1">
 	<indicator:Sightings sightings_count="3">
 		<indicator:Sighting>
 			<indicator:Source>

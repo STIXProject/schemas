@@ -4,35 +4,35 @@
     Part 3 of MAEC -> CybOX -> STIX Chain Example -->
 <stix:STIX_Package
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:report="http://stix.mitre.org/Report-1"
-    xmlns:stixCommon="http://stix.mitre.org/common-1"
+    xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
+    xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
+    xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"
+    xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1"
     xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
     xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
     xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
-    xmlns:maecExtension="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
-    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:maecExtension="http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1"
+    xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:ttp="http://stix.mitre.org/TTP-1"
-    xmlns:stix-maec="http://stix.mitre.org/extensions/Malware#MAEC4.1-1"
+    xmlns:ttp="http://docs.oasis-open.org/cti/ns/stix/ttp-1"
+    xmlns:stix-maec="http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1"
     xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2"
     xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
     xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
     xmlns:WinExecutableFileObj="http://cybox.mitre.org/objects#WinExecutableFileObject-2"
     xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
     xmlns:WinPipeObj="http://cybox.mitre.org/objects#WinPipeObject-2"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+    xmlns:indicator="http://docs.oasis-open.org/cti/ns/stix/indicator-1"
+    xmlns:stixVocabs="http://docs.oasis-open.org/cti/ns/stix/vocabularies-1"
     xmlns:example="http://example.com/"
     xsi:schemaLocation=
-    "http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
-    http://stix.mitre.org/stix-1 ../../stix_core.xsd
-    http://stix.mitre.org/Report-1 ../../report.xsd
-    http://stix.mitre.org/Indicator-2 ../../indicator.xsd
-    http://stix.mitre.org/TTP-1 ../../ttp.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd
-    http://stix.mitre.org/extensions/Malware#MAEC4.1-1 ../../extensions/malware/maec_4.1_malware.xsd
+    "http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/core-1 ../../core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/report-1 ../../report.xsd
+    http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../../indicator.xsd
+    http://docs.oasis-open.org/cti/ns/stix/ttp-1 ../../ttp.xsd
+    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../../vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1 ../../extensions/malware/maec-4.1-malware.xsd
     http://maec.mitre.org/XMLSchema/maec-package-2 ../../external/maec_4.1/maec_package_schema.xsd
     http://maec.mitre.org/default_vocabularies-1 ../../external/maec_4.1/maec_default_vocabularies.xsd
     http://cybox.mitre.org/objects#ArtifactObject-2 ../../cybox/objects/Artifact_Object.xsd

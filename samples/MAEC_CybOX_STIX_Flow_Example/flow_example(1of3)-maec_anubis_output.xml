@@ -6,8 +6,8 @@
     xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
     xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
     xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
-    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
+    xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
+    xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
     xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
     xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
@@ -19,7 +19,7 @@
     "http://maec.mitre.org/XMLSchema/maec-package-2 ../../external/maec_4.1/maec_package_schema.xsd
     http://maec.mitre.org/default_vocabularies-1 ../../external/maec_4.1/maec_default_vocabularies.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
-    http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
     http://cybox.mitre.org/objects#WinPipeObject-2 ../../cybox/objects/Win_Pipe_Object.xsd
     http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
     http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd" 

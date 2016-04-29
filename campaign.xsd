@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:campaign="http://stix.mitre.org/Campaign-1" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" targetNamespace="http://stix.mitre.org/Campaign-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1" xmlns:campaign="http://docs.oasis-open.org/cti/ns/stix/campaign-1" xmlns:marking="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2" targetNamespace="http://docs.oasis-open.org/cti/ns/stix/campaign-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
 	<xs:annotation>
 		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
 		<xs:appinfo>
@@ -10,9 +10,9 @@
 			<terms_of_use>Copyright (c) 2012-2015, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
 		</xs:appinfo>
 	</xs:annotation>
-	<xs:import namespace="http://cybox.mitre.org/cybox-2" schemaLocation="cybox/cybox_core.xsd"/>
-	<xs:import namespace="http://stix.mitre.org/common-1" schemaLocation="stix_common.xsd"/>
-	<xs:import namespace="http://data-marking.mitre.org/Marking-1" schemaLocation="data_marking.xsd"/>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/cybox/core-2" schemaLocation="cybox/core.xsd"/>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/common-1" schemaLocation="common.xsd"/>
+	<xs:import namespace="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" schemaLocation="data-marking.xsd"/>
 	<xs:element name="Campaign" type="campaign:CampaignType">
 		<xs:annotation>
 			<xs:documentation>The Campaign field characterizes a single cyber threat Campaign.</xs:documentation>
@@ -20,60 +20,59 @@
 	</xs:element>
 	<xs:complexType name="CampaignType">
 		<xs:annotation>
-			<xs:documentation>Represents a single STIX Campaign.</xs:documentation>
-			<xs:documentation>Campaigns are instances of ThreatActors pursuing an intent, as observed through sets of Incidents and/or TTP, potentially across organizations. In a structured sense, Campaigns may consist of the suspected intended effect of the adversary, the related TTP leveraged within the Campaign, the related Incidents believed to be part of the Campaign, attribution to the ThreatActors believed responsible for the Campaign, other Campaigns believed related to the Campaign, confidence in the assertion of aggregated intent and characterization of the Campaign, activity taken in response to the Campaign, source of the Campaign information, handling guidance, etc.</xs:documentation>
+			<xs:documentation>The CampaignType characterizes a cyber threat campaign by capturing an asserted relationship between the threat actors who are involved, the TTPs used, and the incidents that comprise parts of the campaign in addition to other intrinsic properties.  The CampaignType extends CampaignBaseType from the Common schema, which provides the essential identifier (id) and identifier reference (idref) properties. </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:CampaignBaseType">
 				<xs:sequence>
 					<xs:element name="Title" type="xs:string" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Title field provides a simple title for this Campaign.</xs:documentation>
+							<xs:documentation>The Title property captures a title for the Campaign and reflects what the content producer thinks the Campaign as a whole should be called.  The Title property is typically used by humans to reference a particular Campaign; however, it is not suggested for correlation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Description field is optional and provides an unstructured, text description of this Campaign.</xs:documentation>
+							<xs:documentation>The Description property captures a textual description of the Campaign.  Any length is permitted.  Optional formatting is supported via the structuring_format property</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Short_Description" type="stixCommon:StructuredTextType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Short_Description field is optional and provides a short, unstructured, text description of this Campaign.</xs:documentation>
+							<xs:documentation>The Short_Description property captures a short textual description of the Campaign.   This property is secondary and should only be used if the Description property is already populated and another, shorter description is available.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Names" type="campaign:NamesType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Names field specifies Names used to identify this Campaign. These may be either internal or external names.</xs:documentation>
+							<xs:documentation>The Names property specifies a set of one or more names (i.e., aliases) used to identify the Campaign.  An organization may use names that are created internally or externally (outside the organization).  Note that the purpose of the Names property is different than that of the Title property:  while the Title property is used to title the Campaign construct instance, the Names property gives the names of the set of activity that the Campaign describes.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Intended_Effect" type="stixCommon:StatementType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Intended_Effect field characterizes the intended effect of this cyber threat Campaign.</xs:documentation>
-							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
-							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Intended_Effect property characterizes the suspected effect that the Campaign is intended to have on its target(s), which includes a Value property that specifies the type of the effect. Examples of potential types include theft, disruption, and unauthorized access (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
+							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is IntendedEffectVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Status" type="stixCommon:ControlledVocabularyStringType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The status of this Campaign. For example, is the Campaign ongoing, historical, future, etc.</xs:documentation>
-							<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CampaignStatusType in the http://stix.mitre.org/default_vocabularies-1 namespace. This type is defined in the stix_default_vocabularies.xsd file or at the URL http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd.</xs:documentation>
-							<xs:documentation>	Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a string field.</xs:documentation>
+							<xs:documentation>The Status property specifies the status of the Campaign. Examples of potential statuses include ongoing, historical, and future (these specific values are only provided to help explain the property: they are neither recommended values nor necessarily part of any existing vocabulary). </xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type controlled vocabulary extension mechanism. The default vocabulary type is CampaignStatusType in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
+							<xs:documentation>	Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_TTPs" type="campaign:RelatedTTPsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_TTPs field specifies TTPs asserted to be related to this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>The Related_TTPs property specifies a set of one or more TTPs leveraged within the Campaign (or in some way related to a Campaign).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Incidents" type="campaign:RelatedIncidentsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Incidents field identifies or characterizes one or more Incidents related to this cyber threat Campaign. </xs:documentation>
+							<xs:documentation>The RelatedIncidents property specifies a set of one or more Incidents that are part of the Campaign (or in some way related to the Campaign).   </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Indicators" type="campaign:RelatedIndicatorsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicators field identifies or characterizes one or more cyber threat Indicators related to this cyber threat Campaign.</xs:documentation>
-							<xs:documentation>NOTE: As of STIX Version 1.1, this field is deprecated and is scheduled to be removed in STIX Version 2.0. Relationships between indicators and campaigns should be represented using the Related_Campaigns field on IndicatorType unless legacy code or content requires the use of this field.</xs:documentation>
+							<xs:documentation>The Related_Indicators property specifies a set of one or more Indicators relevant to the Campaign. </xs:documentation>
+							<xs:documentation>NOTE: As of STIX Version 1.1, this property is deprecated and is scheduled to be removed in STIX Version 2.0. Relationships between indicators and campaigns should be represented using the Related_Campaigns property on IndicatorType unless legacy code or content requires the use of this property.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -81,38 +80,38 @@
 					</xs:element>
 					<xs:element name="Attribution" type="campaign:AttributionType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Attribution field specifies assertions of attibuted Threat Actors for this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>The Attribution property specifies attribution information in the form of a set of one or more Threat Actors who are asserted to be responsible for the Campaign. Multiple groups can be captured by defining multiple Attribution elements.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Associated_Campaigns" type="campaign:AssociatedCampaignsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Associated_Campaigns field specifies other cyber threat Campaigns asserted to be associated with this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>The Associated_Campaigns property specifies a set of one or more other Campaigns related to this Campaign. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Confidence" type="stixCommon:ConfidenceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Confidence field characterizes the level of confidence held in the characterization of this Campaign.</xs:documentation>
+							<xs:documentation>The Confidence property characterizes the level of confidence in the accuracy of the collection of information captured for the Campaign. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Activity" type="stixCommon:ActivityType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Activity field characterizes actions taken in regards to this Campaign. This field is defined as of type ActivityType which is an abstract type enabling the extension and inclusion of various formats of Activity characterization.</xs:documentation>
+							<xs:documentation>The Activity property characterizes a defender activity associated with the Campaign.  Its underlying abstract type must be extended to include the chosen format of activity characterization.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Information_Source" type="stixCommon:InformationSourceType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Information_Source field details the source of this entry.</xs:documentation>
+							<xs:documentation>The Information_Source property characterizes the source of the Campaign information.  Examples of details captured include identitifying characteristics, time-related attributes, and a list of the tools used to collect the information.  </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Handling" type="marking:MarkingType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Handling field specifies the appropriate data handling markings for the elements of this Campaign. The valid marking scope is the nearest CampaignBaseType ancestor of this Handling element and all its descendants.</xs:documentation>
+							<xs:documentation>The Handling property specifies data handling markings for the properties of this Campaign. The marking scope is limited to the campaign and the content it contains. Note that data handling markings can also be specified at a higher level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Related_Packages" type="stixCommon:RelatedPackageRefsType" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>The Related_Packages field identifies or characterizes relationships to set of related Packages.</xs:documentation>
-							<xs:documentation>DEPRECATED: This field is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
+							<xs:documentation>The Related_Packages property specifies a set of one or more STIX Packages that are related to the Campaign. </xs:documentation>
+							<xs:documentation>DEPRECATED: This property is deprecated and will be removed in the next major version of STIX. Its use is strongly discouraged except for legacy applications.</xs:documentation>
 							<xs:appinfo>
 								<deprecated>true</deprecated>
 							</xs:appinfo>
@@ -121,7 +120,7 @@
 				</xs:sequence>
 				<xs:attribute name="version" type="campaign:CampaignVersionType">
 					<xs:annotation>
-						<xs:documentation>Specifies the relevant STIX-Campaign schema version for this content.</xs:documentation>
+						<xs:documentation>The version property specifies the version number of the STIX Campaign data model used to capture the information associated with the Campaign.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -133,23 +132,19 @@
 			<xs:documentation>An enumeration of all versions of the Campaign type valid in the current release of STIX.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1.0"/>
-			<xs:enumeration value="1.0.1"/>
-			<xs:enumeration value="1.1" />
-			<xs:enumeration value="1.1.1" />
-			<xs:enumeration value="1.2" />
+			<xs:enumeration value="stix-1.2.1" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AttributionType">
 		<xs:annotation>
-			<xs:documentation>AttributionType specifies suspected Threat Actors attributed to a given Campaign.</xs:documentation>
+			<xs:documentation>The AttributionType specifies a set of one or more Threat Actors asserted as related to a Campaign from an attribution perspective.  It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Attributed_Threat_Actor" type="stixCommon:RelatedThreatActorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Attributed_Threat_Actor field specifies a Threat Actor asserted to be attributed for a Campaign. The specification of multiple ThreatActor entries for a single Attribution entry would be interpreted as a logical AND composition of the set of specified ThreatActors with a shared Confidence and Information Source. This would be used to assert attribution to a combined set of ThreatActors.</xs:documentation>
+							<xs:documentation>The Attributed_Threat_Actor property specifies a Threat Actor asserted as related to the Campaign and characterizes the relationship between the Threat Actor and the Campaign by capturing information such as the level of confidence that the Threat Actor and the Campaign are related, the source of the relationship information, and the type of the relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -158,12 +153,15 @@
 	</xs:complexType>
 	<!---->
 	<xs:complexType name="RelatedTTPsType">
+	<xs:annotation>
+			<xs:documentation>The RelatedTTPsType specifies a set of one or more TTPs asserted to be leveraged within the Campaign (or in some way related to a Campaign).  It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).</xs:documentation>
+		</xs:annotation>			
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_TTP" type="stixCommon:RelatedTTPType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_TTP field specifies a single TTP asserted to be related to this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>The Related_TTP property specifies a TTP leveraged within the Campaign (or in some way related to a Campaign) and characterizes the relationship between the Campaign and the TTP by capturing information such as the level of confidence that the Campaign and the TTP are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -171,11 +169,13 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="NamesType">
+		<xs:annotation>
+			<xs:documentation>The NamesType specifies a set of one or more names used to identify the Campaign.  Note that an equivalent NamesType is defined in the STIX Common data model; this duplication is due to backward-compatiblity issues and will be corrected in the next major release of STIX . At that time, the campaign:NamesType will be removed, and Campaign names will be defined via the stixCommon:NamesType type. </xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="stixCommon:ControlledVocabularyStringType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>The Name field specifies a Name used to identify this Campaign. This field can be used to capture various aliases used to identify this Campaign.</xs:documentation>
-					<xs:documentation>This field is implemented through the xsi:type controlled vocabulary extension mechanism. No default vocabulary type has been defined for STIX 1.2. Users may either define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use this as a free string field.</xs:documentation>
+					<xs:documentation>The Name property is used to specify a single name or alias that identifies the Campaign.  The content creator may choose any arbitrary value or may constrain the set of possible values by referencing an externally-defined vocabulary or leveraging a formally defined vocabulary extending from the stixCommon:ControlledVocabularyStringType. No default vocabulary has been defined for STIX.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -194,12 +194,17 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RelatedIndicatorsType">
+		<xs:annotation>
+			<xs:documentation>The RelatedIndicatorsType specifies a set of one or more Indicators asserted as relevent to a Campaign.  It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).
+			</xs:documentation>
+			<xs:documentation>The Related_Indicators property of the CampaignType was deprecated in STIX Version 1.1, and it is slated for removal in STIX Version 2.0 (it remains in the Campaign data model for backward compatibility). Therefore, because no other property requires it, RelatedIndicatorsType will be removed in STIX Version 2.0 of the Campaign data model.  Unless legacy code or content require the use of the Related_Indicators property, Relationships between Indicators and Campaigns in STIX v1.2.1 SHOULD be represented using the Related_Campaigns property of the indicator:IndicatorType.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Related_Indicator" type="stixCommon:RelatedIndicatorType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Related_Indicator field identifies or characterizes a cyber threat Indicator related to this Campaign. Such loose associations between Campaigns and Indicators are typically part of the early phases of Campaign identification and characterization. As the Campaign characterization matures these associations are often used to identify relevant TTPs and/or Incidents associated with the Campaign.</xs:documentation>
+							<xs:documentation>The Related_Indicator property specifies an Indicator asserted as relevant to this Campaign and characterizes the relationship between the Indicator and the Campaign by capturing information such as the level of confidence that the Indicator and the Campaign are related, the source of the relationship information, and the type of relationship.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -207,12 +212,16 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="AssociatedCampaignsType">
+		<xs:annotation>
+			<xs:documentation>The AssociatedCampaignType specifies a set of one or more other Campaigns asserted as related to this Campaign and therefore is a self-referential relationship.  It extends GenericRelationshipListType defined in the STIX Common data model, which specifies the scope (whether the elements of the set are related individually or as a group).
+			</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:GenericRelationshipListType">
 				<xs:sequence>
 					<xs:element name="Associated_Campaign" type="stixCommon:RelatedCampaignType" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The Associated_Campaign field specifies a single other cyber threat Campaign asserted to be associated with this cyber threat Campaign.</xs:documentation>
+							<xs:documentation>The Associated_Campaign property specifies another Campaign associated with this Campaign and characterizes the relationship between the Campaigns by capturing information such as the level of confidence that the Campaigns are related, the source of the relationship information, and type of the relationship.  A relationship between Campaigns may represent assertions of general associativity or different versions of the same Campaign.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

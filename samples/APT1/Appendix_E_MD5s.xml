@@ -14,31 +14,31 @@
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e241"
     version="1.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:stix="http://stix.mitre.org/stix-1"
-    xmlns:report="http://stix.mitre.org/Report-1"
-    xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
-    xmlns:stixCommon="http://stix.mitre.org/common-1"
-    xmlns:cybox="http://cybox.mitre.org/cybox-2"
-    xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+    xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
+    xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"
+    xmlns:stixVocabs="http://docs.oasis-open.org/cti/ns/stix/vocabularies-1"
+    xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1"
+    xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
+    xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
     xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:indicator="http://stix.mitre.org/Indicator-2"
-    xmlns:ttp="http://stix.mitre.org/TTP-1"
-    xmlns:marking="http://data-marking.mitre.org/Marking-1"
-    xmlns:terms="http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1"
+    xmlns:indicator="http://docs.oasis-open.org/cti/ns/stix/indicator-1"
+    xmlns:ttp="http://docs.oasis-open.org/cti/ns/stix/ttp-1"
+    xmlns:marking="http://docs.oasis-open.org/cti/ns/stix/data-marking-1"
+    xmlns:terms="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1"
     xmlns:mandiant="http://www.mandiant.com"
     xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
 
     xsi:schemaLocation="
-    http://stix.mitre.org/stix-1 ../../stix_core.xsd
-    http://stix.mitre.org/Report-1 ../../report.xsd
-    http://stix.mitre.org/default_vocabularies-1 ../../stix_default_vocabularies.xsd
-    http://stix.mitre.org/common-1 ../../stix_common.xsd
-    http://data-marking.mitre.org/Marking-1 ../../data_marking.xsd
-    http://cybox.mitre.org/cybox-2 ../../cybox/cybox_core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/core-1 ../../core.xsd
+    http://docs.oasis-open.org/cti/ns/stix/report-1 ../../report.xsd
+    http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../../vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/stix/common-1 ../../common.xsd
+    http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
     http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
-    http://stix.mitre.org/Indicator-2 ../../indicator.xsd
-    http://stix.mitre.org/TTP-1 ../../ttp.xsd
-    http://data-marking.mitre.org/extensions/MarkingStructure#Terms_Of_Use-1 ../../extensions/marking/terms_of_use_marking.xsd
+    http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../../indicator.xsd
+    http://docs.oasis-open.org/cti/ns/stix/ttp-1 ../../ttp.xsd
+    http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
     http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
     ">
     <stix:STIX_Header>
