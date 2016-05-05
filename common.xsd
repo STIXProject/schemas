@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2" xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2" xmlns:stixCommon="http://docs.oasis-open.org/cti/ns/stix/common-1" targetNamespace="http://docs.oasis-open.org/cti/ns/stix/common-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" xml:lang="en">
 	<xs:annotation>
-		<xs:documentation>This schema was originally developed by The MITRE Corporation. The STIX XML Schema implementation is maintained by The MITRE Corporation and developed by the open STIX Community. For more information, including how to get involved in the effort and how to submit change requests, please visit the STIX website at http://stix.mitre.org. </xs:documentation>
+		<xs:documentation> STIX[TM] Version 2.0. Committee Specification Draft 01 / Public Review Draft 01</xs:documentation>
 		<xs:appinfo>
 			<schema>STIX Common</schema>
-			<version>1.2</version>
-			<date>05/15/2015 9:00:00 AM</date>
+			<version>1.2.1</version>
+			<date>12/15/2015 9:00:00 AM</date>
 			<short_description>Structured Threat Information eXpression (STIX) - Common - Schematic implementation for the common types of a structured cyber threat expression language architecture.</short_description>
-			<terms_of_use>Copyright (c) 2012-2015, The MITRE Corporation. All rights reserved. The contents of this file are subject to the terms of the STIX License located at http://stix.mitre.org/about/termsofuse.html. See the STIX License for the specific language governing permissions and limitations for use of this schema. When distributing copies of the STIX Schema, this license header must be included. </terms_of_use>
+			<terms_of_use>Copyright © OASIS Open 2016. All Rights Reserved.
+			Distributed under the terms of the OASIS IPR Policy, [http://www.oasis-open.org/policies-guidelines/ipr], AS-IS, WITHOUT ANY IMPLIED OR EXPRESS WARRANTY; there is no warranty of MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE or NONINFRINGEMENT of the rights of others.</terms_of_use>
+			<terms_of_use> Portions copyright (c) United States Government 2012-2016.  All Rights Reserved.
+			 Source: http://docs.oasis-open.org/cti/stix/v1.2.1/csprd01/schemas/
+			 Latest version of the specification: REPLACE_WITH_SPECIFICATION_URL
+			 TC IPR Statement: https://www.oasis-open.org/committees/cti/ipr.php
+            </terms_of_use>
 		</xs:appinfo>
 	</xs:annotation>
 	<xs:import namespace="http://docs.oasis-open.org/cti/ns/cybox/common-2" schemaLocation="cybox/common.xsd"/>
