@@ -26,7 +26,7 @@
 	</xs:element>
 	<xs:complexType name="IndicatorType">
 		<xs:annotation>
-			<xs:documentation>The IndicatorType characterizes a cyber threat indicator by capturing an asserted relationship between a pattern identifying certain observable conditions and a particular TTP likely in play if those observable conditions are seen, as well as contextual information about how and when it should be acted on and how it relates to other Indicators, Campaigns, and TTPs. IndicatorType extends IndicatorBaseType, which provides the essential identifier (id) and identifier reference (idref) properties.
+			<xs:documentation>The IndicatorType characterizes a cyber threat indicator by capturing an asserted relationship between a pattern identifying certain observable conditions and a particular TTP likely in play if those observable conditions are seen, as well as contextual information about how and when it should be acted on and how it relates to other Indicators, Campaigns, and TTPs. IndicatorType extends IndicatorBaseType, which provides the essential identifier (id) and identifier reference (idref) properties.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="stixCommon:IndicatorBaseType">
@@ -98,7 +98,6 @@
 							<xs:documentation>The Likely_Impact property characterizes the probable impact if the TTP indicated by the presence of the indicator pattern were to occur, which includes a Value property that specifies the impact. Examples of potential impacts include none, minor, and moderate (these specific values are only provided to help explain the Value property: they are neither recommended impacts nor necessarily part of any existing vocabulary). </xs:documentation>
 							<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is ImpactRatingVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
 							<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
-							<xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Suggested_COAs" type="indicator:SuggestedCOAsType" minOccurs="0">
@@ -232,7 +231,6 @@
 					<xs:documentation>The Efficacy property characterizes a measure of the likely effectiveness of a TestMechanismType instance to detect the targeted cyber observable pattern, which includes a Value property that specifies the level of effectiveness. Examples of potential levels include high, medium, and low (these specific values are only provided to help explain the Value property: they are neither recommended values nor necessarily part of any existing vocabulary).  </xs:documentation>
 					<xs:documentation>It is implemented through the StatementType, which allows for the expression of a statement in a vocabulary (Value), a description of the statement (Description), a confidence in the statement (Confidence), and the source of the statement (Source). The default vocabulary type for the Value is HighMediumLowVocab-1.0 in the http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 namespace. This type is defined in the vocabularies.xsd file or at the URL http://docs.oasis-open.org/cti/stix-1.2.1-xml-binding/v1.0/csd01/schemas/vocabularies.xsd.</xs:documentation>
 					<xs:documentation>Users may also define their own vocabulary using the type extension mechanism, specify a vocabulary name and reference using the attributes, or simply use a string.</xs:documentation>
-					<xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Producer" type="stixCommon:InformationSourceType" minOccurs="0">
@@ -348,14 +346,6 @@
 		<xs:annotation>
 			<xs:documentation>The TestMechanismsType specifies a set of one or more test mechanisms effective at identifying the cyber observable pattern characterized in the Indicator. </xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Test_Mechanism" type="indicator:TestMechanismType" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The Test_Mechanism property characterizes an alternative (non-CybOX) test mechanism representation for the desired observable pattern of the Indicator. Its underlying abstract type MUST be extended to enable the expression of a structured or unstructured test mechanism (e.g., Snort, OVAL).</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 		<xs:sequence>
 			<xs:element name="Test_Mechanism" type="indicator:TestMechanismType" maxOccurs="unbounded">
 				<xs:annotation>

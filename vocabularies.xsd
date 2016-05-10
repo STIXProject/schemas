@@ -2595,6 +2595,7 @@
 				<xs:annotation>
 					<xs:documentation>The incident involved a financial loss by the target.</xs:documentation>
 				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="Loss of Confidential / Proprietary Information or Intellectual Property">
 				<xs:annotation>
 					<xs:documentation>During the incident proprietary information or intellectual property (IP) was obtained</xs:documentation>
