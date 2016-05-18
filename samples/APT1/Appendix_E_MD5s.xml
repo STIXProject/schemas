@@ -12,7 +12,7 @@
 
 <stix:STIX_Package
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e241"
-    version="1.2"
+    version="stix-1.2.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
     xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"
@@ -75,7 +75,7 @@
         </stix:Information_Source>
     </stix:STIX_Header>
 
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
         <cybox:Observable id="mandiant:observable-8d12f44f-8ac0-4b12-8b4a-3699ca8c9691">
                 <cybox:Object>
                     <cybox:Properties xsi:type="FileObj:FileObjectType">
@@ -12168,7 +12168,7 @@
             <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Observations</report:Intent>
             <report:Description>This report contains the MD5s referenced in Appendix E of the APT1 report.</report:Description>
          </report:Header>
-         <report:Observables cybox_major_version="2" cybox_minor_version="1">
+         <report:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
             <cybox:Observable idref="mandiant:observable-8d12f44f-8ac0-4b12-8b4a-3699ca8c9691"/>
             <cybox:Observable idref="mandiant:observable-745e1537-b4f3-49da-9f64-df6b1b5df190"/>
             <cybox:Observable idref="mandiant:observable-1dbe6ed0-c305-458f-9cce-f83c678f5afd"/>

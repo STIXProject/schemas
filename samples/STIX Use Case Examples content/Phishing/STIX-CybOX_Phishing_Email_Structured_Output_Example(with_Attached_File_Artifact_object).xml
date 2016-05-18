@@ -26,7 +26,7 @@ http://docs.oasis-open.org/cti/ns/cybox/objects/dns-record-2 ../../../cybox/obje
 http://docs.oasis-open.org/cti/ns/cybox/objects/dns-query-2 ../../../cybox/objects/DNS_Query_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
 " 
-  cybox_major_version="2" cybox_minor_version="1">
+  cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
   
     <cybox:Observable id="example:observable-6f45ce72-30c8-11e2-8011-000c291a73d5">
             <cybox:Object id="example:object-8b319fb4-60a5-49f8-8fbc-68eb0ea12ef0">

@@ -37,9 +37,9 @@
     http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../cybox/objects/File_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../cybox/objects/Artifact_Object.xsd"
     id="example:STIXPackage-95141684-9092-4080-93fe-956a452a4acd"
-    version="1.2"
+    version="stix-1.2.1"
     >
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
         <cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
             <cybox:Description>
                 This observable is an email with a link in it. This observable also 

@@ -24,7 +24,7 @@
 -->
 <stix:STIX_Package
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e240"
-    version="1.2"
+    version="stix-1.2.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
     xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"
@@ -102,7 +102,7 @@
         </stix:Information_Source>
     </stix:STIX_Header>
     
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
         <cybox:Observable id="mandiant:observable-b7013416-7e77-4078-a0bd-a33b49c7cb2f">
                 <cybox:Object>
                     <cybox:Properties xsi:type="FileObj:FileObjectType">
@@ -39863,7 +39863,7 @@ Some variants have just an .exe that acts as a downloader, others have an .exe l
                 <report:Intent xsi:type="stixVocabs:ReportIntentVocab-1.0">Indicators</report:Intent>
                 <report:Description>This report contains the IOCs referenced in Appendix G of the APT1 report.</report:Description>
             </report:Header>
-            <report:Observables cybox_major_version="2" cybox_minor_version="1">
+            <report:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
             <cybox:Observable idref="mandiant:observable-b7013416-7e77-4078-a0bd-a33b49c7cb2f"/>
             <cybox:Observable idref="mandiant:observable-749eea4e-2812-4b4d-bba9-4292bedc05a2"/>
             <cybox:Observable idref="mandiant:observable-2d244ba9-73e0-4270-96aa-64f1c8935d27"/>

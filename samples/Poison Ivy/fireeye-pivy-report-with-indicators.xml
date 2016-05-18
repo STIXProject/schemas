@@ -43,7 +43,7 @@
         http://docs.oasis-open.org/cti/ns/cybox/objects/mutex-2 ../../cybox/objects/Mutex_Object.xsd
         http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1 ../../cybox/objects/Domain_Name_Object.xsd
     "
-    id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d" version="1.2">
+    id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d" version="stix-1.2.1">
     <stix:STIX_Header>
         <stix:Handling>
             <marking:Marking id="fireeye:markingspecification-6d04e7fe-2561-4b2d-a7bb-04f8cfd01271">
@@ -78,7 +78,7 @@
             </stixCommon:References>
         </stix:Information_Source>
     </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
         <cybox:Observable id="fireeye:observable-6e9697fa-38a2-4ba7-adda-a6eb268099fa">
             <cybox:Title>Sample: 026871ea3d6cbbeb90fea6bf2906cc12</cybox:Title>
             <cybox:Object id="fireeye:object-2049611d-757c-4d46-830a-bf5becd26f39">
@@ -35840,7 +35840,7 @@ PIVY also played a key role in the 2011 campaign known as Nitro that targeted ch
 RATs require live, direct, real-time human interaction by the APT attacker. This characteristic is distinctly different from crimeware (malware focused on cybercrime), where the criminal can issue commands to their botnet of compromised endpoints whenever they please and set them to work on a common goal such as a spam relay. In contrast, RATs are much more personal and may indicate that you are dealing with a dedicated threat actor that is interested in your organization specifically.
 </report:Description>
          </report:Header>
-         <report:Observables cybox_major_version="2" cybox_minor_version="1">
+         <report:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
             <cybox:Observable idref="fireeye:observable-6e9697fa-38a2-4ba7-adda-a6eb268099fa"/>
             <cybox:Observable idref="fireeye:observable-1c4b8b44-10fb-4b00-8a49-deb38e92e108"/>
             <cybox:Observable idref="fireeye:observable-ec6fe30b-7495-4390-9f7e-232ae6456a4f"/>

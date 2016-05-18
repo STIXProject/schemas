@@ -32,7 +32,7 @@
     http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/uri-2 ../cybox/objects/URI_Object.xsd"
     id="example:package-4cc56b6b-748f-440b-9f01-03bcf3ce7c68"
-    version="1.2"
+    version="stix-1.2.1"
     >
     <stix:Indicators>
         <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-db4a6ffe-61f0-488d-85a1-20bd5e360f37" timestamp="2015-05-15T09:00:00.000000Z">

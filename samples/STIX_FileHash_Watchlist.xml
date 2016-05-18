@@ -34,7 +34,7 @@
     http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../cybox/objects/File_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../cybox/cybox_default_vocabularies.xsd"
     id="example:STIXPackage-ac823873-4c51-4dd1-936e-a39d40151cc3"
-    version="1.2">
+    version="stix-1.2.1">
     <stix:Indicators>
         <stix:Indicator xsi:type="indicator:IndicatorType" id="example:Indicator-611935aa-4db5-4b63-88ac-ac651634f09b" timestamp="2015-05-15T09:00:00.000000Z">
             <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>

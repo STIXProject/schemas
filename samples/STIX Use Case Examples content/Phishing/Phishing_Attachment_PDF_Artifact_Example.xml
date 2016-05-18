@@ -10,7 +10,7 @@ http://docs.oasis-open.org/cti/ns/cybox/common-2 ../../../cybox/common.xsd
 http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../../../cybox/objects/Artifact_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
 " 
-  cybox_major_version="2" cybox_minor_version="1">
+  cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
   
 <!-- Artifact object -->  
 	 <cybox:Observable id="example:observable-14ee6790-b83d-44f1-8604-92271efac9bf">

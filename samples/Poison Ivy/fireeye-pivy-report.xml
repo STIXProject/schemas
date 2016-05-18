@@ -36,7 +36,7 @@
         http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 ../../extensions/identity/ciq-3.0-identity.xsd
     "
     id="fireeye:stix-b7b16e67-4292-46a3-ba64-60c1a491723d" 
-    version="1.2">
+    version="stix-1.2.1">
     <stix:STIX_Header>
         <stix:Title>Poison Ivy: Assessing Damage and Extracting Intelligence</stix:Title>
         <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Threat Report</stix:Package_Intent>

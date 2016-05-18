@@ -32,7 +32,7 @@
         http://docs.oasis-open.org/cti/ns/cybox/objects/mutex-2 ../../cybox/objects/Mutex_Object.xsd
         http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1 ../../cybox/objects/Domain_Name_Object.xsd
     "
-    id="fireeye:stix-0232a453-acb4-4548-bc0f-e9367b45dac7" version="1.2">
+    id="fireeye:stix-0232a453-acb4-4548-bc0f-e9367b45dac7" version="stix-1.2.1">
     <stix:STIX_Header>
         <stix:Handling>
             <marking:Marking id="fireeye:markingspecification-087236e7-b47c-4a75-b1da-5b3e17dcd1aa">
@@ -67,7 +67,7 @@
             </stixCommon:References>
         </stix:Information_Source>
     </stix:STIX_Header>
-    <stix:Observables cybox_major_version="2" cybox_minor_version="1">
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
         <cybox:Observable id="fireeye:observable-6e9697fa-38a2-4ba7-adda-a6eb268099fa">
             <cybox:Title>Sample: 026871ea3d6cbbeb90fea6bf2906cc12</cybox:Title>
             <cybox:Object id="fireeye:object-2049611d-757c-4d46-830a-bf5becd26f39">

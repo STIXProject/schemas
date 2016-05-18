@@ -13,7 +13,7 @@ http://docs.oasis-open.org/cti/ns/cybox/objects/address-2 ../../../cybox/objects
 http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../../cybox/objects/File_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2 ../../../cybox/objects/Email_Message_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd" 
-  cybox_major_version="2" cybox_minor_version="1">
+  cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
   
 <cybox:Observable id="example:observable-pattern-5f1dedd3-ece3-4007-94cd-7d52784c1474">
          <cybox:Object id="example:object-3a7aa9db-d082-447c-a422-293b78e24238">

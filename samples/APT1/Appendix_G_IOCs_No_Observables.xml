@@ -17,7 +17,7 @@
 -->
 <stix:STIX_Package
     id="mandiant:package-190593d6-1861-4cfe-b212-c016fce1e249"
-    version="1.2"
+    version="stix-1.2.1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
     xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"

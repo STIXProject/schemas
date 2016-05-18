@@ -30,7 +30,7 @@
 
 <stix:STIX_Package
 	id="mandiant:package-e33ffe07-2f4c-48d8-b0af-ee2619d765cf"
-	version="1.2"
+	version="stix-1.2.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:marking="http://docs.oasis-open.org/cti/ns/stix/data-marking-1"
 	xmlns:terms="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1"
@@ -292,7 +292,7 @@
 			</ttp:Behavior>
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Type>Leveraged IP Blocks</ttp:Type>
-				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1">
+				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
 					<cybox:Observable>
 						<cybox:Object id="mandiant:object-031778a4-057f-48e6-9db9-c8d72b81ccd5">
 							<cybox:Properties xsi:type="AddressObject:AddressObjectType" category="ipv4-addr">
@@ -327,7 +327,7 @@
 		<stix:TTP timestamp="2015-05-15T09:00:00.000000Z" id="mandiant:ttp-a35bc05a-247d-49a9-b954-c5c7344c55cc" xsi:type="ttp:TTPType">
 			<ttp:Resources><ttp:Infrastructure>
 				<ttp:Type>Hop Point Accessors</ttp:Type>
-				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1">
+				<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
 					<cybox:Observable>
 						<cybox:Object id="mandiant:object-232deffc-063f-4e83-9027-1b930af4a09f">
 							<cybox:Properties xsi:type="AddressObject:AddressObjectType" category="ipv4-addr">
@@ -1479,7 +1479,7 @@
 					<!-- This is simply two examples of many such entries that could be harvested (and in far more detail) from the APT1 report in regards to specific observed TTP for individual threat actors. -->
 					<stixCommon:TTP xsi:type="ttp:TTPType">
 						<ttp:Resources><ttp:Infrastructure>
-							<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="0"  cybox_update_version="1">
+							<ttp:Observable_Characterization cybox_major_version="2" cybox_minor_version="1"  cybox_update_version="1">
 								<cybox:Observable>
 									<cybox:Object>
 										<cybox:Properties xsi:type="URIObject:URIObjectType" type="Domain Name">
