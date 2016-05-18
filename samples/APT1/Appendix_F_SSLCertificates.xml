@@ -24,8 +24,8 @@
     xmlns:terms="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1"
     xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
     xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:X509CertificateObj="http://cybox.mitre.org/objects#X509CertificateObject-2"
+    xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"
+    xmlns:X509CertificateObj="http://docs.oasis-open.org/cti/ns/cybox/objects/x509-certificate"
     xmlns:mandiant="http://www.mandiant.com"
 
     xsi:schemaLocation="
@@ -36,8 +36,8 @@
     http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
     http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
     http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#X509CertificateObject-2 ../../cybox/objects/X509_Certificate_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/x509-certificate ../../cybox/objects/X509_Certificate_Object.xsd
     ">
     <stix:STIX_Header>
         <stix:Handling>

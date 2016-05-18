@@ -2,15 +2,15 @@
 <stix:STIX_Package
     xmlns:stix="http://docs.oasis-open.org/cti/ns/stix/core-1"
     xmlns:report="http://docs.oasis-open.org/cti/ns/stix/report-1"
-    xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
-    xmlns:CodeObj="http://cybox.mitre.org/objects#CodeObject-2"
-    xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
-    xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2"
-    xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1"
-    xmlns:WhoisObj="http://cybox.mitre.org/objects#WhoisObject-2"
+    xmlns:AddressObj="http://docs.oasis-open.org/cti/ns/cybox/objects/address-2"
+    xmlns:CodeObj="http://docs.oasis-open.org/cti/ns/cybox/objects/code-2"
+    xmlns:FileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/file-2"
+    xmlns:MutexObj="http://docs.oasis-open.org/cti/ns/cybox/objects/mutex-2"
+    xmlns:DomainNameObj="http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1"
+    xmlns:WhoisObj="http://docs.oasis-open.org/cti/ns/cybox/objects/whois-2"
     xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
     xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"
     xmlns:fireeye="http://www.fireeye.com"
     xmlns:marking="http://docs.oasis-open.org/cti/ns/stix/data-marking-1" 
     xmlns:terms="http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1"
@@ -22,15 +22,15 @@
     http://docs.oasis-open.org/cti/ns/stix/report-1 ../../report.xsd
     http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../../vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
     http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
-    http://cybox.mitre.org/objects#AddressObject-2 ../../cybox/objects/Address_Object.xsd
-    http://cybox.mitre.org/objects#CodeObject-2 ../../cybox/objects/Code_Object.xsd
-    http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
-    http://cybox.mitre.org/objects#MutexObject-2 ../../cybox/objects/Mutex_Object.xsd
-    http://cybox.mitre.org/objects#DomainNameObject-1 ../../cybox/objects/Domain_Name_Object.xsd
-    http://cybox.mitre.org/objects#WhoisObject-2 ../../cybox/objects/Whois_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/address-2 ../../cybox/objects/Address_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/code-2 ../../cybox/objects/Code_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../cybox/objects/File_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/mutex-2 ../../cybox/objects/Mutex_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1 ../../cybox/objects/Domain_Name_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/whois-2 ../../cybox/objects/Whois_Object.xsd
     "
     id="fireeye:stix-24da7696-2561-4686-b429-c31d210e2f2b"
     version="1.2">

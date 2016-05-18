@@ -1,18 +1,18 @@
 <cybox:Observables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        
 xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2" 
 xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2" 
-xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
-xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" 
-xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2" 
-xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"                 
+xmlns:AddressObj="http://docs.oasis-open.org/cti/ns/cybox/objects/address-2"
+xmlns:FileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/file-2" 
+xmlns:EmailMessageObj="http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2" 
+xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"                 
 xmlns:example="http://example.com"
 xsi:schemaLocation="     
 http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../../cybox/core.xsd
 http://docs.oasis-open.org/cti/ns/cybox/common-2 ../../../cybox/common.xsd
-http://cybox.mitre.org/objects#AddressObject-2 ../../../cybox/objects/Address_Object.xsd
-http://cybox.mitre.org/objects#FileObject-2 ../../../cybox/objects/File_Object.xsd
-http://cybox.mitre.org/objects#EmailMessageObject-2 ../../../cybox/objects/Email_Message_Object.xsd
-http://cybox.mitre.org/default_vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd" 
+http://docs.oasis-open.org/cti/ns/cybox/objects/address-2 ../../../cybox/objects/Address_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../../cybox/objects/File_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2 ../../../cybox/objects/Email_Message_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd" 
   cybox_major_version="2" cybox_minor_version="1">
   
 <cybox:Observable id="example:observable-pattern-5f1dedd3-ece3-4007-94cd-7d52784c1474">

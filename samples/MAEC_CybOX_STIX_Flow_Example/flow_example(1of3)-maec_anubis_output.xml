@@ -8,21 +8,21 @@
     xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
     xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
     xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
-    xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
-    xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
-    xmlns:WinExecutableFileObj="http://cybox.mitre.org/objects#WinExecutableFileObject-2"
-    xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
-    xmlns:WinPipeObj="http://cybox.mitre.org/objects#WinPipeObject-2"
+    xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"
+    xmlns:FileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/file-2"
+    xmlns:PipeObj="http://docs.oasis-open.org/cti/ns/cybox/objects/pipe-2"
+    xmlns:WinExecutableFileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-executable-file-2"
+    xmlns:WinRegistryKeyObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2"
+    xmlns:WinPipeObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation=
     "http://maec.mitre.org/XMLSchema/maec-package-2 ../../external/maec_4.1/maec_package_schema.xsd
     http://maec.mitre.org/default_vocabularies-1 ../../external/maec_4.1/maec_default_vocabularies.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
     http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
-    http://cybox.mitre.org/objects#WinPipeObject-2 ../../cybox/objects/Win_Pipe_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd" 
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2 ../../cybox/objects/Win_Pipe_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-executable-file-2 ../../cybox/objects/Win_Executable_File_Object.xsd" 
     id="maec-anubis_to_maec-pkg-1" schema_version="2.1">
     <maecPackage:Malware_Subjects>
         <maecPackage:Malware_Subject id="maec-anubis_to_maec-sub-1">

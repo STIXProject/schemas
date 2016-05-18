@@ -13,15 +13,15 @@
     xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
     xmlns:maecExtension="http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1"
     xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
-    xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+    xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"
     xmlns:ttp="http://docs.oasis-open.org/cti/ns/stix/ttp-1"
     xmlns:stix-maec="http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1"
-    xmlns:ArtifactObj="http://cybox.mitre.org/objects#ArtifactObject-2"
-    xmlns:PipeObj="http://cybox.mitre.org/objects#PipeObject-2"
-    xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
-    xmlns:WinExecutableFileObj="http://cybox.mitre.org/objects#WinExecutableFileObject-2"
-    xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
-    xmlns:WinPipeObj="http://cybox.mitre.org/objects#WinPipeObject-2"
+    xmlns:ArtifactObj="http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2"
+    xmlns:PipeObj="http://docs.oasis-open.org/cti/ns/cybox/objects/pipe-2"
+    xmlns:FileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/file-2"
+    xmlns:WinExecutableFileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-executable-file-2"
+    xmlns:WinRegistryKeyObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2"
+    xmlns:WinPipeObj="http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2"
     xmlns:indicator="http://docs.oasis-open.org/cti/ns/stix/indicator-1"
     xmlns:stixVocabs="http://docs.oasis-open.org/cti/ns/stix/vocabularies-1"
     xmlns:example="http://example.com/"
@@ -35,13 +35,13 @@
     http://docs.oasis-open.org/cti/ns/stix/extensions/malware/maec-4.1-1 ../../extensions/malware/maec-4.1-malware.xsd
     http://maec.mitre.org/XMLSchema/maec-package-2 ../../external/maec_4.1/maec_package_schema.xsd
     http://maec.mitre.org/default_vocabularies-1 ../../external/maec_4.1/maec_default_vocabularies.xsd
-    http://cybox.mitre.org/objects#ArtifactObject-2 ../../cybox/objects/Artifact_Object.xsd
-    http://cybox.mitre.org/objects#FileObject-2 ../../cybox/objects/File_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/default_vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
-    http://cybox.mitre.org/objects#WinPipeObject-2 ../../cybox/objects/Win_Pipe_Object.xsd
-    http://cybox.mitre.org/objects#WinRegistryKeyObject-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
-    http://cybox.mitre.org/objects#WinExecutableFileObject-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
+    http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../../cybox/objects/Artifact_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../cybox/objects/File_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2 ../../cybox/objects/Win_Pipe_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/objects/win-executable-file-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
     id="example:STIXPackage-0935d61b-69a4-4e64-8c4c-d9ce885f7fcc" 
     version="1.2">
     <stix:Observables cybox_major_version="2" cybox_minor_version="1">

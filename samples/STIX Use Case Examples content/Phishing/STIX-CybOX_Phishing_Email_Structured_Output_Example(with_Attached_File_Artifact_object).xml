@@ -1,30 +1,30 @@
 <cybox:Observables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2" 
 xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2" 
-xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" 
-xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" 
-xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
-xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1" 
-xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
-xmlns:Artifact="http://cybox.mitre.org/objects#ArtifactObject-2"               
-xmlns:WhoisObj="http://cybox.mitre.org/objects#WhoisObject-2"     
-xmlns:DNSRecordObj="http://cybox.mitre.org/objects#DNSRecordObject-2"
-xmlns:DNSQueryObj="http://cybox.mitre.org/objects#DNSQueryObject-2"
-xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"        
+xmlns:AddressObj="http://docs.oasis-open.org/cti/ns/cybox/objects/address-2" 
+xmlns:FileObj="http://docs.oasis-open.org/cti/ns/cybox/objects/file-2" 
+xmlns:URIObj="http://docs.oasis-open.org/cti/ns/cybox/objects/uri-2"
+xmlns:DomainNameObj="http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1" 
+xmlns:EmailMessageObj="http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2"
+xmlns:Artifact="http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2"               
+xmlns:WhoisObj="http://docs.oasis-open.org/cti/ns/cybox/objects/whois-2"     
+xmlns:DNSRecordObj="http://docs.oasis-open.org/cti/ns/cybox/objects/dns-record-2"
+xmlns:DNSQueryObj="http://docs.oasis-open.org/cti/ns/cybox/objects/dns-query-2"
+xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"        
 xmlns:example="http://example.com"
 xsi:schemaLocation="
 http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../../cybox/core.xsd
 http://docs.oasis-open.org/cti/ns/cybox/common-2 ../../../cybox/common.xsd
-http://cybox.mitre.org/objects#AddressObject-2 ../../../cybox/objects/Address_Object.xsd
-http://cybox.mitre.org/objects#FileObject-2 ../../../cybox/objects/File_Object.xsd
-http://cybox.mitre.org/objects#URIObject-2 ../../../cybox/objects/URI_Object.xsd
-http://cybox.mitre.org/objects#DomainNameObject-1 ../../../cybox/objects/Domain_Name_Object.xsd
-http://cybox.mitre.org/objects#EmailMessageObject-2 ../../../cybox/objects/Email_Message_Object.xsd 
-http://cybox.mitre.org/objects#ArtifactObject-2 ../../../cybox/objects/Artifact_Object.xsd
-http://cybox.mitre.org/objects#WhoisObject-2 ../../../cybox/objects/Whois_Object.xsd
-http://cybox.mitre.org/objects#DNSRecordObject-2 ../../../cybox/objects/DNS_Record_Object.xsd
-http://cybox.mitre.org/objects#DNSQueryObject-2 ../../../cybox/objects/DNS_Query_Object.xsd
-http://cybox.mitre.org/default_vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/address-2 ../../../cybox/objects/Address_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../../cybox/objects/File_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/uri-2 ../../../cybox/objects/URI_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1 ../../../cybox/objects/Domain_Name_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2 ../../../cybox/objects/Email_Message_Object.xsd 
+http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../../../cybox/objects/Artifact_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/whois-2 ../../../cybox/objects/Whois_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/dns-record-2 ../../../cybox/objects/DNS_Record_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/objects/dns-query-2 ../../../cybox/objects/DNS_Query_Object.xsd
+http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
 " 
   cybox_major_version="2" cybox_minor_version="1">
   
