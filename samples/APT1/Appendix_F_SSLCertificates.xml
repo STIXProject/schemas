@@ -36,7 +36,7 @@
     http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
     http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
     http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
-    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/default_vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/x509-certificate ../../cybox/objects/X509_Certificate_Object.xsd
     ">
     <stix:STIX_Header>

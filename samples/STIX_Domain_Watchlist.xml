@@ -25,7 +25,7 @@
     xsi:schemaLocation=
     "http://docs.oasis-open.org/cti/ns/stix/core-1 ../core.xsd
     http://docs.oasis-open.org/cti/ns/stix/indicator-1 ../indicator.xsd
-    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../cybox/cybox_default_vocabularies.xsd
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../cybox/default_vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/stix/vocabularies-1 ../vocabularies.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/domain-name-1 ../cybox/objects/Domain_Name_Object.xsd"
     id="example:STIXPackage-f61cd874-494d-4194-a3e6-6b487dbb6d6e"

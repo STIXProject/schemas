@@ -24,7 +24,7 @@ http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../../../cybox/object
 http://docs.oasis-open.org/cti/ns/cybox/objects/whois-2 ../../../cybox/objects/Whois_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/objects/dns-record-2 ../../../cybox/objects/DNS_Record_Object.xsd
 http://docs.oasis-open.org/cti/ns/cybox/objects/dns-query-2 ../../../cybox/objects/DNS_Query_Object.xsd
-http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
+http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/default_vocabularies.xsd
 " 
   cybox_major_version="2" cybox_minor_version="1" cybox_update_version="1">
   

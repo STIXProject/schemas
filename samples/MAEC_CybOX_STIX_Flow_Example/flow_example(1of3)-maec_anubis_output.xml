@@ -18,7 +18,7 @@
     xsi:schemaLocation=
     "http://maec.mitre.org/XMLSchema/maec-package-2 ../../external/maec_4.1/maec_package_schema.xsd
     http://maec.mitre.org/default_vocabularies-1 ../../external/maec_4.1/maec_default_vocabularies.xsd
-    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/default_vocabularies.xsd 
     http://docs.oasis-open.org/cti/ns/cybox/core-2 ../../cybox/core.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2 ../../cybox/objects/Win_Pipe_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd

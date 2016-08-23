@@ -15,7 +15,7 @@
 	http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../../cybox/objects/File_Object.xsd
 	http://docs.oasis-open.org/cti/ns/cybox/objects/uri-2 ../../../cybox/objects/URI_Object.xsd
 	http://docs.oasis-open.org/cti/ns/cybox/objects/email-message-2 ../../../cybox/objects/Email_Message_Object.xsd 
-	http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/cybox_default_vocabularies.xsd
+	http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../../cybox/default_vocabularies.xsd
 " 
 id="example:package-772be925-6290-4867-9f17-da8e7e2624ff" 
 version="stix-1.2.1">

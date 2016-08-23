@@ -38,7 +38,7 @@
     http://docs.oasis-open.org/cti/ns/cybox/objects/artifact-2 ../../cybox/objects/Artifact_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/file-2 ../../cybox/objects/File_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
-    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/cybox_default_vocabularies.xsd 
+    http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2 ../../cybox/default_vocabularies.xsd 
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-pipe-2 ../../cybox/objects/Win_Pipe_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-registry-key-2 ../../cybox/objects/Win_Registry_Key_Object.xsd
     http://docs.oasis-open.org/cti/ns/cybox/objects/win-executable-file-2 ../../cybox/objects/Win_Executable_File_Object.xsd"
