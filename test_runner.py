@@ -123,6 +123,7 @@ def main():
             if args.test_case_repository is not None:
                 testCaseFileName = args.test_case_repository + "/" + testCaseFileName
             if args.verbose:
+                print "-" * 64
                 print testCaseFileName
             numTestCases += 1
             try:
