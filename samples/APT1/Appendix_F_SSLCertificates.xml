@@ -25,7 +25,7 @@
     xmlns:cybox="http://docs.oasis-open.org/cti/ns/cybox/core-2"
     xmlns:cyboxCommon="http://docs.oasis-open.org/cti/ns/cybox/common-2"
     xmlns:cyboxVocabs="http://docs.oasis-open.org/cti/ns/cybox/vocabularies-2"
-    xmlns:X509CertificateObj="http://docs.oasis-open.org/cti/ns/cybox/objects/x509-certificate"
+    xmlns:X509CertificateObj="http://docs.oasis-open.org/cti/ns/cybox/objects/x509-certificate-2"
     xmlns:mandiant="http://www.mandiant.com"
 
     xsi:schemaLocation="
