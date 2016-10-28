@@ -285,7 +285,7 @@
 			<xs:element name="Report" type="stixCommon:ReportBaseType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>The Report property characterizes a cyber threat Report. </xs:documentation>
-					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/report.xsd.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

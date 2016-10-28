@@ -30,7 +30,7 @@
         http://docs.oasis-open.org/cti/ns/stix/campaign-1 ../../campaign.xsd
         http://docs.oasis-open.org/cti/ns/stix/threat-actor-1 ../../threat-actor.xsd
         http://docs.oasis-open.org/cti/ns/stix/ttp-1 ../../ttp.xsd
-        http://stix.mitre.org/COA-1 ../../course-of-action.xsd
+        http://docs.oasis-open.org/cti/ns/stix/course-of-action-1 ../../course-of-action.xsd
         http://docs.oasis-open.org/cti/ns/stix/data-marking-1 ../../data-marking.xsd
         http://docs.oasis-open.org/cti/ns/stix/extensions/data-marking/terms-of-use-1 ../../extensions/marking/terms-of-use-marking.xsd
         http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 ../../extensions/identity/ciq-3.0-identity.xsd

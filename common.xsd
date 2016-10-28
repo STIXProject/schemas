@@ -31,7 +31,7 @@
 			<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Identity property characterizes the identity of the information source. </xs:documentation>
-					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.2/ciq_identity.xsd.</xs:documentation>
+					<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/extensions/identity/ciq-3.0-identity.xsd.</xs:documentation>
 					<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -440,7 +440,7 @@
 					<xs:element name="Indicator" type="stixCommon:IndicatorBaseType" minOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The Indicator property characterizes a cyber threat Indicator. </xs:documentation>
-							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://stix.mitre.org/XMLSchema/indicator/2.1.1/indicator.xsd.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is IndicatorType in the http://docs.oasis-open.org/cti/ns/stix/indicator-1 namespace. This type is defined in the indicator.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/indicator.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -507,7 +507,7 @@
 					<xs:element name="Report" type="stixCommon:ReportBaseType" minOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The Report property characterizes a STIX Report</xs:documentation>
-							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://stix.mitre.org/XMLSchema/report/1.2/report.xsd.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default and strongly recommended type is ReportType in the http://docs.oasis-open.org/cti/ns/stix/report-1 namespace. This type is defined in the report.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/report.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -524,7 +524,7 @@
 					<xs:element name="Identity" type="stixCommon:IdentityType" minOccurs="1">
 						<xs:annotation>
 							<xs:documentation>A reference to or representation of the related Identity.</xs:documentation>
-							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity_3.0/1.2/ciq_identity_3.0.xsd.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity_3.0.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/extensions/identity/ciq-3.0-identity.xsd.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
