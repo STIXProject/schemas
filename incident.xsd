@@ -80,7 +80,7 @@
 					<xs:element name="Victim" type="stixCommon:IdentityType" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>The Victim property chracterizes information about a victim of the Incident. </xs:documentation>
-							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://stix.mitre.org/XMLSchema/extensions/identity/ciq_identity/1.1/ciq_identity.xsd.</xs:documentation>
+							<xs:documentation>This property is implemented through the xsi:type extension mechanism. The default type is CIQIdentity3.0InstanceType in the http://docs.oasis-open.org/cti/ns/stix/extensions/identity/ciq-3.0-identity-1 namespace. This type is defined in the extensions/identity/ciq_identity.xsd file or at the URL http://docs.oasis-open.org/cti/stix/v1.2.1/csd01/xml-schemas/extensions/identity/ciq-3.0-identity.xsd.</xs:documentation>
 							<xs:documentation>Those who wish to express a simple name may also do so by not specifying an xsi:type and using the Name property.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
