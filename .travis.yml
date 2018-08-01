@@ -18,8 +18,7 @@ branches:
 
 notifications:
   email:
-    - gback@mitre.org
-    - stix-commits-list@lists.mitre.org
+    - stix-commits-list@groups.mitre.org
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/1fbfa85a0bb8108ad060
